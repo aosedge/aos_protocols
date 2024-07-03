@@ -157,3 +157,18 @@ Format of connection string: {service_uid}/[port|port_range]/[tcp|udp]""",
             examples=[{'vis': {'Signal.Doors.*': 'rw', 'Attributes.Vehicle.Vin': 'r'}}],
         ),
     ]
+
+    sysctl: Annotated[
+        Optional[Dict[str, str]],
+        Field(
+            alias='sysctl',
+            default=None,
+            description='Kernel parameters to be modified at runtime for the container.',
+            examples=[
+                {
+                    'net.ipv4.ip_forward': '1',
+                    'net.core.somaxconn': '256',
+                },
+            ]
+        ),
+    ]

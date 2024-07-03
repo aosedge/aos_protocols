@@ -114,6 +114,10 @@
     - [Property `AosConfigSchema > permissions > anyOf > item 0 > additionalProperties`](#permissions_anyOf_i0_additionalProperties)
       - [Property `AosConfigSchema > permissions > anyOf > item 0 > additionalProperties > additionalProperties`](#permissions_anyOf_i0_additionalProperties_additionalProperties)
   - [Property `AosConfigSchema > permissions > anyOf > item 1`](#permissions_anyOf_i1)
+- [![Optional](https://img.shields.io/badge/Optional-yellow) Property `AosConfigSchema > sysctl`](#sysctl)
+  - [Property `AosConfigSchema > sysctl > anyOf > item 0`](#sysctl_anyOf_i0)
+    - [Property `AosConfigSchema > sysctl > anyOf > item 0 > additionalProperties`](#sysctl_anyOf_i0_additionalProperties)
+  - [Property `AosConfigSchema > sysctl > anyOf > item 1`](#sysctl_anyOf_i1)
 
 **Title:** AosConfigSchema
 
@@ -142,6 +146,7 @@ This schema describes the specification of the `aosService` layer in a service.
 | - [resourceRatios](#resourceRatios )         | No      | Combination      | No         | -          | Resource ratios for the service.     |
 | - [alertRules](#alertRules )                 | No      | Combination      | No         | -          | Alert rules for the service.         |
 | - [permissions](#permissions )               | No      | Combination      | No         | -          | Permissions                          |
+| - [sysctl](#sysctl )                         | No      | Combination      | No         | -          | Sysctl                               |
 
 ## <a name="created"></a>![Required](https://img.shields.io/badge/Required-blue) Property `AosConfigSchema > created`
 
@@ -1467,5 +1472,54 @@ Must be one of:
 | -------- | ------ |
 | **Type** | `null` |
 
+## <a name="sysctl"></a>![Optional](https://img.shields.io/badge/Optional-yellow) Property `AosConfigSchema > sysctl`
+
+**Title:** Sysctl
+
+|                           |                                                                                                                                   |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                                                                       |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `null`                                                                                                                            |
+
+**Description:** Kernel parameters to be modified at runtime for the container.
+
+**Example:** 
+
+```json
+{
+    "net.core.somaxconn": "256",
+    "net.ipv4.ip_forward": "1"
+}
+```
+
+| Any of(Option)             |
+| -------------------------- |
+| [item 0](#sysctl_anyOf_i0) |
+| [item 1](#sysctl_anyOf_i1) |
+
+### <a name="sysctl_anyOf_i0"></a>Property `AosConfigSchema > sysctl > anyOf > item 0`
+
+|                           |                                                                                                                                                                              |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                                                                     |
+| **Additional properties** | [![Should-conform](https://img.shields.io/badge/Should-conform-blue)](#sysctl_anyOf_i0_additionalProperties "Each additional property must conform to the following schema") |
+
+| Property                                     | Pattern | Type   | Deprecated | Definition | Title/Description |
+| -------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| - [](#sysctl_anyOf_i0_additionalProperties ) | No      | string | No         | -          | -                 |
+
+#### <a name="sysctl_anyOf_i0_additionalProperties"></a>Property `AosConfigSchema > sysctl > anyOf > item 0 > additionalProperties`
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+### <a name="sysctl_anyOf_i1"></a>Property `AosConfigSchema > sysctl > anyOf > item 1`
+
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
+
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2024-07-01 at 12:32:32 +0300
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2024-07-03 at 17:22:27 +0300

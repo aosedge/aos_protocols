@@ -287,13 +287,14 @@
                     "title": "Instance",
                     "type": "integer"
                 },
-                "errors": {
-                    "description": "List of resource validation errors.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "title": "Errors",
-                    "type": "array"
+                "errorInfo": {
+                    "allOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Error information. Absense means no error."
                 }
             },
             "required": [
@@ -301,8 +302,7 @@
                 "tag",
                 "serviceID",
                 "subjectID",
-                "instance",
-                "errors"
+                "instance"
             ],
             "title": "AosAlertResourceValidate",
             "type": "object"

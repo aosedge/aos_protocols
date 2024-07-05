@@ -11,21 +11,21 @@ from .constants import DataSizes
 from .types import (
     TypeComponentAnnotationsOptional,
     TypeComponentId,
-    TypeStatusForNonExecutables,
-    TypeVersionMandatory,
-    TypeVersionOptional,
-    TypeNodeStatus,
-    TypeServiceIdMandatory,
-    TypeServiceStatus,
-    TypeNodeIdMandatory,
-    TypeStateChecksumOptional,
-    TypeServiceInstanceStatus,
-    TypeSubjectSubjectIdMandatory,
     TypeInstanceNoMandatory,
-    TypeServiceServiceIdMandatory,
+    TypeLayerDigest,
     TypeLayerIdMandatory,
     TypeLayerStatus,
-    TypeLayerDigest,
+    TypeNodeIdMandatory,
+    TypeNodeStatus,
+    TypeServiceIdMandatory,
+    TypeServiceInstanceStatus,
+    TypeServiceServiceIdMandatory,
+    TypeServiceStatus,
+    TypeStateChecksumOptional,
+    TypeStatusForNonExecutables,
+    TypeSubjectSubjectIdMandatory,
+    TypeVersionMandatory,
+    TypeVersionOptional,
 )
 
 
@@ -87,9 +87,10 @@ class AosNodeCPUInfo(BaseModel):
         ),
     ]
     arch: Annotated[
-        Literal['x86', 'x86_64', 'arm32', 'arm64'],
+        str,
         Field(
             alias='arch',
+            examples=['x86', 'x86_64', 'arm32', 'arm64'],
         ),
     ]
     arch_family: Annotated[
@@ -112,7 +113,7 @@ class AosUnitNodeInfo(BaseModel):
     id: Annotated[
         str,
         Field(
-            alias='ID',
+            alias='id',
             min_length=1,
             max_length=DataSizes.DATA_LENGTH_256,
             description='Node unique identifier',
@@ -124,12 +125,11 @@ class AosUnitNodeInfo(BaseModel):
         Optional[str],
         Field(
             alias='name',
-            min_length=1,
             max_length=DataSizes.DATA_LENGTH_256,
             description='User-friendly name of the node',
             examples=['Dom0', 'DomD'],
         ),
-    ] = None
+    ]
 
     type: Annotated[
         str,
@@ -144,7 +144,6 @@ class AosUnitNodeInfo(BaseModel):
         int,
         Field(
             alias='maxDmips',
-            ge=1,
         ),
     ]
 
@@ -156,7 +155,7 @@ class AosUnitNodeInfo(BaseModel):
     ]
 
     os_type: Annotated[
-        Literal['linux'],
+        str,
         Field(
             alias='osType',
         ),
@@ -167,7 +166,7 @@ class AosUnitNodeInfo(BaseModel):
         Field(
             default=None,
             alias='attrs',
-            examples=[{'dynamic'}, {'static': None, 'cloud_connection': None, 'name1': 'value1'}],
+            examples=[{'dynamic'}, {'static': '', 'cloud_connection': '', 'name1': 'value1'}],
         ),
     ]
 
@@ -192,28 +191,6 @@ class AosUnitNodeInfo(BaseModel):
     error_info: TypeAosErrorInfoOptional
 
 
-class AosComponentStatusInfo(BaseModel):
-    """
-    Aos component status info.
-
-    The structure encapsulates information about the component current status such as:
-    - nodes that contain this component
-    - component status on each node
-    """
-
-    node_id: Annotated[
-        Optional[str],
-        Field(
-            default=None,
-            alias='nodeId',
-            description='IDs list of nodes this component is part of. Can be omitted for some statuses',
-        ),
-    ]
-
-    status: TypeStatusForNonExecutables
-    error_info: TypeAosErrorInfoOptional
-
-
 class AosComponentInfo(BaseModel):
     """
     Aos component info.
@@ -234,15 +211,18 @@ class AosComponentInfo(BaseModel):
 
     version: TypeVersionMandatory
 
-    statuses: Annotated[
-        list[AosComponentStatusInfo],
+    node_id: Annotated[
+        Optional[str],
         Field(
-            alias='statuses',
-            description='List of component statuses for each node',
+            default=None,
+            alias='nodeId',
+            description='IDs list of nodes this component is part of. Can be omitted for some statuses',
         ),
     ]
 
+    status: TypeStatusForNonExecutables
     annotations: TypeComponentAnnotationsOptional
+    error_info: TypeAosErrorInfoOptional
 
 
 class AosLayerStatusInfo(BaseModel):
@@ -317,7 +297,7 @@ class AosUnitStatus(BaseModel):
         Field(
             default=None,
             alias='nodes',
-            description='The list of attached to the Unit nodes.'
+            description='The list of attached to the Unit nodes.',
         ),
     ]
 

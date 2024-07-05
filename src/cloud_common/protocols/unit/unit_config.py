@@ -2,19 +2,19 @@
 #  Copyright (c) 2018-2024 Renesas Inc.
 #  Copyright (c) 2018-2024 EPAM Systems Inc.
 #
-from typing import Annotated, Literal
+from typing import Annotated
 
 from pydantic import BaseModel, Field
 
 from cloud_common.protocols.unit.common import (
-    AosHostRecord,
-    AosFileSystemMount,
     AosDeviceInfo,
+    AosFileSystemMount,
+    AosHostRecord,
 )
 from cloud_common.protocols.unit.types import (
-    TypeVersionMandatory,
-    TypeNodeTypeMandatory,
     TypeNodeIdOptional,
+    TypeNodeTypeMandatory,
+    TypeVersionMandatory,
 )
 
 
@@ -40,7 +40,7 @@ class ThresholdInfo(BaseModel):
     low: Annotated[
         float,
         Field(
-            alias="low",
+            alias='low',
             description='The lowest percents of a value after which resource can be rebalanced back.',
             ge=0,
         ),
@@ -49,7 +49,7 @@ class ThresholdInfo(BaseModel):
     high: Annotated[
         float,
         Field(
-            alias="high",
+            alias='high',
             description='The highest percents of a value after which resource have be rebalanced.',
             ge=0,
         ),
@@ -58,14 +58,14 @@ class ThresholdInfo(BaseModel):
     timeout: Annotated[
         float,
         Field(
-            alias="timeout",
+            alias='timeout',
             description='The timeout in seconds. Fraction of value specifies milliseconds',
             gt=0,
             examples=[
                 0.5,
                 100,
             ],
-        )
+        ),
     ]
 
 
@@ -144,7 +144,7 @@ class ResourceInfo(BaseModel):
             default=None,
             alias='groups',
             description='The group names for the resource.',
-        )
+        ),
     ]
 
     mounts: Annotated[
@@ -153,15 +153,7 @@ class ResourceInfo(BaseModel):
             default=None,
             alias='mounts',
             description='The mounts list available for running services.',
-        )
-    ]
-
-    devices: Annotated[
-        list[AosDeviceInfo],
-        Field(
-            default=None,
-            description='The devices list available for running services.',
-        )
+        ),
     ]
 
     envs: Annotated[
@@ -179,7 +171,7 @@ class ResourceInfo(BaseModel):
             default=None,
             alias='hosts',
             description='The list of hostnames.',
-        )
+        ),
     ]
 
 
@@ -207,11 +199,20 @@ class NodeConfig(BaseModel):
         ),
     ]
 
+    devices: Annotated[
+        list[AosDeviceInfo],
+        Field(
+            default=None,
+            alias='devices',
+            description='The devices list available for running services.',
+        ),
+    ]
+
     resources: Annotated[
         list[ResourceInfo],
         Field(
             default=None,
-            alias="resources",
+            alias='resources',
             description='The list of resources available for running services.',
         ),
     ]
@@ -230,7 +231,7 @@ class NodeConfig(BaseModel):
             alias='priority',
             description='The priority of the node for deploying services.',
             ge=0,
-            lt=(2**32)-1,
+            lt=(2**32) - 1,  # noqa: WPS432
         ),
     ]
 
@@ -239,11 +240,11 @@ class UnitConfig(BaseModel):
     """Configuration parameters for a unit."""
 
     format_version: Annotated[
-        str,
+        str | int,
         Field(
-            alias="formatVersion",
-            description="Version of the configuration object (this object).",
-        )
+            alias='formatVersion',
+            description='Version of the configuration object (this object).',
+        ),
     ]
 
     version: TypeVersionMandatory
@@ -252,5 +253,5 @@ class UnitConfig(BaseModel):
         list[NodeConfig],
         Field(
             description='The list of node configurations.',
-        )
+        ),
     ]

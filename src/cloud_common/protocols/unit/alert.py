@@ -7,7 +7,7 @@ from typing import Annotated, Literal, Union
 
 from pydantic import BaseModel, Discriminator, Field
 
-from cloud_common.protocols.unit.common import TypeAosErrorInfoOptional, AosErrorInfo
+from cloud_common.protocols.unit.common import AosErrorInfo
 from cloud_common.protocols.unit.constants import DataSizes
 from cloud_common.protocols.unit.types import (
     TypeAlertMessageMandatory,
@@ -91,7 +91,7 @@ class AosAlertDeviceAllocate(AosBaseAlert):
     service_id: Annotated[
         str,
         Field(
-            alias='serviceID',
+            alias='serviceId',
             description='Service unique identifier in form: UUID4.',
             min_length=1,
         ),
@@ -100,7 +100,7 @@ class AosAlertDeviceAllocate(AosBaseAlert):
     subject_id: Annotated[
         str,
         Field(
-            alias='subjectID',
+            alias='subjectId',
             description='Subject unique identifier.',
             min_length=1,
         ),
@@ -157,7 +157,7 @@ class AosAlertInstanceQuota(AosBaseAlert):
     service_id: Annotated[
         str,
         Field(
-            alias='serviceID',
+            alias='serviceId',
             description='Service unique identifier.',
             min_length=1,
         ),
@@ -166,7 +166,7 @@ class AosAlertInstanceQuota(AosBaseAlert):
     subject_id: Annotated[
         str,
         Field(
-            alias='subjectID',
+            alias='subjectId',
             description='Subject unique identifier.',
             min_length=1,
         ),
@@ -263,7 +263,7 @@ class AosAlertServiceInstance(AosBaseAlert):
     service_id: Annotated[
         str,
         Field(
-            alias='serviceID',
+            alias='serviceId',
             description='Service unique identifier.',
             min_length=1,
         ),
@@ -272,7 +272,7 @@ class AosAlertServiceInstance(AosBaseAlert):
     subject_id: Annotated[
         str,
         Field(
-            alias='subjectID',
+            alias='subjectId',
             description='Subject unique identifier.',
             min_length=1,
         ),

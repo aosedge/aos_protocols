@@ -17,8 +17,8 @@
         - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertDeviceAllocate`](#data_oneOf_i0_items_items_oneOf_i1)
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertDeviceAllocate > timestamp`](#data_oneOf_i0_items_items_oneOf_i1_timestamp)
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertDeviceAllocate > tag`](#data_oneOf_i0_items_items_oneOf_i1_tag)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertDeviceAllocate > serviceID`](#data_oneOf_i0_items_items_oneOf_i1_serviceID)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertDeviceAllocate > subjectID`](#data_oneOf_i0_items_items_oneOf_i1_subjectID)
+          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertDeviceAllocate > serviceId`](#data_oneOf_i0_items_items_oneOf_i1_serviceId)
+          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertDeviceAllocate > subjectId`](#data_oneOf_i0_items_items_oneOf_i1_subjectId)
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertDeviceAllocate > instance`](#data_oneOf_i0_items_items_oneOf_i1_instance)
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertDeviceAllocate > nodeId`](#data_oneOf_i0_items_items_oneOf_i1_nodeId)
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertDeviceAllocate > deviceId`](#data_oneOf_i0_items_items_oneOf_i1_deviceId)
@@ -36,16 +36,16 @@
         - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertInstanceQuota`](#data_oneOf_i0_items_items_oneOf_i3)
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertInstanceQuota > timestamp`](#data_oneOf_i0_items_items_oneOf_i3_timestamp)
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertInstanceQuota > tag`](#data_oneOf_i0_items_items_oneOf_i3_tag)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertInstanceQuota > serviceID`](#data_oneOf_i0_items_items_oneOf_i3_serviceID)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertInstanceQuota > subjectID`](#data_oneOf_i0_items_items_oneOf_i3_subjectID)
+          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertInstanceQuota > serviceId`](#data_oneOf_i0_items_items_oneOf_i3_serviceId)
+          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertInstanceQuota > subjectId`](#data_oneOf_i0_items_items_oneOf_i3_subjectId)
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertInstanceQuota > instance`](#data_oneOf_i0_items_items_oneOf_i3_instance)
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertInstanceQuota > parameter`](#data_oneOf_i0_items_items_oneOf_i3_parameter)
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertInstanceQuota > value`](#data_oneOf_i0_items_items_oneOf_i3_value)
         - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertServiceInstance`](#data_oneOf_i0_items_items_oneOf_i4)
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertServiceInstance > timestamp`](#data_oneOf_i0_items_items_oneOf_i4_timestamp)
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertServiceInstance > tag`](#data_oneOf_i0_items_items_oneOf_i4_tag)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertServiceInstance > serviceID`](#data_oneOf_i0_items_items_oneOf_i4_serviceID)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertServiceInstance > subjectID`](#data_oneOf_i0_items_items_oneOf_i4_subjectID)
+          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertServiceInstance > serviceId`](#data_oneOf_i0_items_items_oneOf_i4_serviceId)
+          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertServiceInstance > subjectId`](#data_oneOf_i0_items_items_oneOf_i4_subjectId)
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertServiceInstance > instance`](#data_oneOf_i0_items_items_oneOf_i4_instance)
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertServiceInstance > version`](#data_oneOf_i0_items_items_oneOf_i4_version)
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertServiceInstance > message`](#data_oneOf_i0_items_items_oneOf_i4_message)
@@ -108,7 +108,7 @@
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
     - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes`](#data_oneOf_i2_nodes)
       - [AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo](#autogenerated_heading_9)
-        - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > ID`](#data_oneOf_i2_nodes_items_ID)
+        - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > id`](#data_oneOf_i2_nodes_items_id)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > name`](#data_oneOf_i2_nodes_items_name)
           - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > name > anyOf > item 0`](#data_oneOf_i2_nodes_items_name_anyOf_i0)
           - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > name > anyOf > item 1`](#data_oneOf_i2_nodes_items_name_anyOf_i1)
@@ -184,30 +184,30 @@
           - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > type > anyOf > item 0`](#data_oneOf_i2_components_items_type_anyOf_i0)
           - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > type > anyOf > item 1`](#data_oneOf_i2_components_items_type_anyOf_i1)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > version`](#data_oneOf_i2_components_items_version)
-        - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > statuses`](#data_oneOf_i2_components_items_statuses)
-          - [AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > statuses > AosComponentStatusInfo](#autogenerated_heading_17)
-            - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > statuses > AosComponentStatusInfo > nodeId`](#data_oneOf_i2_components_items_statuses_items_nodeId)
-              - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > statuses > AosComponentStatusInfo > nodeId > anyOf > item 0`](#data_oneOf_i2_components_items_statuses_items_nodeId_anyOf_i0)
-              - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > statuses > AosComponentStatusInfo > nodeId > anyOf > item 1`](#data_oneOf_i2_components_items_statuses_items_nodeId_anyOf_i1)
-            - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > statuses > AosComponentStatusInfo > status`](#data_oneOf_i2_components_items_statuses_items_status)
-            - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > statuses > AosComponentStatusInfo > errorInfo`](#data_oneOf_i2_components_items_statuses_items_errorInfo)
-              - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
-              - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
-              - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
+        - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > nodeId`](#data_oneOf_i2_components_items_nodeId)
+          - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > nodeId > anyOf > item 0`](#data_oneOf_i2_components_items_nodeId_anyOf_i0)
+          - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > nodeId > anyOf > item 1`](#data_oneOf_i2_components_items_nodeId_anyOf_i1)
+        - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > status`](#data_oneOf_i2_components_items_status)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > annotations`](#data_oneOf_i2_components_items_annotations)
+        - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > errorInfo`](#data_oneOf_i2_components_items_errorInfo)
+          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
+          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
+          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
     - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > unitSubjects`](#data_oneOf_i2_unitSubjects)
-      - [AosUnitMessage > data > oneOf > AosUnitStatus > unitSubjects > unitSubjects items](#autogenerated_heading_18)
+      - [AosUnitMessage > data > oneOf > AosUnitStatus > unitSubjects > unitSubjects items](#autogenerated_heading_17)
   - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus`](#data_oneOf_i3)
     - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > messageType`](#data_oneOf_i3_messageType)
     - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > nodes`](#data_oneOf_i3_nodes)
-      - [AosUnitMessage > data > oneOf > AosDesiredStatus > nodes > AosNodeDesiredState](#autogenerated_heading_19)
+      - [AosUnitMessage > data > oneOf > AosDesiredStatus > nodes > AosNodeDesiredState](#autogenerated_heading_18)
         - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > nodes > AosNodeDesiredState > nodeId`](#data_oneOf_i3_nodes_items_nodeId)
         - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > nodes > AosNodeDesiredState > status`](#data_oneOf_i3_nodes_items_status)
     - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig`](#data_oneOf_i3_unitConfig)
       - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > formatVersion`](#data_oneOf_i3_unitConfig_formatVersion)
+        - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > formatVersion > anyOf > item 0`](#data_oneOf_i3_unitConfig_formatVersion_anyOf_i0)
+        - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > formatVersion > anyOf > item 1`](#data_oneOf_i3_unitConfig_formatVersion_anyOf_i1)
       - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > version`](#data_oneOf_i3_unitConfig_version)
       - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes`](#data_oneOf_i3_unitConfig_nodes)
-        - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig](#autogenerated_heading_20)
+        - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig](#autogenerated_heading_19)
           - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > nodeType`](#data_oneOf_i3_unitConfig_nodes_items_nodeType)
           - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > nodeId`](#data_oneOf_i3_unitConfig_nodes_items_nodeId)
           - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > alertRules`](#data_oneOf_i3_unitConfig_nodes_items_alertRules)
@@ -227,37 +227,37 @@
             - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resourceRatios > cpu`](#data_oneOf_i3_unitConfig_nodes_items_resourceRatios_cpu)
             - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resourceRatios > mem`](#data_oneOf_i3_unitConfig_nodes_items_resourceRatios_mem)
             - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resourceRatios > storage`](#data_oneOf_i3_unitConfig_nodes_items_resourceRatios_storage)
+          - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > devices`](#data_oneOf_i3_unitConfig_nodes_items_devices)
+            - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > devices > AosDeviceInfo](#autogenerated_heading_20)
+              - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > devices > AosDeviceInfo > name`](#data_oneOf_i3_unitConfig_nodes_items_devices_items_name)
+              - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > devices > AosDeviceInfo > hostDevices`](#data_oneOf_i3_unitConfig_nodes_items_devices_items_hostDevices)
+                - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > devices > AosDeviceInfo > hostDevices > hostDevices items](#autogenerated_heading_21)
+              - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > devices > AosDeviceInfo > sharedCount`](#data_oneOf_i3_unitConfig_nodes_items_devices_items_sharedCount)
+              - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > devices > AosDeviceInfo > groups`](#data_oneOf_i3_unitConfig_nodes_items_devices_items_groups)
+                - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > devices > AosDeviceInfo > groups > groups items](#autogenerated_heading_22)
           - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources`](#data_oneOf_i3_unitConfig_nodes_items_resources)
-            - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo](#autogenerated_heading_21)
+            - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo](#autogenerated_heading_23)
               - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > name`](#data_oneOf_i3_unitConfig_nodes_items_resources_items_name)
               - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > groups`](#data_oneOf_i3_unitConfig_nodes_items_resources_items_groups)
-                - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > groups > groups items](#autogenerated_heading_22)
+                - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > groups > groups items](#autogenerated_heading_24)
               - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > mounts`](#data_oneOf_i3_unitConfig_nodes_items_resources_items_mounts)
-                - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > mounts > AosFileSystemMount](#autogenerated_heading_23)
+                - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > mounts > AosFileSystemMount](#autogenerated_heading_25)
                   - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > mounts > AosFileSystemMount > destination`](#data_oneOf_i3_unitConfig_nodes_items_resources_items_mounts_items_destination)
                   - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > mounts > AosFileSystemMount > source`](#data_oneOf_i3_unitConfig_nodes_items_resources_items_mounts_items_source)
                   - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > mounts > AosFileSystemMount > type`](#data_oneOf_i3_unitConfig_nodes_items_resources_items_mounts_items_type)
                   - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > mounts > AosFileSystemMount > options`](#data_oneOf_i3_unitConfig_nodes_items_resources_items_mounts_items_options)
-                    - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > mounts > AosFileSystemMount > options > options items](#autogenerated_heading_24)
-              - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > devices`](#data_oneOf_i3_unitConfig_nodes_items_resources_items_devices)
-                - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > devices > AosDeviceInfo](#autogenerated_heading_25)
-                  - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > devices > AosDeviceInfo > name`](#data_oneOf_i3_unitConfig_nodes_items_resources_items_devices_items_name)
-                  - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > devices > AosDeviceInfo > hostDevices`](#data_oneOf_i3_unitConfig_nodes_items_resources_items_devices_items_hostDevices)
-                    - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > devices > AosDeviceInfo > hostDevices > hostDevices items](#autogenerated_heading_26)
-                  - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > devices > AosDeviceInfo > sharedCount`](#data_oneOf_i3_unitConfig_nodes_items_resources_items_devices_items_sharedCount)
-                  - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > devices > AosDeviceInfo > groups`](#data_oneOf_i3_unitConfig_nodes_items_resources_items_devices_items_groups)
-                    - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > devices > AosDeviceInfo > groups > groups items](#autogenerated_heading_27)
+                    - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > mounts > AosFileSystemMount > options > options items](#autogenerated_heading_26)
               - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > envs`](#data_oneOf_i3_unitConfig_nodes_items_resources_items_envs)
-                - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > envs > envs items](#autogenerated_heading_28)
+                - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > envs > envs items](#autogenerated_heading_27)
               - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > hosts`](#data_oneOf_i3_unitConfig_nodes_items_resources_items_hosts)
-                - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > hosts > AosHostRecord](#autogenerated_heading_29)
+                - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > hosts > AosHostRecord](#autogenerated_heading_28)
                   - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > hosts > AosHostRecord > ip`](#data_oneOf_i3_unitConfig_nodes_items_resources_items_hosts_items_ip)
                   - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > hosts > AosHostRecord > hostname`](#data_oneOf_i3_unitConfig_nodes_items_resources_items_hosts_items_hostname)
           - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > labels`](#data_oneOf_i3_unitConfig_nodes_items_labels)
-            - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > labels > labels items](#autogenerated_heading_30)
+            - [AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > labels > labels items](#autogenerated_heading_29)
           - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > priority`](#data_oneOf_i3_unitConfig_nodes_items_priority)
     - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > components`](#data_oneOf_i3_components)
-      - [AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo](#autogenerated_heading_31)
+      - [AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo](#autogenerated_heading_30)
         - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > id`](#data_oneOf_i3_components_items_id)
           - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > id > anyOf > item 0`](#data_oneOf_i3_components_items_id_anyOf_i0)
           - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > id > anyOf > item 1`](#data_oneOf_i3_components_items_id_anyOf_i1)
@@ -265,7 +265,7 @@
         - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > version`](#data_oneOf_i3_components_items_version)
         - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > annotations`](#data_oneOf_i3_components_items_annotations)
         - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > urls`](#data_oneOf_i3_components_items_urls)
-          - [AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > urls > urls items](#autogenerated_heading_32)
+          - [AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > urls > urls items](#autogenerated_heading_31)
         - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > sha256`](#data_oneOf_i3_components_items_sha256)
         - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > size`](#data_oneOf_i3_components_items_size)
         - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > decryptionInfo`](#data_oneOf_i3_components_items_decryptionInfo)
@@ -282,6 +282,7 @@
           - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > signs > value`](#data_oneOf_i3_components_items_signs_value)
           - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > signs > trustedTimestamp`](#data_oneOf_i3_components_items_signs_trustedTimestamp)
           - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > signs > ocspValues`](#data_oneOf_i3_components_items_signs_ocspValues)
+            - [AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > signs > ocspValues > ocspValues items](#autogenerated_heading_32)
     - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > layers`](#data_oneOf_i3_layers)
       - [AosUnitMessage > data > oneOf > AosDesiredStatus > layers > AosDesiredLayerInfo](#autogenerated_heading_33)
         - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus > layers > AosDesiredLayerInfo > id`](#data_oneOf_i3_layers_items_id)
@@ -375,6 +376,7 @@
     - [Property `AosUnitMessage > data > oneOf > AosRequestLog > logType`](#data_oneOf_i8_logType)
     - [Property `AosUnitMessage > data > oneOf > AosRequestLog > filter`](#data_oneOf_i8_filter)
       - [Property `AosUnitMessage > data > oneOf > AosRequestLog > filter > from`](#data_oneOf_i8_filter_from)
+      - [Property `AosUnitMessage > data > oneOf > AosRequestLog > filter > till`](#data_oneOf_i8_filter_till)
       - [Property `AosUnitMessage > data > oneOf > AosRequestLog > filter > nodeIds`](#data_oneOf_i8_filter_nodeIds)
         - [AosUnitMessage > data > oneOf > AosRequestLog > filter > nodeIds > nodeIds items](#autogenerated_heading_46)
       - [Property `AosUnitMessage > data > oneOf > AosRequestLog > filter > serviceId`](#data_oneOf_i8_filter_serviceId)
@@ -384,7 +386,7 @@
       - [Property `AosUnitMessage > data > oneOf > AosRequestLog > uploadOptions > type`](#data_oneOf_i8_uploadOptions_type)
       - [Property `AosUnitMessage > data > oneOf > AosRequestLog > uploadOptions > url`](#data_oneOf_i8_uploadOptions_url)
       - [Property `AosUnitMessage > data > oneOf > AosRequestLog > uploadOptions > bearerToken`](#data_oneOf_i8_uploadOptions_bearerToken)
-      - [Property `AosUnitMessage > data > oneOf > AosRequestLog > uploadOptions > bearerTokenTTL`](#data_oneOf_i8_uploadOptions_bearerTokenTTL)
+      - [Property `AosUnitMessage > data > oneOf > AosRequestLog > uploadOptions > bearerTokenTtl`](#data_oneOf_i8_uploadOptions_bearerTokenTtl)
   - [Property `AosUnitMessage > data > oneOf > AosPushLog`](#data_oneOf_i9)
     - [Property `AosUnitMessage > data > oneOf > AosPushLog > messageType`](#data_oneOf_i9_messageType)
     - [Property `AosUnitMessage > data > oneOf > AosPushLog > logId`](#data_oneOf_i9_logId)
@@ -393,7 +395,7 @@
     - [Property `AosUnitMessage > data > oneOf > AosPushLog > partsCount`](#data_oneOf_i9_partsCount)
     - [Property `AosUnitMessage > data > oneOf > AosPushLog > content`](#data_oneOf_i9_content)
     - [Property `AosUnitMessage > data > oneOf > AosPushLog > status`](#data_oneOf_i9_status)
-    - [Property `AosUnitMessage > data > oneOf > AosPushLog > error`](#data_oneOf_i9_error)
+    - [Property `AosUnitMessage > data > oneOf > AosPushLog > errorInfo`](#data_oneOf_i9_errorInfo)
       - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
       - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
       - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
@@ -412,21 +414,25 @@
   - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses`](#data_oneOf_i11)
     - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > messageType`](#data_oneOf_i11_messageType)
     - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses`](#data_oneOf_i11_statuses)
-      - [AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarStatus](#autogenerated_heading_49)
-        - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarStatus > serviceId`](#data_oneOf_i11_statuses_items_serviceId)
-        - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarStatus > subjectId`](#data_oneOf_i11_statuses_items_subjectId)
-        - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarStatus > instance`](#data_oneOf_i11_statuses_items_instance)
-        - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarStatus > id`](#data_oneOf_i11_statuses_items_id)
-        - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarStatus > errorInfo`](#data_oneOf_i11_statuses_items_errorInfo)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
+      - [AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus](#autogenerated_heading_49)
+        - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > serviceId`](#data_oneOf_i11_statuses_items_serviceId)
+        - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > subjectId`](#data_oneOf_i11_statuses_items_subjectId)
+        - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > instance`](#data_oneOf_i11_statuses_items_instance)
+        - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses`](#data_oneOf_i11_statuses_items_statuses)
+          - [AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses > AosEnvVarStatus](#autogenerated_heading_50)
+            - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses > AosEnvVarStatus > name`](#data_oneOf_i11_statuses_items_statuses_items_name)
+            - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses > AosEnvVarStatus > errorInfo`](#data_oneOf_i11_statuses_items_statuses_items_errorInfo)
+              - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
+              - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
+              - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
   - [Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification`](#data_oneOf_i12)
     - [Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > messageType`](#data_oneOf_i12_messageType)
     - [Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates`](#data_oneOf_i12_certificates)
-      - [AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates > AosCertificateIdentification](#autogenerated_heading_50)
-        - [Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates > AosCertificateIdentification > type`](#data_oneOf_i12_certificates_items_type)
-        - [Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates > AosCertificateIdentification > nodeId`](#data_oneOf_i12_certificates_items_nodeId)
+      - [AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates > AosCertificateIdentificationValidTill](#autogenerated_heading_51)
+        - [Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates > AosCertificateIdentificationValidTill > type`](#data_oneOf_i12_certificates_items_type)
+        - [Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates > AosCertificateIdentificationValidTill > nodeId`](#data_oneOf_i12_certificates_items_nodeId)
+        - [Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates > AosCertificateIdentificationValidTill > serial`](#data_oneOf_i12_certificates_items_serial)
+        - [Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates > AosCertificateIdentificationValidTill > validTill`](#data_oneOf_i12_certificates_items_validTill)
     - [Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > unitSecret`](#data_oneOf_i12_unitSecret)
       - [Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > unitSecret > version`](#data_oneOf_i12_unitSecret_version)
       - [Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > unitSecret > data`](#data_oneOf_i12_unitSecret_data)
@@ -434,26 +440,26 @@
   - [Property `AosUnitMessage > data > oneOf > AosIssuedUnitCertificates`](#data_oneOf_i13)
     - [Property `AosUnitMessage > data > oneOf > AosIssuedUnitCertificates > messageType`](#data_oneOf_i13_messageType)
     - [Property `AosUnitMessage > data > oneOf > AosIssuedUnitCertificates > certificates`](#data_oneOf_i13_certificates)
-      - [AosUnitMessage > data > oneOf > AosIssuedUnitCertificates > certificates > AosIssuedUnitCerts](#autogenerated_heading_51)
+      - [AosUnitMessage > data > oneOf > AosIssuedUnitCertificates > certificates > AosIssuedUnitCerts](#autogenerated_heading_52)
         - [Property `AosUnitMessage > data > oneOf > AosIssuedUnitCertificates > certificates > AosIssuedUnitCerts > type`](#data_oneOf_i13_certificates_items_type)
         - [Property `AosUnitMessage > data > oneOf > AosIssuedUnitCertificates > certificates > AosIssuedUnitCerts > nodeId`](#data_oneOf_i13_certificates_items_nodeId)
         - [Property `AosUnitMessage > data > oneOf > AosIssuedUnitCertificates > certificates > AosIssuedUnitCerts > certificateChain`](#data_oneOf_i13_certificates_items_certificateChain)
   - [Property `AosUnitMessage > data > oneOf > AosIssueUnitCertificates`](#data_oneOf_i14)
     - [Property `AosUnitMessage > data > oneOf > AosIssueUnitCertificates > messageType`](#data_oneOf_i14_messageType)
     - [Property `AosUnitMessage > data > oneOf > AosIssueUnitCertificates > requests`](#data_oneOf_i14_requests)
-      - [AosUnitMessage > data > oneOf > AosIssueUnitCertificates > requests > AosIssueCertData](#autogenerated_heading_52)
+      - [AosUnitMessage > data > oneOf > AosIssueUnitCertificates > requests > AosIssueCertData](#autogenerated_heading_53)
         - [Property `AosUnitMessage > data > oneOf > AosIssueUnitCertificates > requests > AosIssueCertData > type`](#data_oneOf_i14_requests_items_type)
         - [Property `AosUnitMessage > data > oneOf > AosIssueUnitCertificates > requests > AosIssueCertData > nodeId`](#data_oneOf_i14_requests_items_nodeId)
         - [Property `AosUnitMessage > data > oneOf > AosIssueUnitCertificates > requests > AosIssueCertData > csr`](#data_oneOf_i14_requests_items_csr)
   - [Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation`](#data_oneOf_i15)
     - [Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > messageType`](#data_oneOf_i15_messageType)
-    - [Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > requests`](#data_oneOf_i15_requests)
-      - [AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > requests > AosInstallCertData](#autogenerated_heading_53)
-        - [Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > requests > AosInstallCertData > type`](#data_oneOf_i15_requests_items_type)
-        - [Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > requests > AosInstallCertData > nodeId`](#data_oneOf_i15_requests_items_nodeId)
-        - [Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > requests > AosInstallCertData > serial`](#data_oneOf_i15_requests_items_serial)
-        - [Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > requests > AosInstallCertData > status`](#data_oneOf_i15_requests_items_status)
-        - [Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > requests > AosInstallCertData > description`](#data_oneOf_i15_requests_items_description)
+    - [Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > certificates`](#data_oneOf_i15_certificates)
+      - [AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > certificates > AosInstallCertData](#autogenerated_heading_54)
+        - [Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > certificates > AosInstallCertData > type`](#data_oneOf_i15_certificates_items_type)
+        - [Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > certificates > AosInstallCertData > nodeId`](#data_oneOf_i15_certificates_items_nodeId)
+        - [Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > certificates > AosInstallCertData > serial`](#data_oneOf_i15_certificates_items_serial)
+        - [Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > certificates > AosInstallCertData > status`](#data_oneOf_i15_certificates_items_status)
+        - [Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > certificates > AosInstallCertData > description`](#data_oneOf_i15_certificates_items_description)
 
 **Title:** AosUnitMessage
 
@@ -700,8 +706,8 @@ Specific value: `"coreAlert"`
 | ------------------------------------------------------------- | ------- | ------- | ---------- | ---------- | ----------------- |
 | + [timestamp](#data_oneOf_i0_items_items_oneOf_i1_timestamp ) | No      | string  | No         | -          | Timestamp         |
 | + [tag](#data_oneOf_i0_items_items_oneOf_i1_tag )             | No      | const   | No         | -          | Tag               |
-| + [serviceID](#data_oneOf_i0_items_items_oneOf_i1_serviceID ) | No      | string  | No         | -          | Serviceid         |
-| + [subjectID](#data_oneOf_i0_items_items_oneOf_i1_subjectID ) | No      | string  | No         | -          | Subjectid         |
+| + [serviceId](#data_oneOf_i0_items_items_oneOf_i1_serviceId ) | No      | string  | No         | -          | Serviceid         |
+| + [subjectId](#data_oneOf_i0_items_items_oneOf_i1_subjectId ) | No      | string  | No         | -          | Subjectid         |
 | + [instance](#data_oneOf_i0_items_items_oneOf_i1_instance )   | No      | integer | No         | -          | Instance          |
 | + [nodeId](#data_oneOf_i0_items_items_oneOf_i1_nodeId )       | No      | string  | No         | -          | Node ID           |
 | + [deviceId](#data_oneOf_i0_items_items_oneOf_i1_deviceId )   | No      | string  | No         | -          | Deviceid          |
@@ -732,7 +738,7 @@ Must be one of:
 * "deviceAllocateAlert"
 Specific value: `"deviceAllocateAlert"`
 
-###### <a name="data_oneOf_i0_items_items_oneOf_i1_serviceID"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertDeviceAllocate > serviceID`
+###### <a name="data_oneOf_i0_items_items_oneOf_i1_serviceId"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertDeviceAllocate > serviceId`
 
 **Title:** Serviceid
 
@@ -746,7 +752,7 @@ Specific value: `"deviceAllocateAlert"`
 | -------------- | - |
 | **Min length** | 1 |
 
-###### <a name="data_oneOf_i0_items_items_oneOf_i1_subjectID"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertDeviceAllocate > subjectID`
+###### <a name="data_oneOf_i0_items_items_oneOf_i1_subjectId"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertDeviceAllocate > subjectId`
 
 **Title:** Subjectid
 
@@ -950,8 +956,8 @@ Must be one of:
 | ------------------------------------------------------------- | ------- | ------- | ---------- | ---------- | ----------------- |
 | + [timestamp](#data_oneOf_i0_items_items_oneOf_i3_timestamp ) | No      | string  | No         | -          | Timestamp         |
 | + [tag](#data_oneOf_i0_items_items_oneOf_i3_tag )             | No      | const   | No         | -          | Tag               |
-| + [serviceID](#data_oneOf_i0_items_items_oneOf_i3_serviceID ) | No      | string  | No         | -          | Serviceid         |
-| + [subjectID](#data_oneOf_i0_items_items_oneOf_i3_subjectID ) | No      | string  | No         | -          | Subjectid         |
+| + [serviceId](#data_oneOf_i0_items_items_oneOf_i3_serviceId ) | No      | string  | No         | -          | Serviceid         |
+| + [subjectId](#data_oneOf_i0_items_items_oneOf_i3_subjectId ) | No      | string  | No         | -          | Subjectid         |
 | + [instance](#data_oneOf_i0_items_items_oneOf_i3_instance )   | No      | integer | No         | -          | Instance          |
 | + [parameter](#data_oneOf_i0_items_items_oneOf_i3_parameter ) | No      | string  | No         | -          | Parameter         |
 | + [value](#data_oneOf_i0_items_items_oneOf_i3_value )         | No      | integer | No         | -          | Value             |
@@ -981,7 +987,7 @@ Must be one of:
 * "instanceQuotaAlert"
 Specific value: `"instanceQuotaAlert"`
 
-###### <a name="data_oneOf_i0_items_items_oneOf_i3_serviceID"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertInstanceQuota > serviceID`
+###### <a name="data_oneOf_i0_items_items_oneOf_i3_serviceId"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertInstanceQuota > serviceId`
 
 **Title:** Serviceid
 
@@ -995,7 +1001,7 @@ Specific value: `"instanceQuotaAlert"`
 | -------------- | - |
 | **Min length** | 1 |
 
-###### <a name="data_oneOf_i0_items_items_oneOf_i3_subjectID"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertInstanceQuota > subjectID`
+###### <a name="data_oneOf_i0_items_items_oneOf_i3_subjectId"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertInstanceQuota > subjectId`
 
 **Title:** Subjectid
 
@@ -1062,8 +1068,8 @@ Specific value: `"instanceQuotaAlert"`
 | ------------------------------------------------------------- | ------- | ------- | ---------- | ---------- | ----------------- |
 | + [timestamp](#data_oneOf_i0_items_items_oneOf_i4_timestamp ) | No      | string  | No         | -          | Timestamp         |
 | - [tag](#data_oneOf_i0_items_items_oneOf_i4_tag )             | No      | const   | No         | -          | Tag               |
-| + [serviceID](#data_oneOf_i0_items_items_oneOf_i4_serviceID ) | No      | string  | No         | -          | Serviceid         |
-| + [subjectID](#data_oneOf_i0_items_items_oneOf_i4_subjectID ) | No      | string  | No         | -          | Subjectid         |
+| + [serviceId](#data_oneOf_i0_items_items_oneOf_i4_serviceId ) | No      | string  | No         | -          | Serviceid         |
+| + [subjectId](#data_oneOf_i0_items_items_oneOf_i4_subjectId ) | No      | string  | No         | -          | Subjectid         |
 | + [instance](#data_oneOf_i0_items_items_oneOf_i4_instance )   | No      | integer | No         | -          | Instance          |
 | + [version](#data_oneOf_i0_items_items_oneOf_i4_version )     | No      | string  | No         | -          | Version           |
 | + [message](#data_oneOf_i0_items_items_oneOf_i4_message )     | No      | string  | No         | -          | Message           |
@@ -1091,7 +1097,7 @@ Must be one of:
 * "serviceInstanceAlert"
 Specific value: `"serviceInstanceAlert"`
 
-###### <a name="data_oneOf_i0_items_items_oneOf_i4_serviceID"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertServiceInstance > serviceID`
+###### <a name="data_oneOf_i0_items_items_oneOf_i4_serviceId"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertServiceInstance > serviceId`
 
 **Title:** Serviceid
 
@@ -1105,7 +1111,7 @@ Specific value: `"serviceInstanceAlert"`
 | -------------- | - |
 | **Min length** | 1 |
 
-###### <a name="data_oneOf_i0_items_items_oneOf_i4_subjectID"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertServiceInstance > subjectID`
+###### <a name="data_oneOf_i0_items_items_oneOf_i4_subjectId"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertServiceInstance > subjectId`
 
 **Title:** Subjectid
 
@@ -1983,19 +1989,19 @@ Must be one of:
 
 | Property                                               | Pattern | Type             | Deprecated | Definition | Title/Description                          |
 | ------------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ------------------------------------------ |
-| + [ID](#data_oneOf_i2_nodes_items_ID )                 | No      | string           | No         | -          | Id                                         |
-| - [name](#data_oneOf_i2_nodes_items_name )             | No      | Combination      | No         | -          | Name                                       |
+| + [id](#data_oneOf_i2_nodes_items_id )                 | No      | string           | No         | -          | Id                                         |
+| + [name](#data_oneOf_i2_nodes_items_name )             | No      | Combination      | No         | -          | Name                                       |
 | + [type](#data_oneOf_i2_nodes_items_type )             | No      | string           | No         | -          | Type                                       |
 | + [maxDmips](#data_oneOf_i2_nodes_items_maxDmips )     | No      | integer          | No         | -          | Maxdmips                                   |
 | + [cpus](#data_oneOf_i2_nodes_items_cpus )             | No      | Combination      | No         | -          | Cpus                                       |
-| + [osType](#data_oneOf_i2_nodes_items_osType )         | No      | const            | No         | -          | Ostype                                     |
+| + [osType](#data_oneOf_i2_nodes_items_osType )         | No      | string           | No         | -          | Ostype                                     |
 | - [attrs](#data_oneOf_i2_nodes_items_attrs )           | No      | Combination      | No         | -          | Attrs                                      |
 | + [totalRAM](#data_oneOf_i2_nodes_items_totalRAM )     | No      | integer          | No         | -          | Totalram                                   |
 | - [partitions](#data_oneOf_i2_nodes_items_partitions ) | No      | array            | No         | -          | Partitions                                 |
 | + [status](#data_oneOf_i2_nodes_items_status )         | No      | enum (of string) | No         | -          | Status                                     |
 | - [errorInfo](#data_oneOf_i2_nodes_items_errorInfo )   | No      | object           | No         | In         | Error information. Absense means no error. |
 
-###### <a name="data_oneOf_i2_nodes_items_ID"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > ID`
+###### <a name="data_oneOf_i2_nodes_items_id"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > id`
 
 **Title:** Id
 
@@ -2028,7 +2034,6 @@ Must be one of:
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | **Type**                  | `combining`                                                                                                                       |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `null`                                                                                                                            |
 
 **Description:** User-friendly name of the node
 
@@ -2055,7 +2060,6 @@ Must be one of:
 
 | Restrictions   |     |
 | -------------- | --- |
-| **Min length** | 1   |
 | **Max length** | 256 |
 
 ###### <a name="data_oneOf_i2_nodes_items_name_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > name > anyOf > item 1`
@@ -2084,10 +2088,6 @@ Must be one of:
 |          |           |
 | -------- | --------- |
 | **Type** | `integer` |
-
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &ge; 1 |
 
 ###### <a name="data_oneOf_i2_nodes_items_cpus"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > cpus`
 
@@ -2129,14 +2129,14 @@ Must be one of:
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/$defs/AosNodeCPUInfo                                                                                                            |
 
-| Property                                                                             | Pattern | Type             | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ----------------- |
-| - [modelName](#data_oneOf_i2_nodes_items_cpus_anyOf_i0_items_modelName )             | No      | string           | No         | -          | Modelname         |
-| - [totalNumCores](#data_oneOf_i2_nodes_items_cpus_anyOf_i0_items_totalNumCores )     | No      | integer          | No         | -          | Totalnumcores     |
-| - [totalNumThreads](#data_oneOf_i2_nodes_items_cpus_anyOf_i0_items_totalNumThreads ) | No      | integer          | No         | -          | Totalnumthreads   |
-| + [arch](#data_oneOf_i2_nodes_items_cpus_anyOf_i0_items_arch )                       | No      | enum (of string) | No         | -          | Arch              |
-| - [archFamily](#data_oneOf_i2_nodes_items_cpus_anyOf_i0_items_archFamily )           | No      | Combination      | No         | -          | Archfamily        |
-| - [maxDmips](#data_oneOf_i2_nodes_items_cpus_anyOf_i0_items_maxDmips )               | No      | Combination      | No         | -          | Maxdmips          |
+| Property                                                                             | Pattern | Type        | Deprecated | Definition | Title/Description |
+| ------------------------------------------------------------------------------------ | ------- | ----------- | ---------- | ---------- | ----------------- |
+| - [modelName](#data_oneOf_i2_nodes_items_cpus_anyOf_i0_items_modelName )             | No      | string      | No         | -          | Modelname         |
+| - [totalNumCores](#data_oneOf_i2_nodes_items_cpus_anyOf_i0_items_totalNumCores )     | No      | integer     | No         | -          | Totalnumcores     |
+| - [totalNumThreads](#data_oneOf_i2_nodes_items_cpus_anyOf_i0_items_totalNumThreads ) | No      | integer     | No         | -          | Totalnumthreads   |
+| + [arch](#data_oneOf_i2_nodes_items_cpus_anyOf_i0_items_arch )                       | No      | string      | No         | -          | Arch              |
+| - [archFamily](#data_oneOf_i2_nodes_items_cpus_anyOf_i0_items_archFamily )           | No      | Combination | No         | -          | Archfamily        |
+| - [maxDmips](#data_oneOf_i2_nodes_items_cpus_anyOf_i0_items_maxDmips )               | No      | Combination | No         | -          | Maxdmips          |
 
 ###### <a name="data_oneOf_i2_nodes_items_cpus_anyOf_i0_items_modelName"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > cpus > anyOf > item 0 > AosNodeCPUInfo > modelName`
 
@@ -2169,15 +2169,27 @@ Must be one of:
 
 **Title:** Arch
 
-|          |                    |
-| -------- | ------------------ |
-| **Type** | `enum (of string)` |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
-Must be one of:
-* "x86"
-* "x86_64"
-* "arm32"
-* "arm64"
+**Examples:** 
+
+```json
+"x86"
+```
+
+```json
+"x86_64"
+```
+
+```json
+"arm32"
+```
+
+```json
+"arm64"
+```
 
 ###### <a name="data_oneOf_i2_nodes_items_cpus_anyOf_i0_items_archFamily"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > cpus > anyOf > item 0 > AosNodeCPUInfo > archFamily`
 
@@ -2257,13 +2269,9 @@ Must be one of:
 
 **Title:** Ostype
 
-|          |         |
-| -------- | ------- |
-| **Type** | `const` |
-
-Must be one of:
-* "linux"
-Specific value: `"linux"`
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 ###### <a name="data_oneOf_i2_nodes_items_attrs"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > attrs`
 
@@ -2285,9 +2293,9 @@ Specific value: `"linux"`
 
 ```json
 {
-    "cloud_connection": null,
+    "cloud_connection": "",
     "name1": "value1",
-    "static": null
+    "static": ""
 }
 ```
 
@@ -2861,8 +2869,15 @@ Must be one of:
 **Description:** The current (reported) status of the service instance.
 
 Must be one of:
+* "unknown"
+* "pending"
 * "downloading"
 * "downloaded"
+* "installing"
+* "installed"
+* "removing"
+* "removed"
+* "error"
 
 ###### <a name="data_oneOf_i2_layers_items_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > layers > AosLayerStatusInfo > errorInfo`
 
@@ -2949,13 +2964,15 @@ Must be one of:
 
 AosEdge uses this struct to report information about Unit's components
 
-| Property                                                      | Pattern | Type        | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
-| + [id](#data_oneOf_i2_components_items_id )                   | No      | string      | No         | -          | Component ID      |
-| - [type](#data_oneOf_i2_components_items_type )               | No      | Combination | No         | -          | Type              |
-| + [version](#data_oneOf_i2_components_items_version )         | No      | string      | No         | -          | Version           |
-| + [statuses](#data_oneOf_i2_components_items_statuses )       | No      | array       | No         | -          | Statuses          |
-| - [annotations](#data_oneOf_i2_components_items_annotations ) | No      | object      | No         | -          | Annotations       |
+| Property                                                      | Pattern | Type             | Deprecated | Definition | Title/Description                          |
+| ------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ------------------------------------------ |
+| + [id](#data_oneOf_i2_components_items_id )                   | No      | string           | No         | -          | Component ID                               |
+| - [type](#data_oneOf_i2_components_items_type )               | No      | Combination      | No         | -          | Type                                       |
+| + [version](#data_oneOf_i2_components_items_version )         | No      | string           | No         | -          | Version                                    |
+| - [nodeId](#data_oneOf_i2_components_items_nodeId )           | No      | Combination      | No         | -          | Nodeid                                     |
+| + [status](#data_oneOf_i2_components_items_status )           | No      | enum (of string) | No         | -          | Status                                     |
+| - [annotations](#data_oneOf_i2_components_items_annotations ) | No      | object           | No         | -          | Annotations                                |
+| - [errorInfo](#data_oneOf_i2_components_items_errorInfo )     | No      | object           | No         | In         | Error information. Absense means no error. |
 
 ###### <a name="data_oneOf_i2_components_items_id"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > id`
 
@@ -3006,49 +3023,7 @@ AosEdge uses this struct to report information about Unit's components
 
 **Description:** Version in format of the SemVer.
 
-###### <a name="data_oneOf_i2_components_items_statuses"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > statuses`
-
-**Title:** Statuses
-
-|          |         |
-| -------- | ------- |
-| **Type** | `array` |
-
-**Description:** List of component statuses for each node
-
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
-
-| Each item of this array must be                                          | Description                    |
-| ------------------------------------------------------------------------ | ------------------------------ |
-| [AosComponentStatusInfo](#data_oneOf_i2_components_items_statuses_items) | Aos component status info. ... |
-
-###### <a name="autogenerated_heading_17"></a>AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > statuses > AosComponentStatusInfo
-
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/$defs/AosComponentStatusInfo                                                                                                    |
-
-**Description:** Aos component status info.
-
-The structure encapsulates information about the component current status such as:
-- nodes that contain this component
-- component status on each node
-
-| Property                                                                 | Pattern | Type             | Deprecated | Definition | Title/Description                          |
-| ------------------------------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ------------------------------------------ |
-| - [nodeId](#data_oneOf_i2_components_items_statuses_items_nodeId )       | No      | Combination      | No         | -          | Nodeid                                     |
-| + [status](#data_oneOf_i2_components_items_statuses_items_status )       | No      | enum (of string) | No         | -          | Status                                     |
-| - [errorInfo](#data_oneOf_i2_components_items_statuses_items_errorInfo ) | No      | object           | No         | In         | Error information. Absense means no error. |
-
-###### <a name="data_oneOf_i2_components_items_statuses_items_nodeId"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > statuses > AosComponentStatusInfo > nodeId`
+###### <a name="data_oneOf_i2_components_items_nodeId"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > nodeId`
 
 **Title:** Nodeid
 
@@ -3060,24 +3035,24 @@ The structure encapsulates information about the component current status such a
 
 **Description:** IDs list of nodes this component is part of. Can be omitted for some statuses
 
-| Any of(Option)                                                           |
-| ------------------------------------------------------------------------ |
-| [item 0](#data_oneOf_i2_components_items_statuses_items_nodeId_anyOf_i0) |
-| [item 1](#data_oneOf_i2_components_items_statuses_items_nodeId_anyOf_i1) |
+| Any of(Option)                                            |
+| --------------------------------------------------------- |
+| [item 0](#data_oneOf_i2_components_items_nodeId_anyOf_i0) |
+| [item 1](#data_oneOf_i2_components_items_nodeId_anyOf_i1) |
 
-###### <a name="data_oneOf_i2_components_items_statuses_items_nodeId_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > statuses > AosComponentStatusInfo > nodeId > anyOf > item 0`
+###### <a name="data_oneOf_i2_components_items_nodeId_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > nodeId > anyOf > item 0`
 
 |          |          |
 | -------- | -------- |
 | **Type** | `string` |
 
-###### <a name="data_oneOf_i2_components_items_statuses_items_nodeId_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > statuses > AosComponentStatusInfo > nodeId > anyOf > item 1`
+###### <a name="data_oneOf_i2_components_items_nodeId_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > nodeId > anyOf > item 1`
 
 |          |        |
 | -------- | ------ |
 | **Type** | `null` |
 
-###### <a name="data_oneOf_i2_components_items_statuses_items_status"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > statuses > AosComponentStatusInfo > status`
+###### <a name="data_oneOf_i2_components_items_status"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > status`
 
 **Title:** Status
 
@@ -3093,7 +3068,19 @@ Must be one of:
 * "failed"
 * "error"
 
-###### <a name="data_oneOf_i2_components_items_statuses_items_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > statuses > AosComponentStatusInfo > errorInfo`
+###### <a name="data_oneOf_i2_components_items_annotations"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > annotations`
+
+**Title:** Annotations
+
+|                           |                                                                                                                                   |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `null`                                                                                                                            |
+
+**Description:** Additional information about this component
+
+###### <a name="data_oneOf_i2_components_items_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > errorInfo`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -3143,18 +3130,6 @@ Must be one of:
 
 **Description:** Text of the error description.
 
-###### <a name="data_oneOf_i2_components_items_annotations"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > annotations`
-
-**Title:** Annotations
-
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Default**               | `null`                                                                                                                            |
-
-**Description:** Additional information about this component
-
 #### <a name="data_oneOf_i2_unitSubjects"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > unitSubjects`
 
 **Title:** Unitsubjects
@@ -3176,7 +3151,7 @@ Must be one of:
 | ------------------------------------------------------- | ----------- |
 | [unitSubjects items](#data_oneOf_i2_unitSubjects_items) | -           |
 
-##### <a name="autogenerated_heading_18"></a>AosUnitMessage > data > oneOf > AosUnitStatus > unitSubjects > unitSubjects items
+##### <a name="autogenerated_heading_17"></a>AosUnitMessage > data > oneOf > AosUnitStatus > unitSubjects > unitSubjects items
 
 |          |          |
 | -------- | -------- |
@@ -3245,7 +3220,7 @@ Specific value: `"desiredStatus"`
 | ------------------------------------------------- | -------------------- |
 | [AosNodeDesiredState](#data_oneOf_i3_nodes_items) | Desired node status. |
 
-##### <a name="autogenerated_heading_19"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > nodes > AosNodeDesiredState
+##### <a name="autogenerated_heading_18"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > nodes > AosNodeDesiredState
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -3295,21 +3270,39 @@ Must be one of:
 
 **Description:** Desired unit config dictionary.
 
-| Property                                                    | Pattern | Type   | Deprecated | Definition | Title/Description |
-| ----------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| + [formatVersion](#data_oneOf_i3_unitConfig_formatVersion ) | No      | string | No         | -          | Formatversion     |
-| + [version](#data_oneOf_i3_unitConfig_version )             | No      | string | No         | -          | Version           |
-| + [nodes](#data_oneOf_i3_unitConfig_nodes )                 | No      | array  | No         | -          | Nodes             |
+| Property                                                    | Pattern | Type        | Deprecated | Definition | Title/Description |
+| ----------------------------------------------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
+| + [formatVersion](#data_oneOf_i3_unitConfig_formatVersion ) | No      | Combination | No         | -          | Formatversion     |
+| + [version](#data_oneOf_i3_unitConfig_version )             | No      | string      | No         | -          | Version           |
+| + [nodes](#data_oneOf_i3_unitConfig_nodes )                 | No      | array       | No         | -          | Nodes             |
 
 ##### <a name="data_oneOf_i3_unitConfig_formatVersion"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > formatVersion`
 
 **Title:** Formatversion
 
+|                           |                                                                                                                                   |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                                                                       |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+
+**Description:** Version of the configuration object (this object).
+
+| Any of(Option)                                             |
+| ---------------------------------------------------------- |
+| [item 0](#data_oneOf_i3_unitConfig_formatVersion_anyOf_i0) |
+| [item 1](#data_oneOf_i3_unitConfig_formatVersion_anyOf_i1) |
+
+###### <a name="data_oneOf_i3_unitConfig_formatVersion_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > formatVersion > anyOf > item 0`
+
 |          |          |
 | -------- | -------- |
 | **Type** | `string` |
 
-**Description:** Version of the configuration object (this object).
+###### <a name="data_oneOf_i3_unitConfig_formatVersion_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > formatVersion > anyOf > item 1`
+
+|          |           |
+| -------- | --------- |
+| **Type** | `integer` |
 
 ##### <a name="data_oneOf_i3_unitConfig_version"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > version`
 
@@ -3343,7 +3336,7 @@ Must be one of:
 | --------------------------------------------------- | ------------------------------------------- |
 | [NodeConfig](#data_oneOf_i3_unitConfig_nodes_items) | Configuration parameters for a unit's node. |
 
-###### <a name="autogenerated_heading_20"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig
+###### <a name="autogenerated_heading_19"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -3359,6 +3352,7 @@ Must be one of:
 | - [nodeId](#data_oneOf_i3_unitConfig_nodes_items_nodeId )                 | No      | string          | No         | -          | Nodeid                                                   |
 | - [alertRules](#data_oneOf_i3_unitConfig_nodes_items_alertRules )         | No      | object          | No         | In         | The default thresholds for services running on the node. |
 | - [resourceRatios](#data_oneOf_i3_unitConfig_nodes_items_resourceRatios ) | No      | object          | No         | In         | The requested ratio for each resource.                   |
+| - [devices](#data_oneOf_i3_unitConfig_nodes_items_devices )               | No      | array           | No         | -          | Devices                                                  |
 | - [resources](#data_oneOf_i3_unitConfig_nodes_items_resources )           | No      | array           | No         | -          | Resources                                                |
 | - [labels](#data_oneOf_i3_unitConfig_nodes_items_labels )                 | No      | array of string | No         | -          | Labels                                                   |
 | + [priority](#data_oneOf_i3_unitConfig_nodes_items_priority )             | No      | integer         | No         | -          | Priority                                                 |
@@ -3668,6 +3662,126 @@ Must be one of:
 
 **Description:** The storage ratio in percent.
 
+###### <a name="data_oneOf_i3_unitConfig_nodes_items_devices"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > devices`
+
+**Title:** Devices
+
+|             |         |
+| ----------- | ------- |
+| **Type**    | `array` |
+| **Default** | `null`  |
+
+**Description:** The devices list available for running services.
+
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+
+| Each item of this array must be                                      | Description |
+| -------------------------------------------------------------------- | ----------- |
+| [AosDeviceInfo](#data_oneOf_i3_unitConfig_nodes_items_devices_items) | -           |
+
+###### <a name="autogenerated_heading_20"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > devices > AosDeviceInfo
+
+|                           |                                                                                                                                   |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/$defs/AosDeviceInfo                                                                                                             |
+
+| Property                                                                          | Pattern | Type            | Deprecated | Definition | Title/Description |
+| --------------------------------------------------------------------------------- | ------- | --------------- | ---------- | ---------- | ----------------- |
+| + [name](#data_oneOf_i3_unitConfig_nodes_items_devices_items_name )               | No      | string          | No         | -          | Name              |
+| + [hostDevices](#data_oneOf_i3_unitConfig_nodes_items_devices_items_hostDevices ) | No      | array of string | No         | -          | Hostdevices       |
+| - [sharedCount](#data_oneOf_i3_unitConfig_nodes_items_devices_items_sharedCount ) | No      | integer         | No         | -          | Sharedcount       |
+| - [groups](#data_oneOf_i3_unitConfig_nodes_items_devices_items_groups )           | No      | array of string | No         | -          | Groups            |
+
+###### <a name="data_oneOf_i3_unitConfig_nodes_items_devices_items_name"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > devices > AosDeviceInfo > name`
+
+**Title:** Name
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+**Description:** Name of the device.
+
+###### <a name="data_oneOf_i3_unitConfig_nodes_items_devices_items_hostDevices"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > devices > AosDeviceInfo > hostDevices`
+
+**Title:** Hostdevices
+
+|          |                   |
+| -------- | ----------------- |
+| **Type** | `array of string` |
+
+**Description:** List of host devices.
+
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+
+| Each item of this array must be                                                            | Description |
+| ------------------------------------------------------------------------------------------ | ----------- |
+| [hostDevices items](#data_oneOf_i3_unitConfig_nodes_items_devices_items_hostDevices_items) | -           |
+
+###### <a name="autogenerated_heading_21"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > devices > AosDeviceInfo > hostDevices > hostDevices items
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+###### <a name="data_oneOf_i3_unitConfig_nodes_items_devices_items_sharedCount"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > devices > AosDeviceInfo > sharedCount`
+
+**Title:** Sharedcount
+
+|             |           |
+| ----------- | --------- |
+| **Type**    | `integer` |
+| **Default** | `0`       |
+
+**Description:** The count of shared devices that can be used in one time. 0 means no restrictions.
+
+| Restrictions |        |
+| ------------ | ------ |
+| **Minimum**  | &ge; 0 |
+
+###### <a name="data_oneOf_i3_unitConfig_nodes_items_devices_items_groups"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > devices > AosDeviceInfo > groups`
+
+**Title:** Groups
+
+|             |                   |
+| ----------- | ----------------- |
+| **Type**    | `array of string` |
+| **Default** | `null`            |
+
+**Description:** List of associated groups.
+
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+
+| Each item of this array must be                                                  | Description |
+| -------------------------------------------------------------------------------- | ----------- |
+| [groups items](#data_oneOf_i3_unitConfig_nodes_items_devices_items_groups_items) | -           |
+
+###### <a name="autogenerated_heading_22"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > devices > AosDeviceInfo > groups > groups items
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
 ###### <a name="data_oneOf_i3_unitConfig_nodes_items_resources"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources`
 
 **Title:** Resources
@@ -3691,7 +3805,7 @@ Must be one of:
 | --------------------------------------------------------------------- | ----------- |
 | [ResourceInfo](#data_oneOf_i3_unitConfig_nodes_items_resources_items) | -           |
 
-###### <a name="autogenerated_heading_21"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo
+###### <a name="autogenerated_heading_23"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -3699,14 +3813,13 @@ Must be one of:
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/$defs/ResourceInfo                                                                                                              |
 
-| Property                                                                    | Pattern | Type            | Deprecated | Definition | Title/Description |
-| --------------------------------------------------------------------------- | ------- | --------------- | ---------- | ---------- | ----------------- |
-| + [name](#data_oneOf_i3_unitConfig_nodes_items_resources_items_name )       | No      | string          | No         | -          | Name              |
-| - [groups](#data_oneOf_i3_unitConfig_nodes_items_resources_items_groups )   | No      | array of string | No         | -          | Groups            |
-| - [mounts](#data_oneOf_i3_unitConfig_nodes_items_resources_items_mounts )   | No      | array           | No         | -          | Mounts            |
-| - [devices](#data_oneOf_i3_unitConfig_nodes_items_resources_items_devices ) | No      | array           | No         | -          | Devices           |
-| - [envs](#data_oneOf_i3_unitConfig_nodes_items_resources_items_envs )       | No      | array of string | No         | -          | Envs              |
-| - [hosts](#data_oneOf_i3_unitConfig_nodes_items_resources_items_hosts )     | No      | array           | No         | -          | Hosts             |
+| Property                                                                  | Pattern | Type            | Deprecated | Definition | Title/Description |
+| ------------------------------------------------------------------------- | ------- | --------------- | ---------- | ---------- | ----------------- |
+| + [name](#data_oneOf_i3_unitConfig_nodes_items_resources_items_name )     | No      | string          | No         | -          | Name              |
+| - [groups](#data_oneOf_i3_unitConfig_nodes_items_resources_items_groups ) | No      | array of string | No         | -          | Groups            |
+| - [mounts](#data_oneOf_i3_unitConfig_nodes_items_resources_items_mounts ) | No      | array           | No         | -          | Mounts            |
+| - [envs](#data_oneOf_i3_unitConfig_nodes_items_resources_items_envs )     | No      | array of string | No         | -          | Envs              |
+| - [hosts](#data_oneOf_i3_unitConfig_nodes_items_resources_items_hosts )   | No      | array           | No         | -          | Hosts             |
 
 ###### <a name="data_oneOf_i3_unitConfig_nodes_items_resources_items_name"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > name`
 
@@ -3741,7 +3854,7 @@ Must be one of:
 | ---------------------------------------------------------------------------------- | ----------- |
 | [groups items](#data_oneOf_i3_unitConfig_nodes_items_resources_items_groups_items) | -           |
 
-###### <a name="autogenerated_heading_22"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > groups > groups items
+###### <a name="autogenerated_heading_24"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > groups > groups items
 
 |          |          |
 | -------- | -------- |
@@ -3770,7 +3883,7 @@ Must be one of:
 | ---------------------------------------------------------------------------------------- | ----------- |
 | [AosFileSystemMount](#data_oneOf_i3_unitConfig_nodes_items_resources_items_mounts_items) | -           |
 
-###### <a name="autogenerated_heading_23"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > mounts > AosFileSystemMount
+###### <a name="autogenerated_heading_25"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > mounts > AosFileSystemMount
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -3840,127 +3953,7 @@ Must be one of:
 | ------------------------------------------------------------------------------------------------- | ----------- |
 | [options items](#data_oneOf_i3_unitConfig_nodes_items_resources_items_mounts_items_options_items) | -           |
 
-###### <a name="autogenerated_heading_24"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > mounts > AosFileSystemMount > options > options items
-
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
-
-###### <a name="data_oneOf_i3_unitConfig_nodes_items_resources_items_devices"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > devices`
-
-**Title:** Devices
-
-|             |         |
-| ----------- | ------- |
-| **Type**    | `array` |
-| **Default** | `null`  |
-
-**Description:** The devices list available for running services.
-
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
-
-| Each item of this array must be                                                      | Description |
-| ------------------------------------------------------------------------------------ | ----------- |
-| [AosDeviceInfo](#data_oneOf_i3_unitConfig_nodes_items_resources_items_devices_items) | -           |
-
-###### <a name="autogenerated_heading_25"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > devices > AosDeviceInfo
-
-|                           |                                                                                                                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Type**                  | `object`                                                                                                                          |
-| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/$defs/AosDeviceInfo                                                                                                             |
-
-| Property                                                                                          | Pattern | Type            | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------------------------------------------- | ------- | --------------- | ---------- | ---------- | ----------------- |
-| + [name](#data_oneOf_i3_unitConfig_nodes_items_resources_items_devices_items_name )               | No      | string          | No         | -          | Name              |
-| + [hostDevices](#data_oneOf_i3_unitConfig_nodes_items_resources_items_devices_items_hostDevices ) | No      | array of string | No         | -          | Hostdevices       |
-| - [sharedCount](#data_oneOf_i3_unitConfig_nodes_items_resources_items_devices_items_sharedCount ) | No      | integer         | No         | -          | Sharedcount       |
-| - [groups](#data_oneOf_i3_unitConfig_nodes_items_resources_items_devices_items_groups )           | No      | array of string | No         | -          | Groups            |
-
-###### <a name="data_oneOf_i3_unitConfig_nodes_items_resources_items_devices_items_name"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > devices > AosDeviceInfo > name`
-
-**Title:** Name
-
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
-
-**Description:** Name of the device.
-
-###### <a name="data_oneOf_i3_unitConfig_nodes_items_resources_items_devices_items_hostDevices"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > devices > AosDeviceInfo > hostDevices`
-
-**Title:** Hostdevices
-
-|          |                   |
-| -------- | ----------------- |
-| **Type** | `array of string` |
-
-**Description:** List of host devices.
-
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
-
-| Each item of this array must be                                                                            | Description |
-| ---------------------------------------------------------------------------------------------------------- | ----------- |
-| [hostDevices items](#data_oneOf_i3_unitConfig_nodes_items_resources_items_devices_items_hostDevices_items) | -           |
-
-###### <a name="autogenerated_heading_26"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > devices > AosDeviceInfo > hostDevices > hostDevices items
-
-|          |          |
-| -------- | -------- |
-| **Type** | `string` |
-
-###### <a name="data_oneOf_i3_unitConfig_nodes_items_resources_items_devices_items_sharedCount"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > devices > AosDeviceInfo > sharedCount`
-
-**Title:** Sharedcount
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** Number of possible shares of the device.
-
-| Restrictions |        |
-| ------------ | ------ |
-| **Minimum**  | &gt; 0 |
-
-###### <a name="data_oneOf_i3_unitConfig_nodes_items_resources_items_devices_items_groups"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > devices > AosDeviceInfo > groups`
-
-**Title:** Groups
-
-|             |                   |
-| ----------- | ----------------- |
-| **Type**    | `array of string` |
-| **Default** | `null`            |
-
-**Description:** List of associated groups.
-
-|                      | Array restrictions |
-| -------------------- | ------------------ |
-| **Min items**        | N/A                |
-| **Max items**        | N/A                |
-| **Items unicity**    | False              |
-| **Additional items** | False              |
-| **Tuple validation** | See below          |
-
-| Each item of this array must be                                                                  | Description |
-| ------------------------------------------------------------------------------------------------ | ----------- |
-| [groups items](#data_oneOf_i3_unitConfig_nodes_items_resources_items_devices_items_groups_items) | -           |
-
-###### <a name="autogenerated_heading_27"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > devices > AosDeviceInfo > groups > groups items
+###### <a name="autogenerated_heading_26"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > mounts > AosFileSystemMount > options > options items
 
 |          |          |
 | -------- | -------- |
@@ -3989,7 +3982,7 @@ Must be one of:
 | ------------------------------------------------------------------------------ | ----------- |
 | [envs items](#data_oneOf_i3_unitConfig_nodes_items_resources_items_envs_items) | -           |
 
-###### <a name="autogenerated_heading_28"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > envs > envs items
+###### <a name="autogenerated_heading_27"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > envs > envs items
 
 |          |          |
 | -------- | -------- |
@@ -4018,7 +4011,7 @@ Must be one of:
 | ---------------------------------------------------------------------------------- | ----------- |
 | [AosHostRecord](#data_oneOf_i3_unitConfig_nodes_items_resources_items_hosts_items) | -           |
 
-###### <a name="autogenerated_heading_29"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > hosts > AosHostRecord
+###### <a name="autogenerated_heading_28"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resources > ResourceInfo > hosts > AosHostRecord
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -4074,7 +4067,7 @@ Must be one of:
 | ------------------------------------------------------------------ | ----------- |
 | [labels items](#data_oneOf_i3_unitConfig_nodes_items_labels_items) | -           |
 
-###### <a name="autogenerated_heading_30"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > labels > labels items
+###### <a name="autogenerated_heading_29"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > labels > labels items
 
 |          |          |
 | -------- | -------- |
@@ -4118,7 +4111,7 @@ Must be one of:
 | ---------------------------------------------------------- | ------------------------------------------- |
 | [AosDesiredComponentInfo](#data_oneOf_i3_components_items) | Component info sent from the AosEdge Cloud. |
 
-##### <a name="autogenerated_heading_31"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo
+##### <a name="autogenerated_heading_30"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -4233,7 +4226,7 @@ Must be one of:
 | -------------------------------------------------------- | ----------- |
 | [urls items](#data_oneOf_i3_components_items_urls_items) | -           |
 
-###### <a name="autogenerated_heading_32"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > urls > urls items
+###### <a name="autogenerated_heading_31"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > urls > urls items
 
 |          |          |
 | -------- | -------- |
@@ -4382,7 +4375,7 @@ Must be one of:
 | + [alg](#data_oneOf_i3_components_items_signs_alg )                           | No      | enum (of string) | No         | -          | Alg               |
 | + [value](#data_oneOf_i3_components_items_signs_value )                       | No      | string           | No         | -          | Value             |
 | + [trustedTimestamp](#data_oneOf_i3_components_items_signs_trustedTimestamp ) | No      | string           | No         | -          | Trustedtimestamp  |
-| - [ocspValues](#data_oneOf_i3_components_items_signs_ocspValues )             | No      | string           | No         | -          | Ocspvalues        |
+| - [ocspValues](#data_oneOf_i3_components_items_signs_ocspValues )             | No      | array of string  | No         | -          | Ocspvalues        |
 
 ###### <a name="data_oneOf_i3_components_items_signs_chainName"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > signs > chainName`
 
@@ -4412,10 +4405,9 @@ Must be one of:
 
 **Title:** Value
 
-|            |          |
-| ---------- | -------- |
-| **Type**   | `string` |
-| **Format** | `base64` |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 **Description:** Base64 encoded value of the signature.
 
@@ -4423,10 +4415,9 @@ Must be one of:
 
 **Title:** Trustedtimestamp
 
-|            |             |
-| ---------- | ----------- |
-| **Type**   | `string`    |
-| **Format** | `date-time` |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 **Description:** Timestamp of the signature in ISO8601 format.
 
@@ -4434,13 +4425,30 @@ Must be one of:
 
 **Title:** Ocspvalues
 
-|             |          |
-| ----------- | -------- |
-| **Type**    | `string` |
-| **Format**  | `base64` |
-| **Default** | `null`   |
+|             |                   |
+| ----------- | ----------------- |
+| **Type**    | `array of string` |
+| **Default** | `null`            |
 
 **Description:** OCSP value of the signature.
+
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+
+| Each item of this array must be                                            | Description |
+| -------------------------------------------------------------------------- | ----------- |
+| [ocspValues items](#data_oneOf_i3_components_items_signs_ocspValues_items) | -           |
+
+###### <a name="autogenerated_heading_32"></a>AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > signs > ocspValues > ocspValues items
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 #### <a name="data_oneOf_i3_layers"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > layers`
 
@@ -4771,7 +4779,7 @@ Must be one of:
 | -------------------------------------------------------------- | ------- | --------------- | ---------- | ---------- | ----------------- |
 | + [serviceId](#data_oneOf_i3_instances_items_serviceId )       | No      | string          | No         | -          | Service ID        |
 | + [subjectId](#data_oneOf_i3_instances_items_subjectId )       | No      | string          | No         | -          | Subject ID        |
-| + [priority](#data_oneOf_i3_instances_items_priority )         | No      | integer         | No         | -          | Priority          |
+| - [priority](#data_oneOf_i3_instances_items_priority )         | No      | integer         | No         | -          | Priority          |
 | - [numInstances](#data_oneOf_i3_instances_items_numInstances ) | No      | integer         | No         | -          | Numinstances      |
 | - [labels](#data_oneOf_i3_instances_items_labels )             | No      | array of string | No         | -          | Labels            |
 
@@ -4799,9 +4807,10 @@ Must be one of:
 
 **Title:** Priority
 
-|          |           |
-| -------- | --------- |
-| **Type** | `integer` |
+|             |           |
+| ----------- | --------- |
+| **Type**    | `integer` |
+| **Default** | `0`       |
 
 **Description:** Priority of the service instance.
 
@@ -4867,7 +4876,7 @@ Must be one of:
 
 | Property                                              | Pattern | Type             | Deprecated | Definition | Title/Description |
 | ----------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ----------------- |
-| + [ttl](#data_oneOf_i3_fotaSchedule_ttl )             | No      | integer          | No         | -          | Ttl               |
+| - [ttl](#data_oneOf_i3_fotaSchedule_ttl )             | No      | integer          | No         | -          | Ttl               |
 | + [type](#data_oneOf_i3_fotaSchedule_type )           | No      | enum (of string) | No         | -          | Type              |
 | - [timetable](#data_oneOf_i3_fotaSchedule_timetable ) | No      | array            | No         | -          | Timetable         |
 
@@ -4875,9 +4884,10 @@ Must be one of:
 
 **Title:** Ttl
 
-|          |           |
-| -------- | --------- |
-| **Type** | `integer` |
+|             |           |
+| ----------- | --------- |
+| **Type**    | `integer` |
+| **Default** | `null`    |
 
 **Description:** TTL of the rule in seconds.
 
@@ -5019,7 +5029,7 @@ Represent one entry of the timetable in form
 
 | Property                                              | Pattern | Type             | Deprecated | Definition | Title/Description |
 | ----------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ----------------- |
-| + [ttl](#data_oneOf_i3_fotaSchedule_ttl )             | No      | integer          | No         | -          | Ttl               |
+| - [ttl](#data_oneOf_i3_fotaSchedule_ttl )             | No      | integer          | No         | -          | Ttl               |
 | + [type](#data_oneOf_i3_fotaSchedule_type )           | No      | enum (of string) | No         | -          | Type              |
 | - [timetable](#data_oneOf_i3_fotaSchedule_timetable ) | No      | array            | No         | -          | Timetable         |
 
@@ -5027,9 +5037,10 @@ Represent one entry of the timetable in form
 
 **Title:** Ttl
 
-|          |           |
-| -------- | --------- |
-| **Type** | `integer` |
+|             |           |
+| ----------- | --------- |
+| **Type**    | `integer` |
+| **Default** | `null`    |
 
 **Description:** TTL of the rule in seconds.
 
@@ -5580,7 +5591,7 @@ Must be one of:
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/$defs/AosUpdateState                                                                                                            |
 
-**Description:** AosUnit protocol: 'newState' message.
+**Description:** AosUnit protocol: 'updateState' message.
 
 Cloud reports service state changes using this message.
 
@@ -5739,7 +5750,8 @@ Must be one of:
 
 | Property                                        | Pattern | Type            | Deprecated | Definition | Title/Description |
 | ----------------------------------------------- | ------- | --------------- | ---------- | ---------- | ----------------- |
-| + [from](#data_oneOf_i8_filter_from )           | No      | string          | No         | -          | From              |
+| - [from](#data_oneOf_i8_filter_from )           | No      | string          | No         | -          | From              |
+| - [till](#data_oneOf_i8_filter_till )           | No      | string          | No         | -          | Till              |
 | - [nodeIds](#data_oneOf_i8_filter_nodeIds )     | No      | array of string | No         | -          | Nodes             |
 | - [serviceId](#data_oneOf_i8_filter_serviceId ) | No      | string          | No         | -          | Service ID        |
 | - [subjectId](#data_oneOf_i8_filter_subjectId ) | No      | string          | No         | -          | Subject ID        |
@@ -5748,6 +5760,18 @@ Must be one of:
 ##### <a name="data_oneOf_i8_filter_from"></a>Property `AosUnitMessage > data > oneOf > AosRequestLog > filter > from`
 
 **Title:** From
+
+|             |             |
+| ----------- | ----------- |
+| **Type**    | `string`    |
+| **Format**  | `date-time` |
+| **Default** | `null`      |
+
+**Description:** Start timestamp of the logs in ISO8601 format. Applied operator: `>=`.
+
+##### <a name="data_oneOf_i8_filter_till"></a>Property `AosUnitMessage > data > oneOf > AosRequestLog > filter > till`
+
+**Title:** Till
 
 |             |             |
 | ----------- | ----------- |
@@ -5835,7 +5859,7 @@ Must be one of:
 | + [type](#data_oneOf_i8_uploadOptions_type )                     | No      | enum (of string) | No         | -          | Type of the channel |
 | - [url](#data_oneOf_i8_uploadOptions_url )                       | No      | string           | No         | -          | URL                 |
 | - [bearerToken](#data_oneOf_i8_uploadOptions_bearerToken )       | No      | string           | No         | -          | Bearer token        |
-| - [bearerTokenTTL](#data_oneOf_i8_uploadOptions_bearerTokenTTL ) | No      | string           | No         | -          | Bearer token TTL    |
+| - [bearerTokenTtl](#data_oneOf_i8_uploadOptions_bearerTokenTtl ) | No      | string           | No         | -          | Bearer token TTL    |
 
 ##### <a name="data_oneOf_i8_uploadOptions_type"></a>Property `AosUnitMessage > data > oneOf > AosRequestLog > uploadOptions > type`
 
@@ -5873,7 +5897,7 @@ Must be one of:
 
 **Description:** The token to use in the `Authorization` header.
 
-##### <a name="data_oneOf_i8_uploadOptions_bearerTokenTTL"></a>Property `AosUnitMessage > data > oneOf > AosRequestLog > uploadOptions > bearerTokenTTL`
+##### <a name="data_oneOf_i8_uploadOptions_bearerTokenTtl"></a>Property `AosUnitMessage > data > oneOf > AosRequestLog > uploadOptions > bearerTokenTtl`
 
 **Title:** Bearer token TTL
 
@@ -5897,16 +5921,16 @@ Must be one of:
 
 Unit sends the specified logs to the Cloud.
 
-| Property                                     | Pattern | Type             | Deprecated | Definition | Title/Description |
-| -------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ----------------- |
-| + [messageType](#data_oneOf_i9_messageType ) | No      | const            | No         | -          | Message type      |
-| + [logId](#data_oneOf_i9_logId )             | No      | string           | No         | -          | Lod Request ID    |
-| + [nodeId](#data_oneOf_i9_nodeId )           | No      | string           | No         | -          | Node ID           |
-| - [part](#data_oneOf_i9_part )               | No      | integer          | No         | -          | Part #            |
-| - [partsCount](#data_oneOf_i9_partsCount )   | No      | integer          | No         | -          | Parts count       |
-| - [content](#data_oneOf_i9_content )         | No      | string           | No         | -          | Content           |
-| + [status](#data_oneOf_i9_status )           | No      | enum (of string) | No         | -          | Status            |
-| - [error](#data_oneOf_i9_error )             | No      | object           | No         | In         | Error info        |
+| Property                                     | Pattern | Type             | Deprecated | Definition | Title/Description                          |
+| -------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ------------------------------------------ |
+| + [messageType](#data_oneOf_i9_messageType ) | No      | const            | No         | -          | Message type                               |
+| + [logId](#data_oneOf_i9_logId )             | No      | string           | No         | -          | Lod Request ID                             |
+| + [nodeId](#data_oneOf_i9_nodeId )           | No      | string           | No         | -          | Node ID                                    |
+| - [part](#data_oneOf_i9_part )               | No      | integer          | No         | -          | Part #                                     |
+| - [partsCount](#data_oneOf_i9_partsCount )   | No      | integer          | No         | -          | Parts count                                |
+| - [content](#data_oneOf_i9_content )         | No      | string           | No         | -          | Content                                    |
+| + [status](#data_oneOf_i9_status )           | No      | enum (of string) | No         | -          | Status                                     |
+| - [errorInfo](#data_oneOf_i9_errorInfo )     | No      | object           | No         | In         | Error information. Absense means no error. |
 
 #### <a name="data_oneOf_i9_messageType"></a>Property `AosUnitMessage > data > oneOf > AosPushLog > messageType`
 
@@ -5992,9 +6016,7 @@ Must be one of:
 * "empty"
 * "absent"
 
-#### <a name="data_oneOf_i9_error"></a>Property `AosUnitMessage > data > oneOf > AosPushLog > error`
-
-**Title:** Error info
+#### <a name="data_oneOf_i9_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosPushLog > errorInfo`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -6003,7 +6025,7 @@ Must be one of:
 | **Default**               | `null`                                                                                                                            |
 | **Defined in**            |                                                                                                                                   |
 
-**Description:** The error information about getting the log.
+**Description:** Error information. Absense means no error.
 
 | Property                                                                 | Pattern | Type    | Deprecated | Definition | Title/Description |
 | ------------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | ----------------- |
@@ -6052,7 +6074,7 @@ Must be one of:
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Defined in**            | #/$defs/AosOverrideEnvVarsRequest                                                                                                 |
 
-**Description:** AosUnit protocol: 'overrideEnvVarsStatus' message.
+**Description:** AosUnit protocol: 'overrideEnvVars' message.
 
 Unit reports EnvVar changes using this message.
 
@@ -6072,8 +6094,8 @@ Unit reports EnvVar changes using this message.
 **Description:** Message body type.
 
 Must be one of:
-* "overrideEnvVar"
-Specific value: `"overrideEnvVar"`
+* "overrideEnvVars"
+Specific value: `"overrideEnvVars"`
 
 #### <a name="data_oneOf_i10_items"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsRequest > items`
 
@@ -6237,11 +6259,11 @@ Specific value: `"overrideEnvVar"`
 
 **Title:** TTL
 
-|             |          |
-| ----------- | -------- |
-| **Type**    | `string` |
-| **Format**  | `time`   |
-| **Default** | `null`   |
+|             |             |
+| ----------- | ----------- |
+| **Type**    | `string`    |
+| **Format**  | `date-time` |
+| **Default** | `null`      |
 
 **Description:** Time to live of the variable in form `HH:MM[:SS]`. Optional. Empty or 0 means forever.
 
@@ -6294,29 +6316,28 @@ Specific value: `"overrideEnvVarsStatus"`
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
 
-| Each item of this array must be                   | Description                                     |
-| ------------------------------------------------- | ----------------------------------------------- |
-| [AosEnvVarStatus](#data_oneOf_i11_statuses_items) | The current status of the environment variable. |
+| Each item of this array must be                           | Description                                     |
+| --------------------------------------------------------- | ----------------------------------------------- |
+| [AosEnvVarInstanceStatus](#data_oneOf_i11_statuses_items) | The current status of the environment variable. |
 
-##### <a name="autogenerated_heading_49"></a>AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarStatus
+##### <a name="autogenerated_heading_49"></a>AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/$defs/AosEnvVarStatus                                                                                                           |
+| **Defined in**            | #/$defs/AosEnvVarInstanceStatus                                                                                                   |
 
 **Description:** The current status of the environment variable.
 
-| Property                                                 | Pattern | Type    | Deprecated | Definition | Title/Description                          |
-| -------------------------------------------------------- | ------- | ------- | ---------- | ---------- | ------------------------------------------ |
-| - [serviceId](#data_oneOf_i11_statuses_items_serviceId ) | No      | string  | No         | -          | Service ID                                 |
-| - [subjectId](#data_oneOf_i11_statuses_items_subjectId ) | No      | string  | No         | -          | Subject ID                                 |
-| - [instance](#data_oneOf_i11_statuses_items_instance )   | No      | integer | No         | -          | Instance no                                |
-| + [id](#data_oneOf_i11_statuses_items_id )               | No      | string  | No         | -          | ID (name)                                  |
-| - [errorInfo](#data_oneOf_i11_statuses_items_errorInfo ) | No      | object  | No         | In         | Error information. Absense means no error. |
+| Property                                                 | Pattern | Type    | Deprecated | Definition | Title/Description |
+| -------------------------------------------------------- | ------- | ------- | ---------- | ---------- | ----------------- |
+| - [serviceId](#data_oneOf_i11_statuses_items_serviceId ) | No      | string  | No         | -          | Service ID        |
+| - [subjectId](#data_oneOf_i11_statuses_items_subjectId ) | No      | string  | No         | -          | Subject ID        |
+| - [instance](#data_oneOf_i11_statuses_items_instance )   | No      | integer | No         | -          | Instance no       |
+| + [statuses](#data_oneOf_i11_statuses_items_statuses )   | No      | array   | No         | -          | Statuses list     |
 
-###### <a name="data_oneOf_i11_statuses_items_serviceId"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarStatus > serviceId`
+###### <a name="data_oneOf_i11_statuses_items_serviceId"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > serviceId`
 
 **Title:** Service ID
 
@@ -6327,7 +6348,7 @@ Specific value: `"overrideEnvVarsStatus"`
 
 **Description:** Unique ID of the service.
 
-###### <a name="data_oneOf_i11_statuses_items_subjectId"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarStatus > subjectId`
+###### <a name="data_oneOf_i11_statuses_items_subjectId"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > subjectId`
 
 **Title:** Subject ID
 
@@ -6338,7 +6359,7 @@ Specific value: `"overrideEnvVarsStatus"`
 
 **Description:** Unique ID of the subject.
 
-###### <a name="data_oneOf_i11_statuses_items_instance"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarStatus > instance`
+###### <a name="data_oneOf_i11_statuses_items_instance"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > instance`
 
 **Title:** Instance no
 
@@ -6349,9 +6370,46 @@ Specific value: `"overrideEnvVarsStatus"`
 
 **Description:** The instance number of the service. Starts from 0.
 
-###### <a name="data_oneOf_i11_statuses_items_id"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarStatus > id`
+###### <a name="data_oneOf_i11_statuses_items_statuses"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses`
 
-**Title:** ID (name)
+**Title:** Statuses list
+
+|          |         |
+| -------- | ------- |
+| **Type** | `array` |
+
+**Description:** The list of environment variables and their statuses.
+
+|                      | Array restrictions |
+| -------------------- | ------------------ |
+| **Min items**        | N/A                |
+| **Max items**        | N/A                |
+| **Items unicity**    | False              |
+| **Additional items** | False              |
+| **Tuple validation** | See below          |
+
+| Each item of this array must be                                  | Description                                     |
+| ---------------------------------------------------------------- | ----------------------------------------------- |
+| [AosEnvVarStatus](#data_oneOf_i11_statuses_items_statuses_items) | The current status of the environment variable. |
+
+###### <a name="autogenerated_heading_50"></a>AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses > AosEnvVarStatus
+
+|                           |                                                                                                                                   |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                                                                          |
+| **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Defined in**            | #/$defs/AosEnvVarStatus                                                                                                           |
+
+**Description:** The current status of the environment variable.
+
+| Property                                                                | Pattern | Type   | Deprecated | Definition | Title/Description                          |
+| ----------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ------------------------------------------ |
+| + [name](#data_oneOf_i11_statuses_items_statuses_items_name )           | No      | string | No         | -          | Name                                       |
+| - [errorInfo](#data_oneOf_i11_statuses_items_statuses_items_errorInfo ) | No      | object | No         | In         | Error information. Absense means no error. |
+
+###### <a name="data_oneOf_i11_statuses_items_statuses_items_name"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses > AosEnvVarStatus > name`
+
+**Title:** Name
 
 |          |          |
 | -------- | -------- |
@@ -6359,7 +6417,7 @@ Specific value: `"overrideEnvVarsStatus"`
 
 **Description:** The unique identifier (name) of the variable.
 
-###### <a name="data_oneOf_i11_statuses_items_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarStatus > errorInfo`
+###### <a name="data_oneOf_i11_statuses_items_statuses_items_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses > AosEnvVarStatus > errorInfo`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -6459,26 +6517,28 @@ Specific value: `"renewCertificatesNotification"`
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
 
-| Each item of this array must be                                    | Description                      |
-| ------------------------------------------------------------------ | -------------------------------- |
-| [AosCertificateIdentification](#data_oneOf_i12_certificates_items) | Certificate identification data. |
+| Each item of this array must be                                             | Description                                      |
+| --------------------------------------------------------------------------- | ------------------------------------------------ |
+| [AosCertificateIdentificationValidTill](#data_oneOf_i12_certificates_items) | Certificate identification data with valid till. |
 
-##### <a name="autogenerated_heading_50"></a>AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates > AosCertificateIdentification
+##### <a name="autogenerated_heading_51"></a>AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates > AosCertificateIdentificationValidTill
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/$defs/AosCertificateIdentification                                                                                              |
+| **Defined in**            | #/$defs/AosCertificateIdentificationValidTill                                                                                     |
 
-**Description:** Certificate identification data.
+**Description:** Certificate identification data with valid till.
 
-| Property                                               | Pattern | Type             | Deprecated | Definition | Title/Description       |
-| ------------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ----------------------- |
-| + [type](#data_oneOf_i12_certificates_items_type )     | No      | enum (of string) | No         | -          | Type of the certificate |
-| + [nodeId](#data_oneOf_i12_certificates_items_nodeId ) | No      | string           | No         | -          | Node ID                 |
+| Property                                                     | Pattern | Type             | Deprecated | Definition | Title/Description         |
+| ------------------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ------------------------- |
+| + [type](#data_oneOf_i12_certificates_items_type )           | No      | enum (of string) | No         | -          | Type of the certificate   |
+| + [nodeId](#data_oneOf_i12_certificates_items_nodeId )       | No      | string           | No         | -          | Node ID                   |
+| - [serial](#data_oneOf_i12_certificates_items_serial )       | No      | string           | No         | -          | Serial of the Certificate |
+| - [validTill](#data_oneOf_i12_certificates_items_validTill ) | No      | string           | No         | -          | Valid Till                |
 
-###### <a name="data_oneOf_i12_certificates_items_type"></a>Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates > AosCertificateIdentification > type`
+###### <a name="data_oneOf_i12_certificates_items_type"></a>Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates > AosCertificateIdentificationValidTill > type`
 
 **Title:** Type of the certificate
 
@@ -6499,7 +6559,7 @@ Must be one of:
 * "remote-device"
 * "azure-iot"
 
-###### <a name="data_oneOf_i12_certificates_items_nodeId"></a>Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates > AosCertificateIdentification > nodeId`
+###### <a name="data_oneOf_i12_certificates_items_nodeId"></a>Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates > AosCertificateIdentificationValidTill > nodeId`
 
 **Title:** Node ID
 
@@ -6508,6 +6568,29 @@ Must be one of:
 | **Type** | `string` |
 
 **Description:** Unique ID of the node.
+
+###### <a name="data_oneOf_i12_certificates_items_serial"></a>Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates > AosCertificateIdentificationValidTill > serial`
+
+**Title:** Serial of the Certificate
+
+|             |          |
+| ----------- | -------- |
+| **Type**    | `string` |
+| **Default** | `null`   |
+
+**Description:** Serial of the Certificate.
+
+###### <a name="data_oneOf_i12_certificates_items_validTill"></a>Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates > AosCertificateIdentificationValidTill > validTill`
+
+**Title:** Valid Till
+
+|             |             |
+| ----------- | ----------- |
+| **Type**    | `string`    |
+| **Format**  | `date-time` |
+| **Default** | `null`      |
+
+**Description:** The valid till of the Certificate.
 
 #### <a name="data_oneOf_i12_unitSecret"></a>Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > unitSecret`
 
@@ -6524,7 +6607,7 @@ Must be one of:
 | Property                                         | Pattern | Type    | Deprecated | Definition | Title/Description        |
 | ------------------------------------------------ | ------- | ------- | ---------- | ---------- | ------------------------ |
 | + [version](#data_oneOf_i12_unitSecret_version ) | No      | integer | No         | -          | Version                  |
-| + [data](#data_oneOf_i12_unitSecret_data )       | No      | object  | No         | In         | Data of the unit secret. |
+| - [data](#data_oneOf_i12_unitSecret_data )       | No      | object  | No         | In         | Data of the unit secret. |
 
 ##### <a name="data_oneOf_i12_unitSecret_version"></a>Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > unitSecret > version`
 
@@ -6544,22 +6627,24 @@ Must be one of:
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
+| **Default**               | `null`                                                                                                                            |
 | **Defined in**            |                                                                                                                                   |
 
 **Description:** Data of the unit secret.
 
 | Property                                                          | Pattern | Type   | Deprecated | Definition | Title/Description |
 | ----------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
-| + [ownerPassword](#data_oneOf_i12_unitSecret_data_ownerPassword ) | No      | string | No         | -          | Owner Password    |
+| - [ownerPassword](#data_oneOf_i12_unitSecret_data_ownerPassword ) | No      | string | No         | -          | Owner Password    |
 
 ###### <a name="data_oneOf_i12_unitSecret_data_ownerPassword"></a>Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > unitSecret > data > ownerPassword`
 
 **Title:** Owner Password
 
-|            |          |
-| ---------- | -------- |
-| **Type**   | `string` |
-| **Format** | `base64` |
+|             |          |
+| ----------- | -------- |
+| **Type**    | `string` |
+| **Format**  | `base64` |
+| **Default** | `null`   |
 
 **Description:** The owner password.
 
@@ -6616,7 +6701,7 @@ Specific value: `"issuedUnitCertificates"`
 | -------------------------------------------------------- | ---------------------------------------------- |
 | [AosIssuedUnitCerts](#data_oneOf_i13_certificates_items) | IssuedUnitCerts issued unit certificates info. |
 
-##### <a name="autogenerated_heading_51"></a>AosUnitMessage > data > oneOf > AosIssuedUnitCertificates > certificates > AosIssuedUnitCerts
+##### <a name="autogenerated_heading_52"></a>AosUnitMessage > data > oneOf > AosIssuedUnitCertificates > certificates > AosIssuedUnitCerts
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -6630,7 +6715,7 @@ Specific value: `"issuedUnitCertificates"`
 | -------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ----------------------- |
 | + [type](#data_oneOf_i13_certificates_items_type )                         | No      | enum (of string) | No         | -          | Type of the certificate |
 | + [nodeId](#data_oneOf_i13_certificates_items_nodeId )                     | No      | string           | No         | -          | Node ID                 |
-| + [certificateChain](#data_oneOf_i13_certificates_items_certificateChain ) | No      | integer          | No         | -          | Chain of certificates   |
+| + [certificateChain](#data_oneOf_i13_certificates_items_certificateChain ) | No      | string           | No         | -          | Chain of certificates   |
 
 ###### <a name="data_oneOf_i13_certificates_items_type"></a>Property `AosUnitMessage > data > oneOf > AosIssuedUnitCertificates > certificates > AosIssuedUnitCerts > type`
 
@@ -6667,9 +6752,9 @@ Must be one of:
 
 **Title:** Chain of certificates
 
-|          |           |
-| -------- | --------- |
-| **Type** | `integer` |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 **Description:** Chain of certificates.
 
@@ -6726,7 +6811,7 @@ Specific value: `"issueUnitCertificates"`
 | -------------------------------------------------- | ------------------------------------- |
 | [AosIssueCertData](#data_oneOf_i14_requests_items) | IssueCertData issue certificate data. |
 
-##### <a name="autogenerated_heading_52"></a>AosUnitMessage > data > oneOf > AosIssueUnitCertificates > requests > AosIssueCertData
+##### <a name="autogenerated_heading_53"></a>AosUnitMessage > data > oneOf > AosIssueUnitCertificates > requests > AosIssueCertData
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -6795,10 +6880,10 @@ Must be one of:
 
 Unit sends confirmation that certificates ware installed.
 
-| Property                                      | Pattern | Type  | Deprecated | Definition | Title/Description             |
-| --------------------------------------------- | ------- | ----- | ---------- | ---------- | ----------------------------- |
-| + [messageType](#data_oneOf_i15_messageType ) | No      | const | No         | -          | Message type                  |
-| + [requests](#data_oneOf_i15_requests )       | No      | array | No         | -          | Request to issue certificates |
+| Property                                        | Pattern | Type  | Deprecated | Definition | Title/Description             |
+| ----------------------------------------------- | ------- | ----- | ---------- | ---------- | ----------------------------- |
+| + [messageType](#data_oneOf_i15_messageType )   | No      | const | No         | -          | Message type                  |
+| + [certificates](#data_oneOf_i15_certificates ) | No      | array | No         | -          | Request to issue certificates |
 
 #### <a name="data_oneOf_i15_messageType"></a>Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > messageType`
 
@@ -6814,7 +6899,7 @@ Must be one of:
 * "installUnitCertificatesConfirmation"
 Specific value: `"installUnitCertificatesConfirmation"`
 
-#### <a name="data_oneOf_i15_requests"></a>Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > requests`
+#### <a name="data_oneOf_i15_certificates"></a>Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > certificates`
 
 **Title:** Request to issue certificates
 
@@ -6832,11 +6917,11 @@ Specific value: `"installUnitCertificatesConfirmation"`
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
 
-| Each item of this array must be                      | Description                               |
-| ---------------------------------------------------- | ----------------------------------------- |
-| [AosInstallCertData](#data_oneOf_i15_requests_items) | InstallCertData install certificate data. |
+| Each item of this array must be                          | Description                               |
+| -------------------------------------------------------- | ----------------------------------------- |
+| [AosInstallCertData](#data_oneOf_i15_certificates_items) | InstallCertData install certificate data. |
 
-##### <a name="autogenerated_heading_53"></a>AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > requests > AosInstallCertData
+##### <a name="autogenerated_heading_54"></a>AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > certificates > AosInstallCertData
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -6846,15 +6931,15 @@ Specific value: `"installUnitCertificatesConfirmation"`
 
 **Description:** InstallCertData install certificate data.
 
-| Property                                                     | Pattern | Type             | Deprecated | Definition | Title/Description         |
-| ------------------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ------------------------- |
-| + [type](#data_oneOf_i15_requests_items_type )               | No      | enum (of string) | No         | -          | Type of the certificate   |
-| + [nodeId](#data_oneOf_i15_requests_items_nodeId )           | No      | string           | No         | -          | Node ID                   |
-| + [serial](#data_oneOf_i15_requests_items_serial )           | No      | string           | No         | -          | Serial of the Certificate |
-| + [status](#data_oneOf_i15_requests_items_status )           | No      | enum (of string) | No         | -          | Status                    |
-| - [description](#data_oneOf_i15_requests_items_description ) | No      | string           | No         | -          | Description               |
+| Property                                                         | Pattern | Type             | Deprecated | Definition | Title/Description         |
+| ---------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ------------------------- |
+| + [type](#data_oneOf_i15_certificates_items_type )               | No      | enum (of string) | No         | -          | Type of the certificate   |
+| + [nodeId](#data_oneOf_i15_certificates_items_nodeId )           | No      | string           | No         | -          | Node ID                   |
+| + [serial](#data_oneOf_i15_certificates_items_serial )           | No      | string           | No         | -          | Serial of the Certificate |
+| + [status](#data_oneOf_i15_certificates_items_status )           | No      | enum (of string) | No         | -          | Status                    |
+| - [description](#data_oneOf_i15_certificates_items_description ) | No      | string           | No         | -          | Description               |
 
-###### <a name="data_oneOf_i15_requests_items_type"></a>Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > requests > AosInstallCertData > type`
+###### <a name="data_oneOf_i15_certificates_items_type"></a>Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > certificates > AosInstallCertData > type`
 
 **Title:** Type of the certificate
 
@@ -6875,7 +6960,7 @@ Must be one of:
 * "remote-device"
 * "azure-iot"
 
-###### <a name="data_oneOf_i15_requests_items_nodeId"></a>Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > requests > AosInstallCertData > nodeId`
+###### <a name="data_oneOf_i15_certificates_items_nodeId"></a>Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > certificates > AosInstallCertData > nodeId`
 
 **Title:** Node ID
 
@@ -6885,7 +6970,7 @@ Must be one of:
 
 **Description:** Unique ID of the node.
 
-###### <a name="data_oneOf_i15_requests_items_serial"></a>Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > requests > AosInstallCertData > serial`
+###### <a name="data_oneOf_i15_certificates_items_serial"></a>Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > certificates > AosInstallCertData > serial`
 
 **Title:** Serial of the Certificate
 
@@ -6895,7 +6980,7 @@ Must be one of:
 
 **Description:** Serial of the Certificate.
 
-###### <a name="data_oneOf_i15_requests_items_status"></a>Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > requests > AosInstallCertData > status`
+###### <a name="data_oneOf_i15_certificates_items_status"></a>Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > certificates > AosInstallCertData > status`
 
 **Title:** Status
 
@@ -6911,7 +6996,7 @@ Must be one of:
 * "failed"
 * "error"
 
-###### <a name="data_oneOf_i15_requests_items_description"></a>Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > requests > AosInstallCertData > description`
+###### <a name="data_oneOf_i15_certificates_items_description"></a>Property `AosUnitMessage > data > oneOf > AosInstallUnitCertificatesConfirmation > certificates > AosInstallCertData > description`
 
 **Title:** Description
 
@@ -6923,4 +7008,4 @@ Must be one of:
 **Description:** Description of the Certificate Installation
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2024-07-04 at 15:07:48 +0300
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2024-07-05 at 19:47:52 +0300

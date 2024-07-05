@@ -58,7 +58,7 @@ class AosNewState(BaseModel):
 
 class AosUpdateState(AosNewState):
     """
-    AosUnit protocol: 'newState' message.
+    AosUnit protocol: 'updateState' message.
 
     Cloud reports service state changes using this message.
     """
@@ -104,7 +104,7 @@ class AosStateAcceptance(BaseModel):
         ),
     ]
 
-    result: Annotated[
+    result: Annotated[  # noqa: WPS110
         Literal['accepted', 'rejected'],
         Field(
             alias='result',

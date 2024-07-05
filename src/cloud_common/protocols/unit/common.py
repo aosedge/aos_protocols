@@ -53,7 +53,7 @@ class AosHostRecord(BaseModel):
             alias='ip',
             title='IP address',
             description='IP address.',
-        )
+        ),
     ]
 
     hostname: Annotated[
@@ -62,7 +62,7 @@ class AosHostRecord(BaseModel):
             alias='hostname',
             title='Hostname',
             description='The hostname for the IP address.',
-        )
+        ),
     ]
 
 
@@ -73,7 +73,7 @@ class AosDeviceInfo(BaseModel):
         Field(
             alias='name',
             description='Name of the device.',
-        )
+        ),
     ]
 
     host_devices: Annotated[
@@ -81,16 +81,16 @@ class AosDeviceInfo(BaseModel):
         Field(
             alias='hostDevices',
             description='List of host devices.',
-        )
+        ),
     ]
 
     shared_count: Annotated[
         int,
         Field(
             alias='sharedCount',
-            default=None,
-            gt=0,
-            description='Number of possible shares of the device.',
+            default=0,
+            ge=0,
+            description='The count of shared devices that can be used in one time. 0 means no restrictions.',
         ),
     ]
 
@@ -110,7 +110,7 @@ class AosFileSystemMount(BaseModel):
         Field(
             alias='destination',
             description="The mount's destination.",
-        )
+        ),
     ]
 
     source: Annotated[
@@ -119,7 +119,7 @@ class AosFileSystemMount(BaseModel):
             default=None,
             alias='source',
             description="The mount's source.",
-        )
+        ),
     ]
 
     mount_type: Annotated[
@@ -128,7 +128,7 @@ class AosFileSystemMount(BaseModel):
             default=None,
             alias='type',
             description="The mount's type.",
-        )
+        ),
     ]
 
     options: Annotated[
@@ -137,7 +137,7 @@ class AosFileSystemMount(BaseModel):
             default=None,
             alias='options',
             description="The mount's options.",
-        )
+        ),
     ]
 
 
@@ -148,7 +148,7 @@ class AosAlertConfig(BaseModel):
         Field(
             alias='minTime',
             description='Minimum time (window) in seconds.',
-        )
+        ),
     ]
 
     min_threshold: Annotated[
@@ -156,7 +156,7 @@ class AosAlertConfig(BaseModel):
         Field(
             alias='minThreshold',
             description='Minimum threshold to stop alerting.',
-        )
+        ),
     ]
 
     max_threshold: Annotated[
@@ -164,7 +164,7 @@ class AosAlertConfig(BaseModel):
         Field(
             alias='maxThreshold',
             description='Threshold to trigger the alert.',
-        )
+        ),
     ]
 
 
@@ -174,5 +174,5 @@ TypeAosErrorInfoOptional = Annotated[
         default=None,
         alias='errorInfo',
         description='Error information. Absense means no error.',
-    )
+    ),
 ]

@@ -66,13 +66,13 @@
                     "title": "Tag",
                     "type": "string"
                 },
-                "serviceID": {
+                "serviceId": {
                     "description": "Service unique identifier in form: UUID4.",
                     "minLength": 1,
                     "title": "Serviceid",
                     "type": "string"
                 },
-                "subjectID": {
+                "subjectId": {
                     "description": "Subject unique identifier.",
                     "minLength": 1,
                     "title": "Subjectid",
@@ -104,8 +104,8 @@
             "required": [
                 "timestamp",
                 "tag",
-                "serviceID",
-                "subjectID",
+                "serviceId",
+                "subjectId",
                 "instance",
                 "nodeId",
                 "deviceId",
@@ -209,13 +209,13 @@
                     "title": "Tag",
                     "type": "string"
                 },
-                "serviceID": {
+                "serviceId": {
                     "description": "Service unique identifier.",
                     "minLength": 1,
                     "title": "Serviceid",
                     "type": "string"
                 },
-                "subjectID": {
+                "subjectId": {
                     "description": "Subject unique identifier.",
                     "minLength": 1,
                     "title": "Subjectid",
@@ -243,8 +243,8 @@
             "required": [
                 "timestamp",
                 "tag",
-                "serviceID",
-                "subjectID",
+                "serviceId",
+                "subjectId",
                 "instance",
                 "parameter",
                 "value"
@@ -316,13 +316,13 @@
                     "title": "Tag",
                     "type": "string"
                 },
-                "serviceID": {
+                "serviceId": {
                     "description": "Service unique identifier.",
                     "minLength": 1,
                     "title": "Serviceid",
                     "type": "string"
                 },
-                "subjectID": {
+                "subjectId": {
                     "description": "Subject unique identifier.",
                     "minLength": 1,
                     "title": "Subjectid",
@@ -348,8 +348,8 @@
             },
             "required": [
                 "timestamp",
-                "serviceID",
-                "subjectID",
+                "serviceId",
+                "subjectId",
                 "instance",
                 "version",
                 "message"
@@ -533,8 +533,8 @@
             "title": "AosCertificateChainInfo",
             "type": "object"
         },
-        "AosCertificateIdentification": {
-            "description": "Certificate identification data.",
+        "AosCertificateIdentificationValidTill": {
+            "description": "Certificate identification data with valid till.",
             "properties": {
                 "type": {
                     "description": "Type of the certificate.",
@@ -556,13 +556,26 @@
                     "description": "Unique ID of the node.",
                     "title": "Node ID",
                     "type": "string"
+                },
+                "serial": {
+                    "default": null,
+                    "description": "Serial of the Certificate.",
+                    "title": "Serial of the Certificate",
+                    "type": "string"
+                },
+                "validTill": {
+                    "default": null,
+                    "description": "The valid till of the Certificate.",
+                    "format": "date-time",
+                    "title": "Valid Till",
+                    "type": "string"
                 }
             },
             "required": [
                 "type",
                 "nodeId"
             ],
-            "title": "AosCertificateIdentification",
+            "title": "AosCertificateIdentificationValidTill",
             "type": "object"
         },
         "AosCertificateInfo": {
@@ -613,32 +626,6 @@
                     "title": "Version",
                     "type": "string"
                 },
-                "statuses": {
-                    "description": "List of component statuses for each node",
-                    "items": {
-                        "$ref": "#/$defs/AosComponentStatusInfo"
-                    },
-                    "title": "Statuses",
-                    "type": "array"
-                },
-                "annotations": {
-                    "default": null,
-                    "description": "Additional information about this component",
-                    "title": "Annotations",
-                    "type": "object"
-                }
-            },
-            "required": [
-                "id",
-                "version",
-                "statuses"
-            ],
-            "title": "AosComponentInfo",
-            "type": "object"
-        },
-        "AosComponentStatusInfo": {
-            "description": "Aos component status info.\n\nThe structure encapsulates information about the component current status such as:\n- nodes that contain this component\n- component status on each node",
-            "properties": {
                 "nodeId": {
                     "anyOf": [
                         {
@@ -663,6 +650,12 @@
                     "title": "Status",
                     "type": "string"
                 },
+                "annotations": {
+                    "default": null,
+                    "description": "Additional information about this component",
+                    "title": "Annotations",
+                    "type": "object"
+                },
                 "errorInfo": {
                     "allOf": [
                         {
@@ -674,9 +667,11 @@
                 }
             },
             "required": [
+                "id",
+                "version",
                 "status"
             ],
-            "title": "AosComponentStatusInfo",
+            "title": "AosComponentInfo",
             "type": "object"
         },
         "AosDecryptionInfo": {
@@ -830,6 +825,7 @@
                     "type": "string"
                 },
                 "priority": {
+                    "default": 0,
                     "description": "Priority of the service instance.",
                     "exclusiveMaximum": 1000000,
                     "minimum": 0,
@@ -855,8 +851,7 @@
             },
             "required": [
                 "serviceId",
-                "subjectId",
-                "priority"
+                "subjectId"
             ],
             "title": "AosDesiredInstanceInfo",
             "type": "object"
@@ -1125,9 +1120,9 @@
                     "type": "array"
                 },
                 "sharedCount": {
-                    "default": null,
-                    "description": "Number of possible shares of the device.",
-                    "exclusiveMinimum": 0,
+                    "default": 0,
+                    "description": "The count of shared devices that can be used in one time. 0 means no restrictions.",
+                    "minimum": 0,
                     "title": "Sharedcount",
                     "type": "integer"
                 },
@@ -1175,7 +1170,7 @@
                 "ttl": {
                     "default": null,
                     "description": "Time to live of the variable in form `HH:MM[:SS]`. Optional. Empty or 0 means forever.",
-                    "format": "time",
+                    "format": "date-time",
                     "title": "TTL",
                     "type": "string"
                 }
@@ -1187,7 +1182,7 @@
             "title": "AosEnvVar",
             "type": "object"
         },
-        "AosEnvVarStatus": {
+        "AosEnvVarInstanceStatus": {
             "description": "The current status of the environment variable.",
             "properties": {
                 "serviceId": {
@@ -1208,9 +1203,27 @@
                     "title": "Instance no",
                     "type": "integer"
                 },
-                "id": {
+                "statuses": {
+                    "description": "The list of environment variables and their statuses.",
+                    "items": {
+                        "$ref": "#/$defs/AosEnvVarStatus"
+                    },
+                    "title": "Statuses list",
+                    "type": "array"
+                }
+            },
+            "required": [
+                "statuses"
+            ],
+            "title": "AosEnvVarInstanceStatus",
+            "type": "object"
+        },
+        "AosEnvVarStatus": {
+            "description": "The current status of the environment variable.",
+            "properties": {
+                "name": {
                     "description": "The unique identifier (name) of the variable.",
-                    "title": "ID (name)",
+                    "title": "Name",
                     "type": "string"
                 },
                 "errorInfo": {
@@ -1224,7 +1237,7 @@
                 }
             },
             "required": [
-                "id"
+                "name"
             ],
             "title": "AosEnvVarStatus",
             "type": "object"
@@ -1377,7 +1390,7 @@
                     "title": "Message type",
                     "type": "string"
                 },
-                "requests": {
+                "certificates": {
                     "description": "Request to issue certificates.",
                     "items": {
                         "$ref": "#/$defs/AosInstallCertData"
@@ -1388,7 +1401,7 @@
             },
             "required": [
                 "messageType",
-                "requests"
+                "certificates"
             ],
             "title": "AosInstallUnitCertificatesConfirmation",
             "type": "object"
@@ -1556,7 +1569,7 @@
                 "certificateChain": {
                     "description": "Chain of certificates.",
                     "title": "Chain of certificates",
-                    "type": "integer"
+                    "type": "string"
                 }
             },
             "required": [
@@ -1591,8 +1604,15 @@
                 "status": {
                     "description": "The current (reported) status of the service instance.",
                     "enum": [
+                        "unknown",
+                        "pending",
                         "downloading",
-                        "downloaded"
+                        "downloaded",
+                        "installing",
+                        "installed",
+                        "removing",
+                        "removed",
+                        "error"
                     ],
                     "title": "Status",
                     "type": "string"
@@ -1621,9 +1641,16 @@
             "properties": {
                 "from": {
                     "default": null,
-                    "description": "End timestamp of the logs in ISO8601 format. Applied operator: `<`.",
+                    "description": "Start timestamp of the logs in ISO8601 format. Applied operator: `>=`.",
                     "format": "date-time",
                     "title": "From",
+                    "type": "string"
+                },
+                "till": {
+                    "default": null,
+                    "description": "End timestamp of the logs in ISO8601 format. Applied operator: `<`.",
+                    "format": "date-time",
+                    "title": "Till",
                     "type": "string"
                 },
                 "nodeIds": {
@@ -1654,9 +1681,6 @@
                     "type": "integer"
                 }
             },
-            "required": [
-                "from"
-            ],
             "title": "AosLogFilter",
             "type": "object"
         },
@@ -1815,7 +1839,7 @@
                     "type": "integer"
                 },
                 "arch": {
-                    "enum": [
+                    "examples": [
                         "x86",
                         "x86_64",
                         "arm32",
@@ -1937,13 +1961,13 @@
             "type": "object"
         },
         "AosOverrideEnvVarsRequest": {
-            "description": "AosUnit protocol: 'overrideEnvVarsStatus' message.\n\nUnit reports EnvVar changes using this message.",
+            "description": "AosUnit protocol: 'overrideEnvVars' message.\n\nUnit reports EnvVar changes using this message.",
             "properties": {
                 "messageType": {
-                    "const": "overrideEnvVar",
+                    "const": "overrideEnvVars",
                     "description": "Message body type.",
                     "enum": [
-                        "overrideEnvVar"
+                        "overrideEnvVars"
                     ],
                     "title": "Message type",
                     "type": "string"
@@ -1979,7 +2003,7 @@
                 "statuses": {
                     "description": "The list of environment variables and their statuses.",
                     "items": {
-                        "$ref": "#/$defs/AosEnvVarStatus"
+                        "$ref": "#/$defs/AosEnvVarInstanceStatus"
                     },
                     "title": "Statuses list",
                     "type": "array"
@@ -2065,15 +2089,14 @@
                     "title": "Status",
                     "type": "string"
                 },
-                "error": {
+                "errorInfo": {
                     "allOf": [
                         {
                             "$ref": "#/$defs/AosErrorInfo"
                         }
                     ],
                     "default": null,
-                    "description": "The error information about getting the log.",
-                    "title": "Error info"
+                    "description": "Error information. Absense means no error."
                 }
             },
             "required": [
@@ -2122,7 +2145,7 @@
                 "certificates": {
                     "description": "The list of certificates that were renewed.",
                     "items": {
-                        "$ref": "#/$defs/AosCertificateIdentification"
+                        "$ref": "#/$defs/AosCertificateIdentificationValidTill"
                     },
                     "title": "Certificates",
                     "type": "array"
@@ -2204,6 +2227,7 @@
             "description": "Aos schedule rule.",
             "properties": {
                 "ttl": {
+                    "default": null,
                     "description": "TTL of the rule in seconds.",
                     "title": "Ttl",
                     "type": "integer"
@@ -2229,7 +2253,6 @@
                 }
             },
             "required": [
-                "ttl",
                 "type"
             ],
             "title": "AosScheduleRule",
@@ -2402,22 +2425,22 @@
                 },
                 "value": {
                     "description": "Base64 encoded value of the signature.",
-                    "format": "base64",
                     "title": "Value",
                     "type": "string"
                 },
                 "trustedTimestamp": {
                     "description": "Timestamp of the signature in ISO8601 format.",
-                    "format": "date-time",
                     "title": "Trustedtimestamp",
                     "type": "string"
                 },
                 "ocspValues": {
                     "default": null,
                     "description": "OCSP value of the signature.",
-                    "format": "base64",
+                    "items": {
+                        "type": "string"
+                    },
                     "title": "Ocspvalues",
-                    "type": "string"
+                    "type": "array"
                 }
             },
             "required": [
@@ -2644,7 +2667,7 @@
         },
         "AosUnitNodeInfo": {
             "properties": {
-                "ID": {
+                "id": {
                     "description": "Node unique identifier",
                     "examples": [
                         "1398jf391",
@@ -2659,14 +2682,12 @@
                     "anyOf": [
                         {
                             "maxLength": 256,
-                            "minLength": 1,
                             "type": "string"
                         },
                         {
                             "type": "null"
                         }
                     ],
-                    "default": null,
                     "description": "User-friendly name of the node",
                     "examples": [
                         "Dom0",
@@ -2681,7 +2702,6 @@
                     "type": "string"
                 },
                 "maxDmips": {
-                    "minimum": 1,
                     "title": "Maxdmips",
                     "type": "integer"
                 },
@@ -2700,10 +2720,6 @@
                     "title": "Cpus"
                 },
                 "osType": {
-                    "const": "linux",
-                    "enum": [
-                        "linux"
-                    ],
                     "title": "Ostype",
                     "type": "string"
                 },
@@ -2725,9 +2741,9 @@
                             "dynamic"
                         ],
                         {
-                            "cloud_connection": null,
+                            "cloud_connection": "",
                             "name1": "value1",
-                            "static": null
+                            "static": ""
                         }
                     ],
                     "title": "Attrs"
@@ -2768,7 +2784,8 @@
                 }
             },
             "required": [
-                "ID",
+                "id",
+                "name",
                 "type",
                 "maxDmips",
                 "cpus",
@@ -2793,13 +2810,13 @@
                             "$ref": "#/$defs/AosUnitSecretData"
                         }
                     ],
+                    "default": null,
                     "description": "Data of the unit secret.",
                     "title": "Data of the unit secret."
                 }
             },
             "required": [
-                "version",
-                "data"
+                "version"
             ],
             "title": "AosUnitSecret",
             "type": "object"
@@ -2808,15 +2825,13 @@
             "description": "Keeps unit secret used to decode secure device password.",
             "properties": {
                 "ownerPassword": {
+                    "default": null,
                     "description": "The owner password.",
                     "format": "base64",
                     "title": "Owner Password",
                     "type": "string"
                 }
             },
-            "required": [
-                "ownerPassword"
-            ],
             "title": "AosUnitSecretData",
             "type": "object"
         },
@@ -2917,7 +2932,7 @@
             "type": "object"
         },
         "AosUpdateState": {
-            "description": "AosUnit protocol: 'newState' message.\n\nCloud reports service state changes using this message.",
+            "description": "AosUnit protocol: 'updateState' message.\n\nCloud reports service state changes using this message.",
             "properties": {
                 "messageType": {
                     "const": "updateState",
@@ -2992,7 +3007,7 @@
                     "title": "Bearer token",
                     "type": "string"
                 },
-                "bearerTokenTTL": {
+                "bearerTokenTtl": {
                     "default": null,
                     "description": "Time to live of the token in ISO8601 format.",
                     "format": "date-time",
@@ -3041,6 +3056,15 @@
                     ],
                     "default": null,
                     "description": "The requested ratio for each resource."
+                },
+                "devices": {
+                    "default": null,
+                    "description": "The devices list available for running services.",
+                    "items": {
+                        "$ref": "#/$defs/AosDeviceInfo"
+                    },
+                    "title": "Devices",
+                    "type": "array"
                 },
                 "resources": {
                     "default": null,
@@ -3133,15 +3157,6 @@
                     "title": "Mounts",
                     "type": "array"
                 },
-                "devices": {
-                    "default": null,
-                    "description": "The devices list available for running services.",
-                    "items": {
-                        "$ref": "#/$defs/AosDeviceInfo"
-                    },
-                    "title": "Devices",
-                    "type": "array"
-                },
                 "envs": {
                     "default": null,
                     "description": "The list of environment variables.",
@@ -3229,9 +3244,16 @@
             "description": "Configuration parameters for a unit.",
             "properties": {
                 "formatVersion": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ],
                     "description": "Version of the configuration object (this object).",
-                    "title": "Formatversion",
-                    "type": "string"
+                    "title": "Formatversion"
                 },
                 "version": {
                     "description": "Version in format of the SemVer.",
@@ -3277,7 +3299,7 @@
                     "issuedUnitCertificates": "#/$defs/AosIssuedUnitCertificates",
                     "monitoringData": "#/$defs/AosMonitoring",
                     "newState": "#/$defs/AosNewState",
-                    "overrideEnvVar": "#/$defs/AosOverrideEnvVarsRequest",
+                    "overrideEnvVars": "#/$defs/AosOverrideEnvVarsRequest",
                     "overrideEnvVarsStatus": "#/$defs/AosOverrideEnvVarsStatuses",
                     "pushLog": "#/$defs/AosPushLog",
                     "renewCertificatesNotification": "#/$defs/AosRenewCertsNotification",

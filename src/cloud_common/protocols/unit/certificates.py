@@ -3,6 +3,7 @@
 #  Copyright (c) 2018-2024 EPAM Systems Inc.
 #
 import base64
+from datetime import datetime
 from typing import Annotated, Literal
 
 from pydantic import BaseModel, Field, field_serializer
@@ -22,12 +23,41 @@ class AosCertificateIdentification(BaseModel):
     node_id: TypeNodeIdMandatory
 
 
+class AosCertificateIdentificationValidTill(AosCertificateIdentification):
+    """Certificate identification data with valid till."""
+
+    serial: Annotated[
+        str,
+        Field(
+            default=None,
+            alias='serial',
+            title='Serial of the Certificate',
+            description='Serial of the Certificate.',
+        ),
+    ]
+
+    valid_till: Annotated[
+        datetime,
+        Field(
+            default=None,
+            alias='validTill',
+            title='Valid Till',
+            description='The valid till of the Certificate.',
+        ),
+    ]
+
+    @field_serializer('valid_till')
+    def serialize_valid_till(self, valid_till: datetime, info):  # noqa: WPS110
+        return valid_till.isoformat()
+
+
 class AosUnitSecretData(BaseModel):
     """Keeps unit secret used to decode secure device password."""
 
     owner_password: Annotated[
         AosSensitiveBytes,
         Field(
+            default=None,
             alias='ownerPassword',
             title='Owner Password',
             description='The owner password.',
@@ -36,6 +66,8 @@ class AosUnitSecretData(BaseModel):
 
     @field_serializer('owner_password', when_used='json')
     def dump_secret(self, struct_value):
+        if not struct_value:
+            return None
         return base64.b64encode(struct_value.get_secret_value())
 
 
@@ -54,6 +86,7 @@ class AosUnitSecret(BaseModel):
     data: Annotated[  # noqa: WPS110
         AosUnitSecretData,
         Field(
+            default=None,
             alias='data',
             title='Data of the unit secret.',
             description='Data of the unit secret.',
@@ -78,7 +111,7 @@ class AosRenewCertsNotification(BaseModel):
     ]
 
     certificates: Annotated[
-        list[AosCertificateIdentification],
+        list[AosCertificateIdentificationValidTill],
         Field(
             alias='certificates',
             title='Certificates',
@@ -100,7 +133,7 @@ class AosIssuedUnitCerts(AosCertificateIdentification):
     """IssuedUnitCerts issued unit certificates info."""
 
     certificate_chain: Annotated[
-        int,
+        str,
         Field(
             alias='certificateChain',
             title='Chain of certificates',
@@ -216,7 +249,7 @@ class AosInstallUnitCertificatesConfirmation(BaseModel):
     certificates: Annotated[
         list[AosInstallCertData],
         Field(
-            alias='requests',
+            alias='certificates',
             title='Request to issue certificates',
             description='Request to issue certificates.',
         ),

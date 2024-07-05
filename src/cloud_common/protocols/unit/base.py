@@ -21,7 +21,12 @@ from cloud_common.protocols.unit.envars import (
 from cloud_common.protocols.unit.header import AosUnitHeader
 from cloud_common.protocols.unit.log import AosPushLog, AosRequestLog
 from cloud_common.protocols.unit.monitoring import AosMonitoring
-from cloud_common.protocols.unit.state import AosNewState, AosStateRequest, AosStateAcceptance, AosUpdateState
+from cloud_common.protocols.unit.state import (
+    AosNewState,
+    AosStateAcceptance,
+    AosStateRequest,
+    AosUpdateState,
+)
 from cloud_common.protocols.unit.unit_status import AosUnitStatus
 
 

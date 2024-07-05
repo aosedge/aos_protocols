@@ -37,23 +37,6 @@ TypeAosSystemIdMandatory = Annotated[
     ),
 ]
 
-TypeAosVendorVersionMandatory = Annotated[
-    str,
-    Field(
-        alias='vendorVersion',
-        description='vendor version in format of the SemVer',
-    ),
-]
-
-TypeAosVendorVersionOptional = Annotated[
-    Optional[str],
-    Field(
-        default=None,
-        alias='vendorVersion',
-        description='Vendor version in format of the SemVer.',
-    ),
-]
-
 TypeVersionMandatory = Annotated[
     str,
     Field(
@@ -367,8 +350,15 @@ TypeServiceInstanceStatus = Annotated[
 
 TypeLayerStatus = Annotated[
     Literal[
+        'unknown',
+        'pending',
         'downloading',
         'downloaded',
+        'installing',
+        'installed',
+        'removing',
+        'removed',
+        'error',
     ],
     Field(
         alias='status',

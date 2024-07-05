@@ -3,7 +3,7 @@
 #  Copyright (c) 2018-2024 EPAM Systems Inc.
 #
 import base64
-from datetime import datetime, time
+from datetime import time
 from typing import Annotated, Literal
 
 from pydantic import Base64Bytes, BaseModel, Field, field_serializer
@@ -14,17 +14,17 @@ from cloud_common.protocols.unit.types import (
     TypeAosSha256,
     TypeAosUrlsList,
     TypeComponentAnnotationsOptional,
+    TypeComponentIdOptional,
     TypeComponentType,
+    TypeLayerDigest,
     TypeLayerIdMandatory,
+    TypeNodeDesiredStatus,
+    TypeNodeIdMandatory,
     TypeProviderIdMandatory,
     TypeServiceIdMandatory,
-    TypeVersionMandatory,
-    TypeComponentIdOptional,
     TypeServiceServiceIdMandatory,
-    TypeNodeIdMandatory,
-    TypeNodeDesiredStatus,
-    TypeLayerDigest,
     TypeSubjectSubjectIdMandatory,
+    TypeVersionMandatory,
 )
 from cloud_common.protocols.unit.unit_config import UnitConfig
 
@@ -98,12 +98,12 @@ class AosDecryptionInfo(BaseModel):
 
 
 TypeAosDecryptionInfo = Annotated[
-        AosDecryptionInfo,
-        Field(
-            alias='decryptionInfo',
-            description='Object with information to decrypt the component.',
-        ),
-    ]
+    AosDecryptionInfo,
+    Field(
+        alias='decryptionInfo',
+        description='Object with information to decrypt the component.',
+    ),
+]
 
 
 class AosCertificateInfo(BaseModel):
@@ -161,14 +161,14 @@ class AosSignInfo(BaseModel):
     ]
 
     value: Annotated[  # noqa: WPS110
-        Base64Bytes,
+        str,
         Field(
             description='Base64 encoded value of the signature.',
         ),
     ]
 
-    timestamp: Annotated[
-        datetime,
+    trusted_timestamp: Annotated[
+        str,
         Field(
             alias='trustedTimestamp',
             description='Timestamp of the signature in ISO8601 format.',
@@ -176,7 +176,7 @@ class AosSignInfo(BaseModel):
     ]
 
     ocsp_values: Annotated[
-        Base64Bytes,
+        list[str],
         Field(
             alias='ocspValues',
             default=None,
@@ -244,6 +244,7 @@ class AosScheduleRule(BaseModel):
     ttl: Annotated[
         int,
         Field(
+            default=None,
             description='TTL of the rule in seconds.',
         ),
     ]
@@ -313,6 +314,7 @@ class AosDesiredInstanceInfo(BaseModel):
     priority: Annotated[
         int,
         Field(
+            default=0,
             ge=0,
             lt=1000000,  # noqa: WPS432
             description='Priority of the service instance.',

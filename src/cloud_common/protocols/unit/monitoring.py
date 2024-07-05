@@ -8,10 +8,10 @@ from typing import Annotated, Literal
 from pydantic import BaseModel, Field
 
 from cloud_common.protocols.unit.types import (
+    TypeInstanceNoMandatory,
     TypeNodeIdMandatory,
     TypeServiceServiceIdMandatory,
     TypeSubjectSubjectIdMandatory,
-    TypeInstanceNoMandatory,
 )
 
 
@@ -98,12 +98,12 @@ class AosInstanceMonitoringData(BaseModel):
     instance: TypeInstanceNoMandatory
     node_id: TypeNodeIdMandatory
 
-    items: Annotated[
+    items: Annotated[  # noqa: WPS110
         list[AosMonitoringData],
         Field(
             alias='items',
             description='List of the monitoring records',
-        )
+        ),
     ]
 
 
@@ -112,13 +112,13 @@ class AosNodeMonitoringData(BaseModel):
 
     node_id: TypeNodeIdMandatory
 
-    items: Annotated[
+    items: Annotated[  # noqa: WPS110
         AosMonitoringData,
         Field(
             default=None,
             alias='items',
             description='List of the monitoring records.',
-        )
+        ),
     ]
 
 

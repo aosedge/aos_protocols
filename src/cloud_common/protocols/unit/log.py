@@ -5,9 +5,9 @@
 from datetime import datetime
 from typing import Annotated, Literal
 
-from pydantic import Base64Bytes, BaseModel, Field
+from pydantic import Base64Bytes, BaseModel, Field, field_serializer
 
-from cloud_common.protocols.unit.common import AosErrorInfo
+from cloud_common.protocols.unit.common import TypeAosErrorInfoOptional
 from cloud_common.protocols.unit.types import (
     TypeAosLogId,
     TypeInstanceNoOptional,
@@ -23,6 +23,7 @@ class AosLogFilter(BaseModel):
     from_timestamp: Annotated[
         datetime,
         Field(
+            default=None,
             alias='from',
             title='From',
             description='Start timestamp of the logs in ISO8601 format. Applied operator: `>=`.',
@@ -33,8 +34,8 @@ class AosLogFilter(BaseModel):
         datetime,
         Field(
             default=None,
-            alias='from',
-            title='From',
+            alias='till',
+            title='Till',
             description='End timestamp of the logs in ISO8601 format. Applied operator: `<`.',
         ),
     ]
@@ -52,6 +53,14 @@ class AosLogFilter(BaseModel):
     service_id: TypeServiceServiceIdOptional
     subject_id: TypeSubjectSubjectIdOptional
     instance: TypeInstanceNoOptional
+
+    @field_serializer('from_timestamp')
+    def serialize_from_timestamp(self, from_timestamp: datetime, info):  # noqa: WPS110
+        return from_timestamp.isoformat('T', 'seconds')
+
+    @field_serializer('till_timestamp')
+    def serialize_till_timestamp(self, till_timestamp: datetime, info):  # noqa: WPS110
+        return till_timestamp.isoformat('T', 'seconds')
 
 
 class AosUploadLogOptions(BaseModel):
@@ -88,7 +97,7 @@ class AosUploadLogOptions(BaseModel):
         datetime,
         Field(
             default=None,
-            alias='bearerTokenTTL',
+            alias='bearerTokenTtl',
             title='Bearer token TTL',
             description='Time to live of the token in ISO8601 format.',
         ),
@@ -200,11 +209,4 @@ class AosPushLog(BaseModel):
         ),
     ]
 
-    error: Annotated[
-        AosErrorInfo,
-        Field(
-            default=None,
-            title='Error info',
-            description='The error information about getting the log.',
-        ),
-    ]
+    error_info: TypeAosErrorInfoOptional

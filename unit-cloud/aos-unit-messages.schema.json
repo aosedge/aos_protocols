@@ -3108,7 +3108,7 @@
                     ],
                     "title": "Attrs"
                 },
-                "totalRAM": {
+                "totalRam": {
                     "minimum": 1,
                     "title": "Totalram",
                     "type": "integer"
@@ -3150,7 +3150,7 @@
                 "maxDmips",
                 "cpus",
                 "osType",
-                "totalRAM",
+                "totalRam",
                 "status"
             ],
             "title": "AosUnitNodeInfo",

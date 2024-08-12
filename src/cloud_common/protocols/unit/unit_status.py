@@ -173,7 +173,7 @@ class AosUnitNodeInfo(BaseModel):
     total_ram: Annotated[
         int,
         Field(
-            alias='totalRAM',
+            alias='totalRam',
             ge=1,
         ),
     ]

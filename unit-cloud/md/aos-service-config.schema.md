@@ -73,18 +73,18 @@
       - [Property `AosConfigSchema > quotas > anyOf > ServiceQuotas > pidsLimit > anyOf > item 0`](#quotas_anyOf_i0_pidsLimit_anyOf_i0)
       - [Property `AosConfigSchema > quotas > anyOf > ServiceQuotas > pidsLimit > anyOf > item 1`](#quotas_anyOf_i0_pidsLimit_anyOf_i1)
   - [Property `AosConfigSchema > quotas > anyOf > item 1`](#quotas_anyOf_i1)
-- [![Optional](https://img.shields.io/badge/Optional-yellow) Property `AosConfigSchema > resourceRatios`](#resourceRatios)
-  - [Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios`](#resourceRatios_anyOf_i0)
-    - [Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > cpu`](#resourceRatios_anyOf_i0_cpu)
-      - [Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > cpu > anyOf > item 0`](#resourceRatios_anyOf_i0_cpu_anyOf_i0)
-      - [Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > cpu > anyOf > item 1`](#resourceRatios_anyOf_i0_cpu_anyOf_i1)
-    - [Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > ram`](#resourceRatios_anyOf_i0_ram)
-      - [Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > ram > anyOf > item 0`](#resourceRatios_anyOf_i0_ram_anyOf_i0)
-      - [Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > ram > anyOf > item 1`](#resourceRatios_anyOf_i0_ram_anyOf_i1)
-    - [Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > storage`](#resourceRatios_anyOf_i0_storage)
-      - [Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > storage > anyOf > item 0`](#resourceRatios_anyOf_i0_storage_anyOf_i0)
-      - [Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > storage > anyOf > item 1`](#resourceRatios_anyOf_i0_storage_anyOf_i1)
-  - [Property `AosConfigSchema > resourceRatios > anyOf > item 1`](#resourceRatios_anyOf_i1)
+- [![Optional](https://img.shields.io/badge/Optional-yellow) Property `AosConfigSchema > requestedResources`](#requestedResources)
+  - [Property `AosConfigSchema > requestedResources > anyOf > RequestedResources`](#requestedResources_anyOf_i0)
+    - [Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > cpu`](#requestedResources_anyOf_i0_cpu)
+      - [Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > cpu > anyOf > item 0`](#requestedResources_anyOf_i0_cpu_anyOf_i0)
+      - [Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > cpu > anyOf > item 1`](#requestedResources_anyOf_i0_cpu_anyOf_i1)
+    - [Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > ram`](#requestedResources_anyOf_i0_ram)
+      - [Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > ram > anyOf > item 0`](#requestedResources_anyOf_i0_ram_anyOf_i0)
+      - [Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > ram > anyOf > item 1`](#requestedResources_anyOf_i0_ram_anyOf_i1)
+    - [Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > storage`](#requestedResources_anyOf_i0_storage)
+      - [Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > storage > anyOf > item 0`](#requestedResources_anyOf_i0_storage_anyOf_i0)
+      - [Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > storage > anyOf > item 1`](#requestedResources_anyOf_i0_storage_anyOf_i1)
+  - [Property `AosConfigSchema > requestedResources > anyOf > item 1`](#requestedResources_anyOf_i1)
 - [![Optional](https://img.shields.io/badge/Optional-yellow) Property `AosConfigSchema > alertRules`](#alertRules)
   - [Property `AosConfigSchema > alertRules > anyOf > AlertRules`](#alertRules_anyOf_i0)
     - [Property `AosConfigSchema > alertRules > anyOf > AlertRules > ram`](#alertRules_anyOf_i0_ram)
@@ -142,23 +142,23 @@
 
 This schema describes the specification of the `aosService` layer in a service.
 
-| Property                                     | Pattern | Type             | Deprecated | Definition | Title/Description                    |
-| -------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ------------------------------------ |
-| + [created](#created )                       | No      | string           | No         | -          | Created                              |
-| - [author](#author )                         | No      | Combination      | No         | -          | Author                               |
-| - [balancingPolicy](#balancingPolicy )       | No      | enum (of string) | No         | -          | Balancingpolicy                      |
-| - [hostname](#hostname )                     | No      | Combination      | No         | -          | Hostname                             |
-| - [runners](#runners )                       | No      | Combination      | No         | -          | Runners                              |
-| - [runParameters](#runParameters )           | No      | Combination      | No         | -          | Run parameters for the Aos service.  |
-| - [offlineTTL](#offlineTTL )                 | No      | Combination      | No         | -          | Offlinettl                           |
-| - [devices](#devices )                       | No      | Combination      | No         | -          | List of needed or requested devices. |
-| - [resources](#resources )                   | No      | Combination      | No         | -          | Resources                            |
-| - [allowedConnections](#allowedConnections ) | No      | Combination      | No         | -          | Allowedconnections                   |
-| - [quotas](#quotas )                         | No      | Combination      | No         | -          | Quotas for the service.              |
-| - [resourceRatios](#resourceRatios )         | No      | Combination      | No         | -          | Resource ratios for the service.     |
-| - [alertRules](#alertRules )                 | No      | Combination      | No         | -          | Alert rules for the service.         |
-| - [permissions](#permissions )               | No      | Combination      | No         | -          | Permissions                          |
-| - [sysctl](#sysctl )                         | No      | Combination      | No         | -          | Sysctl                               |
+| Property                                     | Pattern | Type             | Deprecated | Definition | Title/Description                           |
+| -------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ------------------------------------------- |
+| + [created](#created )                       | No      | string           | No         | -          | Created                                     |
+| - [author](#author )                         | No      | Combination      | No         | -          | Author                                      |
+| - [balancingPolicy](#balancingPolicy )       | No      | enum (of string) | No         | -          | Balancingpolicy                             |
+| - [hostname](#hostname )                     | No      | Combination      | No         | -          | Hostname                                    |
+| - [runners](#runners )                       | No      | Combination      | No         | -          | Runners                                     |
+| - [runParameters](#runParameters )           | No      | Combination      | No         | -          | Run parameters for the Aos service.         |
+| - [offlineTTL](#offlineTTL )                 | No      | Combination      | No         | -          | Offlinettl                                  |
+| - [devices](#devices )                       | No      | Combination      | No         | -          | List of needed or requested devices.        |
+| - [resources](#resources )                   | No      | Combination      | No         | -          | Resources                                   |
+| - [allowedConnections](#allowedConnections ) | No      | Combination      | No         | -          | Allowedconnections                          |
+| - [quotas](#quotas )                         | No      | Combination      | No         | -          | Quotas for the service.                     |
+| - [requestedResources](#requestedResources ) | No      | Combination      | No         | -          | Requested Resources (CPU, RAM and Storage). |
+| - [alertRules](#alertRules )                 | No      | Combination      | No         | -          | Alert rules for the service.                |
+| - [permissions](#permissions )               | No      | Combination      | No         | -          | Permissions                                 |
+| - [sysctl](#sysctl )                         | No      | Combination      | No         | -          | Sysctl                                      |
 
 ## <a name="created"></a>![Required](https://img.shields.io/badge/Required-blue) Property `AosConfigSchema > created`
 
@@ -1026,7 +1026,7 @@ Format of connection string: {service_uid}/[port|port_range]/[tcp|udp]
 | -------- | ------ |
 | **Type** | `null` |
 
-## <a name="resourceRatios"></a>![Optional](https://img.shields.io/badge/Optional-yellow) Property `AosConfigSchema > resourceRatios`
+## <a name="requestedResources"></a>![Optional](https://img.shields.io/badge/Optional-yellow) Property `AosConfigSchema > requestedResources`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -1034,32 +1034,30 @@ Format of connection string: {service_uid}/[port|port_range]/[tcp|udp]
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Default**               | `null`                                                                                                                            |
 
-**Description:** Resource ratios for the service.
+**Description:** Requested Resources (CPU, RAM and Storage).
 
-| Any of(Option)                             |
-| ------------------------------------------ |
-| [ResourceRatios](#resourceRatios_anyOf_i0) |
-| [item 1](#resourceRatios_anyOf_i1)         |
+| Any of(Option)                                     |
+| -------------------------------------------------- |
+| [RequestedResources](#requestedResources_anyOf_i0) |
+| [item 1](#requestedResources_anyOf_i1)             |
 
-### <a name="resourceRatios_anyOf_i0"></a>Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios`
+### <a name="requestedResources_anyOf_i0"></a>Property `AosConfigSchema > requestedResources > anyOf > RequestedResources`
 
 |                           |                                                                                                                                   |
 | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                                                                          |
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
-| **Defined in**            | #/$defs/ResourceRatios                                                                                                            |
+| **Defined in**            | #/$defs/RequestedResources                                                                                                        |
 
-**Description:** Schema for resource ratios.
+**Description:** Schema for requested resources.
 
-Each of specified resource ratio is treated as `requested` value.
+| Property                                           | Pattern | Type        | Deprecated | Definition | Title/Description |
+| -------------------------------------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
+| - [cpu](#requestedResources_anyOf_i0_cpu )         | No      | Combination | No         | -          | Cpu               |
+| - [ram](#requestedResources_anyOf_i0_ram )         | No      | Combination | No         | -          | Ram               |
+| - [storage](#requestedResources_anyOf_i0_storage ) | No      | Combination | No         | -          | Storage           |
 
-| Property                                       | Pattern | Type        | Deprecated | Definition | Title/Description |
-| ---------------------------------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
-| - [cpu](#resourceRatios_anyOf_i0_cpu )         | No      | Combination | No         | -          | Cpu               |
-| - [ram](#resourceRatios_anyOf_i0_ram )         | No      | Combination | No         | -          | Ram               |
-| - [storage](#resourceRatios_anyOf_i0_storage ) | No      | Combination | No         | -          | Storage           |
-
-#### <a name="resourceRatios_anyOf_i0_cpu"></a>Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > cpu`
+#### <a name="requestedResources_anyOf_i0_cpu"></a>Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > cpu`
 
 **Title:** Cpu
 
@@ -1069,26 +1067,26 @@ Each of specified resource ratio is treated as `requested` value.
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Default**               | `null`                                                                                                                            |
 
-**Description:** CPU requested ratio in percents (against cpuLimit)
+**Description:** CPU requested resource (against cpuLimit)
 
-| Any of(Option)                                  |
-| ----------------------------------------------- |
-| [item 0](#resourceRatios_anyOf_i0_cpu_anyOf_i0) |
-| [item 1](#resourceRatios_anyOf_i0_cpu_anyOf_i1) |
+| Any of(Option)                                      |
+| --------------------------------------------------- |
+| [item 0](#requestedResources_anyOf_i0_cpu_anyOf_i0) |
+| [item 1](#requestedResources_anyOf_i0_cpu_anyOf_i1) |
 
-##### <a name="resourceRatios_anyOf_i0_cpu_anyOf_i0"></a>Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > cpu > anyOf > item 0`
+##### <a name="requestedResources_anyOf_i0_cpu_anyOf_i0"></a>Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > cpu > anyOf > item 0`
 
-|          |          |
-| -------- | -------- |
-| **Type** | `number` |
+|          |           |
+| -------- | --------- |
+| **Type** | `integer` |
 
-##### <a name="resourceRatios_anyOf_i0_cpu_anyOf_i1"></a>Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > cpu > anyOf > item 1`
+##### <a name="requestedResources_anyOf_i0_cpu_anyOf_i1"></a>Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > cpu > anyOf > item 1`
 
 |          |        |
 | -------- | ------ |
 | **Type** | `null` |
 
-#### <a name="resourceRatios_anyOf_i0_ram"></a>Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > ram`
+#### <a name="requestedResources_anyOf_i0_ram"></a>Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > ram`
 
 **Title:** Ram
 
@@ -1098,26 +1096,26 @@ Each of specified resource ratio is treated as `requested` value.
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Default**               | `null`                                                                                                                            |
 
-**Description:** RAM requested ratio in percents (against ramLimit)
+**Description:** RAM requested resource (against ramLimit)
 
-| Any of(Option)                                  |
-| ----------------------------------------------- |
-| [item 0](#resourceRatios_anyOf_i0_ram_anyOf_i0) |
-| [item 1](#resourceRatios_anyOf_i0_ram_anyOf_i1) |
+| Any of(Option)                                      |
+| --------------------------------------------------- |
+| [item 0](#requestedResources_anyOf_i0_ram_anyOf_i0) |
+| [item 1](#requestedResources_anyOf_i0_ram_anyOf_i1) |
 
-##### <a name="resourceRatios_anyOf_i0_ram_anyOf_i0"></a>Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > ram > anyOf > item 0`
+##### <a name="requestedResources_anyOf_i0_ram_anyOf_i0"></a>Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > ram > anyOf > item 0`
 
-|          |          |
-| -------- | -------- |
-| **Type** | `number` |
+|          |           |
+| -------- | --------- |
+| **Type** | `integer` |
 
-##### <a name="resourceRatios_anyOf_i0_ram_anyOf_i1"></a>Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > ram > anyOf > item 1`
+##### <a name="requestedResources_anyOf_i0_ram_anyOf_i1"></a>Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > ram > anyOf > item 1`
 
 |          |        |
 | -------- | ------ |
 | **Type** | `null` |
 
-#### <a name="resourceRatios_anyOf_i0_storage"></a>Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > storage`
+#### <a name="requestedResources_anyOf_i0_storage"></a>Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > storage`
 
 **Title:** Storage
 
@@ -1127,26 +1125,26 @@ Each of specified resource ratio is treated as `requested` value.
 | **Additional properties** | [![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green)](# "Additional Properties of any type are allowed.") |
 | **Default**               | `null`                                                                                                                            |
 
-**Description:** Storage requested ratio in percents (against storageLimit)
+**Description:** Storage requested resource (against storageLimit)
 
-| Any of(Option)                                      |
-| --------------------------------------------------- |
-| [item 0](#resourceRatios_anyOf_i0_storage_anyOf_i0) |
-| [item 1](#resourceRatios_anyOf_i0_storage_anyOf_i1) |
+| Any of(Option)                                          |
+| ------------------------------------------------------- |
+| [item 0](#requestedResources_anyOf_i0_storage_anyOf_i0) |
+| [item 1](#requestedResources_anyOf_i0_storage_anyOf_i1) |
 
-##### <a name="resourceRatios_anyOf_i0_storage_anyOf_i0"></a>Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > storage > anyOf > item 0`
+##### <a name="requestedResources_anyOf_i0_storage_anyOf_i0"></a>Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > storage > anyOf > item 0`
 
-|          |          |
-| -------- | -------- |
-| **Type** | `number` |
+|          |           |
+| -------- | --------- |
+| **Type** | `integer` |
 
-##### <a name="resourceRatios_anyOf_i0_storage_anyOf_i1"></a>Property `AosConfigSchema > resourceRatios > anyOf > ResourceRatios > storage > anyOf > item 1`
+##### <a name="requestedResources_anyOf_i0_storage_anyOf_i1"></a>Property `AosConfigSchema > requestedResources > anyOf > RequestedResources > storage > anyOf > item 1`
 
 |          |        |
 | -------- | ------ |
 | **Type** | `null` |
 
-### <a name="resourceRatios_anyOf_i1"></a>Property `AosConfigSchema > resourceRatios > anyOf > item 1`
+### <a name="requestedResources_anyOf_i1"></a>Property `AosConfigSchema > requestedResources > anyOf > item 1`
 
 |          |        |
 | -------- | ------ |
@@ -1675,4 +1673,4 @@ Must be one of:
 | **Type** | `null` |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2024-08-27 at 17:33:56 +0300
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2024-09-03 at 14:58:43 +0300

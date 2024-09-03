@@ -80,11 +80,11 @@ class AosMonitoringData(BaseModel):
         ),
     ]
 
-    disk: Annotated[
+    partitions: Annotated[
         list[AosPartitionUsage],
         Field(
             default=None,
-            alias='disk',
+            alias='partitions',
             description='Usage of disk partitions',
         ),
     ]

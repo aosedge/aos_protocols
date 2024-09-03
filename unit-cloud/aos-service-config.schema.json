@@ -177,50 +177,50 @@
             "title": "AlertRules",
             "type": "object"
         },
-        "ResourceRatios": {
-            "description": "Schema for resource ratios.\n\nEach of specified resource ratio is treated as `requested` value.",
+        "RequestedResources": {
+            "description": "Schema for requested resources.",
             "properties": {
                 "cpu": {
                     "anyOf": [
                         {
-                            "type": "number"
+                            "type": "integer"
                         },
                         {
                             "type": "null"
                         }
                     ],
                     "default": null,
-                    "description": "CPU requested ratio in percents (against cpuLimit)",
+                    "description": "CPU requested resource (against cpuLimit)",
                     "title": "Cpu"
                 },
                 "ram": {
                     "anyOf": [
                         {
-                            "type": "number"
+                            "type": "integer"
                         },
                         {
                             "type": "null"
                         }
                     ],
                     "default": null,
-                    "description": "RAM requested ratio in percents (against ramLimit)",
+                    "description": "RAM requested resource (against ramLimit)",
                     "title": "Ram"
                 },
                 "storage": {
                     "anyOf": [
                         {
-                            "type": "number"
+                            "type": "integer"
                         },
                         {
                             "type": "null"
                         }
                     ],
                     "default": null,
-                    "description": "Storage requested ratio in percents (against storageLimit)",
+                    "description": "Storage requested resource (against storageLimit)",
                     "title": "Storage"
                 }
             },
-            "title": "ResourceRatios",
+            "title": "RequestedResources",
             "type": "object"
         },
         "RunParameters": {
@@ -610,17 +610,17 @@
             "default": null,
             "description": "Quotas for the service."
         },
-        "resourceRatios": {
+        "requestedResources": {
             "anyOf": [
                 {
-                    "$ref": "#/$defs/ResourceRatios"
+                    "$ref": "#/$defs/RequestedResources"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "description": "Resource ratios for the service."
+            "description": "Requested Resources (CPU, RAM and Storage)."
         },
         "alertRules": {
             "anyOf": [

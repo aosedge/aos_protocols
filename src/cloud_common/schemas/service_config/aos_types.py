@@ -67,37 +67,35 @@ to configure how many starts per interval are allowed.""",
     ]
 
 
-class ResourceRatios(BaseModel):
+class RequestedResources(BaseModel):
     """
-    Schema for resource ratios.
-
-    Each of specified resource ratio is treated as `requested` value.
+    Schema for requested resources.
     """
 
     cpu: Annotated[
-        Optional[float],
+        Optional[int],
         Field(
             alias='cpu',
             default=None,
-            description='CPU requested ratio in percents (against cpuLimit)',
+            description='CPU requested resource (against cpuLimit)',
         ),
     ]
 
     ram: Annotated[
-        Optional[float],
+        Optional[int],
         Field(
             alias='ram',
             default=None,
-            description='RAM requested ratio in percents (against ramLimit)',
+            description='RAM requested resource (against ramLimit)',
         ),
     ]
 
     storage: Annotated[
-        Optional[float],
+        Optional[int],
         Field(
             alias='storage',
             default=None,
-            description='Storage requested ratio in percents (against storageLimit)',
+            description='Storage requested resource (against storageLimit)',
         ),
     ]
 

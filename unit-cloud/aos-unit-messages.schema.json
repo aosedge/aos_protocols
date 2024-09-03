@@ -36,6 +36,47 @@
             "title": "AlertRulePercents",
             "type": "object"
         },
+        "AlertRulePercentsOfDisk": {
+            "description": "Information about the threshold for disk with names.",
+            "properties": {
+                "minThreshold": {
+                    "description": "The lowest percents of a value after which resource can be rebalanced back.",
+                    "maximum": 100.0,
+                    "minimum": 0.0,
+                    "title": "Minthreshold",
+                    "type": "number"
+                },
+                "maxThreshold": {
+                    "description": "The highest percents of a value after which resource have be rebalanced.",
+                    "maximum": 100.0,
+                    "minimum": 0.0,
+                    "title": "Maxthreshold",
+                    "type": "number"
+                },
+                "minTimeout": {
+                    "description": "The timeout in seconds. Fraction of value specifies milliseconds",
+                    "examples": [
+                        0.5,
+                        100
+                    ],
+                    "exclusiveMinimum": 0.0,
+                    "title": "Mintimeout",
+                    "type": "number"
+                },
+                "name": {
+                    "title": "Name of partition",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "minThreshold",
+                "maxThreshold",
+                "minTimeout",
+                "name"
+            ],
+            "title": "AlertRulePercentsOfDisk",
+            "type": "object"
+        },
         "AlertRulePoints": {
             "description": "Information about the threshold in points.\n\nPoints can be DMIPs, bytes, etc.",
             "properties": {
@@ -90,14 +131,21 @@
                     "default": null,
                     "description": "The memory thresholds."
                 },
-                "storage": {
-                    "allOf": [
+                "partitions": {
+                    "anyOf": [
                         {
-                            "$ref": "#/$defs/AlertRulePercents"
+                            "items": {
+                                "$ref": "#/$defs/AlertRulePercentsOfDisk"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
                         }
                     ],
                     "default": null,
-                    "description": "The storage thresholds."
+                    "description": "The list of thresholds partitions.",
+                    "title": "Partitions"
                 },
                 "download": {
                     "allOf": [
@@ -2036,13 +2084,13 @@
                     "title": "Upload",
                     "type": "integer"
                 },
-                "disk": {
+                "partitions": {
                     "default": null,
                     "description": "Usage of disk partitions",
                     "items": {
                         "$ref": "#/$defs/AosPartitionUsage"
                     },
-                    "title": "Disk",
+                    "title": "Partitions",
                     "type": "array"
                 }
             },

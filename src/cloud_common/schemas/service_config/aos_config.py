@@ -8,7 +8,7 @@ from typing import Annotated, Optional, Literal, Dict
 from pydantic import BaseModel, Field
 
 from cloud_common.schemas.service_config.aos_types import UnitDevice, RunParameters, ServiceQuotas, AlertRules, \
-    ResourceRatios
+    RequestedResources
 
 
 class AosConfigSchema(BaseModel):
@@ -130,12 +130,12 @@ Format of connection string: {service_uid}/[port|port_range]/[tcp|udp]""",
         ),
     ]
 
-    resource_ratios: Annotated[
-        Optional[ResourceRatios],
+    requested_resources: Annotated[
+        Optional[RequestedResources],
         Field(
-            alias='resourceRatios',
+            alias='requestedResources',
             default=None,
-            description='Resource ratios for the service.'
+            description='Requested Resources (CPU, RAM and Storage).',
         ),
     ]
 

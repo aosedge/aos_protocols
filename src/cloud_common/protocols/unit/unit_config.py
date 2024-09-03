@@ -2,7 +2,7 @@
 #  Copyright (c) 2018-2024 Renesas Inc.
 #  Copyright (c) 2018-2024 EPAM Systems Inc.
 #
-from typing import Annotated
+from typing import Annotated, Optional
 
 from pydantic import BaseModel, Field
 
@@ -67,6 +67,19 @@ class AlertRulePercents(BaseModel):
                 0.5,
                 100,
             ],
+        ),
+    ]
+
+
+class AlertRulePercentsOfDisk(AlertRulePercents):
+    """
+    Information about the threshold for disk with names.
+    """
+    name: Annotated[
+        str,
+        Field(
+            title='Name of partition',
+            alias='name',
         ),
     ]
 
@@ -159,12 +172,12 @@ class AlertRules(BaseModel):
         ),
     ]
 
-    storage: Annotated[
-        AlertRulePercents,
+    partitions: Annotated[
+        Optional[list[AlertRulePercentsOfDisk]],
         Field(
             default=None,
-            alias='storage',
-            description='The storage thresholds.',
+            alias='partitions',
+            description='The list of thresholds partitions.',
         ),
     ]
 

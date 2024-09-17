@@ -7,12 +7,23 @@ import click
 from cloud_common.protocols.unit import base
 from cloud_common.schemas.service_config.aos_config import AosConfigSchema
 from cloud_common.schemas.unit_update.aos_update import AosUpdateSchema
+from cloud_common.protocols.unit.unit_config import UnitConfig
 
 DOCS_BASE_DIR = os.path.abspath(os.path.join(
     os.path.dirname(__file__),
     '..',
     'unit-cloud',
 ))
+
+def generate_unitconfig_schema() -> str:
+    schema = UnitConfig.model_json_schema()
+    schema_filename = os.path.join(DOCS_BASE_DIR, 'aos-unit-config.schema.json')
+    with open(schema_filename, 'wt') as file_handler:
+        file_handler.write(json.dumps(schema, indent=4))
+        file_handler.write('\n')
+    print(f'Schema generated at {schema_filename}')
+
+    return schema_filename
 
 
 def generate_schema() -> str:
@@ -102,8 +113,9 @@ def both():
 @cli.command()
 def schemas():
     schema_filenames = [
-        generate_service_schema(),
-        generate_update_schema(),
+#        generate_service_schema(),
+#        generate_update_schema(),
+        generate_unitconfig_schema(),
     ]
 
     for schema_filename in schema_filenames:

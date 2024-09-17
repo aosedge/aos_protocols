@@ -58,7 +58,7 @@ TypeNodeIdMandatory = Annotated[
     str,
     Field(
         alias='nodeId',
-        title='Node ID',
+        title='NodeID',
         description='Unique ID of the node.',
     ),
 ]
@@ -68,6 +68,7 @@ TypeNodeIdOptional = Annotated[
     Field(
         default=None,
         alias='nodeId',
+        title='NodeID',
         description='Unique ID of the node',
     ),
 ]
@@ -76,12 +77,13 @@ TypeNodeTypeMandatory = Annotated[
     str,
     Field(
         alias='nodeType',
-        title='Node type',
-        description='The type of the node.',
+        title='NodeType',
+        description='Depending on the configuration nodes are separated into several categories, named node types.',
         examples=[
-            'DomA',
-            'DomD',
-        ],
+            'VM setup has vm-dev-dynamic-1.0-main & vm-dev-dynamic-1.0-secondary node types:'
+            'vm-dev-dynamic-1.0-main node is single per unit, responsible for cloud communication and service balancing on the nodes;'
+            'vm-dev-dynamic-1.0-secondary - auxiliary node'
+        ]
     ),
 ]
 

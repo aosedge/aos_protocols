@@ -80,7 +80,7 @@ class AosDeviceInfo(BaseModel):
         list[str],
         Field(
             alias='hostDevices',
-            description='List of host devices.',
+            description='List of files in /dev/ dir, associated with the device name.',
         ),
     ]
 
@@ -90,7 +90,7 @@ class AosDeviceInfo(BaseModel):
             alias='sharedCount',
             default=0,
             ge=0,
-            description='The count of shared devices that can be used in one time. 0 means no restrictions.',
+            description='The maximum allowed number of services using the device. 0 means no restrictions.',
         ),
     ]
 
@@ -98,7 +98,7 @@ class AosDeviceInfo(BaseModel):
         list[str],
         Field(
             default=None,
-            description='List of associated groups.',
+            description='List of associated user groups.',
         ),
     ]
 

@@ -99,6 +99,15 @@ class RequestedResources(BaseModel):
         ),
     ]
 
+    state: Annotated[
+        Optional[int],
+        Field(
+            alias='state',
+            default=None,
+            description='State requested resource (against stateLimit)',
+        ),
+    ]
+
 
 class ServiceQuotas(BaseModel):
     """Schema for possible quotas for a service."""

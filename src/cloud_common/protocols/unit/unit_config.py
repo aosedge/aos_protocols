@@ -152,6 +152,15 @@ class ResourceRatiosInfo(BaseModel):
         ),
     ]
 
+    state: Annotated[
+        float,
+        Field(
+            default=None,
+            alias='state',
+            description='Requested size of the "state" partition (in percents of its capacity).',
+        ),
+    ]
+
 
 class AlertRules(BaseModel):
     cpu: Annotated[

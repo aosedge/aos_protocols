@@ -3586,6 +3586,12 @@
                     "description": "The storage ratio in percent.",
                     "title": "Storage",
                     "type": "number"
+                },
+                "state": {
+                    "default": null,
+                    "description": "Requested size of the \"state\" partition (in percents of its capacity).",
+                    "title": "State",
+                    "type": "number"
                 }
             },
             "title": "ResourceRatiosInfo",

@@ -340,6 +340,7 @@ TypeServiceInstanceStatus = Annotated[
     Literal[
         'activating',
         'active',
+        'inactive',
         'failed',
     ],
     Field(

@@ -2669,6 +2669,7 @@
                     "enum": [
                         "activating",
                         "active",
+                        "inactive",
                         "failed"
                     ],
                     "title": "Status",

@@ -124,7 +124,9 @@ class AlertRulePoints(BaseModel):
 
 
 class ResourceRatiosInfo(BaseModel):
-
+    """
+    The default resource ratio allocated for a service.
+    """
     cpu: Annotated[
         float,
         Field(
@@ -163,6 +165,9 @@ class ResourceRatiosInfo(BaseModel):
 
 
 class AlertRules(BaseModel):
+    """
+    The default thresholds for services running on the node.
+    """
     cpu: Annotated[
         AlertRulePercents,
         Field(
@@ -177,7 +182,7 @@ class AlertRules(BaseModel):
         Field(
             default=None,
             alias='ram',
-            description='The memory thresholds.',
+            description='The RAM thresholds.',
         ),
     ]
 
@@ -195,7 +200,7 @@ class AlertRules(BaseModel):
         Field(
             default=None,
             alias='download',
-            description='The incoming to the unit traffic thresholds (in bytes).',
+            description='Alert rules for incoming network traffic(in bytes).',
         )
     ]
 
@@ -204,7 +209,7 @@ class AlertRules(BaseModel):
         Field(
             default=None,
             alias='upload',
-            description='The outgoing from the unit traffic thresholds (in bytes).',
+            description='Alert rules for outgoing network traffic(in bytes).',
         )
     ]
 
@@ -257,7 +262,7 @@ class ResourceInfo(BaseModel):
 
 
 class NodeConfig(BaseModel):
-    """Configuration parameters for a unit's node."""
+    """Node configuration parameters."""
 
     node_type: TypeNodeTypeMandatory
     node_id: TypeNodeIdOptional
@@ -267,6 +272,7 @@ class NodeConfig(BaseModel):
         Field(
             default=None,
             alias='alertRules',
+            title='Alert Rules',
             description='The default thresholds for services running on the node.',
         ),
     ]
@@ -276,7 +282,7 @@ class NodeConfig(BaseModel):
         Field(
             alias='resourceRatios',
             default=None,
-            description='The requested ratio for each resource.',
+            description='The default resource ratio allocated for a service.',
         ),
     ]
 
@@ -285,7 +291,8 @@ class NodeConfig(BaseModel):
         Field(
             default=None,
             alias='devices',
-            description='The devices list available for running services.',
+            description='The device list available for running services.',
+            examples=['Name="camera", host_devices=["/dev/camera"]', 'Name="pulseaudio", host_devices=["/dev/pulseaudio"]']
         ),
     ]
 
@@ -294,7 +301,7 @@ class NodeConfig(BaseModel):
         Field(
             default=None,
             alias='resources',
-            description='The list of resources available for running services.',
+            description='Available resources for services.',
         ),
     ]
 
@@ -320,15 +327,22 @@ class NodeConfig(BaseModel):
 class UnitConfig(BaseModel):
     """Configuration parameters for a unit."""
 
-    format_version: Annotated[
-        str | int,
+    version: Annotated[
+        str,
         Field(
-            alias='formatVersion',
-            description='Version of the configuration object (this object).',
+            alias='version',
+            description='Version identifies the configuration itself. It is automatically incremented with every configuration update.',
         ),
     ]
 
-    version: TypeVersionMandatory
+    format_version: Annotated[
+        str,
+        Field(
+            alias='formatVersion',
+            title="Format Version",
+            description='JSON format of the unit configuration may change over time. This field identifies current format of unit configuration. Cloud sets it automatically.',
+        ),
+    ]
 
     nodes: Annotated[
         list[NodeConfig],

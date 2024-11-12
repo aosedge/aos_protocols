@@ -68,6 +68,7 @@ TypeNodeIdOptional = Annotated[
     Field(
         default=None,
         alias='nodeId',
+        title='Node ID',
         description='Unique ID of the node',
     ),
 ]
@@ -76,12 +77,8 @@ TypeNodeTypeMandatory = Annotated[
     str,
     Field(
         alias='nodeType',
-        title='Node type',
-        description='The type of the node.',
-        examples=[
-            'DomA',
-            'DomD',
-        ],
+        title='Node Type',
+        description='Group of nodes with identical configuration.',
     ),
 ]
 

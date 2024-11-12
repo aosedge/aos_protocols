@@ -112,6 +112,7 @@
             "type": "object"
         },
         "AlertRules": {
+            "description": "The default thresholds for services running on the node.",
             "properties": {
                 "cpu": {
                     "allOf": [
@@ -129,7 +130,7 @@
                         }
                     ],
                     "default": null,
-                    "description": "The memory thresholds."
+                    "description": "The RAM thresholds."
                 },
                 "partitions": {
                     "anyOf": [
@@ -154,7 +155,7 @@
                         }
                     ],
                     "default": null,
-                    "description": "The incoming to the unit traffic thresholds (in bytes)."
+                    "description": "Alert rules for incoming network traffic(in bytes)."
                 },
                 "upload": {
                     "allOf": [
@@ -163,7 +164,7 @@
                         }
                     ],
                     "default": null,
-                    "description": "The outgoing from the unit traffic thresholds (in bytes)."
+                    "description": "Alert rules for outgoing network traffic(in bytes)."
                 }
             },
             "title": "AlertRules",
@@ -1371,7 +1372,7 @@
                     "type": "string"
                 },
                 "hostDevices": {
-                    "description": "List of host devices.",
+                    "description": "List of files in /dev/ dir, associated with the device name.",
                     "items": {
                         "type": "string"
                     },
@@ -1380,14 +1381,14 @@
                 },
                 "sharedCount": {
                     "default": 0,
-                    "description": "The count of shared devices that can be used in one time. 0 means no restrictions.",
+                    "description": "The maximum allowed number of services that can use this device simultaneously. 0 means no restrictions.",
                     "minimum": 0,
                     "title": "Sharedcount",
                     "type": "integer"
                 },
                 "groups": {
                     "default": null,
-                    "description": "List of associated groups.",
+                    "description": "List of associated user groups.",
                     "items": {
                         "type": "string"
                     },
@@ -3441,21 +3442,17 @@
             "type": "object"
         },
         "NodeConfig": {
-            "description": "Configuration parameters for a unit's node.",
+            "description": "Node configuration parameters.",
             "properties": {
                 "nodeType": {
-                    "description": "The type of the node.",
-                    "examples": [
-                        "DomA",
-                        "DomD"
-                    ],
-                    "title": "Node type",
+                    "description": "Group of nodes with identical configuration.",
+                    "title": "Node Type",
                     "type": "string"
                 },
                 "nodeId": {
                     "default": null,
                     "description": "Unique ID of the node",
-                    "title": "Nodeid",
+                    "title": "Node ID",
                     "type": "string"
                 },
                 "alertRules": {
@@ -3465,7 +3462,8 @@
                         }
                     ],
                     "default": null,
-                    "description": "The default thresholds for services running on the node."
+                    "description": "The default thresholds for services running on the node.",
+                    "title": "Alert Rules"
                 },
                 "resourceRatios": {
                     "allOf": [
@@ -3474,11 +3472,15 @@
                         }
                     ],
                     "default": null,
-                    "description": "The requested ratio for each resource."
+                    "description": "The default resource ratio allocated for a service."
                 },
                 "devices": {
                     "default": null,
-                    "description": "The devices list available for running services.",
+                    "description": "The device list available for running services.",
+                    "examples": [
+                        "Name=\"camera\", host_devices=[\"/dev/camera\"]",
+                        "Name=\"pulseaudio\", host_devices=[\"/dev/pulseaudio\"]"
+                    ],
                     "items": {
                         "$ref": "#/$defs/AosDeviceInfo"
                     },
@@ -3487,7 +3489,7 @@
                 },
                 "resources": {
                     "default": null,
-                    "description": "The list of resources available for running services.",
+                    "description": "Available resources for services.",
                     "items": {
                         "$ref": "#/$defs/ResourceInfo"
                     },
@@ -3569,6 +3571,7 @@
             "type": "object"
         },
         "ResourceRatiosInfo": {
+            "description": "The default resource ratio allocated for a service.",
             "properties": {
                 "cpu": {
                     "default": null,
@@ -3601,21 +3604,14 @@
         "UnitConfig": {
             "description": "Configuration parameters for a unit.",
             "properties": {
-                "formatVersion": {
-                    "anyOf": [
-                        {
-                            "type": "string"
-                        },
-                        {
-                            "type": "integer"
-                        }
-                    ],
-                    "description": "Version of the configuration object (this object).",
-                    "title": "Formatversion"
-                },
                 "version": {
-                    "description": "Version in format of the SemVer.",
+                    "description": "Version identifies the configuration itself. It is automatically incremented with every configuration update.",
                     "title": "Version",
+                    "type": "string"
+                },
+                "formatVersion": {
+                    "description": "JSON format of the unit configuration may change over time. This field identifies current format of unit configuration. Cloud sets it automatically.",
+                    "title": "Format Version",
                     "type": "string"
                 },
                 "nodes": {
@@ -3628,8 +3624,8 @@
                 }
             },
             "required": [
-                "formatVersion",
                 "version",
+                "formatVersion",
                 "nodes"
             ],
             "title": "UnitConfig",

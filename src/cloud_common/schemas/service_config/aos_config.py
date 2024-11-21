@@ -35,6 +35,15 @@ class AosConfigSchema(BaseModel):
         ),
     ]
 
+    skip_resource_limits: Annotated[
+        Optional[bool],
+        Field(
+            alias='skipResourceLimits',
+            default=None,
+            description='Use resource limits or not in Pre-release versions.',
+        ),
+    ]
+
     balancing_policy: Annotated[
         Literal[
             'enabled',

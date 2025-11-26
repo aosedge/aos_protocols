@@ -308,8 +308,6 @@ class AosInstanceInfo(BaseModel):
         ),
     ]
 
-    item: TypeItemMandatory
-
     instance: TypeInstanceNoMandatory
     state_checksum: TypeStateChecksumOptional
     state: TypeUpdateItemInstanceState

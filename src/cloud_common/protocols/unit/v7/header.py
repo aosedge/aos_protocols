@@ -21,6 +21,7 @@ class AosUnitHeaderV7(BaseModel):
     system_id: TypeAosSystemIdMandatory
 
     correlation_id: str = Field(
+        alias='correlationId',
         default=None,
         description='Correlation ID of the request.',
     )

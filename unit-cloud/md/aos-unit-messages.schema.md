@@ -3201,6 +3201,10 @@ Must be one of:
 
 **Description:** Additional information about this component
 
+| Property                                                                | Pattern | Type   | Deprecated | Definition | Title/Description |
+| ----------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| - [](#data_oneOf_i2_components_items_annotations_additionalProperties ) | No      | object | No         | -          | -                 |
+
 ###### <a name="data_oneOf_i2_components_items_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > errorInfo`
 
 **Title:** AosErrorInfo
@@ -3557,10 +3561,10 @@ Must be one of:
 
 **Description:** The lowest percents of a value after which resource can be rebalanced back.
 
-| Restrictions |     |
-| ------------ | --- |
-| **Minimum**  | N/A |
-| **Maximum**  | N/A |
+| Restrictions |          |
+| ------------ | -------- |
+| **Minimum**  | &ge; 0   |
+| **Maximum**  | &le; 100 |
 
 ###### <a name="data_oneOf_i3_unitConfig_nodes_items_alertRules_cpu_maxThreshold"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > alertRules > cpu > maxThreshold`
 
@@ -3572,10 +3576,10 @@ Must be one of:
 
 **Description:** The highest percents of a value after which resource have be rebalanced.
 
-| Restrictions |     |
-| ------------ | --- |
-| **Minimum**  | N/A |
-| **Maximum**  | N/A |
+| Restrictions |          |
+| ------------ | -------- |
+| **Minimum**  | &ge; 0   |
+| **Maximum**  | &le; 100 |
 
 ###### <a name="data_oneOf_i3_unitConfig_nodes_items_alertRules_cpu_minTimeout"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > alertRules > cpu > minTimeout`
 
@@ -3597,9 +3601,9 @@ Must be one of:
 100
 ```
 
-| Restrictions |     |
-| ------------ | --- |
-| **Minimum**  | N/A |
+| Restrictions |        |
+| ------------ | ------ |
+| **Minimum**  | &gt; 0 |
 
 ###### <a name="data_oneOf_i3_unitConfig_nodes_items_alertRules_ram"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > alertRules > ram`
 
@@ -3630,10 +3634,10 @@ Must be one of:
 
 **Description:** The lowest percents of a value after which resource can be rebalanced back.
 
-| Restrictions |     |
-| ------------ | --- |
-| **Minimum**  | N/A |
-| **Maximum**  | N/A |
+| Restrictions |          |
+| ------------ | -------- |
+| **Minimum**  | &ge; 0   |
+| **Maximum**  | &le; 100 |
 
 ###### <a name="data_oneOf_i3_unitConfig_nodes_items_alertRules_cpu_maxThreshold"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > alertRules > cpu > maxThreshold`
 
@@ -3645,10 +3649,10 @@ Must be one of:
 
 **Description:** The highest percents of a value after which resource have be rebalanced.
 
-| Restrictions |     |
-| ------------ | --- |
-| **Minimum**  | N/A |
-| **Maximum**  | N/A |
+| Restrictions |          |
+| ------------ | -------- |
+| **Minimum**  | &ge; 0   |
+| **Maximum**  | &le; 100 |
 
 ###### <a name="data_oneOf_i3_unitConfig_nodes_items_alertRules_cpu_minTimeout"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > alertRules > cpu > minTimeout`
 
@@ -3670,9 +3674,9 @@ Must be one of:
 100
 ```
 
-| Restrictions |     |
-| ------------ | --- |
-| **Minimum**  | N/A |
+| Restrictions |        |
+| ------------ | ------ |
+| **Minimum**  | &gt; 0 |
 
 ###### <a name="data_oneOf_i3_unitConfig_nodes_items_alertRules_partitions"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > alertRules > partitions`
 
@@ -3738,10 +3742,10 @@ Must be one of:
 
 **Description:** The lowest percents of a value after which resource can be rebalanced back.
 
-| Restrictions |     |
-| ------------ | --- |
-| **Minimum**  | N/A |
-| **Maximum**  | N/A |
+| Restrictions |          |
+| ------------ | -------- |
+| **Minimum**  | &ge; 0   |
+| **Maximum**  | &le; 100 |
 
 ###### <a name="data_oneOf_i3_unitConfig_nodes_items_alertRules_partitions_anyOf_i0_items_maxThreshold"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > alertRules > partitions > anyOf > item 0 > AlertRulePercentsOfDisk > maxThreshold`
 
@@ -3753,10 +3757,10 @@ Must be one of:
 
 **Description:** The highest percents of a value after which resource have be rebalanced.
 
-| Restrictions |     |
-| ------------ | --- |
-| **Minimum**  | N/A |
-| **Maximum**  | N/A |
+| Restrictions |          |
+| ------------ | -------- |
+| **Minimum**  | &ge; 0   |
+| **Maximum**  | &le; 100 |
 
 ###### <a name="data_oneOf_i3_unitConfig_nodes_items_alertRules_partitions_anyOf_i0_items_minTimeout"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > alertRules > partitions > anyOf > item 0 > AlertRulePercentsOfDisk > minTimeout`
 
@@ -3778,9 +3782,9 @@ Must be one of:
 100
 ```
 
-| Restrictions |     |
-| ------------ | --- |
-| **Minimum**  | N/A |
+| Restrictions |        |
+| ------------ | ------ |
+| **Minimum**  | &gt; 0 |
 
 ###### <a name="data_oneOf_i3_unitConfig_nodes_items_alertRules_partitions_anyOf_i0_items_name"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > alertRules > partitions > anyOf > item 0 > AlertRulePercentsOfDisk > name`
 
@@ -3863,9 +3867,9 @@ Must be one of:
 100
 ```
 
-| Restrictions |     |
-| ------------ | --- |
-| **Minimum**  | N/A |
+| Restrictions |        |
+| ------------ | ------ |
+| **Minimum**  | &gt; 0 |
 
 ###### <a name="data_oneOf_i3_unitConfig_nodes_items_alertRules_upload"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > alertRules > upload`
 
@@ -3934,9 +3938,9 @@ Must be one of:
 100
 ```
 
-| Restrictions |     |
-| ------------ | --- |
-| **Minimum**  | N/A |
+| Restrictions |        |
+| ------------ | ------ |
+| **Minimum**  | &gt; 0 |
 
 ###### <a name="data_oneOf_i3_unitConfig_nodes_items_resourceRatios"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > unitConfig > nodes > NodeConfig > resourceRatios`
 
@@ -4563,6 +4567,10 @@ Must be one of:
 | **Default**               | `null`                                                                      |
 
 **Description:** Additional information about this component
+
+| Property                                                                | Pattern | Type   | Deprecated | Definition | Title/Description |
+| ----------------------------------------------------------------------- | ------- | ------ | ---------- | ---------- | ----------------- |
+| - [](#data_oneOf_i3_components_items_annotations_additionalProperties ) | No      | object | No         | -          | -                 |
 
 ###### <a name="data_oneOf_i3_components_items_urls"></a>Property `AosUnitMessage > data > oneOf > AosDesiredStatus > components > AosDesiredComponentInfo > urls`
 
@@ -8005,4 +8013,4 @@ Specific value: `"deprovisioningResponse"`
 **Description:** Text of the error description.
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2025-11-18 at 18:43:12 +0200
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2025-11-26 at 15:47:17 +0200

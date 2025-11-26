@@ -2318,10 +2318,10 @@ Must be one of:
 | -------- | -------- |
 | **Type** | `number` |
 
-| Restrictions |     |
-| ------------ | --- |
-| **Minimum**  | N/A |
-| **Maximum**  | N/A |
+| Restrictions |          |
+| ------------ | -------- |
+| **Minimum**  | &ge; 0   |
+| **Maximum**  | &le; 100 |
 
 ###### <a name="items_items_configuration_anyOf_i0_alertRules_anyOf_i0_ram_anyOf_i0_minThreshold_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > alertRules > anyOf > AosAlertRules > ram > anyOf > AosAlertRulePercents > minThreshold > anyOf > item 1`
 
@@ -2351,10 +2351,10 @@ Must be one of:
 | -------- | -------- |
 | **Type** | `number` |
 
-| Restrictions |     |
-| ------------ | --- |
-| **Minimum**  | N/A |
-| **Maximum**  | N/A |
+| Restrictions |          |
+| ------------ | -------- |
+| **Minimum**  | &ge; 0   |
+| **Maximum**  | &le; 100 |
 
 ###### <a name="items_items_configuration_anyOf_i0_alertRules_anyOf_i0_ram_anyOf_i0_maxThreshold_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > alertRules > anyOf > AosAlertRules > ram > anyOf > AosAlertRulePercents > maxThreshold > anyOf > item 1`
 
@@ -2800,4 +2800,4 @@ Must be one of:
 | **Type** | `null` |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2025-11-25 at 16:31:25 +0200
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2025-11-26 at 15:47:18 +0200

@@ -5,15 +5,15 @@
             "properties": {
                 "minThreshold": {
                     "description": "The lowest percents of a value after which resource can be rebalanced back.",
-                    "maximum": 100.0,
-                    "minimum": 0.0,
+                    "maximum": 100,
+                    "minimum": 0,
                     "title": "Minthreshold",
                     "type": "number"
                 },
                 "maxThreshold": {
                     "description": "The highest percents of a value after which resource have be rebalanced.",
-                    "maximum": 100.0,
-                    "minimum": 0.0,
+                    "maximum": 100,
+                    "minimum": 0,
                     "title": "Maxthreshold",
                     "type": "number"
                 },
@@ -23,7 +23,7 @@
                         0.5,
                         100
                     ],
-                    "exclusiveMinimum": 0.0,
+                    "exclusiveMinimum": 0,
                     "title": "Mintimeout",
                     "type": "number"
                 }
@@ -41,15 +41,15 @@
             "properties": {
                 "minThreshold": {
                     "description": "The lowest percents of a value after which resource can be rebalanced back.",
-                    "maximum": 100.0,
-                    "minimum": 0.0,
+                    "maximum": 100,
+                    "minimum": 0,
                     "title": "Minthreshold",
                     "type": "number"
                 },
                 "maxThreshold": {
                     "description": "The highest percents of a value after which resource have be rebalanced.",
-                    "maximum": 100.0,
-                    "minimum": 0.0,
+                    "maximum": 100,
+                    "minimum": 0,
                     "title": "Maxthreshold",
                     "type": "number"
                 },
@@ -59,7 +59,7 @@
                         0.5,
                         100
                     ],
-                    "exclusiveMinimum": 0.0,
+                    "exclusiveMinimum": 0,
                     "title": "Mintimeout",
                     "type": "number"
                 },
@@ -98,7 +98,7 @@
                         0.5,
                         100
                     ],
-                    "exclusiveMinimum": 0.0,
+                    "exclusiveMinimum": 0,
                     "title": "Mintimeout",
                     "type": "number"
                 }
@@ -1366,10 +1366,6 @@
                 "runtime": {
                     "$ref": "#/$defs/AosIdentity"
                 },
-                "item": {
-                    "$ref": "#/$defs/AosIdentity",
-                    "description": "Update item identifier."
-                },
                 "instance": {
                     "description": "The instance number of the service. Starts from 0.",
                     "title": "Instance no",
@@ -1409,7 +1405,6 @@
             "required": [
                 "node",
                 "runtime",
-                "item",
                 "instance",
                 "state"
             ],
@@ -2756,10 +2751,10 @@
                     "title": "",
                     "type": "string"
                 },
-                "correlation_id": {
+                "correlationId": {
                     "default": null,
                     "description": "Correlation ID of the request.",
-                    "title": "Correlation Id",
+                    "title": "Correlationid",
                     "type": "string"
                 }
             },

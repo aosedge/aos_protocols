@@ -11,7 +11,7 @@ from cloud_common.protocols.unit.types import (
     TypeAosLogId,
     TypeInstanceNoOptional,
 )
-from .common import AosIdentity, TypeItemOptional
+from .common import AosIdentity, TypeItemOptional, AosBaseModel
 
 
 class AosLogFilterV7(BaseModel):
@@ -110,7 +110,7 @@ class AosUploadLogOptions(BaseModel):
     ]
 
 
-class AosRequestLogV7(BaseModel):
+class AosRequestLogV7(AosBaseModel):
     """
     AosUnit protocol: 'requestLog' message.
 
@@ -125,8 +125,6 @@ class AosRequestLogV7(BaseModel):
             description='Message body type.',
         ),
     ]
-
-    log_id: TypeAosLogId
 
     log_type: Annotated[
         Literal['systemLog', 'instanceLog', 'crashLog'],
@@ -154,7 +152,7 @@ class AosRequestLogV7(BaseModel):
     ]
 
 
-class AosPushLogV7(BaseModel):
+class AosPushLogV7(AosBaseModel):
     """
     AosUnit protocol: 'pushLog' message.
 
@@ -169,8 +167,6 @@ class AosPushLogV7(BaseModel):
             description='Message body type.',
         ),
     ]
-
-    log_id: TypeAosLogId
 
     node: Annotated[
         AosIdentity,

@@ -1,6 +1,7 @@
 #
 #  Copyright (c) 2018-2025 EPAM Systems Inc.
 #
+from datetime import datetime
 from typing import Annotated, Literal
 
 from pydantic import BaseModel, Field
@@ -20,8 +21,19 @@ class AosUnitHeaderV7(BaseModel):
     ]
     system_id: TypeAosSystemIdMandatory
 
-    correlation_id: str = Field(
-        alias='correlationId',
-        default=None,
-        description='Correlation ID of the request.',
-    )
+    created_at: Annotated[
+        datetime,
+        Field(
+            alias='createdAt',
+            description='The time when the message was created.',
+        ),
+    ]
+
+    txn: Annotated[
+        str,
+        Field(
+            alias='txn',
+            description='Transmission ID of the message (for acknowledgements and tracing purposes).',
+        )
+    ]
+

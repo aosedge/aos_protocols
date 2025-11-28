@@ -5,15 +5,15 @@
             "properties": {
                 "minThreshold": {
                     "description": "The lowest percents of a value after which resource can be rebalanced back.",
-                    "maximum": 100,
-                    "minimum": 0,
+                    "maximum": 100.0,
+                    "minimum": 0.0,
                     "title": "Minthreshold",
                     "type": "number"
                 },
                 "maxThreshold": {
                     "description": "The highest percents of a value after which resource have be rebalanced.",
-                    "maximum": 100,
-                    "minimum": 0,
+                    "maximum": 100.0,
+                    "minimum": 0.0,
                     "title": "Maxthreshold",
                     "type": "number"
                 },
@@ -23,7 +23,7 @@
                         0.5,
                         100
                     ],
-                    "exclusiveMinimum": 0,
+                    "exclusiveMinimum": 0.0,
                     "title": "Mintimeout",
                     "type": "number"
                 }
@@ -41,15 +41,15 @@
             "properties": {
                 "minThreshold": {
                     "description": "The lowest percents of a value after which resource can be rebalanced back.",
-                    "maximum": 100,
-                    "minimum": 0,
+                    "maximum": 100.0,
+                    "minimum": 0.0,
                     "title": "Minthreshold",
                     "type": "number"
                 },
                 "maxThreshold": {
                     "description": "The highest percents of a value after which resource have be rebalanced.",
-                    "maximum": 100,
-                    "minimum": 0,
+                    "maximum": 100.0,
+                    "minimum": 0.0,
                     "title": "Maxthreshold",
                     "type": "number"
                 },
@@ -59,7 +59,7 @@
                         0.5,
                         100
                     ],
-                    "exclusiveMinimum": 0,
+                    "exclusiveMinimum": 0.0,
                     "title": "Mintimeout",
                     "type": "number"
                 },
@@ -98,7 +98,7 @@
                         0.5,
                         100
                     ],
-                    "exclusiveMinimum": 0,
+                    "exclusiveMinimum": 0.0,
                     "title": "Mintimeout",
                     "type": "number"
                 }
@@ -156,6 +156,11 @@
         },
         "AosAckV7": {
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "ack",
                     "description": "Message body type.",
@@ -164,6 +169,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType"
             ],
             "title": "AosAckV7",
@@ -546,6 +552,11 @@
         },
         "AosAlertsV7": {
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "alerts",
                     "description": "message body type",
@@ -596,6 +607,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "items"
             ],
@@ -636,6 +648,11 @@
         },
         "AosBlobUrlsV7": {
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "blobUrls",
                     "description": "Type of the message body.",
@@ -652,6 +669,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "items"
             ],
@@ -776,6 +794,11 @@
         "AosDeProvisioningRequestV7": {
             "description": "AosUnit protocol: 'deprovisioningRequest' message.",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "deprovisioningRequest",
                     "description": "message body type",
@@ -793,6 +816,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "node",
                 "password"
@@ -803,6 +827,11 @@
         "AosDeProvisioningResponseV7": {
             "description": "AosUnit protocol: 'deprovisioningResponse' message.",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "deprovisioningResponse",
                     "description": "message body type",
@@ -820,6 +849,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "node"
             ],
@@ -911,6 +941,11 @@
         "AosDesiredStatusV7": {
             "description": "AosUnit protocol: 'desiredStatus' message.\n\nUnit reports all current status information using this message",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "desiredStatus",
                     "description": "Type of the message body.",
@@ -981,6 +1016,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType"
             ],
             "title": "AosDesiredStatusV7",
@@ -1136,6 +1172,11 @@
         "AosFinishProvisioningRequestV7": {
             "description": "AosUnit protocol: 'finishProvisioningRequest' message.\n\nCloud begins provisioning process with this message",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "finishProvisioningRequest",
                     "description": "message body type",
@@ -1161,6 +1202,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "node",
                 "certificates",
@@ -1172,6 +1214,11 @@
         "AosFinishProvisioningResponseV7": {
             "description": "AosUnit protocol: 'finishProvisioningResponse' message.",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "finishProvisioningResponse",
                     "description": "message body type",
@@ -1189,6 +1236,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "node"
             ],
@@ -1336,6 +1384,11 @@
         "AosInstallUnitCertificatesConfirmationV7": {
             "description": "AosUnit protocol: 'installUnitCertificatesConfirmation' message.\n\nUnit sends confirmation that certificates ware installed.",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "installUnitCertificatesConfirmation",
                     "description": "Message body type.",
@@ -1352,6 +1405,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "certificates"
             ],
@@ -1562,6 +1616,11 @@
         "AosIssueUnitCertificatesV7": {
             "description": "AosUnit protocol: 'issueUnitCertificates' message.\n\nUnit sends issue unit certificates request.",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "issueUnitCertificates",
                     "description": "Message body type.",
@@ -1578,6 +1637,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "requests"
             ],
@@ -1612,6 +1672,11 @@
         "AosIssuedUnitCertificatesV7": {
             "description": "AosUnit protocol: 'issuedUnitCertificates' message.\n\nCloud sends issued unit certificates info.",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "issuedUnitCertificates",
                     "description": "Message body type.",
@@ -1628,6 +1693,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "certificates"
             ],
@@ -1783,6 +1849,11 @@
         "AosMonitoringV7": {
             "description": "AosEdge unit monitoring message.",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "monitoringData",
                     "description": "message body type",
@@ -1808,6 +1879,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "nodes"
             ],
@@ -1816,6 +1888,11 @@
         },
         "AosNackV7": {
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "nack",
                     "description": "Message body type.",
@@ -1830,6 +1907,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType"
             ],
             "title": "AosNackV7",
@@ -1838,6 +1916,11 @@
         "AosNewStateV7": {
             "description": "AosUnit protocol: 'newState' message.\n\nUnit reports service state changes using this message.",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "newState",
                     "description": "Message body type.",
@@ -1874,6 +1957,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "instance",
                 "stateChecksum",
@@ -2118,6 +2202,11 @@
         "AosOverrideEnvVarsRequestV7": {
             "description": "AosUnit protocol: 'overrideEnvVars' message.\n\nCloud requests EnvVar changes using this message.",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "overrideEnvVars",
                     "description": "Message body type.",
@@ -2134,6 +2223,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "items"
             ],
@@ -2143,6 +2233,11 @@
         "AosOverrideEnvVarsStatusesV7": {
             "description": "AosUnit protocol: 'overrideEnvVarsStatus' message.\n\nUnit reports EnvVar changes using this message.",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "overrideEnvVarsStatus",
                     "description": "Message body type.",
@@ -2159,6 +2254,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "statuses"
             ],
@@ -2189,15 +2285,15 @@
         "AosPushLogV7": {
             "description": "AosUnit protocol: 'pushLog' message.\n\nUnit sends the specified logs to the Cloud.",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "pushLog",
                     "description": "Message body type.",
                     "title": "Message type",
-                    "type": "string"
-                },
-                "logId": {
-                    "description": "The unique log request ID. Used to group all results into the single batch.",
-                    "title": "Lod Request ID",
                     "type": "string"
                 },
                 "node": {
@@ -2241,8 +2337,8 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
-                "logId",
                 "node",
                 "status"
             ],
@@ -2252,6 +2348,11 @@
         "AosRenewCertsNotificationV7": {
             "description": "AosUnit protocol: 'renewCertificatesNotification' message.\n\nCloud sends renew certificate notification from cloud with unit secrets.",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "renewCertificatesNotification",
                     "description": "Message body type.",
@@ -2282,6 +2383,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "certificates",
                 "unitSecrets"
@@ -2291,6 +2393,11 @@
         },
         "AosRequestBlobUrlsV7": {
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "requestBlobUrls",
                     "description": "Type of the message body.",
@@ -2312,6 +2419,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "digests"
             ],
@@ -2321,15 +2429,15 @@
         "AosRequestLogV7": {
             "description": "AosUnit protocol: 'requestLog' message.\n\nCloud requests the specified logs from the Unit.",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "requestLog",
                     "description": "Message body type.",
                     "title": "Message type",
-                    "type": "string"
-                },
-                "logId": {
-                    "description": "The unique log request ID. Used to group all results into the single batch.",
-                    "title": "Lod Request ID",
                     "type": "string"
                 },
                 "logType": {
@@ -2354,8 +2462,8 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
-                "logId",
                 "logType",
                 "filter"
             ],
@@ -2528,6 +2636,11 @@
         "AosStartProvisioningRequestV7": {
             "description": "AosUnit protocol: 'startProvisioningRequest' message.\n\nCloud begins provisioning process with this message",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "startProvisioningRequest",
                     "description": "message body type",
@@ -2545,6 +2658,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "node",
                 "password"
@@ -2555,6 +2669,11 @@
         "AosStartProvisioningResponseV7": {
             "description": "AosUnit protocol: 'startProvisioningResponse' message.",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "startProvisioningResponse",
                     "description": "message body type",
@@ -2580,6 +2699,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "node",
                 "csrs"
@@ -2590,6 +2710,11 @@
         "AosStateAcceptanceV7": {
             "description": "AosUnit protocol: 'stateAcceptance' message.\n\nCloud reports service state changes using this message.",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "stateAcceptance",
                     "description": "Message body type.",
@@ -2634,6 +2759,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "item",
                 "subject",
@@ -2648,6 +2774,11 @@
         "AosStateRequestV7": {
             "description": "AosUnit protocol: 'newState' message.\n\nUnit request service state.\n  - if `default` field is equal to `true` - AosEdge Cloud will return the initial (default) state.\n  - else AosEdge Cloud will return current state (the latest)",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "stateRequest",
                     "description": "Message body type.",
@@ -2675,6 +2806,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "item",
                 "subject",
@@ -2751,16 +2883,23 @@
                     "title": "",
                     "type": "string"
                 },
-                "correlationId": {
-                    "default": null,
-                    "description": "Correlation ID of the request.",
-                    "title": "Correlationid",
+                "createdAt": {
+                    "description": "The time when the message was created.",
+                    "format": "date-time",
+                    "title": "Createdat",
+                    "type": "string"
+                },
+                "txn": {
+                    "description": "Transmission ID of the message (for acknowledgements and tracing purposes).",
+                    "title": "Txn",
                     "type": "string"
                 }
             },
             "required": [
                 "version",
-                "systemId"
+                "systemId",
+                "createdAt",
+                "txn"
             ],
             "title": "AosUnitHeaderV7",
             "type": "object"
@@ -2959,6 +3098,11 @@
         "AosUnitStatusV7": {
             "description": "AosUnit protocol: 'unitStatus' message.\n\nUnit reports all current status information using this message",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "unitStatus",
                     "description": "message body type",
@@ -3062,6 +3206,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType"
             ],
             "title": "AosUnitStatusV7",
@@ -3120,6 +3265,11 @@
         "AosUpdateStateV7": {
             "description": "AosUnit protocol: 'updateState' message.\n\nCloud reports service state changes using this message.",
             "properties": {
+                "correlationId": {
+                    "description": "Correlation ID of the request.",
+                    "title": "Correlationid",
+                    "type": "string"
+                },
                 "messageType": {
                     "const": "updateState",
                     "description": "Message body type.",
@@ -3156,6 +3306,7 @@
                 }
             },
             "required": [
+                "correlationId",
                 "messageType",
                 "instance",
                 "stateChecksum",

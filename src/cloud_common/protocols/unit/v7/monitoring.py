@@ -8,7 +8,7 @@ from pydantic import BaseModel, Field
 
 from .types import TypeUpdateItemInstanceState, TypeNodeState
 from ..types import TypeInstanceNoMandatory
-from .common import AosIdentity, TypeItemMandatory, TypeSubjectMandatory
+from .common import AosIdentity, TypeItemMandatory, TypeSubjectMandatory, AosBaseModel
 
 
 class AosPartitionUsage(BaseModel):
@@ -184,7 +184,7 @@ class AosNodeMonitoringDataV7(BaseModel):
     ]
 
 
-class AosMonitoringV7(BaseModel):
+class AosMonitoringV7(AosBaseModel):
     """AosEdge unit monitoring message."""
 
     message_type: Annotated[

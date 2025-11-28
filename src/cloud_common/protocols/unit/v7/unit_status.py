@@ -5,7 +5,8 @@ from typing import Annotated, Dict, Literal, Optional, List
 
 from pydantic import BaseModel, Field, UUID4
 
-from .common import AosIdentity, AosResourceInfo, AosArchInfo, AosOsInfo, TypeItemMandatory, TypeSubjectMandatory
+from .common import AosIdentity, AosResourceInfo, AosArchInfo, AosOsInfo, TypeItemMandatory, TypeSubjectMandatory, \
+    AosBaseModel
 from ..common import TypeAosErrorInfoOptional
 from .types import (
     TypeInstanceNoMandatory,
@@ -339,7 +340,7 @@ class AosUpdateItemInfo(BaseModel):
     error_info: TypeAosErrorInfoOptional
 
 
-class AosUnitStatusV7(BaseModel):
+class AosUnitStatusV7(AosBaseModel):
     """
     AosUnit protocol: 'unitStatus' message.
 

@@ -6,7 +6,7 @@ from typing import Annotated, Literal
 from pydantic import BaseModel, Field
 
 from cloud_common.protocols.unit.common import TypeAosErrorInfoOptional
-from cloud_common.protocols.unit.v7.common import AosIdentity
+from cloud_common.protocols.unit.v7.common import AosIdentity, AosBaseModel
 
 
 class AosCSR(BaseModel):
@@ -30,7 +30,7 @@ class AosCSR(BaseModel):
     ]
 
 
-class AosStartProvisioningRequestV7(BaseModel):
+class AosStartProvisioningRequestV7(AosBaseModel):
     """
     AosUnit protocol: 'startProvisioningRequest' message.
 
@@ -62,7 +62,7 @@ class AosStartProvisioningRequestV7(BaseModel):
     ]
 
 
-class AosStartProvisioningResponseV7(BaseModel):
+class AosStartProvisioningResponseV7(AosBaseModel):
     """
     AosUnit protocol: 'startProvisioningResponse' message.
     """
@@ -116,7 +116,7 @@ class AosIssuedCertificateV7(BaseModel):
     ]
 
 
-class AosFinishProvisioningRequestV7(BaseModel):
+class AosFinishProvisioningRequestV7(AosBaseModel):
     """
     AosUnit protocol: 'finishProvisioningRequest' message.
 
@@ -156,7 +156,7 @@ class AosFinishProvisioningRequestV7(BaseModel):
     ]
 
 
-class AosFinishProvisioningResponseV7(BaseModel):
+class AosFinishProvisioningResponseV7(AosBaseModel):
     """
     AosUnit protocol: 'finishProvisioningResponse' message.
     """
@@ -180,7 +180,7 @@ class AosFinishProvisioningResponseV7(BaseModel):
     error_info: TypeAosErrorInfoOptional
 
 
-class AosDeProvisioningRequestV7(BaseModel):
+class AosDeProvisioningRequestV7(AosBaseModel):
     """
     AosUnit protocol: 'deprovisioningRequest' message.
     """
@@ -210,7 +210,7 @@ class AosDeProvisioningRequestV7(BaseModel):
     ]
 
 
-class AosDeProvisioningResponseV7(BaseModel):
+class AosDeProvisioningResponseV7(AosBaseModel):
     """
     AosUnit protocol: 'deprovisioningResponse' message.
     """

@@ -3,10 +3,12 @@
 #
 from typing import Annotated, Literal
 
-from pydantic import BaseModel, Field
+from pydantic import Field
+
+from .common import AosBaseModel
 
 
-class AosAckV7(BaseModel):
+class AosAckV7(AosBaseModel):
     message_type: Annotated[
         Literal['ack'],
         Field(
@@ -17,7 +19,7 @@ class AosAckV7(BaseModel):
     ]
 
 
-class AosNackV7(BaseModel):
+class AosNackV7(AosBaseModel):
     message_type: Annotated[
         Literal['nack'],
         Field(

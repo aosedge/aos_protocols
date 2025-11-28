@@ -11,6 +11,17 @@ from ..common import (
 )
 
 
+class AosBaseModel(BaseModel):
+    """Base model for Aos objects."""
+
+    correlation_id: Annotated[
+        str,
+        Field(
+            alias='correlationId',
+            description='Correlation ID of the request.',
+        )
+    ]
+
 class AosIdentity(BaseModel):
     """Aos objects identifier."""
 
@@ -249,6 +260,7 @@ TypeSubjectMandatory = Annotated[
 
 
 __all__ = (
+    'AosBaseModel',
     'AosArchInfo',
     'AosOsInfo',
     'AosIdentity',

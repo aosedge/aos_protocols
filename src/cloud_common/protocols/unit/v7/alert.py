@@ -13,7 +13,7 @@ from cloud_common.protocols.unit.types import (
     TypeDeviceMandatory,
     TypeVersionMandatory,
 )
-from .common import AosIdentity, TypeItemMandatory
+from .common import AosIdentity, TypeItemMandatory, AosBaseModel
 from ..common import TypeAosErrorInfoOptional
 
 
@@ -277,7 +277,7 @@ class AosAlertUpdateItemInstanceV7(AosBaseAlert):
     message: TypeAlertMessageMandatory
 
 
-class AosAlertsV7(BaseModel):
+class AosAlertsV7(AosBaseModel):
     message_type: Annotated[
         Literal['alerts'],
         Field(

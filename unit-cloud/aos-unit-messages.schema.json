@@ -5,15 +5,15 @@
             "properties": {
                 "minThreshold": {
                     "description": "The lowest percents of a value after which resource can be rebalanced back.",
-                    "maximum": 100,
-                    "minimum": 0,
+                    "maximum": 100.0,
+                    "minimum": 0.0,
                     "title": "Minthreshold",
                     "type": "number"
                 },
                 "maxThreshold": {
                     "description": "The highest percents of a value after which resource have be rebalanced.",
-                    "maximum": 100,
-                    "minimum": 0,
+                    "maximum": 100.0,
+                    "minimum": 0.0,
                     "title": "Maxthreshold",
                     "type": "number"
                 },
@@ -23,7 +23,7 @@
                         0.5,
                         100
                     ],
-                    "exclusiveMinimum": 0,
+                    "exclusiveMinimum": 0.0,
                     "title": "Mintimeout",
                     "type": "number"
                 }
@@ -41,15 +41,15 @@
             "properties": {
                 "minThreshold": {
                     "description": "The lowest percents of a value after which resource can be rebalanced back.",
-                    "maximum": 100,
-                    "minimum": 0,
+                    "maximum": 100.0,
+                    "minimum": 0.0,
                     "title": "Minthreshold",
                     "type": "number"
                 },
                 "maxThreshold": {
                     "description": "The highest percents of a value after which resource have be rebalanced.",
-                    "maximum": 100,
-                    "minimum": 0,
+                    "maximum": 100.0,
+                    "minimum": 0.0,
                     "title": "Maxthreshold",
                     "type": "number"
                 },
@@ -59,7 +59,7 @@
                         0.5,
                         100
                     ],
-                    "exclusiveMinimum": 0,
+                    "exclusiveMinimum": 0.0,
                     "title": "Mintimeout",
                     "type": "number"
                 },
@@ -98,7 +98,7 @@
                         0.5,
                         100
                     ],
-                    "exclusiveMinimum": 0,
+                    "exclusiveMinimum": 0.0,
                     "title": "Mintimeout",
                     "type": "number"
                 }
@@ -803,7 +803,6 @@
                     "type": "string"
                 },
                 "annotations": {
-                    "additionalProperties": true,
                     "default": null,
                     "description": "Additional information about this component",
                     "title": "Annotations",
@@ -954,7 +953,6 @@
                     "type": "string"
                 },
                 "annotations": {
-                    "additionalProperties": true,
                     "default": null,
                     "description": "Additional information about this component",
                     "title": "Annotations",

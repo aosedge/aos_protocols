@@ -10,7 +10,7 @@ from cloud_common.protocols.unit.types import (
     TypeCertificatesType,
     TypeStatusForNonExecutables,
 )
-from .common import AosIdentity
+from .common import AosIdentity, AosBaseModel
 from ..common import TypeAosErrorInfoOptional
 
 
@@ -97,7 +97,7 @@ class AosUnitSecretsDataV7(BaseModel):
     ]
 
 
-class AosRenewCertsNotificationV7(BaseModel):
+class AosRenewCertsNotificationV7(AosBaseModel):
     """
     AosUnit protocol: 'renewCertificatesNotification' message.
 
@@ -154,7 +154,7 @@ class AosIssuedUnitCertsV7(AosCertificateIdentificationV7):
     ]
 
 
-class AosIssuedUnitCertificatesV7(BaseModel):
+class AosIssuedUnitCertificatesV7(AosBaseModel):
     """
     AosUnit protocol: 'issuedUnitCertificates' message.
 
@@ -193,7 +193,7 @@ class AosIssueCertData(AosCertificateIdentificationV7):
     ]
 
 
-class AosIssueUnitCertificatesV7(BaseModel):
+class AosIssueUnitCertificatesV7(AosBaseModel):
     """
     AosUnit protocol: 'issueUnitCertificates' message.
 
@@ -234,7 +234,7 @@ class AosInstallCertDataV7(AosCertificateIdentificationV7):
     error_info: TypeAosErrorInfoOptional
 
 
-class AosInstallUnitCertificatesConfirmationV7(BaseModel):
+class AosInstallUnitCertificatesConfirmationV7(AosBaseModel):
     """
     AosUnit protocol: 'installUnitCertificatesConfirmation' message.
 

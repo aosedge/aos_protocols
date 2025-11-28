@@ -15,7 +15,7 @@ from cloud_common.protocols.unit.types import (
     TypeVersionMandatory,
 )
 
-from .common import AosIdentity, TypeItemMandatory, AosSubject
+from .common import AosIdentity, TypeItemMandatory, AosSubject, AosBaseModel
 from .types import TypeNodeDesiredState
 from .unit_config import UnitConfigV7
 
@@ -281,7 +281,7 @@ class AosNodeDesiredState(BaseModel):
     state: TypeNodeDesiredState
 
 
-class AosDesiredStatusV7(BaseModel):
+class AosDesiredStatusV7(AosBaseModel):
     """
     AosUnit protocol: 'desiredStatus' message.
 
@@ -360,7 +360,7 @@ class AosDesiredStatusV7(BaseModel):
     ]
 
 
-class AosRequestBlobUrlsV7(BaseModel):
+class AosRequestBlobUrlsV7(AosBaseModel):
     message_type: Annotated[
         Literal['requestBlobUrls'],
         Field(
@@ -379,7 +379,7 @@ class AosRequestBlobUrlsV7(BaseModel):
     ]
 
 
-class AosBlobUrlsV7(BaseModel):
+class AosBlobUrlsV7(AosBaseModel):
     message_type: Annotated[
         Literal['blobUrls'],
         Field(

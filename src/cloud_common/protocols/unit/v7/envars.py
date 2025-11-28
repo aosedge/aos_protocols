@@ -11,7 +11,7 @@ from cloud_common.protocols.unit.constants import DataSizes
 from cloud_common.protocols.unit.types import (
     TypeInstanceNoOptional,
 )
-from .common import AosIdentity, TypeItemMandatory, TypeItemOptional
+from .common import AosIdentity, TypeItemMandatory, TypeItemOptional, AosBaseModel
 from .types import TypeInstanceNoMandatory
 
 
@@ -121,7 +121,7 @@ class AosEnvVarV7(BaseModel):
     ]
 
 
-class AosOverrideEnvVarsRequestV7(BaseModel):
+class AosOverrideEnvVarsRequestV7(AosBaseModel):
     """
     AosUnit protocol: 'overrideEnvVars' message.
 
@@ -146,7 +146,7 @@ class AosOverrideEnvVarsRequestV7(BaseModel):
     ]
 
 
-class AosOverrideEnvVarsStatusesV7(BaseModel):
+class AosOverrideEnvVarsStatusesV7(AosBaseModel):
     """
     AosUnit protocol: 'overrideEnvVarsStatus' message.
 

@@ -214,6 +214,15 @@ class AosSubject(AosBaseModel):
         ),
     ]
 
+    is_reported_from_unit: Annotated[
+        bool,
+        Field(
+            default=False,
+            alias='isReportedFromUnit',
+            description='Indicates whether the subject is reported from unit.',
+        ),
+    ] = False
+
 
 TypeAosIdentityMandatory = Annotated[
     AosIdentity,

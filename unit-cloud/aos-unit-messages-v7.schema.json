@@ -294,7 +294,14 @@
                     "title": "Reason"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -675,6 +682,7 @@
                 },
                 "messageType": {
                     "const": "blobUrls",
+                    "default": "blobUrls",
                     "description": "Type of the message body.",
                     "title": "Messagetype",
                     "type": "string"
@@ -689,7 +697,6 @@
                 }
             },
             "required": [
-                "messageType",
                 "items"
             ],
             "title": "AosBlobUrlsV7",
@@ -877,7 +884,14 @@
                     "description": "The identification of the node."
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -989,6 +1003,7 @@
                 },
                 "messageType": {
                     "const": "desiredStatus",
+                    "default": "desiredStatus",
                     "description": "Type of the message body.",
                     "title": "Messagetype",
                     "type": "string"
@@ -1003,7 +1018,14 @@
                     "type": "array"
                 },
                 "unitConfig": {
-                    "$ref": "#/$defs/UnitConfigV7",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/UnitConfigV7"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Desired unit config dictionary."
                 },
@@ -1011,55 +1033,112 @@
                     "default": [],
                     "description": "List of the desired update items. If absent or null - do nothing.",
                     "items": {
-                        "$ref": "#/$defs/cloud_common__protocols__unit__v7__desired_status__AosUpdateItemInfo"
+                        "$ref": "#/$defs/AosDesiredUpdateItemInfo"
                     },
                     "minItems": 0,
                     "title": "Items",
                     "type": "array"
                 },
                 "instances": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "$ref": "#/$defs/AosDesiredInstanceInfo"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "List of the desired update item instances. If absent or null - do nothing.",
-                    "items": {
-                        "$ref": "#/$defs/AosDesiredInstanceInfo"
-                    },
-                    "title": "Instances",
-                    "type": "array"
+                    "title": "Instances"
                 },
                 "subjects": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "$ref": "#/$defs/AosSubject"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "The list of the used subjects",
-                    "items": {
-                        "$ref": "#/$defs/AosSubject"
-                    },
-                    "title": "Subjects",
-                    "type": "array"
+                    "title": "Subjects"
                 },
                 "certificates": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "$ref": "#/$defs/AosCertificateInfo"
+                            },
+                            "maxItems": 32,
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "The list of the used certificates",
-                    "items": {
-                        "$ref": "#/$defs/AosCertificateInfo"
-                    },
-                    "maxItems": 32,
-                    "title": "Certificates",
-                    "type": "array"
+                    "title": "Certificates"
                 },
                 "certificateChains": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "$ref": "#/$defs/AosCertificateChainInfo"
+                            },
+                            "maxItems": 8,
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Certificate chains info for checking signs.",
-                    "items": {
-                        "$ref": "#/$defs/AosCertificateChainInfo"
-                    },
-                    "maxItems": 8,
-                    "title": "Certificatechains",
-                    "type": "array"
+                    "title": "Certificatechains"
+                }
+            },
+            "title": "AosDesiredStatusV7",
+            "type": "object"
+        },
+        "AosDesiredUpdateItemInfo": {
+            "description": "Update item info sent from the AosEdge Cloud.",
+            "properties": {
+                "identity": {
+                    "$ref": "#/$defs/AosIdentity",
+                    "description": "The identification of the resource."
+                },
+                "version": {
+                    "description": "Version in format of the SemVer.",
+                    "title": "Version",
+                    "type": "string"
+                },
+                "owner": {
+                    "$ref": "#/$defs/AosIdentity",
+                    "description": "The ID of the owner of the update item (OEM or SP identity)."
+                },
+                "indexDigest": {
+                    "description": "Digest of the index.json file for the update item.",
+                    "minLength": 1,
+                    "title": "Indexdigest",
+                    "type": "string"
                 }
             },
             "required": [
-                "messageType"
+                "identity",
+                "version",
+                "owner",
+                "indexDigest"
             ],
-            "title": "AosDesiredStatusV7",
+            "title": "AosDesiredUpdateItemInfo",
             "type": "object"
         },
         "AosEnvVar": {
@@ -1123,7 +1202,14 @@
                     "type": "string"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -1188,22 +1274,43 @@
             "description": "AosUnit error info structure.\n\nEncapsulates a structure for AosUnit error info.\nAll fields are optional. In this case treated as no error.",
             "properties": {
                 "aosCode": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "AosCore error code.",
-                    "title": "Aos error code",
-                    "type": "integer"
+                    "title": "Aos error code"
                 },
                 "exitCode": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Module error code.",
-                    "title": "Exit code",
-                    "type": "integer"
+                    "title": "Exit code"
                 },
                 "message": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Text of the error description.",
-                    "title": "Error message",
-                    "type": "string"
+                    "title": "Error message"
                 }
             },
             "title": "AosErrorInfo",
@@ -1227,6 +1334,7 @@
                 },
                 "messageType": {
                     "const": "finishProvisioningRequest",
+                    "default": "finishProvisioningRequest",
                     "description": "message body type",
                     "title": "Messagetype",
                     "type": "string"
@@ -1250,7 +1358,6 @@
                 }
             },
             "required": [
-                "messageType",
                 "node",
                 "certificates",
                 "password"
@@ -1285,7 +1392,14 @@
                     "description": "The identification of the node."
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -1303,7 +1417,7 @@
                 "id": {
                     "anyOf": [
                         {
-                            "format": "uuid4",
+                            "format": "uuid",
                             "type": "string"
                         },
                         {
@@ -1317,17 +1431,7 @@
                 "type": {
                     "anyOf": [
                         {
-                            "enum": [
-                                "component",
-                                "service",
-                                "layer",
-                                "subject",
-                                "oem",
-                                "sp",
-                                "node",
-                                "runtime"
-                            ],
-                            "type": "string"
+                            "$ref": "#/$defs/AosIdentityType"
                         },
                         {
                             "type": "null"
@@ -1393,6 +1497,22 @@
             "title": "AosIdentity",
             "type": "object"
         },
+        "AosIdentityType": {
+            "enum": [
+                "component",
+                "service",
+                "layer",
+                "subject",
+                "oem",
+                "sp",
+                "fleet",
+                "node",
+                "node-subject",
+                "runtime"
+            ],
+            "title": "AosIdentityType",
+            "type": "string"
+        },
         "AosInstallCertDataV7": {
             "description": "InstallCertData install certificate data.",
             "properties": {
@@ -1422,7 +1542,14 @@
                     "type": "string"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -1512,7 +1639,14 @@
                     "type": "string"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -1755,6 +1889,7 @@
                 },
                 "messageType": {
                     "const": "issuedUnitCertificates",
+                    "default": "issuedUnitCertificates",
                     "description": "Message body type.",
                     "title": "Message type",
                     "type": "string"
@@ -1769,7 +1904,6 @@
                 }
             },
             "required": [
-                "messageType",
                 "certificates"
             ],
             "title": "AosIssuedUnitCertificatesV7",
@@ -2220,9 +2354,9 @@
                     "title": "Timestamp",
                     "type": "string"
                 },
-                "connected": {
+                "isConnected": {
                     "description": "Flag to indicate if the node is connected to main.",
-                    "title": "Connected",
+                    "title": "Isconnected",
                     "type": "boolean"
                 },
                 "state": {
@@ -2239,7 +2373,7 @@
             },
             "required": [
                 "timestamp",
-                "connected",
+                "isConnected",
                 "state"
             ],
             "title": "AosNodeState",
@@ -2394,17 +2528,10 @@
             "description": "AosUnit protocol: 'pushLog' message.\n\nUnit sends the specified logs to the Cloud.",
             "properties": {
                 "correlationId": {
-                    "anyOf": [
-                        {
-                            "type": "string"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ],
                     "default": null,
-                    "description": "Correlation ID of the request.",
-                    "title": "Correlationid"
+                    "description": "The unique log request ID. Used to group all results into the single batch.",
+                    "title": "Correlation id",
+                    "type": "string"
                 },
                 "messageType": {
                     "const": "pushLog",
@@ -2447,7 +2574,14 @@
                     "type": "string"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -2530,6 +2664,7 @@
                 },
                 "messageType": {
                     "const": "requestBlobUrls",
+                    "default": "requestBlobUrls",
                     "description": "Type of the message body.",
                     "title": "Messagetype",
                     "type": "string"
@@ -2549,7 +2684,6 @@
                 }
             },
             "required": [
-                "messageType",
                 "digests"
             ],
             "title": "AosRequestBlobUrlsV7",
@@ -2787,6 +2921,7 @@
                 },
                 "messageType": {
                     "const": "startProvisioningRequest",
+                    "default": "startProvisioningRequest",
                     "description": "message body type",
                     "title": "Messagetype",
                     "type": "string"
@@ -2802,7 +2937,6 @@
                 }
             },
             "required": [
-                "messageType",
                 "node",
                 "password"
             ],
@@ -2836,7 +2970,14 @@
                     "description": "The identification of the node."
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 },
@@ -2875,6 +3016,7 @@
                 },
                 "messageType": {
                     "const": "stateAcceptance",
+                    "default": "stateAcceptance",
                     "description": "Message body type.",
                     "title": "Message type",
                     "type": "string"
@@ -2894,11 +3036,19 @@
                     "type": "integer"
                 },
                 "checksum": {
+                    "anyOf": [
+                        {
+                            "maxLength": 256,
+                            "minLength": 0,
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
                     "description": "The checksum (digest) over state content",
-                    "maxLength": 256,
-                    "minLength": 1,
-                    "title": "State checksum (digest)",
-                    "type": "string"
+                    "title": "State checksum (digest)"
                 },
                 "result": {
                     "description": "The result of applying state change.",
@@ -2917,11 +3067,9 @@
                 }
             },
             "required": [
-                "messageType",
                 "item",
                 "subject",
                 "instance",
-                "checksum",
                 "result",
                 "reason"
             ],
@@ -3022,7 +3170,14 @@
                     "type": "string"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -3157,13 +3312,20 @@
                     "title": "Attrs"
                 },
                 "partitions": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "$ref": "#/$defs/AosNodePartitionInfo"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "List of partitions",
-                    "items": {
-                        "$ref": "#/$defs/AosNodePartitionInfo"
-                    },
-                    "title": "Partitions",
-                    "type": "array"
+                    "title": "Partitions"
                 },
                 "runtimes": {
                     "anyOf": [
@@ -3214,7 +3376,14 @@
                     "type": "string"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -3334,7 +3503,7 @@
                     "anyOf": [
                         {
                             "items": {
-                                "$ref": "#/$defs/cloud_common__protocols__unit__v7__unit_status__AosUpdateItemInfo"
+                                "$ref": "#/$defs/AosUpdateItemInfo"
                             },
                             "type": "array"
                         },
@@ -3431,6 +3600,54 @@
                 "signInfo"
             ],
             "title": "AosUpdateItemBlobInfo",
+            "type": "object"
+        },
+        "AosUpdateItemInfo": {
+            "description": "Update item info sent to the AosEdge Cloud.",
+            "properties": {
+                "item": {
+                    "$ref": "#/$defs/AosIdentity",
+                    "description": "Update item identifier."
+                },
+                "version": {
+                    "description": "Version in format of the SemVer.",
+                    "title": "Version",
+                    "type": "string"
+                },
+                "state": {
+                    "description": "The current (reported) state of the update item.",
+                    "enum": [
+                        "unknown",
+                        "downloading",
+                        "pending",
+                        "installing",
+                        "installed",
+                        "removing",
+                        "removed",
+                        "failed"
+                    ],
+                    "title": "State",
+                    "type": "string"
+                },
+                "errorInfo": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Error information. Absense means no error."
+                }
+            },
+            "required": [
+                "item",
+                "version",
+                "state"
+            ],
+            "title": "AosUpdateItemInfo",
             "type": "object"
         },
         "AosUpdateStateV7": {
@@ -3674,79 +3891,6 @@
                 "nodes"
             ],
             "title": "UnitConfigV7",
-            "type": "object"
-        },
-        "cloud_common__protocols__unit__v7__desired_status__AosUpdateItemInfo": {
-            "description": "Update item info sent from the AosEdge Cloud.",
-            "properties": {
-                "item": {
-                    "$ref": "#/$defs/AosIdentity",
-                    "description": "Update item identifier."
-                },
-                "version": {
-                    "description": "Version in format of the SemVer.",
-                    "title": "Version",
-                    "type": "string"
-                },
-                "owner": {
-                    "$ref": "#/$defs/AosIdentity",
-                    "description": "The ID of the owner of the update item (OEM or SP identity)."
-                },
-                "indexDigest": {
-                    "description": "Digest of the index.json file for the update item.",
-                    "minLength": 1,
-                    "title": "Indexdigest",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "item",
-                "version",
-                "owner",
-                "indexDigest"
-            ],
-            "title": "AosUpdateItemInfo",
-            "type": "object"
-        },
-        "cloud_common__protocols__unit__v7__unit_status__AosUpdateItemInfo": {
-            "description": "Update item info sent to the AosEdge Cloud.",
-            "properties": {
-                "item": {
-                    "$ref": "#/$defs/AosIdentity",
-                    "description": "Update item identifier."
-                },
-                "version": {
-                    "description": "Version in format of the SemVer.",
-                    "title": "Version",
-                    "type": "string"
-                },
-                "state": {
-                    "description": "The current (reported) state of the update item.",
-                    "enum": [
-                        "unknown",
-                        "downloading",
-                        "pending",
-                        "installing",
-                        "installed",
-                        "removing",
-                        "removed",
-                        "failed"
-                    ],
-                    "title": "State",
-                    "type": "string"
-                },
-                "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
-                    "default": null,
-                    "description": "Error information. Absense means no error."
-                }
-            },
-            "required": [
-                "item",
-                "version",
-                "state"
-            ],
-            "title": "AosUpdateItemInfo",
             "type": "object"
         }
     },

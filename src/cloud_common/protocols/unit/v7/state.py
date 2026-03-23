@@ -1,7 +1,7 @@
 #
 #  Copyright (c) 2018-2025 EPAM Systems Inc.
 #
-from typing import Annotated, Literal
+from typing import Annotated, Literal, Optional
 
 from pydantic import Field
 
@@ -101,18 +101,18 @@ class AosStateAcceptanceV7(AosBaseDataModel):
             title='Message type',
             description='Message body type.',
         ),
-    ]
+    ] = 'stateAcceptance'
 
     item: TypeItemMandatory
     subject: TypeSubjectMandatory
     instance: TypeInstanceNoMandatory
-
     checksum: Annotated[
-        str,
+        Optional[str],
         Field(
             alias='checksum',
             title='State checksum (digest)',
-            min_length=1,
+            default=None,
+            min_length=0,
             max_length=DataSizes.DATA_LENGTH_256,
             description='The checksum (digest) over state content',
         ),

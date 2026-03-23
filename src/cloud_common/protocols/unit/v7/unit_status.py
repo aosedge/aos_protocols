@@ -264,13 +264,13 @@ class AosUnitNodeInfo(AosBaseModel):
     ] = None
 
     partitions: Annotated[
-        list[AosNodePartitionInfo],
+        Optional[list[AosNodePartitionInfo]],
         Field(
             alias='partitions',
             default=None,
             description='List of partitions',
         ),
-    ]
+    ] = None
 
     runtimes: Annotated[
         Optional[List[AosRuntimeInfo]],

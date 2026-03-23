@@ -2,13 +2,15 @@
 #  Copyright (c) 2018-2025 EPAM Systems Inc.
 #
 from typing import Annotated, Optional, Literal, List
+from uuid import UUID
 
-from pydantic import Field, UUID4
+from pydantic import Field
 
 from .types import AosBaseModel
 from ..common import (
     AosErrorInfo,
     AosHostRecord,
+    AosIdentityType,
 )
 
 
@@ -29,7 +31,7 @@ class AosIdentity(AosBaseModel):
     """Aos objects identifier."""
 
     id: Annotated[
-        Optional[UUID4],
+        Optional[UUID],
         Field(
             default=None,
             alias='id',
@@ -39,16 +41,7 @@ class AosIdentity(AosBaseModel):
     ] = None
 
     type: Annotated[
-        Optional[Literal[
-            'component',
-            'service',
-            'layer',
-            'subject',
-            'oem',
-            'sp',
-            'node',
-            'runtime',
-        ]],
+        Optional[AosIdentityType],
         Field(
             default=None,
             alias='type',
@@ -172,7 +165,7 @@ class AosArchInfo(AosBaseModel):
 class AosUpdateItemImageInfo(AosBaseModel):
 
     digest: Annotated[
-        UUID4,
+        UUID,
         Field(
             alias='id',
             description='The identification of the update item image.',
@@ -213,15 +206,6 @@ class AosSubject(AosBaseModel):
             description='The type of the subject.',
         ),
     ]
-
-    is_reported_from_unit: Annotated[
-        bool,
-        Field(
-            default=False,
-            alias='isReportedFromUnit',
-            description='Indicates whether the subject is reported from unit.',
-        ),
-    ] = False
 
 
 TypeAosIdentityMandatory = Annotated[

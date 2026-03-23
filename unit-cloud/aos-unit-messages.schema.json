@@ -809,7 +809,14 @@
                     "type": "object"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -865,7 +872,14 @@
                     "type": "string"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -1269,7 +1283,7 @@
                     "type": "string"
                 },
                 "hostDevices": {
-                    "description": "List of files in /dev dir, associated with the device name.",
+                    "description": "List of host devices.",
                     "items": {
                         "type": "string"
                     },
@@ -1278,14 +1292,14 @@
                 },
                 "sharedCount": {
                     "default": 0,
-                    "description": "The maximum allowed number of service instances that can use this device simultaneously. 0 means no restrictions.",
+                    "description": "The count of shared devices that can be used in one time. 0 means no restrictions.",
                     "minimum": 0,
                     "title": "Sharedcount",
                     "type": "integer"
                 },
                 "groups": {
                     "default": null,
-                    "description": "List of associated user groups.",
+                    "description": "List of associated groups.",
                     "items": {
                         "type": "string"
                     },
@@ -1384,7 +1398,14 @@
                     "type": "string"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -1399,22 +1420,43 @@
             "description": "AosUnit error info structure.\n\nEncapsulates a structure for AosUnit error info.\nAll fields are optional. In this case treated as no error.",
             "properties": {
                 "aosCode": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "AosCore error code.",
-                    "title": "Aos error code",
-                    "type": "integer"
+                    "title": "Aos error code"
                 },
                 "exitCode": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Module error code.",
-                    "title": "Exit code",
-                    "type": "integer"
+                    "title": "Exit code"
                 },
                 "message": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Text of the error description.",
-                    "title": "Error message",
-                    "type": "string"
+                    "title": "Error message"
                 }
             },
             "title": "AosErrorInfo",
@@ -1507,7 +1549,14 @@
                     "type": "string"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -1826,7 +1875,14 @@
                     "type": "string"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -2279,7 +2335,14 @@
                     "type": "string"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -2516,7 +2579,14 @@
                     "type": "string"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -2562,7 +2632,14 @@
                     "type": "string"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -2664,7 +2741,14 @@
                     "type": "string"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 },
@@ -2852,7 +2936,14 @@
                     "type": "string"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }
@@ -2994,7 +3085,14 @@
                     "type": "string"
                 },
                 "errorInfo": {
-                    "$ref": "#/$defs/AosErrorInfo",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosErrorInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Error information. Absense means no error."
                 }

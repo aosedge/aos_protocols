@@ -5,7 +5,7 @@ import base64
 from datetime import time
 from typing import Annotated, Literal, Optional
 
-from pydantic import Base64Bytes, BaseModel, Field, field_serializer
+from pydantic import Base64Bytes, BaseModel, Field, field_serializer, ConfigDict
 
 from cloud_common.protocols.unit.types import (
     AosSensitiveBytes,
@@ -15,8 +15,8 @@ from cloud_common.protocols.unit.types import (
     TypeVersionMandatory,
 )
 
-from .common import AosIdentity, TypeItemMandatory, AosSubject, AosBaseDataModel
-from .types import TypeNodeDesiredState
+from .common import AosIdentity, TypeItemMandatory, AosSubject, AosBaseDataModel, TypeAosIdentityMandatory
+from .types import TypeNodeDesiredState, AosBaseModel
 from .unit_config import UnitConfigV7
 
 
@@ -54,6 +54,13 @@ class AosDecryptInfo(BaseModel):
     @field_serializer('block_key', 'block_iv', when_used='json')
     def dump_secret(self, struct_value):
         return base64.b64encode(struct_value.get_secret_value())
+
+    model_config = ConfigDict(
+        validate_by_name=True,
+        validate_by_alias=True,
+        serialize_by_alias=True,
+        use_enum_values=True,
+    )
 
 
 TypeAosDecryptInfo = Annotated[
@@ -101,7 +108,7 @@ class AosCertificateChainInfo(BaseModel):
     ]
 
 
-class AosSignInfo(BaseModel):
+class AosSignInfo(AosBaseModel):
     """Aos sign information."""
 
     chain_name: Annotated[
@@ -197,7 +204,7 @@ class AosTimetableItem(BaseModel):
     ]
 
 
-class AosUpdateItemBlobInfo(BaseModel):
+class AosUpdateItemBlobInfo(AosBaseModel):
 
     digest: Annotated[
         str,
@@ -215,10 +222,10 @@ class AosUpdateItemBlobInfo(BaseModel):
     sign_info: TypeAosSignInfo
 
 
-class AosUpdateItemInfo(BaseModel):
+class AosDesiredUpdateItemInfo(AosBaseModel):
     """Update item info sent from the AosEdge Cloud."""
 
-    identity: TypeItemMandatory
+    identity: TypeAosIdentityMandatory
     version: TypeVersionMandatory
 
     owner: Annotated[
@@ -294,7 +301,7 @@ class AosDesiredStatusV7(AosBaseDataModel):
             alias='messageType',
             description='Type of the message body.',
         ),
-    ]
+    ] = 'desiredStatus'
 
     nodes: Annotated[
         list[AosNodeDesiredState],
@@ -306,58 +313,58 @@ class AosDesiredStatusV7(AosBaseDataModel):
     ]
 
     unit_config: Annotated[
-        UnitConfigV7,
+        Optional[UnitConfigV7],
         Field(
             default=None,
             alias='unitConfig',
             description='Desired unit config dictionary.',
         ),
-    ]
+    ] = None
 
     items: Annotated[
-        list[AosUpdateItemInfo],
+        list[AosDesiredUpdateItemInfo],
         Field(
             default=[],
             alias='items',
             description='List of the desired update items. If absent or null - do nothing.',
             min_length=0,
         ),
-    ]
+    ] = []
 
     instances: Annotated[
-        list[AosDesiredInstanceInfo],
+        Optional[list[AosDesiredInstanceInfo]],
         Field(
             default=None,
             description='List of the desired update item instances. If absent or null - do nothing.',
         ),
-    ]
+    ] = None
 
     subjects: Annotated[
-        list[AosSubject],
+        Optional[list[AosSubject]],
         Field(
             default=None,
             description='The list of the used subjects',
         ),
-    ]
+    ] = None
 
     certificates: Annotated[
-        list[AosCertificateInfo],
+        Optional[list[AosCertificateInfo]],
         Field(
             default=None,
             description='The list of the used certificates',
             max_length=32,
         ),
-    ]
+    ] = None
 
     certificate_chains: Annotated[
-        list[AosCertificateChainInfo],
+        Optional[list[AosCertificateChainInfo]],
         Field(
             default=None,
             alias='certificateChains',
             description='Certificate chains info for checking signs.',
             max_length=8,
         ),
-    ]
+    ] = None
 
 
 class AosRequestBlobUrlsV7(AosBaseDataModel):
@@ -367,7 +374,7 @@ class AosRequestBlobUrlsV7(AosBaseDataModel):
             alias='messageType',
             description='Type of the message body.',
         ),
-    ]
+    ] = 'requestBlobUrls'
 
     digests: Annotated[
         list[str],
@@ -386,7 +393,7 @@ class AosBlobUrlsV7(AosBaseDataModel):
             alias='messageType',
             description='Type of the message body.',
         ),
-    ]
+    ] = 'blobUrls'
 
     items: Annotated[
         list[AosUpdateItemBlobInfo],

@@ -168,6 +168,16 @@ class AosPushLogV7(AosBaseDataModel):
         ),
     ]
 
+    correlation_id: Annotated[
+        str,
+        Field(
+            alias='correlationId',
+            default=None,
+            title='Correlation id',
+            description='The unique log request ID. Used to group all results into the single batch.',
+        ),
+    ]
+
     node: Annotated[
         AosIdentity,
         Field(

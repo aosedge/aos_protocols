@@ -168,7 +168,7 @@ class AosIssuedUnitCertificatesV7(AosBaseDataModel):
             title='Message type',
             description='Message body type.',
         ),
-    ]
+    ] = 'issuedUnitCertificates'
 
     certificates: Annotated[
         list[AosIssuedUnitCertsV7],

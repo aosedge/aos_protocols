@@ -45,7 +45,7 @@ class AosStartProvisioningRequestV7(AosBaseDataModel):
             alias='messageType',
             description='message body type',
         ),
-    ]
+    ] = 'startProvisioningRequest'
 
     node: Annotated[
         AosIdentity,
@@ -131,7 +131,7 @@ class AosFinishProvisioningRequestV7(AosBaseDataModel):
             alias='messageType',
             description='message body type',
         ),
-    ]
+    ] = 'finishProvisioningRequest'
 
     node: Annotated[
         AosIdentity,

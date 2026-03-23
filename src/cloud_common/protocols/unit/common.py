@@ -1,8 +1,8 @@
 #
-#  Copyright (c) 2018-2024 Renesas Inc.
 #  Copyright (c) 2018-2024 EPAM Systems Inc.
 #
-from typing import Annotated
+from enum import Enum
+from typing import Annotated, Optional
 
 from pydantic import BaseModel, Field
 
@@ -16,7 +16,7 @@ class AosErrorInfo(BaseModel):
     """
 
     aos_code: Annotated[
-        int,
+        Optional[int],
         Field(
             default=None,
             alias='aosCode',
@@ -26,7 +26,7 @@ class AosErrorInfo(BaseModel):
     ]
 
     exit_code: Annotated[
-        int,
+        Optional[int],
         Field(
             default=None,
             alias='exitCode',
@@ -36,7 +36,7 @@ class AosErrorInfo(BaseModel):
     ]
 
     message: Annotated[
-        str,
+        Optional[str],
         Field(
             default=None,
             title='Error message',
@@ -80,7 +80,7 @@ class AosDeviceInfo(BaseModel):
         list[str],
         Field(
             alias='hostDevices',
-            description='List of files in /dev dir, associated with the device name.',
+            description='List of host devices.',
         ),
     ]
 
@@ -90,7 +90,7 @@ class AosDeviceInfo(BaseModel):
             alias='sharedCount',
             default=0,
             ge=0,
-            description='The maximum allowed number of service instances that can use this device simultaneously. 0 means no restrictions.',
+            description='The count of shared devices that can be used in one time. 0 means no restrictions.',
         ),
     ]
 
@@ -98,7 +98,7 @@ class AosDeviceInfo(BaseModel):
         list[str],
         Field(
             default=None,
-            description='List of associated user groups.',
+            description='List of associated groups.',
         ),
     ]
 
@@ -169,10 +169,23 @@ class AosAlertConfig(BaseModel):
 
 
 TypeAosErrorInfoOptional = Annotated[
-    AosErrorInfo,
+    Optional[AosErrorInfo],
     Field(
         default=None,
         alias='errorInfo',
         description='Error information. Absense means no error.',
     ),
 ]
+
+
+class AosIdentityType(Enum):
+    component = 'component'
+    service = 'service'
+    layer = 'layer'
+    subject = 'subject'
+    oem = 'oem'
+    sp = 'sp'
+    fleet = 'fleet'
+    node = 'node'
+    node_subject = 'node-subject'
+    runtime = 'runtime'

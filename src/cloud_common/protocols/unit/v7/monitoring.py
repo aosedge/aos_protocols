@@ -114,7 +114,7 @@ class AosNodeState(AosBaseModel):
     is_connected: Annotated[
         bool,
         Field(
-            alias='connected',
+            alias='isConnected',
             description='Flag to indicate if the node is connected to main.',
         ),
     ]

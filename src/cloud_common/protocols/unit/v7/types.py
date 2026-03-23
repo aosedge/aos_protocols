@@ -13,6 +13,8 @@ class AosBaseModel(BaseModel):
     model_config = ConfigDict(
         validate_by_name=True,
         serialize_by_alias=True,
+        use_enum_values=True,
+        populate_by_name=True,
     )
 
 

@@ -1112,9 +1112,9 @@
         "AosDesiredUpdateItemInfo": {
             "description": "Update item info sent from the AosEdge Cloud.",
             "properties": {
-                "identity": {
+                "item": {
                     "$ref": "#/$defs/AosIdentity",
-                    "description": "The identification of the resource."
+                    "description": "Update item identifier."
                 },
                 "version": {
                     "description": "Version in format of the SemVer.",
@@ -1133,7 +1133,7 @@
                 }
             },
             "required": [
-                "identity",
+                "item",
                 "version",
                 "owner",
                 "indexDigest"

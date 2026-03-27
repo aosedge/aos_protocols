@@ -178,7 +178,7 @@ class AosTimeSlot(BaseModel):
     ]
 
 
-class AosTimetableItem(BaseModel):
+class AosTimetableItem(AosBaseModel):
     """
     Timetable signe record.
 
@@ -225,7 +225,7 @@ class AosUpdateItemBlobInfo(AosBaseModel):
 class AosDesiredUpdateItemInfo(AosBaseModel):
     """Update item info sent from the AosEdge Cloud."""
 
-    identity: TypeAosIdentityMandatory
+    item: TypeItemMandatory
     version: TypeVersionMandatory
 
     owner: Annotated[
@@ -246,7 +246,7 @@ class AosDesiredUpdateItemInfo(AosBaseModel):
     ]
 
 
-class AosDesiredInstanceInfo(BaseModel):
+class AosDesiredInstanceInfo(AosBaseModel):
     """Update item info sent from the AosEdge Cloud."""
 
     item: TypeItemMandatory
@@ -281,7 +281,7 @@ class AosDesiredInstanceInfo(BaseModel):
     ] = None
 
 
-class AosNodeDesiredState(BaseModel):
+class AosNodeDesiredState(AosBaseModel):
     """Desired node status."""
 
     item: TypeItemMandatory

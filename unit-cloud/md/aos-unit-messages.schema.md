@@ -68,8 +68,14 @@
           - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors`](#data_oneOf_i0_items_items_oneOf_i7_errors)
             - [AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo](#data_oneOf_i0_items_items_oneOf_i7_errors_items)
               - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
+                - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode > anyOf > item 0`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode_anyOf_i0)
+                - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode > anyOf > item 1`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode_anyOf_i1)
               - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
+                - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode > anyOf > item 0`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode_anyOf_i0)
+                - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode > anyOf > item 1`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode_anyOf_i1)
               - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
+                - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message > anyOf > item 0`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message_anyOf_i0)
+                - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message > anyOf > item 1`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message_anyOf_i1)
   - [Property `AosUnitMessage > data > oneOf > AosMonitoring`](#data_oneOf_i1)
     - [Property `AosUnitMessage > data > oneOf > AosMonitoring > messageType`](#data_oneOf_i1_messageType)
     - [Property `AosUnitMessage > data > oneOf > AosMonitoring > nodes`](#data_oneOf_i1_nodes)
@@ -104,9 +110,8 @@
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > unitConfig > AosUnitConfigStatus > version`](#data_oneOf_i2_unitConfig_items_version)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > unitConfig > AosUnitConfigStatus > status`](#data_oneOf_i2_unitConfig_items_status)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > unitConfig > AosUnitConfigStatus > errorInfo`](#data_oneOf_i2_unitConfig_items_errorInfo)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
+          - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > unitConfig > AosUnitConfigStatus > errorInfo > anyOf > AosErrorInfo`](#data_oneOf_i2_unitConfig_items_errorInfo_anyOf_i0)
+          - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > unitConfig > AosUnitConfigStatus > errorInfo > anyOf > item 1`](#data_oneOf_i2_unitConfig_items_errorInfo_anyOf_i1)
     - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes`](#data_oneOf_i2_nodes)
       - [AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo](#data_oneOf_i2_nodes_items)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > id`](#data_oneOf_i2_nodes_items_id)
@@ -143,18 +148,16 @@
             - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > partitions > AosNodePartitionInfo > totalSize`](#data_oneOf_i2_nodes_items_partitions_items_totalSize)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > status`](#data_oneOf_i2_nodes_items_status)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > errorInfo`](#data_oneOf_i2_nodes_items_errorInfo)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
+          - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > errorInfo > anyOf > AosErrorInfo`](#data_oneOf_i2_nodes_items_errorInfo_anyOf_i0)
+          - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > errorInfo > anyOf > item 1`](#data_oneOf_i2_nodes_items_errorInfo_anyOf_i1)
     - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > services`](#data_oneOf_i2_services)
       - [AosUnitMessage > data > oneOf > AosUnitStatus > services > AosServiceStatus](#data_oneOf_i2_services_items)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > services > AosServiceStatus > id`](#data_oneOf_i2_services_items_id)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > services > AosServiceStatus > version`](#data_oneOf_i2_services_items_version)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > services > AosServiceStatus > status`](#data_oneOf_i2_services_items_status)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > services > AosServiceStatus > errorInfo`](#data_oneOf_i2_services_items_errorInfo)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
+          - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > services > AosServiceStatus > errorInfo > anyOf > AosErrorInfo`](#data_oneOf_i2_services_items_errorInfo_anyOf_i0)
+          - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > services > AosServiceStatus > errorInfo > anyOf > item 1`](#data_oneOf_i2_services_items_errorInfo_anyOf_i1)
     - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > instances`](#data_oneOf_i2_instances)
       - [AosUnitMessage > data > oneOf > AosUnitStatus > instances > AosServiceInstanceStatus](#data_oneOf_i2_instances_items)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > instances > AosServiceInstanceStatus > serviceId`](#data_oneOf_i2_instances_items_serviceId)
@@ -165,9 +168,8 @@
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > instances > AosServiceInstanceStatus > status`](#data_oneOf_i2_instances_items_status)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > instances > AosServiceInstanceStatus > stateChecksum`](#data_oneOf_i2_instances_items_stateChecksum)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > instances > AosServiceInstanceStatus > errorInfo`](#data_oneOf_i2_instances_items_errorInfo)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
+          - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > instances > AosServiceInstanceStatus > errorInfo > anyOf > AosErrorInfo`](#data_oneOf_i2_instances_items_errorInfo_anyOf_i0)
+          - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > instances > AosServiceInstanceStatus > errorInfo > anyOf > item 1`](#data_oneOf_i2_instances_items_errorInfo_anyOf_i1)
     - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > layers`](#data_oneOf_i2_layers)
       - [AosUnitMessage > data > oneOf > AosUnitStatus > layers > AosLayerStatusInfo](#data_oneOf_i2_layers_items)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > layers > AosLayerStatusInfo > id`](#data_oneOf_i2_layers_items_id)
@@ -175,9 +177,8 @@
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > layers > AosLayerStatusInfo > digest`](#data_oneOf_i2_layers_items_digest)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > layers > AosLayerStatusInfo > status`](#data_oneOf_i2_layers_items_status)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > layers > AosLayerStatusInfo > errorInfo`](#data_oneOf_i2_layers_items_errorInfo)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
+          - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > layers > AosLayerStatusInfo > errorInfo > anyOf > AosErrorInfo`](#data_oneOf_i2_layers_items_errorInfo_anyOf_i0)
+          - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > layers > AosLayerStatusInfo > errorInfo > anyOf > item 1`](#data_oneOf_i2_layers_items_errorInfo_anyOf_i1)
     - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components`](#data_oneOf_i2_components)
       - [AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo](#data_oneOf_i2_components_items)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > id`](#data_oneOf_i2_components_items_id)
@@ -191,9 +192,8 @@
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > status`](#data_oneOf_i2_components_items_status)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > annotations`](#data_oneOf_i2_components_items_annotations)
         - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > errorInfo`](#data_oneOf_i2_components_items_errorInfo)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
-          - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
+          - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > errorInfo > anyOf > AosErrorInfo`](#data_oneOf_i2_components_items_errorInfo_anyOf_i0)
+          - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > errorInfo > anyOf > item 1`](#data_oneOf_i2_components_items_errorInfo_anyOf_i1)
     - [Property `AosUnitMessage > data > oneOf > AosUnitStatus > unitSubjects`](#data_oneOf_i2_unitSubjects)
       - [AosUnitMessage > data > oneOf > AosUnitStatus > unitSubjects > unitSubjects items](#data_oneOf_i2_unitSubjects_items)
   - [Property `AosUnitMessage > data > oneOf > AosDesiredStatus`](#data_oneOf_i3)
@@ -410,9 +410,8 @@
     - [Property `AosUnitMessage > data > oneOf > AosPushLog > content`](#data_oneOf_i9_content)
     - [Property `AosUnitMessage > data > oneOf > AosPushLog > status`](#data_oneOf_i9_status)
     - [Property `AosUnitMessage > data > oneOf > AosPushLog > errorInfo`](#data_oneOf_i9_errorInfo)
-      - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
-      - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
-      - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
+      - [Property `AosUnitMessage > data > oneOf > AosPushLog > errorInfo > anyOf > AosErrorInfo`](#data_oneOf_i9_errorInfo_anyOf_i0)
+      - [Property `AosUnitMessage > data > oneOf > AosPushLog > errorInfo > anyOf > item 1`](#data_oneOf_i9_errorInfo_anyOf_i1)
   - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsRequest`](#data_oneOf_i10)
     - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsRequest > messageType`](#data_oneOf_i10_messageType)
     - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsRequest > items`](#data_oneOf_i10_items)
@@ -436,9 +435,8 @@
           - [AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses > AosEnvVarStatus](#data_oneOf_i11_statuses_items_statuses_items)
             - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses > AosEnvVarStatus > name`](#data_oneOf_i11_statuses_items_statuses_items_name)
             - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses > AosEnvVarStatus > errorInfo`](#data_oneOf_i11_statuses_items_statuses_items_errorInfo)
-              - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
-              - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
-              - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
+              - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses > AosEnvVarStatus > errorInfo > anyOf > AosErrorInfo`](#data_oneOf_i11_statuses_items_statuses_items_errorInfo_anyOf_i0)
+              - [Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses > AosEnvVarStatus > errorInfo > anyOf > item 1`](#data_oneOf_i11_statuses_items_statuses_items_errorInfo_anyOf_i1)
   - [Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification`](#data_oneOf_i12)
     - [Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > messageType`](#data_oneOf_i12_messageType)
     - [Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification > certificates`](#data_oneOf_i12_certificates)
@@ -484,9 +482,8 @@
     - [Property `AosUnitMessage > data > oneOf > AosStartProvisioningResponse > messageType`](#data_oneOf_i17_messageType)
     - [Property `AosUnitMessage > data > oneOf > AosStartProvisioningResponse > nodeId`](#data_oneOf_i17_nodeId)
     - [Property `AosUnitMessage > data > oneOf > AosStartProvisioningResponse > errorInfo`](#data_oneOf_i17_errorInfo)
-      - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
-      - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
-      - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
+      - [Property `AosUnitMessage > data > oneOf > AosStartProvisioningResponse > errorInfo > anyOf > AosErrorInfo`](#data_oneOf_i17_errorInfo_anyOf_i0)
+      - [Property `AosUnitMessage > data > oneOf > AosStartProvisioningResponse > errorInfo > anyOf > item 1`](#data_oneOf_i17_errorInfo_anyOf_i1)
     - [Property `AosUnitMessage > data > oneOf > AosStartProvisioningResponse > csrs`](#data_oneOf_i17_csrs)
       - [AosUnitMessage > data > oneOf > AosStartProvisioningResponse > csrs > AosCSR](#data_oneOf_i17_csrs_items)
         - [Property `AosUnitMessage > data > oneOf > AosStartProvisioningResponse > csrs > AosCSR > type`](#data_oneOf_i17_csrs_items_type)
@@ -501,9 +498,8 @@
     - [Property `AosUnitMessage > data > oneOf > AosFinishProvisioningResponse > messageType`](#data_oneOf_i19_messageType)
     - [Property `AosUnitMessage > data > oneOf > AosFinishProvisioningResponse > nodeId`](#data_oneOf_i19_nodeId)
     - [Property `AosUnitMessage > data > oneOf > AosFinishProvisioningResponse > errorInfo`](#data_oneOf_i19_errorInfo)
-      - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
-      - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
-      - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
+      - [Property `AosUnitMessage > data > oneOf > AosFinishProvisioningResponse > errorInfo > anyOf > AosErrorInfo`](#data_oneOf_i19_errorInfo_anyOf_i0)
+      - [Property `AosUnitMessage > data > oneOf > AosFinishProvisioningResponse > errorInfo > anyOf > item 1`](#data_oneOf_i19_errorInfo_anyOf_i1)
   - [Property `AosUnitMessage > data > oneOf > AosDeProvisioningRequest`](#data_oneOf_i20)
     - [Property `AosUnitMessage > data > oneOf > AosDeProvisioningRequest > messageType`](#data_oneOf_i20_messageType)
     - [Property `AosUnitMessage > data > oneOf > AosDeProvisioningRequest > nodeId`](#data_oneOf_i20_nodeId)
@@ -512,9 +508,8 @@
     - [Property `AosUnitMessage > data > oneOf > AosDeProvisioningResponse > messageType`](#data_oneOf_i21_messageType)
     - [Property `AosUnitMessage > data > oneOf > AosDeProvisioningResponse > nodeId`](#data_oneOf_i21_nodeId)
     - [Property `AosUnitMessage > data > oneOf > AosDeProvisioningResponse > errorInfo`](#data_oneOf_i21_errorInfo)
-      - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode)
-      - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode)
-      - [Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message)
+      - [Property `AosUnitMessage > data > oneOf > AosDeProvisioningResponse > errorInfo > anyOf > AosErrorInfo`](#data_oneOf_i21_errorInfo_anyOf_i0)
+      - [Property `AosUnitMessage > data > oneOf > AosDeProvisioningResponse > errorInfo > anyOf > item 1`](#data_oneOf_i21_errorInfo_anyOf_i1)
 
 **Title:** AosUnitMessage
 
@@ -1470,44 +1465,98 @@ Specific value: `"resourceValidateAlert"`
 Encapsulates a structure for AosUnit error info.
 All fields are optional. In this case treated as no error.
 
-| Property                                                                 | Pattern | Type    | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | ----------------- |
-| - [aosCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode )   | No      | integer | No         | -          | Aos error code    |
-| - [exitCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode ) | No      | integer | No         | -          | Exit code         |
-| - [message](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message )   | No      | string  | No         | -          | Error message     |
+| Property                                                                 | Pattern | Type        | Deprecated | Definition | Title/Description |
+| ------------------------------------------------------------------------ | ------- | ----------- | ---------- | ---------- | ----------------- |
+| - [aosCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode )   | No      | Combination | No         | -          | Aos error code    |
+| - [exitCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode ) | No      | Combination | No         | -          | Exit code         |
+| - [message](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message )   | No      | Combination | No         | -          | Error message     |
 
 ###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`
 
 **Title:** Aos error code
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
 
 **Description:** AosCore error code.
+
+| Any of(Option)                                                              |
+| --------------------------------------------------------------------------- |
+| [item 0](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode_anyOf_i0) |
+| [item 1](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode_anyOf_i1) |
+
+###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode > anyOf > item 0`
+
+|          |           |
+| -------- | --------- |
+| **Type** | `integer` |
+
+###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode > anyOf > item 1`
+
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 ###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`
 
 **Title:** Exit code
 
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
 
 **Description:** Module error code.
+
+| Any of(Option)                                                               |
+| ---------------------------------------------------------------------------- |
+| [item 0](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode_anyOf_i0) |
+| [item 1](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode_anyOf_i1) |
+
+###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode > anyOf > item 0`
+
+|          |           |
+| -------- | --------- |
+| **Type** | `integer` |
+
+###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode > anyOf > item 1`
+
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 ###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_message"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`
 
 **Title:** Error message
 
-|             |          |
-| ----------- | -------- |
-| **Type**    | `string` |
-| **Default** | `null`   |
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
 
 **Description:** Text of the error description.
+
+| Any of(Option)                                                              |
+| --------------------------------------------------------------------------- |
+| [item 0](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message_anyOf_i0) |
+| [item 1](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message_anyOf_i1) |
+
+###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_message_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message > anyOf > item 0`
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_message_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message > anyOf > item 1`
+
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 ### <a name="data_oneOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosMonitoring`
 
@@ -1969,11 +2018,11 @@ false
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 | **Defined in**            | #/$defs/AosUnitConfigStatus                                                 |
 
-| Property                                                  | Pattern | Type             | Deprecated | Definition              | Title/Description |
-| --------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------- | ----------------- |
-| - [version](#data_oneOf_i2_unitConfig_items_version )     | No      | string           | No         | -                       | Version           |
-| + [status](#data_oneOf_i2_unitConfig_items_status )       | No      | enum (of string) | No         | -                       | Status            |
-| - [errorInfo](#data_oneOf_i2_unitConfig_items_errorInfo ) | No      | object           | No         | In #/$defs/AosErrorInfo | AosErrorInfo      |
+| Property                                                  | Pattern | Type             | Deprecated | Definition | Title/Description                          |
+| --------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ------------------------------------------ |
+| - [version](#data_oneOf_i2_unitConfig_items_version )     | No      | string           | No         | -          | Version                                    |
+| + [status](#data_oneOf_i2_unitConfig_items_status )       | No      | enum (of string) | No         | -          | Status                                     |
+| - [errorInfo](#data_oneOf_i2_unitConfig_items_errorInfo ) | No      | Combination      | No         | -          | Error information. Absense means no error. |
 
 ###### <a name="data_oneOf_i2_unitConfig_items_version"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > unitConfig > AosUnitConfigStatus > version`
 
@@ -2004,55 +2053,39 @@ Must be one of:
 
 ###### <a name="data_oneOf_i2_unitConfig_items_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > unitConfig > AosUnitConfigStatus > errorInfo`
 
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Error information. Absense means no error.
+
+| Any of(Option)                                                     |
+| ------------------------------------------------------------------ |
+| [AosErrorInfo](#data_oneOf_i2_unitConfig_items_errorInfo_anyOf_i0) |
+| [item 1](#data_oneOf_i2_unitConfig_items_errorInfo_anyOf_i1)       |
+
+###### <a name="data_oneOf_i2_unitConfig_items_errorInfo_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > unitConfig > AosUnitConfigStatus > errorInfo > anyOf > AosErrorInfo`
+
 **Title:** AosErrorInfo
 
 |                           |                                                                             |
 | ------------------------- | --------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `null`                                                                      |
-| **Defined in**            | #/$defs/AosErrorInfo                                                        |
+| **Same definition as**    | [AosErrorInfo](#data_oneOf_i0_items_items_oneOf_i7_errors_items)            |
 
-**Description:** Error information. Absense means no error.
+**Description:** AosUnit error info structure.
 
-| Property                                                                 | Pattern | Type    | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | ----------------- |
-| - [aosCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode )   | No      | integer | No         | -          | Aos error code    |
-| - [exitCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode ) | No      | integer | No         | -          | Exit code         |
-| - [message](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message )   | No      | string  | No         | -          | Error message     |
+Encapsulates a structure for AosUnit error info.
+All fields are optional. In this case treated as no error.
 
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`
+###### <a name="data_oneOf_i2_unitConfig_items_errorInfo_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > unitConfig > AosUnitConfigStatus > errorInfo > anyOf > item 1`
 
-**Title:** Aos error code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** AosCore error code.
-
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`
-
-**Title:** Exit code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** Module error code.
-
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_message"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`
-
-**Title:** Error message
-
-|             |          |
-| ----------- | -------- |
-| **Type**    | `string` |
-| **Default** | `null`   |
-
-**Description:** Text of the error description.
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 #### <a name="data_oneOf_i2_nodes"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes`
 
@@ -2087,19 +2120,19 @@ Must be one of:
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 | **Defined in**            | #/$defs/AosUnitNodeInfo                                                     |
 
-| Property                                               | Pattern | Type             | Deprecated | Definition              | Title/Description |
-| ------------------------------------------------------ | ------- | ---------------- | ---------- | ----------------------- | ----------------- |
-| + [id](#data_oneOf_i2_nodes_items_id )                 | No      | string           | No         | -                       | Id                |
-| + [name](#data_oneOf_i2_nodes_items_name )             | No      | Combination      | No         | -                       | Name              |
-| + [type](#data_oneOf_i2_nodes_items_type )             | No      | string           | No         | -                       | Type              |
-| + [maxDmips](#data_oneOf_i2_nodes_items_maxDmips )     | No      | integer          | No         | -                       | Maxdmips          |
-| + [cpus](#data_oneOf_i2_nodes_items_cpus )             | No      | Combination      | No         | -                       | Cpus              |
-| + [osType](#data_oneOf_i2_nodes_items_osType )         | No      | string           | No         | -                       | Ostype            |
-| - [attrs](#data_oneOf_i2_nodes_items_attrs )           | No      | Combination      | No         | -                       | Attrs             |
-| + [totalRam](#data_oneOf_i2_nodes_items_totalRam )     | No      | integer          | No         | -                       | Totalram          |
-| - [partitions](#data_oneOf_i2_nodes_items_partitions ) | No      | array            | No         | -                       | Partitions        |
-| + [status](#data_oneOf_i2_nodes_items_status )         | No      | enum (of string) | No         | -                       | Status            |
-| - [errorInfo](#data_oneOf_i2_nodes_items_errorInfo )   | No      | object           | No         | In #/$defs/AosErrorInfo | AosErrorInfo      |
+| Property                                               | Pattern | Type             | Deprecated | Definition | Title/Description                          |
+| ------------------------------------------------------ | ------- | ---------------- | ---------- | ---------- | ------------------------------------------ |
+| + [id](#data_oneOf_i2_nodes_items_id )                 | No      | string           | No         | -          | Id                                         |
+| + [name](#data_oneOf_i2_nodes_items_name )             | No      | Combination      | No         | -          | Name                                       |
+| + [type](#data_oneOf_i2_nodes_items_type )             | No      | string           | No         | -          | Type                                       |
+| + [maxDmips](#data_oneOf_i2_nodes_items_maxDmips )     | No      | integer          | No         | -          | Maxdmips                                   |
+| + [cpus](#data_oneOf_i2_nodes_items_cpus )             | No      | Combination      | No         | -          | Cpus                                       |
+| + [osType](#data_oneOf_i2_nodes_items_osType )         | No      | string           | No         | -          | Ostype                                     |
+| - [attrs](#data_oneOf_i2_nodes_items_attrs )           | No      | Combination      | No         | -          | Attrs                                      |
+| + [totalRam](#data_oneOf_i2_nodes_items_totalRam )     | No      | integer          | No         | -          | Totalram                                   |
+| - [partitions](#data_oneOf_i2_nodes_items_partitions ) | No      | array            | No         | -          | Partitions                                 |
+| + [status](#data_oneOf_i2_nodes_items_status )         | No      | enum (of string) | No         | -          | Status                                     |
+| - [errorInfo](#data_oneOf_i2_nodes_items_errorInfo )   | No      | Combination      | No         | -          | Error information. Absense means no error. |
 
 ###### <a name="data_oneOf_i2_nodes_items_id"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > id`
 
@@ -2542,55 +2575,39 @@ Must be one of:
 
 ###### <a name="data_oneOf_i2_nodes_items_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > errorInfo`
 
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Error information. Absense means no error.
+
+| Any of(Option)                                                |
+| ------------------------------------------------------------- |
+| [AosErrorInfo](#data_oneOf_i2_nodes_items_errorInfo_anyOf_i0) |
+| [item 1](#data_oneOf_i2_nodes_items_errorInfo_anyOf_i1)       |
+
+###### <a name="data_oneOf_i2_nodes_items_errorInfo_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > errorInfo > anyOf > AosErrorInfo`
+
 **Title:** AosErrorInfo
 
 |                           |                                                                             |
 | ------------------------- | --------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `null`                                                                      |
-| **Defined in**            | #/$defs/AosErrorInfo                                                        |
+| **Same definition as**    | [AosErrorInfo](#data_oneOf_i0_items_items_oneOf_i7_errors_items)            |
 
-**Description:** Error information. Absense means no error.
+**Description:** AosUnit error info structure.
 
-| Property                                                                 | Pattern | Type    | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | ----------------- |
-| - [aosCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode )   | No      | integer | No         | -          | Aos error code    |
-| - [exitCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode ) | No      | integer | No         | -          | Exit code         |
-| - [message](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message )   | No      | string  | No         | -          | Error message     |
+Encapsulates a structure for AosUnit error info.
+All fields are optional. In this case treated as no error.
 
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`
+###### <a name="data_oneOf_i2_nodes_items_errorInfo_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > nodes > AosUnitNodeInfo > errorInfo > anyOf > item 1`
 
-**Title:** Aos error code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** AosCore error code.
-
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`
-
-**Title:** Exit code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** Module error code.
-
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_message"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`
-
-**Title:** Error message
-
-|             |          |
-| ----------- | -------- |
-| **Type**    | `string` |
-| **Default** | `null`   |
-
-**Description:** Text of the error description.
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 #### <a name="data_oneOf_i2_services"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > services`
 
@@ -2625,12 +2642,12 @@ Must be one of:
 
 **Description:** Reported by a unit service status.
 
-| Property                                                | Pattern | Type             | Deprecated | Definition              | Title/Description |
-| ------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------- | ----------------- |
-| + [id](#data_oneOf_i2_services_items_id )               | No      | string           | No         | -                       | Id                |
-| + [version](#data_oneOf_i2_services_items_version )     | No      | string           | No         | -                       | Version           |
-| + [status](#data_oneOf_i2_services_items_status )       | No      | enum (of string) | No         | -                       | Status            |
-| - [errorInfo](#data_oneOf_i2_services_items_errorInfo ) | No      | object           | No         | In #/$defs/AosErrorInfo | AosErrorInfo      |
+| Property                                                | Pattern | Type             | Deprecated | Definition | Title/Description                          |
+| ------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ------------------------------------------ |
+| + [id](#data_oneOf_i2_services_items_id )               | No      | string           | No         | -          | Id                                         |
+| + [version](#data_oneOf_i2_services_items_version )     | No      | string           | No         | -          | Version                                    |
+| + [status](#data_oneOf_i2_services_items_status )       | No      | enum (of string) | No         | -          | Status                                     |
+| - [errorInfo](#data_oneOf_i2_services_items_errorInfo ) | No      | Combination      | No         | -          | Error information. Absense means no error. |
 
 ###### <a name="data_oneOf_i2_services_items_id"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > services > AosServiceStatus > id`
 
@@ -2675,55 +2692,39 @@ Must be one of:
 
 ###### <a name="data_oneOf_i2_services_items_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > services > AosServiceStatus > errorInfo`
 
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Error information. Absense means no error.
+
+| Any of(Option)                                                   |
+| ---------------------------------------------------------------- |
+| [AosErrorInfo](#data_oneOf_i2_services_items_errorInfo_anyOf_i0) |
+| [item 1](#data_oneOf_i2_services_items_errorInfo_anyOf_i1)       |
+
+###### <a name="data_oneOf_i2_services_items_errorInfo_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > services > AosServiceStatus > errorInfo > anyOf > AosErrorInfo`
+
 **Title:** AosErrorInfo
 
 |                           |                                                                             |
 | ------------------------- | --------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `null`                                                                      |
-| **Defined in**            | #/$defs/AosErrorInfo                                                        |
+| **Same definition as**    | [AosErrorInfo](#data_oneOf_i0_items_items_oneOf_i7_errors_items)            |
 
-**Description:** Error information. Absense means no error.
+**Description:** AosUnit error info structure.
 
-| Property                                                                 | Pattern | Type    | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | ----------------- |
-| - [aosCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode )   | No      | integer | No         | -          | Aos error code    |
-| - [exitCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode ) | No      | integer | No         | -          | Exit code         |
-| - [message](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message )   | No      | string  | No         | -          | Error message     |
+Encapsulates a structure for AosUnit error info.
+All fields are optional. In this case treated as no error.
 
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`
+###### <a name="data_oneOf_i2_services_items_errorInfo_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > services > AosServiceStatus > errorInfo > anyOf > item 1`
 
-**Title:** Aos error code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** AosCore error code.
-
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`
-
-**Title:** Exit code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** Module error code.
-
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_message"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`
-
-**Title:** Error message
-
-|             |          |
-| ----------- | -------- |
-| **Type**    | `string` |
-| **Default** | `null`   |
-
-**Description:** Text of the error description.
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 #### <a name="data_oneOf_i2_instances"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > instances`
 
@@ -2758,16 +2759,16 @@ Must be one of:
 
 **Description:** Reported by a unit service instance status.
 
-| Property                                                         | Pattern | Type             | Deprecated | Definition              | Title/Description |
-| ---------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------- | ----------------- |
-| + [serviceId](#data_oneOf_i2_instances_items_serviceId )         | No      | string           | No         | -                       | Service ID        |
-| + [subjectId](#data_oneOf_i2_instances_items_subjectId )         | No      | string           | No         | -                       | Subject ID        |
-| + [instance](#data_oneOf_i2_instances_items_instance )           | No      | integer          | No         | -                       | Instance no       |
-| + [version](#data_oneOf_i2_instances_items_version )             | No      | string           | No         | -                       | Version           |
-| + [nodeId](#data_oneOf_i2_instances_items_nodeId )               | No      | string           | No         | -                       | Node ID           |
-| + [status](#data_oneOf_i2_instances_items_status )               | No      | enum (of string) | No         | -                       | Status            |
-| - [stateChecksum](#data_oneOf_i2_instances_items_stateChecksum ) | No      | string           | No         | -                       | Statechecksum     |
-| - [errorInfo](#data_oneOf_i2_instances_items_errorInfo )         | No      | object           | No         | In #/$defs/AosErrorInfo | AosErrorInfo      |
+| Property                                                         | Pattern | Type             | Deprecated | Definition | Title/Description                          |
+| ---------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ------------------------------------------ |
+| + [serviceId](#data_oneOf_i2_instances_items_serviceId )         | No      | string           | No         | -          | Service ID                                 |
+| + [subjectId](#data_oneOf_i2_instances_items_subjectId )         | No      | string           | No         | -          | Subject ID                                 |
+| + [instance](#data_oneOf_i2_instances_items_instance )           | No      | integer          | No         | -          | Instance no                                |
+| + [version](#data_oneOf_i2_instances_items_version )             | No      | string           | No         | -          | Version                                    |
+| + [nodeId](#data_oneOf_i2_instances_items_nodeId )               | No      | string           | No         | -          | Node ID                                    |
+| + [status](#data_oneOf_i2_instances_items_status )               | No      | enum (of string) | No         | -          | Status                                     |
+| - [stateChecksum](#data_oneOf_i2_instances_items_stateChecksum ) | No      | string           | No         | -          | Statechecksum                              |
+| - [errorInfo](#data_oneOf_i2_instances_items_errorInfo )         | No      | Combination      | No         | -          | Error information. Absense means no error. |
 
 ###### <a name="data_oneOf_i2_instances_items_serviceId"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > instances > AosServiceInstanceStatus > serviceId`
 
@@ -2848,55 +2849,39 @@ Must be one of:
 
 ###### <a name="data_oneOf_i2_instances_items_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > instances > AosServiceInstanceStatus > errorInfo`
 
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Error information. Absense means no error.
+
+| Any of(Option)                                                    |
+| ----------------------------------------------------------------- |
+| [AosErrorInfo](#data_oneOf_i2_instances_items_errorInfo_anyOf_i0) |
+| [item 1](#data_oneOf_i2_instances_items_errorInfo_anyOf_i1)       |
+
+###### <a name="data_oneOf_i2_instances_items_errorInfo_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > instances > AosServiceInstanceStatus > errorInfo > anyOf > AosErrorInfo`
+
 **Title:** AosErrorInfo
 
 |                           |                                                                             |
 | ------------------------- | --------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `null`                                                                      |
-| **Defined in**            | #/$defs/AosErrorInfo                                                        |
+| **Same definition as**    | [AosErrorInfo](#data_oneOf_i0_items_items_oneOf_i7_errors_items)            |
 
-**Description:** Error information. Absense means no error.
+**Description:** AosUnit error info structure.
 
-| Property                                                                 | Pattern | Type    | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | ----------------- |
-| - [aosCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode )   | No      | integer | No         | -          | Aos error code    |
-| - [exitCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode ) | No      | integer | No         | -          | Exit code         |
-| - [message](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message )   | No      | string  | No         | -          | Error message     |
+Encapsulates a structure for AosUnit error info.
+All fields are optional. In this case treated as no error.
 
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`
+###### <a name="data_oneOf_i2_instances_items_errorInfo_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > instances > AosServiceInstanceStatus > errorInfo > anyOf > item 1`
 
-**Title:** Aos error code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** AosCore error code.
-
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`
-
-**Title:** Exit code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** Module error code.
-
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_message"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`
-
-**Title:** Error message
-
-|             |          |
-| ----------- | -------- |
-| **Type**    | `string` |
-| **Default** | `null`   |
-
-**Description:** Text of the error description.
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 #### <a name="data_oneOf_i2_layers"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > layers`
 
@@ -2931,13 +2916,13 @@ Must be one of:
 
 **Description:** Layer status info.
 
-| Property                                              | Pattern | Type             | Deprecated | Definition              | Title/Description |
-| ----------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------- | ----------------- |
-| + [id](#data_oneOf_i2_layers_items_id )               | No      | string           | No         | -                       | Id                |
-| + [version](#data_oneOf_i2_layers_items_version )     | No      | string           | No         | -                       | Version           |
-| + [digest](#data_oneOf_i2_layers_items_digest )       | No      | string           | No         | -                       | Digest            |
-| + [status](#data_oneOf_i2_layers_items_status )       | No      | enum (of string) | No         | -                       | Status            |
-| - [errorInfo](#data_oneOf_i2_layers_items_errorInfo ) | No      | object           | No         | In #/$defs/AosErrorInfo | AosErrorInfo      |
+| Property                                              | Pattern | Type             | Deprecated | Definition | Title/Description                          |
+| ----------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ------------------------------------------ |
+| + [id](#data_oneOf_i2_layers_items_id )               | No      | string           | No         | -          | Id                                         |
+| + [version](#data_oneOf_i2_layers_items_version )     | No      | string           | No         | -          | Version                                    |
+| + [digest](#data_oneOf_i2_layers_items_digest )       | No      | string           | No         | -          | Digest                                     |
+| + [status](#data_oneOf_i2_layers_items_status )       | No      | enum (of string) | No         | -          | Status                                     |
+| - [errorInfo](#data_oneOf_i2_layers_items_errorInfo ) | No      | Combination      | No         | -          | Error information. Absense means no error. |
 
 ###### <a name="data_oneOf_i2_layers_items_id"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > layers > AosLayerStatusInfo > id`
 
@@ -2998,55 +2983,39 @@ Must be one of:
 
 ###### <a name="data_oneOf_i2_layers_items_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > layers > AosLayerStatusInfo > errorInfo`
 
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Error information. Absense means no error.
+
+| Any of(Option)                                                 |
+| -------------------------------------------------------------- |
+| [AosErrorInfo](#data_oneOf_i2_layers_items_errorInfo_anyOf_i0) |
+| [item 1](#data_oneOf_i2_layers_items_errorInfo_anyOf_i1)       |
+
+###### <a name="data_oneOf_i2_layers_items_errorInfo_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > layers > AosLayerStatusInfo > errorInfo > anyOf > AosErrorInfo`
+
 **Title:** AosErrorInfo
 
 |                           |                                                                             |
 | ------------------------- | --------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `null`                                                                      |
-| **Defined in**            | #/$defs/AosErrorInfo                                                        |
+| **Same definition as**    | [AosErrorInfo](#data_oneOf_i0_items_items_oneOf_i7_errors_items)            |
 
-**Description:** Error information. Absense means no error.
+**Description:** AosUnit error info structure.
 
-| Property                                                                 | Pattern | Type    | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | ----------------- |
-| - [aosCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode )   | No      | integer | No         | -          | Aos error code    |
-| - [exitCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode ) | No      | integer | No         | -          | Exit code         |
-| - [message](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message )   | No      | string  | No         | -          | Error message     |
+Encapsulates a structure for AosUnit error info.
+All fields are optional. In this case treated as no error.
 
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`
+###### <a name="data_oneOf_i2_layers_items_errorInfo_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > layers > AosLayerStatusInfo > errorInfo > anyOf > item 1`
 
-**Title:** Aos error code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** AosCore error code.
-
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`
-
-**Title:** Exit code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** Module error code.
-
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_message"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`
-
-**Title:** Error message
-
-|             |          |
-| ----------- | -------- |
-| **Type**    | `string` |
-| **Default** | `null`   |
-
-**Description:** Text of the error description.
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 #### <a name="data_oneOf_i2_components"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components`
 
@@ -3085,15 +3054,15 @@ Must be one of:
 
 AosEdge uses this struct to report information about Unit's components
 
-| Property                                                      | Pattern | Type             | Deprecated | Definition              | Title/Description |
-| ------------------------------------------------------------- | ------- | ---------------- | ---------- | ----------------------- | ----------------- |
-| + [id](#data_oneOf_i2_components_items_id )                   | No      | string           | No         | -                       | Component ID      |
-| - [type](#data_oneOf_i2_components_items_type )               | No      | Combination      | No         | -                       | Type              |
-| + [version](#data_oneOf_i2_components_items_version )         | No      | string           | No         | -                       | Version           |
-| - [nodeId](#data_oneOf_i2_components_items_nodeId )           | No      | Combination      | No         | -                       | Nodeid            |
-| + [status](#data_oneOf_i2_components_items_status )           | No      | enum (of string) | No         | -                       | Status            |
-| - [annotations](#data_oneOf_i2_components_items_annotations ) | No      | object           | No         | -                       | Annotations       |
-| - [errorInfo](#data_oneOf_i2_components_items_errorInfo )     | No      | object           | No         | In #/$defs/AosErrorInfo | AosErrorInfo      |
+| Property                                                      | Pattern | Type             | Deprecated | Definition | Title/Description                          |
+| ------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ------------------------------------------ |
+| + [id](#data_oneOf_i2_components_items_id )                   | No      | string           | No         | -          | Component ID                               |
+| - [type](#data_oneOf_i2_components_items_type )               | No      | Combination      | No         | -          | Type                                       |
+| + [version](#data_oneOf_i2_components_items_version )         | No      | string           | No         | -          | Version                                    |
+| - [nodeId](#data_oneOf_i2_components_items_nodeId )           | No      | Combination      | No         | -          | Nodeid                                     |
+| + [status](#data_oneOf_i2_components_items_status )           | No      | enum (of string) | No         | -          | Status                                     |
+| - [annotations](#data_oneOf_i2_components_items_annotations ) | No      | object           | No         | -          | Annotations                                |
+| - [errorInfo](#data_oneOf_i2_components_items_errorInfo )     | No      | Combination      | No         | -          | Error information. Absense means no error. |
 
 ###### <a name="data_oneOf_i2_components_items_id"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > id`
 
@@ -3207,55 +3176,39 @@ Must be one of:
 
 ###### <a name="data_oneOf_i2_components_items_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > errorInfo`
 
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Error information. Absense means no error.
+
+| Any of(Option)                                                     |
+| ------------------------------------------------------------------ |
+| [AosErrorInfo](#data_oneOf_i2_components_items_errorInfo_anyOf_i0) |
+| [item 1](#data_oneOf_i2_components_items_errorInfo_anyOf_i1)       |
+
+###### <a name="data_oneOf_i2_components_items_errorInfo_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > errorInfo > anyOf > AosErrorInfo`
+
 **Title:** AosErrorInfo
 
 |                           |                                                                             |
 | ------------------------- | --------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `null`                                                                      |
-| **Defined in**            | #/$defs/AosErrorInfo                                                        |
+| **Same definition as**    | [AosErrorInfo](#data_oneOf_i0_items_items_oneOf_i7_errors_items)            |
 
-**Description:** Error information. Absense means no error.
+**Description:** AosUnit error info structure.
 
-| Property                                                                 | Pattern | Type    | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | ----------------- |
-| - [aosCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode )   | No      | integer | No         | -          | Aos error code    |
-| - [exitCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode ) | No      | integer | No         | -          | Exit code         |
-| - [message](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message )   | No      | string  | No         | -          | Error message     |
+Encapsulates a structure for AosUnit error info.
+All fields are optional. In this case treated as no error.
 
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`
+###### <a name="data_oneOf_i2_components_items_errorInfo_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > components > AosComponentInfo > errorInfo > anyOf > item 1`
 
-**Title:** Aos error code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** AosCore error code.
-
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`
-
-**Title:** Exit code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** Module error code.
-
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_message"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`
-
-**Title:** Error message
-
-|             |          |
-| ----------- | -------- |
-| **Type**    | `string` |
-| **Default** | `null`   |
-
-**Description:** Text of the error description.
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 #### <a name="data_oneOf_i2_unitSubjects"></a>Property `AosUnitMessage > data > oneOf > AosUnitStatus > unitSubjects`
 
@@ -4074,7 +4027,7 @@ Must be one of:
 | -------- | ----------------- |
 | **Type** | `array of string` |
 
-**Description:** List of files in /dev dir, associated with the device name.
+**Description:** List of host devices.
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -4103,7 +4056,7 @@ Must be one of:
 | **Type**    | `integer` |
 | **Default** | `0`       |
 
-**Description:** The maximum allowed number of service instances that can use this device simultaneously. 0 means no restrictions.
+**Description:** The count of shared devices that can be used in one time. 0 means no restrictions.
 
 | Restrictions |        |
 | ------------ | ------ |
@@ -4118,7 +4071,7 @@ Must be one of:
 | **Type**    | `array of string` |
 | **Default** | `null`            |
 
-**Description:** List of associated user groups.
+**Description:** List of associated groups.
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -6327,16 +6280,16 @@ Must be one of:
 
 Unit sends the specified logs to the Cloud.
 
-| Property                                     | Pattern | Type             | Deprecated | Definition              | Title/Description |
-| -------------------------------------------- | ------- | ---------------- | ---------- | ----------------------- | ----------------- |
-| + [messageType](#data_oneOf_i9_messageType ) | No      | const            | No         | -                       | Message type      |
-| + [logId](#data_oneOf_i9_logId )             | No      | string           | No         | -                       | Lod Request ID    |
-| + [nodeId](#data_oneOf_i9_nodeId )           | No      | string           | No         | -                       | Node ID           |
-| - [part](#data_oneOf_i9_part )               | No      | integer          | No         | -                       | Part #            |
-| - [partsCount](#data_oneOf_i9_partsCount )   | No      | integer          | No         | -                       | Parts count       |
-| - [content](#data_oneOf_i9_content )         | No      | string           | No         | -                       | Content           |
-| + [status](#data_oneOf_i9_status )           | No      | enum (of string) | No         | -                       | Status            |
-| - [errorInfo](#data_oneOf_i9_errorInfo )     | No      | object           | No         | In #/$defs/AosErrorInfo | AosErrorInfo      |
+| Property                                     | Pattern | Type             | Deprecated | Definition | Title/Description                          |
+| -------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ------------------------------------------ |
+| + [messageType](#data_oneOf_i9_messageType ) | No      | const            | No         | -          | Message type                               |
+| + [logId](#data_oneOf_i9_logId )             | No      | string           | No         | -          | Lod Request ID                             |
+| + [nodeId](#data_oneOf_i9_nodeId )           | No      | string           | No         | -          | Node ID                                    |
+| - [part](#data_oneOf_i9_part )               | No      | integer          | No         | -          | Part #                                     |
+| - [partsCount](#data_oneOf_i9_partsCount )   | No      | integer          | No         | -          | Parts count                                |
+| - [content](#data_oneOf_i9_content )         | No      | string           | No         | -          | Content                                    |
+| + [status](#data_oneOf_i9_status )           | No      | enum (of string) | No         | -          | Status                                     |
+| - [errorInfo](#data_oneOf_i9_errorInfo )     | No      | Combination      | No         | -          | Error information. Absense means no error. |
 
 #### <a name="data_oneOf_i9_messageType"></a>Property `AosUnitMessage > data > oneOf > AosPushLog > messageType`
 
@@ -6422,55 +6375,39 @@ Must be one of:
 
 #### <a name="data_oneOf_i9_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosPushLog > errorInfo`
 
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Error information. Absense means no error.
+
+| Any of(Option)                                    |
+| ------------------------------------------------- |
+| [AosErrorInfo](#data_oneOf_i9_errorInfo_anyOf_i0) |
+| [item 1](#data_oneOf_i9_errorInfo_anyOf_i1)       |
+
+##### <a name="data_oneOf_i9_errorInfo_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosPushLog > errorInfo > anyOf > AosErrorInfo`
+
 **Title:** AosErrorInfo
 
 |                           |                                                                             |
 | ------------------------- | --------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `null`                                                                      |
-| **Defined in**            | #/$defs/AosErrorInfo                                                        |
+| **Same definition as**    | [AosErrorInfo](#data_oneOf_i0_items_items_oneOf_i7_errors_items)            |
 
-**Description:** Error information. Absense means no error.
+**Description:** AosUnit error info structure.
 
-| Property                                                                 | Pattern | Type    | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | ----------------- |
-| - [aosCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode )   | No      | integer | No         | -          | Aos error code    |
-| - [exitCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode ) | No      | integer | No         | -          | Exit code         |
-| - [message](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message )   | No      | string  | No         | -          | Error message     |
+Encapsulates a structure for AosUnit error info.
+All fields are optional. In this case treated as no error.
 
-##### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`
+##### <a name="data_oneOf_i9_errorInfo_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosPushLog > errorInfo > anyOf > item 1`
 
-**Title:** Aos error code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** AosCore error code.
-
-##### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`
-
-**Title:** Exit code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** Module error code.
-
-##### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_message"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`
-
-**Title:** Error message
-
-|             |          |
-| ----------- | -------- |
-| **Type**    | `string` |
-| **Default** | `null`   |
-
-**Description:** Text of the error description.
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 ### <a name="data_oneOf_i10"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsRequest`
 
@@ -6816,10 +6753,10 @@ Specific value: `"overrideEnvVarsStatus"`
 
 **Description:** The current status of the environment variable.
 
-| Property                                                                | Pattern | Type   | Deprecated | Definition              | Title/Description |
-| ----------------------------------------------------------------------- | ------- | ------ | ---------- | ----------------------- | ----------------- |
-| + [name](#data_oneOf_i11_statuses_items_statuses_items_name )           | No      | string | No         | -                       | Name              |
-| - [errorInfo](#data_oneOf_i11_statuses_items_statuses_items_errorInfo ) | No      | object | No         | In #/$defs/AosErrorInfo | AosErrorInfo      |
+| Property                                                                | Pattern | Type        | Deprecated | Definition | Title/Description                          |
+| ----------------------------------------------------------------------- | ------- | ----------- | ---------- | ---------- | ------------------------------------------ |
+| + [name](#data_oneOf_i11_statuses_items_statuses_items_name )           | No      | string      | No         | -          | Name                                       |
+| - [errorInfo](#data_oneOf_i11_statuses_items_statuses_items_errorInfo ) | No      | Combination | No         | -          | Error information. Absense means no error. |
 
 ###### <a name="data_oneOf_i11_statuses_items_statuses_items_name"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses > AosEnvVarStatus > name`
 
@@ -6833,55 +6770,39 @@ Specific value: `"overrideEnvVarsStatus"`
 
 ###### <a name="data_oneOf_i11_statuses_items_statuses_items_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses > AosEnvVarStatus > errorInfo`
 
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Error information. Absense means no error.
+
+| Any of(Option)                                                                   |
+| -------------------------------------------------------------------------------- |
+| [AosErrorInfo](#data_oneOf_i11_statuses_items_statuses_items_errorInfo_anyOf_i0) |
+| [item 1](#data_oneOf_i11_statuses_items_statuses_items_errorInfo_anyOf_i1)       |
+
+###### <a name="data_oneOf_i11_statuses_items_statuses_items_errorInfo_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses > AosEnvVarStatus > errorInfo > anyOf > AosErrorInfo`
+
 **Title:** AosErrorInfo
 
 |                           |                                                                             |
 | ------------------------- | --------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `null`                                                                      |
-| **Defined in**            | #/$defs/AosErrorInfo                                                        |
+| **Same definition as**    | [AosErrorInfo](#data_oneOf_i0_items_items_oneOf_i7_errors_items)            |
 
-**Description:** Error information. Absense means no error.
+**Description:** AosUnit error info structure.
 
-| Property                                                                 | Pattern | Type    | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | ----------------- |
-| - [aosCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode )   | No      | integer | No         | -          | Aos error code    |
-| - [exitCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode ) | No      | integer | No         | -          | Exit code         |
-| - [message](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message )   | No      | string  | No         | -          | Error message     |
+Encapsulates a structure for AosUnit error info.
+All fields are optional. In this case treated as no error.
 
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`
+###### <a name="data_oneOf_i11_statuses_items_statuses_items_errorInfo_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosOverrideEnvVarsStatuses > statuses > AosEnvVarInstanceStatus > statuses > AosEnvVarStatus > errorInfo > anyOf > item 1`
 
-**Title:** Aos error code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** AosCore error code.
-
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`
-
-**Title:** Exit code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** Module error code.
-
-###### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_message"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`
-
-**Title:** Error message
-
-|             |          |
-| ----------- | -------- |
-| **Type**    | `string` |
-| **Default** | `null`   |
-
-**Description:** Text of the error description.
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 ### <a name="data_oneOf_i12"></a>Property `AosUnitMessage > data > oneOf > AosRenewCertsNotification`
 
@@ -7541,12 +7462,12 @@ Specific value: `"startProvisioningRequest"`
 
 **Description:** AosUnit protocol: 'startProvisioningResponse' message.
 
-| Property                                      | Pattern | Type   | Deprecated | Definition              | Title/Description |
-| --------------------------------------------- | ------- | ------ | ---------- | ----------------------- | ----------------- |
-| + [messageType](#data_oneOf_i17_messageType ) | No      | const  | No         | -                       | Messagetype       |
-| + [nodeId](#data_oneOf_i17_nodeId )           | No      | string | No         | -                       | Node ID           |
-| - [errorInfo](#data_oneOf_i17_errorInfo )     | No      | object | No         | In #/$defs/AosErrorInfo | AosErrorInfo      |
-| + [csrs](#data_oneOf_i17_csrs )               | No      | array  | No         | -                       | Csrs              |
+| Property                                      | Pattern | Type        | Deprecated | Definition | Title/Description                          |
+| --------------------------------------------- | ------- | ----------- | ---------- | ---------- | ------------------------------------------ |
+| + [messageType](#data_oneOf_i17_messageType ) | No      | const       | No         | -          | Messagetype                                |
+| + [nodeId](#data_oneOf_i17_nodeId )           | No      | string      | No         | -          | Node ID                                    |
+| - [errorInfo](#data_oneOf_i17_errorInfo )     | No      | Combination | No         | -          | Error information. Absense means no error. |
+| + [csrs](#data_oneOf_i17_csrs )               | No      | array       | No         | -          | Csrs                                       |
 
 #### <a name="data_oneOf_i17_messageType"></a>Property `AosUnitMessage > data > oneOf > AosStartProvisioningResponse > messageType`
 
@@ -7572,55 +7493,39 @@ Specific value: `"startProvisioningResponse"`
 
 #### <a name="data_oneOf_i17_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosStartProvisioningResponse > errorInfo`
 
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Error information. Absense means no error.
+
+| Any of(Option)                                     |
+| -------------------------------------------------- |
+| [AosErrorInfo](#data_oneOf_i17_errorInfo_anyOf_i0) |
+| [item 1](#data_oneOf_i17_errorInfo_anyOf_i1)       |
+
+##### <a name="data_oneOf_i17_errorInfo_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosStartProvisioningResponse > errorInfo > anyOf > AosErrorInfo`
+
 **Title:** AosErrorInfo
 
 |                           |                                                                             |
 | ------------------------- | --------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `null`                                                                      |
-| **Defined in**            | #/$defs/AosErrorInfo                                                        |
+| **Same definition as**    | [AosErrorInfo](#data_oneOf_i0_items_items_oneOf_i7_errors_items)            |
 
-**Description:** Error information. Absense means no error.
+**Description:** AosUnit error info structure.
 
-| Property                                                                 | Pattern | Type    | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | ----------------- |
-| - [aosCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode )   | No      | integer | No         | -          | Aos error code    |
-| - [exitCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode ) | No      | integer | No         | -          | Exit code         |
-| - [message](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message )   | No      | string  | No         | -          | Error message     |
+Encapsulates a structure for AosUnit error info.
+All fields are optional. In this case treated as no error.
 
-##### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`
+##### <a name="data_oneOf_i17_errorInfo_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosStartProvisioningResponse > errorInfo > anyOf > item 1`
 
-**Title:** Aos error code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** AosCore error code.
-
-##### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`
-
-**Title:** Exit code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** Module error code.
-
-##### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_message"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`
-
-**Title:** Error message
-
-|             |          |
-| ----------- | -------- |
-| **Type**    | `string` |
-| **Default** | `null`   |
-
-**Description:** Text of the error description.
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 #### <a name="data_oneOf_i17_csrs"></a>Property `AosUnitMessage > data > oneOf > AosStartProvisioningResponse > csrs`
 
@@ -7790,11 +7695,11 @@ Specific value: `"finishProvisioningRequest"`
 
 **Description:** AosUnit protocol: 'finishProvisioningResponse' message.
 
-| Property                                      | Pattern | Type   | Deprecated | Definition              | Title/Description |
-| --------------------------------------------- | ------- | ------ | ---------- | ----------------------- | ----------------- |
-| + [messageType](#data_oneOf_i19_messageType ) | No      | const  | No         | -                       | Messagetype       |
-| + [nodeId](#data_oneOf_i19_nodeId )           | No      | string | No         | -                       | Node ID           |
-| - [errorInfo](#data_oneOf_i19_errorInfo )     | No      | object | No         | In #/$defs/AosErrorInfo | AosErrorInfo      |
+| Property                                      | Pattern | Type        | Deprecated | Definition | Title/Description                          |
+| --------------------------------------------- | ------- | ----------- | ---------- | ---------- | ------------------------------------------ |
+| + [messageType](#data_oneOf_i19_messageType ) | No      | const       | No         | -          | Messagetype                                |
+| + [nodeId](#data_oneOf_i19_nodeId )           | No      | string      | No         | -          | Node ID                                    |
+| - [errorInfo](#data_oneOf_i19_errorInfo )     | No      | Combination | No         | -          | Error information. Absense means no error. |
 
 #### <a name="data_oneOf_i19_messageType"></a>Property `AosUnitMessage > data > oneOf > AosFinishProvisioningResponse > messageType`
 
@@ -7820,55 +7725,39 @@ Specific value: `"finishProvisioningResponse"`
 
 #### <a name="data_oneOf_i19_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosFinishProvisioningResponse > errorInfo`
 
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Error information. Absense means no error.
+
+| Any of(Option)                                     |
+| -------------------------------------------------- |
+| [AosErrorInfo](#data_oneOf_i19_errorInfo_anyOf_i0) |
+| [item 1](#data_oneOf_i19_errorInfo_anyOf_i1)       |
+
+##### <a name="data_oneOf_i19_errorInfo_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosFinishProvisioningResponse > errorInfo > anyOf > AosErrorInfo`
+
 **Title:** AosErrorInfo
 
 |                           |                                                                             |
 | ------------------------- | --------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `null`                                                                      |
-| **Defined in**            | #/$defs/AosErrorInfo                                                        |
+| **Same definition as**    | [AosErrorInfo](#data_oneOf_i0_items_items_oneOf_i7_errors_items)            |
 
-**Description:** Error information. Absense means no error.
+**Description:** AosUnit error info structure.
 
-| Property                                                                 | Pattern | Type    | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | ----------------- |
-| - [aosCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode )   | No      | integer | No         | -          | Aos error code    |
-| - [exitCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode ) | No      | integer | No         | -          | Exit code         |
-| - [message](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message )   | No      | string  | No         | -          | Error message     |
+Encapsulates a structure for AosUnit error info.
+All fields are optional. In this case treated as no error.
 
-##### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`
+##### <a name="data_oneOf_i19_errorInfo_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosFinishProvisioningResponse > errorInfo > anyOf > item 1`
 
-**Title:** Aos error code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** AosCore error code.
-
-##### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`
-
-**Title:** Exit code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** Module error code.
-
-##### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_message"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`
-
-**Title:** Error message
-
-|             |          |
-| ----------- | -------- |
-| **Type**    | `string` |
-| **Default** | `null`   |
-
-**Description:** Text of the error description.
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 ### <a name="data_oneOf_i20"></a>Property `AosUnitMessage > data > oneOf > AosDeProvisioningRequest`
 
@@ -7932,11 +7821,11 @@ Specific value: `"deprovisioningRequest"`
 
 **Description:** AosUnit protocol: 'deprovisioningResponse' message.
 
-| Property                                      | Pattern | Type   | Deprecated | Definition              | Title/Description |
-| --------------------------------------------- | ------- | ------ | ---------- | ----------------------- | ----------------- |
-| + [messageType](#data_oneOf_i21_messageType ) | No      | const  | No         | -                       | Messagetype       |
-| + [nodeId](#data_oneOf_i21_nodeId )           | No      | string | No         | -                       | Node ID           |
-| - [errorInfo](#data_oneOf_i21_errorInfo )     | No      | object | No         | In #/$defs/AosErrorInfo | AosErrorInfo      |
+| Property                                      | Pattern | Type        | Deprecated | Definition | Title/Description                          |
+| --------------------------------------------- | ------- | ----------- | ---------- | ---------- | ------------------------------------------ |
+| + [messageType](#data_oneOf_i21_messageType ) | No      | const       | No         | -          | Messagetype                                |
+| + [nodeId](#data_oneOf_i21_nodeId )           | No      | string      | No         | -          | Node ID                                    |
+| - [errorInfo](#data_oneOf_i21_errorInfo )     | No      | Combination | No         | -          | Error information. Absense means no error. |
 
 #### <a name="data_oneOf_i21_messageType"></a>Property `AosUnitMessage > data > oneOf > AosDeProvisioningResponse > messageType`
 
@@ -7962,55 +7851,39 @@ Specific value: `"deprovisioningResponse"`
 
 #### <a name="data_oneOf_i21_errorInfo"></a>Property `AosUnitMessage > data > oneOf > AosDeProvisioningResponse > errorInfo`
 
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Error information. Absense means no error.
+
+| Any of(Option)                                     |
+| -------------------------------------------------- |
+| [AosErrorInfo](#data_oneOf_i21_errorInfo_anyOf_i0) |
+| [item 1](#data_oneOf_i21_errorInfo_anyOf_i1)       |
+
+##### <a name="data_oneOf_i21_errorInfo_anyOf_i0"></a>Property `AosUnitMessage > data > oneOf > AosDeProvisioningResponse > errorInfo > anyOf > AosErrorInfo`
+
 **Title:** AosErrorInfo
 
 |                           |                                                                             |
 | ------------------------- | --------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `null`                                                                      |
-| **Defined in**            | #/$defs/AosErrorInfo                                                        |
+| **Same definition as**    | [AosErrorInfo](#data_oneOf_i0_items_items_oneOf_i7_errors_items)            |
 
-**Description:** Error information. Absense means no error.
+**Description:** AosUnit error info structure.
 
-| Property                                                                 | Pattern | Type    | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------------------ | ------- | ------- | ---------- | ---------- | ----------------- |
-| - [aosCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode )   | No      | integer | No         | -          | Aos error code    |
-| - [exitCode](#data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode ) | No      | integer | No         | -          | Exit code         |
-| - [message](#data_oneOf_i0_items_items_oneOf_i7_errors_items_message )   | No      | string  | No         | -          | Error message     |
+Encapsulates a structure for AosUnit error info.
+All fields are optional. In this case treated as no error.
 
-##### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_aosCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > aosCode`
+##### <a name="data_oneOf_i21_errorInfo_anyOf_i1"></a>Property `AosUnitMessage > data > oneOf > AosDeProvisioningResponse > errorInfo > anyOf > item 1`
 
-**Title:** Aos error code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** AosCore error code.
-
-##### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_exitCode"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > exitCode`
-
-**Title:** Exit code
-
-|             |           |
-| ----------- | --------- |
-| **Type**    | `integer` |
-| **Default** | `null`    |
-
-**Description:** Module error code.
-
-##### <a name="data_oneOf_i0_items_items_oneOf_i7_errors_items_message"></a>Property `AosUnitMessage > data > oneOf > AosAlerts > items > items items > oneOf > AosAlertResourceValidate > errors > AosErrorInfo > message`
-
-**Title:** Error message
-
-|             |          |
-| ----------- | -------- |
-| **Type**    | `string` |
-| **Default** | `null`   |
-
-**Description:** Text of the error description.
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2025-11-26 at 15:47:17 +0200
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-04-14 at 12:16:24 +0300

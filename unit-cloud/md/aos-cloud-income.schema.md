@@ -27,7 +27,7 @@
         - [Property `AosUploadMetaConfig > items > AosUpdateItem > identity > id > anyOf > item 0`](#items_items_identity_id_anyOf_i0)
         - [Property `AosUploadMetaConfig > items > AosUpdateItem > identity > id > anyOf > item 1`](#items_items_identity_id_anyOf_i1)
       - [Property `AosUploadMetaConfig > items > AosUpdateItem > identity > type`](#items_items_identity_type)
-        - [Property `AosUploadMetaConfig > items > AosUpdateItem > identity > type > anyOf > item 0`](#items_items_identity_type_anyOf_i0)
+        - [Property `AosUploadMetaConfig > items > AosUpdateItem > identity > type > anyOf > AosIdentityType`](#items_items_identity_type_anyOf_i0)
         - [Property `AosUploadMetaConfig > items > AosUpdateItem > identity > type > anyOf > item 1`](#items_items_identity_type_anyOf_i1)
       - [Property `AosUploadMetaConfig > items > AosUpdateItem > identity > codename`](#items_items_identity_codename)
         - [Property `AosUploadMetaConfig > items > AosUpdateItem > identity > codename > anyOf > item 0`](#items_items_identity_codename_anyOf_i0)
@@ -41,6 +41,7 @@
       - [Property `AosUploadMetaConfig > items > AosUpdateItem > identity > urn`](#items_items_identity_urn)
         - [Property `AosUploadMetaConfig > items > AosUpdateItem > identity > urn > anyOf > item 0`](#items_items_identity_urn_anyOf_i0)
         - [Property `AosUploadMetaConfig > items > AosUpdateItem > identity > urn > anyOf > item 1`](#items_items_identity_urn_anyOf_i1)
+    - [Property `AosUploadMetaConfig > items > AosUpdateItem > version`](#items_items_version)
     - [Property `AosUploadMetaConfig > items > AosUpdateItem > sourceFolder`](#items_items_sourceFolder)
       - [Property `AosUploadMetaConfig > items > AosUpdateItem > sourceFolder > anyOf > item 0`](#items_items_sourceFolder_anyOf_i0)
       - [Property `AosUploadMetaConfig > items > AosUpdateItem > sourceFolder > anyOf > item 1`](#items_items_sourceFolder_anyOf_i1)
@@ -473,6 +474,7 @@ Specific value: `2`
 | Property                                       | Pattern | Type        | Deprecated | Definition             | Title/Description                 |
 | ---------------------------------------------- | ------- | ----------- | ---------- | ---------------------- | --------------------------------- |
 | + [identity](#items_items_identity )           | No      | object      | No         | In #/$defs/AosIdentity | AosIdentity                       |
+| + [version](#items_items_version )             | No      | string      | No         | -                      | Version                           |
 | - [sourceFolder](#items_items_sourceFolder )   | No      | Combination | No         | -                      | Sourcefolder                      |
 | + [images](#items_items_images )               | No      | array       | No         | -                      | Images                            |
 | - [configuration](#items_items_configuration ) | No      | Combination | No         | -                      | Configuration of the update item. |
@@ -521,7 +523,7 @@ Specific value: `2`
 |            |          |
 | ---------- | -------- |
 | **Type**   | `string` |
-| **Format** | `uuid4`  |
+| **Format** | `uuid`   |
 
 ###### <a name="items_items_identity_id_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > identity > id > anyOf > item 1`
 
@@ -541,16 +543,19 @@ Specific value: `2`
 
 **Description:** Aos object type. E.g.: AosService, AosComponent
 
-| Any of(Option)                                |
-| --------------------------------------------- |
-| [item 0](#items_items_identity_type_anyOf_i0) |
-| [item 1](#items_items_identity_type_anyOf_i1) |
+| Any of(Option)                                         |
+| ------------------------------------------------------ |
+| [AosIdentityType](#items_items_identity_type_anyOf_i0) |
+| [item 1](#items_items_identity_type_anyOf_i1)          |
 
-###### <a name="items_items_identity_type_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > identity > type > anyOf > item 0`
+###### <a name="items_items_identity_type_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > identity > type > anyOf > AosIdentityType`
 
-|          |                    |
-| -------- | ------------------ |
-| **Type** | `enum (of string)` |
+**Title:** AosIdentityType
+
+|                |                         |
+| -------------- | ----------------------- |
+| **Type**       | `enum (of string)`      |
+| **Defined in** | #/$defs/AosIdentityType |
 
 Must be one of:
 * "component"
@@ -559,7 +564,9 @@ Must be one of:
 * "subject"
 * "oem"
 * "sp"
+* "fleet"
 * "node"
+* "node-subject"
 * "runtime"
 
 ###### <a name="items_items_identity_type_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > identity > type > anyOf > item 1`
@@ -683,6 +690,16 @@ Must be one of:
 |          |        |
 | -------- | ------ |
 | **Type** | `null` |
+
+#### <a name="items_items_version"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > version`
+
+**Title:** Version
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+**Description:** Version in SemVer format of the update item.
 
 #### <a name="items_items_sourceFolder"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > sourceFolder`
 
@@ -2800,4 +2817,4 @@ Must be one of:
 | **Type** | `null` |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2025-11-26 at 15:47:18 +0200
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-04-14 at 12:16:12 +0300

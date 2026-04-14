@@ -23,8 +23,8 @@
                 "minThreshold": {
                     "anyOf": [
                         {
-                            "maximum": 100.0,
-                            "minimum": 0.0,
+                            "maximum": 100,
+                            "minimum": 0,
                             "type": "number"
                         },
                         {
@@ -37,8 +37,8 @@
                 "maxThreshold": {
                     "anyOf": [
                         {
-                            "maximum": 100.0,
-                            "minimum": 0.0,
+                            "maximum": 100,
+                            "minimum": 0,
                             "type": "number"
                         },
                         {
@@ -257,7 +257,7 @@
                 "id": {
                     "anyOf": [
                         {
-                            "format": "uuid4",
+                            "format": "uuid",
                             "type": "string"
                         },
                         {
@@ -271,17 +271,7 @@
                 "type": {
                     "anyOf": [
                         {
-                            "enum": [
-                                "component",
-                                "service",
-                                "layer",
-                                "subject",
-                                "oem",
-                                "sp",
-                                "node",
-                                "runtime"
-                            ],
-                            "type": "string"
+                            "$ref": "#/$defs/AosIdentityType"
                         },
                         {
                             "type": "null"
@@ -346,6 +336,22 @@
             },
             "title": "AosIdentity",
             "type": "object"
+        },
+        "AosIdentityType": {
+            "enum": [
+                "component",
+                "service",
+                "layer",
+                "subject",
+                "oem",
+                "sp",
+                "fleet",
+                "node",
+                "node-subject",
+                "runtime"
+            ],
+            "title": "AosIdentityType",
+            "type": "string"
         },
         "AosImage": {
             "properties": {

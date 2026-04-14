@@ -70,12 +70,12 @@ class AosItemConfigSchema(BaseModel):
         ),
     ]
 
-    runners: Annotated[
+    runtimes: Annotated[
         Optional[list[Literal['runc', 'crun', 'xrun']]],
         Field(
-            alias='runners',
+            alias='runtimes',
             default=None,
-            description='Aos service allowed runner types. Absense means ["runc", "crun"].',
+            description='Aos item allowed runtime types. Absense means ["runc", "crun"].',
         ),
     ]
 

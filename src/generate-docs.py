@@ -9,7 +9,7 @@ import click
 from cloud_common.protocols.unit import base
 from cloud_common.protocols.unit.v7.message import AosUnitMessageV7
 from cloud_common.protocols.unit.v7.common import AosIdentity
-from cloud_common.schemas.item_config.aos_config import AosItemConfigSchema
+from cloud_common.schemas.service_config.aos_config import AosConfigSchema
 from cloud_common.schemas.unit_update.aos_update import AosUpdateSchema
 from cloud_common.protocols.unit.unit_config import UnitConfig
 from cloud_common.schemas.v2.cloud_income import AosUploadMetaConfig
@@ -61,9 +61,9 @@ def generate_schema_v7() -> str:
     return schema_filename
 
 
-def generate_item_config_schema() -> str:
-    schema = AosItemConfigSchema.model_json_schema()
-    schema_filename = os.path.join(DOCS_BASE_DIR, 'aos-item-config.schema.json')
+def generate_service_schema() -> str:
+    schema = AosConfigSchema.model_json_schema()
+    schema_filename = os.path.join(DOCS_BASE_DIR, 'aos-service-config.schema.json')
     with open(schema_filename, 'wt') as file_handler:
         file_handler.write(json.dumps(schema, indent=4))
         file_handler.write('\n')
@@ -143,7 +143,7 @@ def both():
 @cli.command()
 def schemas():
     schema_filenames = [
-        # generate_item_config_schema(),
+        # generate_service_schema(),
         # generate_update_schema(),
         # generate_unitconfig_schema(),
         generate_cloud_income_schema(),

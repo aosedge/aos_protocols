@@ -7,7 +7,7 @@ from typing import Annotated, Optional, Literal, Dict, List
 
 from pydantic import BaseModel, Field
 
-from cloud_common.schemas.item_config.aos_types import (
+from cloud_common.schemas.service_config.aos_types import (
     UnitDevice,
     RunParameters,
     ServiceQuotas,
@@ -16,18 +16,18 @@ from cloud_common.schemas.item_config.aos_types import (
 )
 
 
-class AosItemConfigSchema(BaseModel):
+class AosConfigSchema(BaseModel):
     """
-    Aos item config schema.
+    Aos service config schema.
 
-    This schema describes the specification of the `aosItemConfig` layer.
+    This schema describes the specification of the `aosService` layer in a service.
     """
 
     created: Annotated[
         datetime,
         Field(
             alias='created',
-            description='Timestamp when Aos item config was created.',
+            description='Timestamp when Aos service was created.',
         ),
     ]
 
@@ -36,7 +36,7 @@ class AosItemConfigSchema(BaseModel):
         Field(
             alias='author',
             default=None,
-            description='Aos item config author.',
+            description='Aos service author.',
         ),
     ]
 

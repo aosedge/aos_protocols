@@ -1,0 +1,860 @@
+{
+    "$defs": {
+        "AosAlertRulePercents": {
+            "description": "Schema alert triggering procedure in percents.",
+            "properties": {
+                "minTimeout": {
+                    "anyOf": [
+                        {
+                            "format": "duration",
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The duration in ISO8601 for a time window to check alert rule.",
+                    "examples": [
+                        "PT10S",
+                        "PT1M"
+                    ],
+                    "title": "Mintimeout"
+                },
+                "minThreshold": {
+                    "anyOf": [
+                        {
+                            "maximum": 100.0,
+                            "minimum": 0.0,
+                            "type": "number"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The minimum threshold to stop alert.",
+                    "title": "Minthreshold"
+                },
+                "maxThreshold": {
+                    "anyOf": [
+                        {
+                            "maximum": 100.0,
+                            "minimum": 0.0,
+                            "type": "number"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The maximum threshold value to start alert.",
+                    "title": "Maxthreshold"
+                }
+            },
+            "required": [
+                "minTimeout",
+                "minThreshold",
+                "maxThreshold"
+            ],
+            "title": "AosAlertRulePercents",
+            "type": "object"
+        },
+        "AosAlertRulePoints": {
+            "description": "Schema alert triggering procedure.",
+            "properties": {
+                "minTimeout": {
+                    "anyOf": [
+                        {
+                            "format": "duration",
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The duration in ISO8601 for a time window to check alert rule.",
+                    "examples": [
+                        "PT10S",
+                        "PT1M"
+                    ],
+                    "title": "Mintimeout"
+                },
+                "minThreshold": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The minimum threshold to stop alert.",
+                    "title": "Minthreshold"
+                },
+                "maxThreshold": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The maximum threshold value to start alert.",
+                    "title": "Maxthreshold"
+                }
+            },
+            "required": [
+                "minTimeout",
+                "minThreshold",
+                "maxThreshold"
+            ],
+            "title": "AosAlertRulePoints",
+            "type": "object"
+        },
+        "AosAlertRules": {
+            "description": "Schema for all possible alert rules.",
+            "properties": {
+                "ram": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosAlertRulePercents"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "RAM alert settings."
+                },
+                "cpu": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosAlertRulePercents"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "CPU alert settings."
+                },
+                "storage": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosAlertRulePercents"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Storage alert settings."
+                },
+                "upload": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosAlertRulePoints"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Upload alert settings."
+                },
+                "download": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosAlertRulePoints"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Download alert settings."
+                }
+            },
+            "title": "AosAlertRules",
+            "type": "object"
+        },
+        "AosIdentity": {
+            "description": "Aos objects identifier.",
+            "properties": {
+                "id": {
+                    "anyOf": [
+                        {
+                            "format": "uuid",
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Aos object unique per Aos instance UUID.",
+                    "title": "Aos object UUID identifier. Unique per Aos instance."
+                },
+                "type": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AosIdentityType"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Aos object type. E.g.: AosService, AosComponent",
+                    "title": "Aos object type."
+                },
+                "codename": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Aos object codename. Uniqueness depends on object type.",
+                    "title": "Aos object codename."
+                },
+                "title": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Aos object title.",
+                    "title": "Aos object title."
+                },
+                "description": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Aos object description.",
+                    "title": "Aos object description."
+                },
+                "urn": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Aos object URN. Globally unique.",
+                    "title": "Aos object URN."
+                }
+            },
+            "title": "AosIdentity",
+            "type": "object"
+        },
+        "AosIdentityType": {
+            "enum": [
+                "component",
+                "service",
+                "layer",
+                "subject",
+                "oem",
+                "sp",
+                "fleet",
+                "node",
+                "node-subject",
+                "runtime"
+            ],
+            "title": "AosIdentityType",
+            "type": "string"
+        },
+        "AosResourceAccess": {
+            "properties": {
+                "name": {
+                    "description": "The name of the systems device.",
+                    "examples": [
+                        "camera0",
+                        "mic0"
+                    ],
+                    "title": "Name",
+                    "type": "string"
+                },
+                "mode": {
+                    "default": "r",
+                    "description": "The needed access permissions for the resource.",
+                    "enum": [
+                        "w",
+                        "rw"
+                    ],
+                    "examples": [
+                        "r",
+                        "rw",
+                        "w"
+                    ],
+                    "title": "Mode",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "AosResourceAccess",
+            "type": "object"
+        },
+        "RequestedResources": {
+            "description": "Schema for requested resources.",
+            "properties": {
+                "cpu": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "CPU requested resource (against cpuLimit)",
+                    "title": "Cpu"
+                },
+                "ram": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "RAM requested resource (against ramLimit)",
+                    "title": "Ram"
+                },
+                "storage": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Storage requested resource (against storageLimit)",
+                    "title": "Storage"
+                },
+                "state": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "State requested resource (against stateLimit)",
+                    "title": "State"
+                }
+            },
+            "title": "RequestedResources",
+            "type": "object"
+        },
+        "RunParameters": {
+            "description": "Schema for startup parameters.",
+            "properties": {
+                "startInterval": {
+                    "anyOf": [
+                        {
+                            "format": "duration",
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "The duration in ISO8601 format to wait service start.",
+                    "examples": [
+                        "PT10S",
+                        "PT1M"
+                    ],
+                    "title": "Startinterval"
+                },
+                "startBurst": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Service which are started more than burst times within an interval time span are not permitted to start any more.\nUse `startInterval` to configure the checking interval and `startBurst`\nto configure how many starts per interval are allowed.",
+                    "examples": [
+                        3,
+                        10
+                    ],
+                    "title": "Startburst"
+                },
+                "restartInterval": {
+                    "anyOf": [
+                        {
+                            "format": "duration",
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "The duration in ISO8601 format to wait before service restart.",
+                    "examples": [
+                        "PT1S",
+                        "PT1M"
+                    ],
+                    "title": "Restartinterval"
+                }
+            },
+            "title": "RunParameters",
+            "type": "object"
+        },
+        "ServiceQuotas": {
+            "description": "Schema for possible quotas for a service.",
+            "properties": {
+                "cpuLimit": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "CPU limit in percents",
+                    "title": "Cpulimit"
+                },
+                "cpuDmipsLimit": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "CPU limit in DMIPs",
+                    "title": "Cpudmipslimit"
+                },
+                "ramLimit": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "RAM limit in bytes",
+                    "title": "Ramlimit"
+                },
+                "storageLimit": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Storage limit in bytes",
+                    "title": "Storagelimit"
+                },
+                "stateLimit": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "State limit in bytes",
+                    "title": "Statelimit"
+                },
+                "tmpLimit": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Temporary storage limit in bytes",
+                    "title": "Tmplimit"
+                },
+                "uploadSpeed": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Upload limit in bytes per second",
+                    "title": "Uploadspeed"
+                },
+                "downloadSpeed": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Upload limit in bytes per second",
+                    "title": "Downloadspeed"
+                },
+                "noFileLimit": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Limit of opened files",
+                    "title": "Nofilelimit"
+                },
+                "pidsLimit": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Limit of PIDs",
+                    "title": "Pidslimit"
+                }
+            },
+            "title": "ServiceQuotas",
+            "type": "object"
+        }
+    },
+    "description": "Aos deployable item config schema.\n\nThis schema describes the specification of the\n `application/vnd.aos.item.config.v1+json` layer in a deployable item.",
+    "properties": {
+        "created": {
+            "description": "Timestamp when Aos service was created.",
+            "format": "date-time",
+            "title": "Created",
+            "type": "string"
+        },
+        "author": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Aos service author.",
+            "title": "Author"
+        },
+        "skipResourceLimits": {
+            "anyOf": [
+                {
+                    "type": "boolean"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Use resource limits or not in Pre-release versions.",
+            "title": "Skipresourcelimits"
+        },
+        "balancingPolicy": {
+            "default": "enabled",
+            "description": "Balancing type. `disabled` means total prohibition from balancing to other nodes.",
+            "enum": [
+                "enabled",
+                "disabled"
+            ],
+            "title": "Balancingpolicy",
+            "type": "string"
+        },
+        "hostname": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "The hostname of the Aos service. The FQDN is {hostname].{service_provider}.",
+            "title": "Hostname"
+        },
+        "runner": {
+            "anyOf": [
+                {
+                    "enum": [
+                        "runc",
+                        "crun",
+                        "xrun"
+                    ],
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": "crun",
+            "description": "Aos service allowed runner type. Use for backward compatibility with previous version of Aos",
+            "title": "Runner"
+        },
+        "runners": {
+            "anyOf": [
+                {
+                    "items": {
+                        "enum": [
+                            "runc",
+                            "crun",
+                            "xrun"
+                        ],
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": [
+                "runc",
+                "crun"
+            ],
+            "description": "Aos service allowed runner types. Absense means [\"runc\", \"crun\"].",
+            "title": "Runners"
+        },
+        "runtimes": {
+            "anyOf": [
+                {
+                    "items": {
+                        "$ref": "#/$defs/AosIdentity"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Aos service allowed runtimes. Absense means all runtimes.",
+            "title": "Runtimes"
+        },
+        "runParameters": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/RunParameters"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Run parameters for the Aos service."
+        },
+        "offlineTTL": {
+            "anyOf": [
+                {
+                    "format": "duration",
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "TTL (allowed time) to run service when unit in offline mode.\nIf value is absent service will live on an unit forever.\nFormat: ISO8601 duration.",
+            "examples": [
+                "PT1M",
+                "PT7D"
+            ],
+            "title": "Offlinettl"
+        },
+        "resources": {
+            "anyOf": [
+                {
+                    "items": {
+                        "$ref": "#/$defs/AosResourceAccess"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "List of needed resources.",
+            "examples": [
+                {
+                    "mode": "rw",
+                    "name": "bluetooth"
+                },
+                {
+                    "mode": "rw",
+                    "name": "system-dbus"
+                },
+                {
+                    "mode": "r",
+                    "name": "camera0"
+                }
+            ],
+            "title": "Resources"
+        },
+        "allowedConnections": {
+            "anyOf": [
+                {
+                    "type": "object"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "List of allowed network connections.\nFormat of connection string: {service_uid}/[port|port_range]/[tcp|udp]",
+            "examples": [
+                "9931560c-be75-4f60-9abf-08297d905332/8087:8088/tcp",
+                "9931560c-be75-4f60-9abf-08297d905332/1515/udp"
+            ],
+            "title": "Allowedconnections"
+        },
+        "quotas": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/ServiceQuotas"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Quotas for the service."
+        },
+        "requestedResources": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/RequestedResources"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Requested Resources (CPU, RAM and Storage)."
+        },
+        "alertRules": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/AosAlertRules"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Alert rules for the service."
+        },
+        "permissions": {
+            "anyOf": [
+                {
+                    "additionalProperties": {
+                        "additionalProperties": {
+                            "enum": [
+                                "r",
+                                "rw",
+                                "w"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "object"
+                    },
+                    "type": "object"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Service permissions to access resources.",
+            "examples": [
+                {
+                    "vis": {
+                        "Attributes.Vehicle.Vin": "r",
+                        "Signal.Doors.*": "rw"
+                    }
+                }
+            ],
+            "title": "Permissions"
+        },
+        "sysctl": {
+            "anyOf": [
+                {
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "type": "object"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Kernel parameters to be modified at runtime for the container.",
+            "examples": [
+                {
+                    "net.core.somaxconn": "256",
+                    "net.ipv4.ip_forward": "1"
+                }
+            ],
+            "title": "Sysctl"
+        }
+    },
+    "required": [
+        "created"
+    ],
+    "title": "AosConfigSchemaV2",
+    "type": "object"
+}

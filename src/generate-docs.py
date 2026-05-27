@@ -12,6 +12,7 @@ from cloud_common.protocols.unit.v7.common import AosIdentity
 from cloud_common.schemas.service_config.aos_config import AosConfigSchema
 from cloud_common.schemas.unit_update.aos_update import AosUpdateSchema
 from cloud_common.protocols.unit.unit_config import UnitConfig
+from cloud_common.schemas.v2.aos_item_config import AosConfigSchemaV2
 from cloud_common.schemas.v2.cloud_income import AosUploadMetaConfig
 from core.configs.cm import CMConfig
 from core.configs.iam import IAMConfig
@@ -38,6 +39,10 @@ def generate_schema_file(schema: Dict[str, Any], output_dir: str, filename: str)
 
 def generate_cloud_income_schema() -> str:
     return generate_schema_file(AosUploadMetaConfig.model_json_schema(), UNIT_CLOUD_DIR, 'aos-cloud-income.schema.json')
+
+
+def generate_aos_deployable_item_schema() -> str:
+    return generate_schema_file(AosConfigSchemaV2.model_json_schema(), 'aos-deployable-item.schema.json')
 
 
 def generate_unitconfig_schema() -> str:
@@ -168,7 +173,8 @@ def schemas():
         # generate_service_schema(),
         # generate_update_schema(),
         # generate_unitconfig_schema(),
-        generate_cloud_income_schema(),
+        # generate_cloud_income_schema(),
+        generate_aos_deployable_item_schema(),
     ]
 
     for schema_filename in schema_filenames:

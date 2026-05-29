@@ -20,31 +20,32 @@ from core.configs.sm import SMConfig
 DOCS_BASE_DIR = os.path.abspath(os.path.join(
     os.path.dirname(__file__),
     '..',
-    'unit-cloud',
 ))
+UNIT_CLOUD_DIR = os.path.join(DOCS_BASE_DIR, 'unit-cloud')
+CORE_DOCS_DIR = os.path.join(DOCS_BASE_DIR, 'core')
 
 
-def generate_schema_file(schema: Dict[str, Any], filename: str) -> str:
-    schema_filename = os.path.join(DOCS_BASE_DIR, filename)
+def generate_schema_file(schema: Dict[str, Any], output_dir: str, filename: str) -> str:
+    os.makedirs(output_dir, exist_ok=True)
+    schema_filename = os.path.join(output_dir, filename)
     with open(schema_filename, 'wt') as file_handler:
         file_handler.write(json.dumps(schema, indent=4))
         file_handler.write('\n')
     print(f'Schema generated at {schema_filename}')
-
     return schema_filename
 
 
 def generate_cloud_income_schema() -> str:
-    return generate_schema_file(AosUploadMetaConfig.model_json_schema(), 'aos-cloud-income.schema.json')
+    return generate_schema_file(AosUploadMetaConfig.model_json_schema(), UNIT_CLOUD_DIR, 'aos-cloud-income.schema.json')
 
 
 def generate_unitconfig_schema() -> str:
-    return generate_schema_file(UnitConfig.model_json_schema(), 'aos-unit-config.schema.json')
+    return generate_schema_file(UnitConfig.model_json_schema(), UNIT_CLOUD_DIR, 'aos-unit-config.schema.json')
 
 
 def generate_schema() -> str:
     schema = base.AosUnitMessage.model_json_schema()
-    schema_filename = os.path.join(DOCS_BASE_DIR, 'aos-unit-messages.schema.json')
+    schema_filename = os.path.join(UNIT_CLOUD_DIR, 'aos-unit-messages.schema.json')
     with open(schema_filename, 'wt') as file_handler:
         file_handler.write(json.dumps(schema, indent=4))
         file_handler.write('\n')
@@ -55,7 +56,7 @@ def generate_schema() -> str:
 
 def generate_schema_v7() -> str:
     schema = AosUnitMessageV7.model_json_schema()
-    schema_filename = os.path.join(DOCS_BASE_DIR, 'aos-unit-messages-v7.schema.json')
+    schema_filename = os.path.join(UNIT_CLOUD_DIR, 'aos-unit-messages-v7.schema.json')
     with open(schema_filename, 'wt') as file_handler:
         file_handler.write(json.dumps(schema, indent=4))
         file_handler.write('\n')
@@ -66,7 +67,7 @@ def generate_schema_v7() -> str:
 
 def generate_service_schema() -> str:
     schema = AosConfigSchema.model_json_schema()
-    schema_filename = os.path.join(DOCS_BASE_DIR, 'aos-service-config.schema.json')
+    schema_filename = os.path.join(UNIT_CLOUD_DIR, 'aos-service-config.schema.json')
     with open(schema_filename, 'wt') as file_handler:
         file_handler.write(json.dumps(schema, indent=4))
         file_handler.write('\n')
@@ -77,7 +78,7 @@ def generate_service_schema() -> str:
 
 def generate_update_schema() -> str:
     schema = AosUpdateSchema.model_json_schema()
-    schema_filename = os.path.join(DOCS_BASE_DIR, 'aos-update.schema.json')
+    schema_filename = os.path.join(UNIT_CLOUD_DIR, 'aos-update.schema.json')
     with open(schema_filename, 'wt') as file_handler:
         file_handler.write(json.dumps(schema, indent=4))
         file_handler.write('\n')
@@ -87,15 +88,15 @@ def generate_update_schema() -> str:
 
 
 def generate_sm_config_schema() -> str:
-    return generate_schema_file(SMConfig.model_json_schema(), 'aos-sm-config.schema.json')
+    return generate_schema_file(SMConfig.model_json_schema(), CORE_DOCS_DIR, 'aos-sm-config.schema.json')
 
 
 def generate_cm_config_schema() -> str:
-    return generate_schema_file(CMConfig.model_json_schema(), 'aos-cm-config.schema.json')
+    return generate_schema_file(CMConfig.model_json_schema(), CORE_DOCS_DIR, 'aos-cm-config.schema.json')
 
 
 def generate_iam_config_schema() -> str:
-    return generate_schema_file(IAMConfig.model_json_schema(), 'aos-iam-config.schema.json')
+    return generate_schema_file(IAMConfig.model_json_schema(), CORE_DOCS_DIR, 'aos-iam-config.schema.json')
 
 
 @click.group()
@@ -108,17 +109,17 @@ def html():
     subprocess.run([
         'generate-schema-doc',
         '--config-file',
-        os.path.join(DOCS_BASE_DIR, 'config-html.yaml'),
+        os.path.join(UNIT_CLOUD_DIR, 'config-html.yaml'),
         generate_schema(),
-        os.path.join(DOCS_BASE_DIR, 'html'),
+        os.path.join(UNIT_CLOUD_DIR, 'html'),
     ])
 
     subprocess.run([
         'generate-schema-doc',
         '--config-file',
-        os.path.join(DOCS_BASE_DIR, 'config-html.yaml'),
+        os.path.join(UNIT_CLOUD_DIR, 'config-html.yaml'),
         generate_schema_v7(),
-        os.path.join(DOCS_BASE_DIR, 'html'),
+        os.path.join(UNIT_CLOUD_DIR, 'html'),
     ])
 
 
@@ -129,9 +130,9 @@ def md():
     subprocess.run([
         'generate-schema-doc',
         '--config-file',
-        os.path.join(DOCS_BASE_DIR, 'config-md.yaml'),
+        os.path.join(UNIT_CLOUD_DIR, 'config-md.yaml'),
         schema_filename,
-        os.path.join(DOCS_BASE_DIR, 'md'),
+        os.path.join(UNIT_CLOUD_DIR, 'md'),
     ])
 
 
@@ -142,17 +143,17 @@ def both():
     subprocess.run([
         'generate-schema-doc',
         '--config-file',
-        os.path.join(DOCS_BASE_DIR, 'config-html.yaml'),
+        os.path.join(UNIT_CLOUD_DIR, 'config-html.yaml'),
         schema_filename,
-        os.path.join(DOCS_BASE_DIR, 'html'),
+        os.path.join(UNIT_CLOUD_DIR, 'html'),
     ])
 
     subprocess.run([
         'generate-schema-doc',
         '--config-file',
-        os.path.join(DOCS_BASE_DIR, 'config-md.yaml'),
+        os.path.join(UNIT_CLOUD_DIR, 'config-md.yaml'),
         schema_filename,
-        os.path.join(DOCS_BASE_DIR, 'md'),
+        os.path.join(UNIT_CLOUD_DIR, 'md'),
     ])
 
 
@@ -163,27 +164,30 @@ def schemas():
         # generate_update_schema(),
         # generate_unitconfig_schema(),
         generate_cloud_income_schema(),
-        generate_sm_config_schema(),
-        generate_cm_config_schema(),
-        generate_iam_config_schema(),
     ]
 
     for schema_filename in schema_filenames:
         subprocess.run([
             'generate-schema-doc',
             '--config-file',
-            os.path.join(DOCS_BASE_DIR, 'config-html.yaml'),
+            os.path.join(UNIT_CLOUD_DIR, 'config-html.yaml'),
             schema_filename,
-            os.path.join(DOCS_BASE_DIR, 'html'),
+            os.path.join(UNIT_CLOUD_DIR, 'html'),
         ])
 
         subprocess.run([
             'generate-schema-doc',
             '--config-file',
-            os.path.join(DOCS_BASE_DIR, 'config-md.yaml'),
+            os.path.join(UNIT_CLOUD_DIR, 'config-md.yaml'),
             schema_filename,
-            os.path.join(DOCS_BASE_DIR, 'md'),
+            os.path.join(UNIT_CLOUD_DIR, 'md'),
         ])
+
+@cli.command()
+def core_schemas():
+    generate_sm_config_schema()
+    generate_cm_config_schema()
+    generate_iam_config_schema()
 
 
 if __name__ == '__main__':

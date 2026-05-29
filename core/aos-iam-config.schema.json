@@ -1,0 +1,640 @@
+{
+    "$defs": {
+        "CertModuleConfig": {
+            "description": "Certificate module (plugin) configuration.",
+            "properties": {
+                "id": {
+                    "description": "Unique identifier of the certificate module.",
+                    "examples": [
+                        "cm",
+                        "sm",
+                        "iam"
+                    ],
+                    "title": "Id",
+                    "type": "string"
+                },
+                "plugin": {
+                    "description": "Certificate plugin type (e.g. \"pkcs11\", \"swmodule\").",
+                    "examples": [
+                        "pkcs11",
+                        "swmodule"
+                    ],
+                    "title": "Plugin",
+                    "type": "string"
+                },
+                "algorithm": {
+                    "description": "Key algorithm used by this module.",
+                    "examples": [
+                        "rsa",
+                        "ecc"
+                    ],
+                    "title": "Algorithm",
+                    "type": "string"
+                },
+                "maxItems": {
+                    "description": "Maximum number of certificate slots managed by this module.",
+                    "title": "Maxitems",
+                    "type": "integer"
+                },
+                "extendedKeyUsage": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "X.509 extended key usage OIDs or short names for generated certificates.",
+                    "examples": [
+                        [
+                            "clientAuth"
+                        ],
+                        [
+                            "serverAuth"
+                        ],
+                        [
+                            "clientAuth",
+                            "serverAuth"
+                        ]
+                    ],
+                    "title": "Extendedkeyusage"
+                },
+                "alternativeNames": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Subject alternative names (SANs) added to generated certificates.",
+                    "examples": [
+                        [
+                            "localhost",
+                            "127.0.0.1"
+                        ]
+                    ],
+                    "title": "Alternativenames"
+                },
+                "disabled": {
+                    "anyOf": [
+                        {
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": false,
+                    "description": "Set to true to disable this certificate module.",
+                    "title": "Disabled"
+                },
+                "skipValidation": {
+                    "anyOf": [
+                        {
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": false,
+                    "description": "Skip certificate chain validation for this module (use in test environments only).",
+                    "title": "Skipvalidation"
+                },
+                "selfSigned": {
+                    "anyOf": [
+                        {
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": false,
+                    "description": "Generate self-signed certificates instead of requesting signing from the IAM CA.",
+                    "title": "Selfsigned"
+                },
+                "params": {
+                    "anyOf": [
+                        {},
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Plugin-specific parameters passed verbatim to the certificate plugin.",
+                    "title": "Params"
+                }
+            },
+            "required": [
+                "id",
+                "plugin",
+                "algorithm",
+                "maxItems"
+            ],
+            "title": "CertModuleConfig",
+            "type": "object"
+        },
+        "DatabaseMigrationConfig": {
+            "description": "Database migration paths.",
+            "properties": {
+                "migrationPath": {
+                    "description": "Directory containing migration SQL scripts.",
+                    "title": "Migrationpath",
+                    "type": "string"
+                },
+                "mergedMigrationPath": {
+                    "description": "Directory for merged migration scripts.",
+                    "title": "Mergedmigrationpath",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "migrationPath",
+                "mergedMigrationPath"
+            ],
+            "title": "DatabaseMigrationConfig",
+            "type": "object"
+        },
+        "IdentifierConfig": {
+            "description": "Identifier plugin configuration.",
+            "properties": {
+                "plugin": {
+                    "description": "Identifier plugin type (e.g. \"fileidentifier\", \"visidentifier\").",
+                    "examples": [
+                        "fileidentifier",
+                        "visidentifier"
+                    ],
+                    "title": "Plugin",
+                    "type": "string"
+                },
+                "params": {
+                    "anyOf": [
+                        {},
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Plugin-specific parameters passed verbatim to the identifier plugin.",
+                    "title": "Params"
+                }
+            },
+            "required": [
+                "plugin"
+            ],
+            "title": "IdentifierConfig",
+            "type": "object"
+        },
+        "NodeInfoConfig": {
+            "description": "Node information reported by the IAM to the cloud.\n\nThis section describes the hardware and software identity of the node.",
+            "properties": {
+                "nodeName": {
+                    "description": "Human-readable name of the node.",
+                    "title": "Nodename",
+                    "type": "string"
+                },
+                "nodeType": {
+                    "description": "Node type identifier.",
+                    "title": "Nodetype",
+                    "type": "string"
+                },
+                "maxDMIPS": {
+                    "description": "Maximum CPU performance of the node in DMIPS.",
+                    "title": "Maxdmips",
+                    "type": "integer"
+                },
+                "nodeIDPath": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "/etc/machine-id",
+                    "description": "Path to the file containing the unique node identifier. Default: /etc/machine-id.",
+                    "title": "Nodeidpath"
+                },
+                "provisioningStatePath": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "/var/aos/.provisionstate",
+                    "description": "Path to the provisioning state file. Default: /var/aos/.provisionstate.",
+                    "title": "Provisioningstatepath"
+                },
+                "cpuInfoPath": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "/proc/cpuinfo",
+                    "description": "Path to the CPU information file. Default: /proc/cpuinfo.",
+                    "title": "Cpuinfopath"
+                },
+                "memInfoPath": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "/proc/meminfo",
+                    "description": "Path to the memory information file. Default: /proc/meminfo.",
+                    "title": "Meminfopath"
+                },
+                "architecture": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "CPU architecture string (e.g. \"amd64\", \"arm64\"). Must be GOARCH-compatible if specified.",
+                    "title": "Architecture"
+                },
+                "architectureVariant": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "CPU architecture variant (e.g. \"v8\", \"v7l\").",
+                    "title": "Architecturevariant"
+                },
+                "os": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Operating system name (e.g. \"linux\"). Must be GOOS-compatible if specified.",
+                    "title": "Os"
+                },
+                "osVersion": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Operating system version string.",
+                    "title": "Osversion"
+                },
+                "attrs": {
+                    "anyOf": [
+                        {
+                            "additionalProperties": {
+                                "type": "string"
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Arbitrary key/value attributes attached to the node and reported to the cloud.",
+                    "examples": [
+                        {
+                            "key1": "value1",
+                            "key2": "value2"
+                        }
+                    ],
+                    "title": "Attrs"
+                },
+                "partitions": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "$ref": "#/$defs/PartitionInfoConfig"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "List of storage partitions whose usage is monitored and reported.",
+                    "title": "Partitions"
+                }
+            },
+            "required": [
+                "nodeName",
+                "nodeType",
+                "maxDMIPS"
+            ],
+            "title": "NodeInfoConfig",
+            "type": "object"
+        },
+        "PartitionInfoConfig": {
+            "description": "Partition information for node storage reporting.",
+            "properties": {
+                "name": {
+                    "description": "Partition label reported to the cloud.",
+                    "title": "Name",
+                    "type": "string"
+                },
+                "path": {
+                    "description": "Filesystem path of the partition.",
+                    "title": "Path",
+                    "type": "string"
+                },
+                "types": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "List of partition type tags (e.g. generic, storages, states).",
+                    "examples": [
+                        [
+                            "generic"
+                        ],
+                        [
+                            "storages",
+                            "states"
+                        ]
+                    ],
+                    "title": "Types"
+                }
+            },
+            "required": [
+                "name",
+                "path"
+            ],
+            "title": "PartitionInfoConfig",
+            "type": "object"
+        }
+    },
+    "description": "Identity and Access Manager (IAM) configuration schema.\n\nThis schema describes the JSON configuration file for the Aos IAM,\ntypically located at /etc/aos/iam.cfg .\n\nSeveral top-level fields are shared between the IAM server role (listening for connections\nfrom SM/CM) and the IAM client role (connecting to a main/primary IAM on a multi-node setup).",
+    "properties": {
+        "nodeInfo": {
+            "$ref": "#/$defs/NodeInfoConfig",
+            "description": "Hardware and software description of this node, reported to the cloud."
+        },
+        "caCert": {
+            "description": "Path to the CA certificate file used for mutual TLS connections.",
+            "title": "Cacert",
+            "type": "string"
+        },
+        "certStorage": {
+            "description": "Certificate storage identifier used for IAM TLS credentials.",
+            "examples": [
+                "/var/aos/crypt/iam/"
+            ],
+            "title": "Certstorage",
+            "type": "string"
+        },
+        "startProvisioningCmdArgs": {
+            "anyOf": [
+                {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Command-line (argv) of the script executed at the start of provisioning.",
+            "examples": [
+                [
+                    "/var/aos/start_provisioning.sh"
+                ]
+            ],
+            "title": "Startprovisioningcmdargs"
+        },
+        "finishProvisioningCmdArgs": {
+            "anyOf": [
+                {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Command-line (argv) of the script executed when provisioning completes.",
+            "examples": [
+                [
+                    "/var/aos/finish.sh"
+                ]
+            ],
+            "title": "Finishprovisioningcmdargs"
+        },
+        "diskEncryptionCmdArgs": {
+            "anyOf": [
+                {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Command-line (argv) of the disk encryption script run during provisioning.",
+            "examples": [
+                [
+                    "/bin/sh",
+                    "/var/aos/encrypt.sh"
+                ]
+            ],
+            "title": "Diskencryptioncmdargs"
+        },
+        "deprovisionCmdArgs": {
+            "anyOf": [
+                {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Command-line (argv) of the script executed during de-provisioning.",
+            "examples": [
+                [
+                    "/var/aos/deprovision.sh"
+                ]
+            ],
+            "title": "Deprovisioncmdargs"
+        },
+        "iamPublicServerURL": {
+            "description": "Listening address of the IAM public gRPC server (unauthenticated operations).",
+            "examples": [
+                "localhost:8090"
+            ],
+            "title": "Iampublicserverurl",
+            "type": "string"
+        },
+        "iamProtectedServerURL": {
+            "description": "Listening address of the IAM protected gRPC server (certificate operations).",
+            "examples": [
+                "localhost:8089"
+            ],
+            "title": "Iamprotectedserverurl",
+            "type": "string"
+        },
+        "mainIAMPublicServerURL": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "URL of the main (primary) IAM public gRPC server.\nRequired in multi-node setups where this node's IAM registers with a central IAM.",
+            "examples": [
+                "main-node:8090"
+            ],
+            "title": "Mainiampublicserverurl"
+        },
+        "mainIAMProtectedServerURL": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "URL of the main (primary) IAM protected gRPC server.\nRequired in multi-node setups where this node's IAM registers with a central IAM.",
+            "examples": [
+                "main-node:8089"
+            ],
+            "title": "Mainiamprotectedserverurl"
+        },
+        "nodeReconnectInterval": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": "10s",
+            "description": "Delay before retrying a dropped connection to the main IAM. Default: 10s.\nFormat: duration string (e.g. \"10s\", \"30s\", \"1m\").",
+            "examples": [
+                "10s",
+                "30s",
+                "1m"
+            ],
+            "title": "Nodereconnectinterval"
+        },
+        "workingDir": {
+            "description": "Working directory for the IAM database and runtime data.",
+            "title": "Workingdir",
+            "type": "string"
+        },
+        "migration": {
+            "$ref": "#/$defs/DatabaseMigrationConfig"
+        },
+        "certModules": {
+            "anyOf": [
+                {
+                    "items": {
+                        "$ref": "#/$defs/CertModuleConfig"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "List of certificate module (plugin) configurations managed by the IAM.",
+            "title": "Certmodules"
+        },
+        "enablePermissionsHandler": {
+            "description": "Enable the IAM permissions handler for deployable items access-control policy enforcement.",
+            "title": "Enablepermissionshandler",
+            "type": "boolean"
+        },
+        "identifier": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/IdentifierConfig"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Identifier plugin configuration used to resolve system/unit IDs."
+        }
+    },
+    "required": [
+        "nodeInfo",
+        "caCert",
+        "certStorage",
+        "iamPublicServerURL",
+        "iamProtectedServerURL",
+        "workingDir",
+        "migration",
+        "enablePermissionsHandler"
+    ],
+    "title": "IAMConfig",
+    "type": "object"
+}

@@ -1,0 +1,565 @@
+{
+    "$defs": {
+        "AlertsConfig": {
+            "description": "Alerts subsystem configuration.",
+            "properties": {
+                "sendPeriod": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "10s",
+                    "description": "Interval for forwarding accumulated alert batches to the cloud. Default: 10s.\nFormat: duration string (e.g. \"10s\", \"30s\", \"1m\").",
+                    "examples": [
+                        "10s",
+                        "30s",
+                        "1m"
+                    ],
+                    "title": "Sendperiod"
+                }
+            },
+            "title": "AlertsConfig",
+            "type": "object"
+        },
+        "CMImageManagerConfig": {
+            "description": "Image manager subsystem configuration.",
+            "properties": {
+                "installPath": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Directory where deployable item OCI images are installed. Defaults to {workingDir}/install.",
+                    "title": "Installpath"
+                },
+                "downloadPath": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Staging directory for deployable item image downloads. Defaults to {workingDir}/download.",
+                    "title": "Downloadpath"
+                },
+                "updateItemTtl": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "30d",
+                    "description": "TTL for pending update items before they are considered outdated. Default: 30d.\nFormat: duration string (e.g. \"30d\", \"7d\", \"24h\").",
+                    "examples": [
+                        "30d",
+                        "7d",
+                        "24h"
+                    ],
+                    "title": "Updateitemttl"
+                },
+                "removeOutdatedPeriod": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "24h",
+                    "description": "Period between removal passes for outdated images. Default: 24h.\nFormat: duration string (e.g. \"24h\", \"12h\", \"48h\").",
+                    "examples": [
+                        "24h",
+                        "12h",
+                        "48h"
+                    ],
+                    "title": "Removeoutdatedperiod"
+                }
+            },
+            "title": "CMImageManagerConfig",
+            "type": "object"
+        },
+        "CMMonitoringConfig": {
+            "description": "Node monitoring configuration for the CM.",
+            "properties": {
+                "pollPeriod": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "35s",
+                    "description": "Interval between resource usage samples. Default: 35s.\nFormat: duration string (e.g. \"35s\", \"1m\", \"5m\").",
+                    "examples": [
+                        "35s",
+                        "1m",
+                        "5m"
+                    ],
+                    "title": "Pollperiod"
+                },
+                "averageWindow": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "35s",
+                    "description": "Sliding window for computing resource usage averages. Default: 35s.\nFormat: duration string (e.g. \"35s\", \"5m\", \"10m\").",
+                    "examples": [
+                        "35s",
+                        "5m",
+                        "10m"
+                    ],
+                    "title": "Averagewindow"
+                },
+                "sendPeriod": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "1m",
+                    "description": "Interval for forwarding collected monitoring data to the cloud. Default: 1m.\nFormat: duration string (e.g. \"1m\", \"5m\", \"30s\").",
+                    "examples": [
+                        "1m",
+                        "5m",
+                        "30s"
+                    ],
+                    "title": "Sendperiod"
+                }
+            },
+            "title": "CMMonitoringConfig",
+            "type": "object"
+        },
+        "LauncherConfig": {
+            "description": "Deployable item launcher subsystem configuration.",
+            "properties": {
+                "nodesConnectionTimeout": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "10m",
+                    "description": "Timeout for all SM nodes to connect before the launcher starts scheduling deployable items. Default: 10m.\nFormat: duration string (e.g. \"10m\", \"5m\", \"1m\").",
+                    "examples": [
+                        "10m",
+                        "5m",
+                        "1m"
+                    ],
+                    "title": "Nodesconnectiontimeout"
+                },
+                "instanceTtl": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "30d",
+                    "description": "TTL for cached deployable item instance metadata. Default: 30d.\nFormat: duration string (e.g. \"30d\", \"7d\", \"1d\").",
+                    "examples": [
+                        "30d",
+                        "7d",
+                        "1d"
+                    ],
+                    "title": "Instancettl"
+                },
+                "checkOverrideEnvVarsPeriod": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "1m",
+                    "description": "Interval for polling overridden environment variable changes. Default: 1m.\nFormat: duration string (e.g. \"1m\", \"5m\", \"30s\").",
+                    "examples": [
+                        "1m",
+                        "5m",
+                        "30s"
+                    ],
+                    "title": "Checkoverrideenvvarsperiod"
+                }
+            },
+            "title": "LauncherConfig",
+            "type": "object"
+        },
+        "MigrationConfig": {
+            "description": "Database migration configuration.",
+            "properties": {
+                "migrationPath": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "/usr/share/aos/communicationmanager/migration",
+                    "description": "Directory containing migration SQL scripts. Default: /usr/share/aos/communicationmanager/migration.",
+                    "title": "Migrationpath"
+                },
+                "mergedMigrationPath": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Directory for merged migration scripts. Defaults to {workingDir}/migration.",
+                    "title": "Mergedmigrationpath"
+                }
+            },
+            "title": "MigrationConfig",
+            "type": "object"
+        },
+        "NodeInfoProviderConfig": {
+            "description": "Node info provider subsystem configuration.",
+            "properties": {
+                "smConnectionTimeout": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "1m",
+                    "description": "Timeout waiting for SM nodes to connect during node info collection. Default: 1m.\nFormat: duration string (e.g. \"1m\", \"5m\", \"30s\").",
+                    "examples": [
+                        "1m",
+                        "5m",
+                        "30s"
+                    ],
+                    "title": "Smconnectiontimeout"
+                }
+            },
+            "title": "NodeInfoProviderConfig",
+            "type": "object"
+        }
+    },
+    "description": "Communication Manager (CM) configuration schema.\n\nThis schema describes the JSON configuration file for the Aos Communication Manager,\ntypically located at /etc/aos/cm.cfg .",
+    "properties": {
+        "workingDir": {
+            "description": "Working directory for all CM runtime data (images, databases, states, etc.).",
+            "title": "Workingdir",
+            "type": "string"
+        },
+        "caCert": {
+            "description": "Path to the CA certificate file used for mutual TLS connections.",
+            "title": "Cacert",
+            "type": "string"
+        },
+        "serviceDiscoveryUrl": {
+            "description": "URL of the cloud service discovery endpoint.",
+            "examples": [
+                "www.aos.com"
+            ],
+            "title": "Servicediscoveryurl",
+            "type": "string"
+        },
+        "iamPublicServerUrl": {
+            "description": "URL of the IAM public gRPC server.",
+            "examples": [
+                "localhost:8090"
+            ],
+            "title": "Iampublicserverurl",
+            "type": "string"
+        },
+        "iamProtectedServerUrl": {
+            "description": "URL of the IAM protected gRPC server used for certificate operations.",
+            "examples": [
+                "localhost:8089"
+            ],
+            "title": "Iamprotectedserverurl",
+            "type": "string"
+        },
+        "cmServerUrl": {
+            "description": "URL of the CM gRPC server (self-hosted endpoint listened to by SM nodes).",
+            "examples": [
+                "localhost:8094"
+            ],
+            "title": "Cmserverurl",
+            "type": "string"
+        },
+        "fileServerUrl": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "URL of the file server for downloading deployable item OCI image archives.",
+            "examples": [
+                "localhost:8080"
+            ],
+            "title": "Fileserverurl"
+        },
+        "dnsIp": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Address (host:port) of the internal DNS server managed by the CM.",
+            "examples": [
+                "0.0.0.0:5353",
+                "127.0.0.1:5353"
+            ],
+            "title": "Dnsip"
+        },
+        "certStorage": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": "/var/aos/crypt/cm/",
+            "description": "Certificate storage identifier for CM TLS credentials. Default: /var/aos/crypt/cm/.",
+            "title": "Certstorage"
+        },
+        "storageDir": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Directory for deployable item persistent storage volumes. Defaults to {workingDir}/storages.",
+            "title": "Storagedir"
+        },
+        "stateDir": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Directory for deployable item state data. Defaults to {workingDir}/states.",
+            "title": "Statedir"
+        },
+        "unitConfigFile": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Path to the unit configuration file. Defaults to {workingDir}/aos_unit.cfg.",
+            "title": "Unitconfigfile"
+        },
+        "dnsStoragePath": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": "/var/aos/dns",
+            "description": "Directory for DNS server persistent data. Default: /var/aos/dns.",
+            "title": "Dnsstoragepath"
+        },
+        "overrideServiceDiscoveryUrl": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Override URL for service discovery; replaces serviceDiscoveryUrl in test/dev environments.",
+            "title": "Overrideservicediscoveryurl"
+        },
+        "cloudMessageLog": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Path to a file for logging raw cloud protocol messages (for debugging).",
+            "title": "Cloudmessagelog"
+        },
+        "unitStatusSendTimeout": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": "10s",
+            "description": "Timeout for sending unit status updates to the cloud. Default: 10s.\nFormat: duration string (e.g. \"10s\", \"30s\", \"1m\").",
+            "examples": [
+                "10s",
+                "30s",
+                "1m"
+            ],
+            "title": "Unitstatussendtimeout"
+        },
+        "cloudResponseWaitTimeout": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": "10s",
+            "description": "Timeout waiting for a cloud response after sending a request. Default: 10s.\nFormat: duration string (e.g. \"10s\", \"30s\", \"1m\").",
+            "examples": [
+                "10s",
+                "30s",
+                "1m"
+            ],
+            "title": "Cloudresponsewaittimeout"
+        },
+        "monitoring": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/CMMonitoringConfig"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Node monitoring subsystem configuration."
+        },
+        "nodeInfoProvider": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/NodeInfoProviderConfig"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Node info provider subsystem configuration."
+        },
+        "alerts": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/AlertsConfig"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Alerts subsystem configuration."
+        },
+        "imageManager": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/CMImageManagerConfig"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Image manager subsystem configuration."
+        },
+        "launcher": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/LauncherConfig"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Deployable item launcher subsystem configuration."
+        },
+        "migration": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/MigrationConfig"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Database migration configuration."
+        }
+    },
+    "required": [
+        "workingDir",
+        "caCert",
+        "serviceDiscoveryUrl",
+        "iamPublicServerUrl",
+        "iamProtectedServerUrl",
+        "cmServerUrl"
+    ],
+    "title": "CMConfig",
+    "type": "object"
+}

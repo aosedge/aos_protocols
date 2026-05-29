@@ -1,0 +1,481 @@
+{
+    "$defs": {
+        "ImageManagerConfig": {
+            "description": "Image manager subsystem configuration.",
+            "properties": {
+                "imagePath": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Path to store deployable item images. Defaults to {workingDir}/images.",
+                    "title": "Imagepath"
+                },
+                "imagesPartLimit": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": 0,
+                    "description": "Maximum number of image parts retained. 0 means unlimited.",
+                    "title": "Imagespartlimit"
+                },
+                "updateItemTtl": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "30d",
+                    "description": "Time-to-live for pending update items before they are considered outdated. Default: 30d.\nFormat: duration string (e.g. \"30d\", \"7d\", \"24h\").",
+                    "examples": [
+                        "30d",
+                        "7d",
+                        "24h"
+                    ],
+                    "title": "Updateitemttl"
+                },
+                "removeOutdatedPeriod": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "24h",
+                    "description": "Period between removal passes for outdated images. Default: 24h.\nFormat: duration string (e.g. \"24h\", \"12h\", \"1d\").",
+                    "examples": [
+                        "24h",
+                        "12h",
+                        "48h"
+                    ],
+                    "title": "Removeoutdatedperiod"
+                }
+            },
+            "title": "ImageManagerConfig",
+            "type": "object"
+        },
+        "JournalAlertsConfig": {
+            "description": "Systemd journal alerts subsystem configuration.",
+            "properties": {
+                "filter": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "List of regular expressions matched against journal log entries to generate alerts.",
+                    "examples": [
+                        [
+                            "error",
+                            "critical",
+                            "panic"
+                        ]
+                    ],
+                    "title": "Filter"
+                },
+                "serviceAlertPriority": {
+                    "anyOf": [
+                        {
+                            "maximum": 7,
+                            "minimum": 0,
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": 4,
+                    "description": "Minimum syslog priority level for service-specific journal alerts (0=emerg \u2026 7=debug).\nValues outside [0, 7] are reset to the default. Default: 4 (warning).",
+                    "title": "Servicealertpriority"
+                },
+                "systemAlertPriority": {
+                    "anyOf": [
+                        {
+                            "maximum": 7,
+                            "minimum": 0,
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": 3,
+                    "description": "Minimum syslog priority level for system-wide journal alerts (0=emerg \u2026 7=debug).\nValues outside [0, 7] are reset to the default. Default: 3 (err).",
+                    "title": "Systemalertpriority"
+                }
+            },
+            "title": "JournalAlertsConfig",
+            "type": "object"
+        },
+        "LoggingConfig": {
+            "description": "Log provider subsystem configuration.",
+            "properties": {
+                "maxPartSize": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Maximum size in bytes of a single log part. Defaults to the compiled-in cLogContentLen.",
+                    "examples": [
+                        1024,
+                        65536
+                    ],
+                    "title": "Maxpartsize"
+                },
+                "maxPartCount": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": 80,
+                    "description": "Maximum number of log parts kept per request. Default: 80.",
+                    "title": "Maxpartcount"
+                }
+            },
+            "title": "LoggingConfig",
+            "type": "object"
+        },
+        "MigrationConfig": {
+            "description": "Database migration configuration.",
+            "properties": {
+                "migrationPath": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "/usr/share/aos/servicemanager/migration",
+                    "description": "Directory containing migration SQL scripts. Default: /usr/share/aos/servicemanager/migration.",
+                    "title": "Migrationpath"
+                },
+                "mergedMigrationPath": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Directory for merged migration scripts. Defaults to {workingDir}/mergedMigration.",
+                    "title": "Mergedmigrationpath"
+                }
+            },
+            "title": "MigrationConfig",
+            "type": "object"
+        },
+        "MonitoringConfig": {
+            "description": "Node monitoring subsystem configuration.",
+            "properties": {
+                "pollPeriod": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "35s",
+                    "description": "Interval between resource usage samples. Default: 35s.\nFormat: duration string (e.g. \"35s\", \"1m\", \"5m\").",
+                    "examples": [
+                        "35s",
+                        "1m",
+                        "5m"
+                    ],
+                    "title": "Pollperiod"
+                },
+                "averageWindow": {
+                    "anyOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": "35s",
+                    "description": "Sliding window for computing resource usage averages. Default: 35s.\nFormat: duration string (e.g. \"35s\", \"5m\", \"10m\").",
+                    "examples": [
+                        "35s",
+                        "5m",
+                        "10m"
+                    ],
+                    "title": "Averagewindow"
+                }
+            },
+            "title": "MonitoringConfig",
+            "type": "object"
+        },
+        "RuntimeConfig": {
+            "description": "Single runtime plugin entry used by the launcher.",
+            "properties": {
+                "plugin": {
+                    "description": "Runtime plugin identifier (e.g. \"container\", \"rootfs\", \"boot\").",
+                    "examples": [
+                        "container",
+                        "rootfs",
+                        "boot"
+                    ],
+                    "title": "Plugin",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Runtime type name passed to the plugin (e.g. \"runc\", \"crun\", \"aos-vm-rootfs\").",
+                    "examples": [
+                        "runc",
+                        "crun",
+                        "aos-vm-rootfs",
+                        "aos-vm-boot"
+                    ],
+                    "title": "Type",
+                    "type": "string"
+                },
+                "isComponent": {
+                    "anyOf": [
+                        {
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": false,
+                    "description": "Set to true when this runtime handles component (firmware) updates.",
+                    "title": "Iscomponent"
+                },
+                "config": {
+                    "anyOf": [
+                        {},
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Plugin-specific configuration object. Passed verbatim to the runtime plugin.",
+                    "title": "Config"
+                }
+            },
+            "required": [
+                "plugin",
+                "type"
+            ],
+            "title": "RuntimeConfig",
+            "type": "object"
+        }
+    },
+    "description": "Service Manager (SM) configuration schema.\n\nThis schema describes the JSON configuration file for the Aos Service Manager,\ntypically located at /etc/aos/sm.cfg .",
+    "properties": {
+        "workingDir": {
+            "description": "Working directory for all SM runtime data (images, databases, etc.).",
+            "title": "Workingdir",
+            "type": "string"
+        },
+        "iamPublicServerURL": {
+            "description": "URL of the IAM public gRPC server.",
+            "examples": [
+                "localhost:8090"
+            ],
+            "title": "Iampublicserverurl",
+            "type": "string"
+        },
+        "caCert": {
+            "description": "Path to the CA certificate file used for mutual TLS connections.",
+            "title": "Cacert",
+            "type": "string"
+        },
+        "iamProtectedServerURL": {
+            "description": "URL of the IAM protected gRPC server used for certificate operations.",
+            "examples": [
+                "localhost:8089"
+            ],
+            "title": "Iamprotectedserverurl",
+            "type": "string"
+        },
+        "cmServerURL": {
+            "description": "URL of the Cloud Manager (CM) gRPC server.",
+            "examples": [
+                "aoscm:8093"
+            ],
+            "title": "Cmserverurl",
+            "type": "string"
+        },
+        "certStorage": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": "/var/aos/crypt/sm/",
+            "description": "Certificate storage identifier used for SM TLS credentials. Default: /var/aos/crypt/sm/.",
+            "title": "Certstorage"
+        },
+        "cmReconnectTimeout": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": "10s",
+            "description": "Delay before retrying a dropped CM connection. Default: 10s.\nFormat: duration string (e.g. \"10s\", \"1m\").",
+            "examples": [
+                "10s",
+                "30s",
+                "1m"
+            ],
+            "title": "Cmreconnecttimeout"
+        },
+        "nodeConfigFile": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Path to the node configuration file. Defaults to {workingDir}/aos_node.cfg.",
+            "title": "Nodeconfigfile"
+        },
+        "resourcesConfigFile": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": "/etc/aos/resources.cfg",
+            "description": "Path to the resources configuration file. Default: /etc/aos/resources.cfg.",
+            "title": "Resourcesconfigfile"
+        },
+        "monitoring": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/MonitoringConfig"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Node monitoring subsystem configuration."
+        },
+        "imageManager": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/ImageManagerConfig"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Image manager subsystem configuration."
+        },
+        "logging": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/LoggingConfig"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Log provider subsystem configuration."
+        },
+        "journalAlerts": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/JournalAlertsConfig"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Systemd journal alerts subsystem configuration."
+        },
+        "migration": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/MigrationConfig"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Database migration configuration."
+        },
+        "runtimes": {
+            "anyOf": [
+                {
+                    "items": {
+                        "$ref": "#/$defs/RuntimeConfig"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "List of runtime plugin configurations available to the launcher.",
+            "title": "Runtimes"
+        }
+    },
+    "required": [
+        "workingDir",
+        "iamPublicServerURL",
+        "caCert",
+        "iamProtectedServerURL",
+        "cmServerURL"
+    ],
+    "title": "SMConfig",
+    "type": "object"
+}

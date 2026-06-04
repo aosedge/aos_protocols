@@ -15,6 +15,7 @@ from cloud_common.protocols.unit.unit_config import UnitConfig
 from cloud_common.schemas.v2.cloud_income import AosUploadMetaConfig
 from core.configs.cm import CMConfig
 from core.configs.iam import IAMConfig
+from core.configs.resource import ResourcesConfig
 from core.configs.sm import SMConfig
 
 DOCS_BASE_DIR = os.path.abspath(os.path.join(
@@ -97,6 +98,10 @@ def generate_cm_config_schema() -> str:
 
 def generate_iam_config_schema() -> str:
     return generate_schema_file(IAMConfig.model_json_schema(), CORE_DOCS_DIR, 'aos-iam-config.schema.json')
+
+
+def generate_resources_config_schema() -> str:
+    return generate_schema_file(ResourcesConfig.model_json_schema(), CORE_DOCS_DIR, 'aos-resources-config.schema.json')
 
 
 @click.group()
@@ -188,6 +193,7 @@ def core_schemas():
     generate_sm_config_schema()
     generate_cm_config_schema()
     generate_iam_config_schema()
+    generate_resources_config_schema()
 
 
 if __name__ == '__main__':

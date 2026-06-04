@@ -1,0 +1,231 @@
+{
+    "$defs": {
+        "Host": {
+            "description": "Extra host-to-IP mapping.",
+            "properties": {
+                "hostname": {
+                    "description": "Hostname to resolve.",
+                    "examples": [
+                        "Kuksa"
+                    ],
+                    "title": "Hostname",
+                    "type": "string"
+                },
+                "ip": {
+                    "description": "IP address the hostname resolves to.",
+                    "examples": [
+                        "10.0.0.100"
+                    ],
+                    "title": "IP",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "hostname",
+                "ip"
+            ],
+            "title": "Host",
+            "type": "object"
+        },
+        "Mount": {
+            "description": "Filesystem mount entry.",
+            "properties": {
+                "destination": {
+                    "description": "Mount destination path.",
+                    "examples": [
+                        "/dev/bus/usb"
+                    ],
+                    "title": "Destination",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Filesystem type (e.g. \"bind\", \"tmpfs\").",
+                    "examples": [
+                        "bind",
+                        "tmpfs"
+                    ],
+                    "title": "Type",
+                    "type": "string"
+                },
+                "source": {
+                    "description": "Source path.",
+                    "examples": [
+                        "/dev/bus/usb"
+                    ],
+                    "title": "Source",
+                    "type": "string"
+                },
+                "options": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Mount options.",
+                    "examples": [
+                        [
+                            "ro",
+                            "bind"
+                        ],
+                        [
+                            "rbind",
+                            "rprivate"
+                        ]
+                    ],
+                    "title": "Options"
+                }
+            },
+            "required": [
+                "destination",
+                "type",
+                "source"
+            ],
+            "title": "Mount",
+            "type": "object"
+        },
+        "ResourceInfo": {
+            "description": "Description of a single named resource available for allocation.",
+            "properties": {
+                "name": {
+                    "description": "Unique resource identifier.",
+                    "examples": [
+                        "bluetooth",
+                        "video"
+                    ],
+                    "title": "Name",
+                    "type": "string"
+                },
+                "sharedCount": {
+                    "anyOf": [
+                        {
+                            "minimum": 0,
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": 0,
+                    "description": "Maximum number of allocations for this resource. 0 means unlimited.",
+                    "title": "Sharedcount"
+                },
+                "groups": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Group names attached to this resource.",
+                    "examples": [
+                        [
+                            "video",
+                            "audio"
+                        ]
+                    ],
+                    "title": "Groups"
+                },
+                "mounts": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "$ref": "#/$defs/Mount"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Filesystem mounts attached to this resource.",
+                    "title": "Mounts"
+                },
+                "envs": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Environment variables attached to this resource in KEY=VALUE form.",
+                    "examples": [
+                        [
+                            "MY_VAR=1",
+                            "OTHER=abc"
+                        ]
+                    ],
+                    "title": "Envs"
+                },
+                "hosts": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "$ref": "#/$defs/Host"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "Extra host-to-IP mappings attached to this resource.",
+                    "title": "Hosts"
+                },
+                "devices": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "List of devices attached to this resource.\nFormat: <src-path>:<dst-path> (e.g. \"/dev/video0:/dev/video\").\nsrc-path is the path on the host, dst-path is the path inside the container. If dst-path is omitted, it defaults to src-path.",
+                    "examples": [
+                        [
+                            "/dev/video0:/dev/video",
+                            "/dev/snd"
+                        ]
+                    ],
+                    "title": "Devices"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "ResourceInfo",
+            "type": "object"
+        }
+    },
+    "description": "Resources configuration schema.\n\nThis schema describes the JSON resources configuration file for the Aos Service Manager,\ntypically located at /etc/aos/resources.cfg .\n\nThe file contains a JSON array of resource descriptors. Each entry declares a named\nresource along with the OS groups, mounts, environment variables, hosts, and device\nnodes that are injected into a service container when the resource is allocated.",
+    "items": {
+        "$ref": "#/$defs/ResourceInfo"
+    },
+    "title": "ResourcesConfig",
+    "type": "array"
+}

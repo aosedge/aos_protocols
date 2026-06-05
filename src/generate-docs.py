@@ -42,7 +42,7 @@ def generate_cloud_income_schema() -> str:
 
 
 def generate_aos_deployable_item_schema() -> str:
-    return generate_schema_file(AosConfigSchemaV2.model_json_schema(), 'aos-deployable-item.schema.json')
+    return generate_schema_file(AosConfigSchemaV2.model_json_schema(), UNIT_CLOUD_DIR, 'aos-deployable-item.schema.json')
 
 
 def generate_unitconfig_schema() -> str:

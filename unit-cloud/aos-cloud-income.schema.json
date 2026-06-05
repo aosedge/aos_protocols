@@ -721,7 +721,9 @@
                     "description": "The needed access permissions for the resource.",
                     "enum": [
                         "w",
-                        "rw"
+                        "rw",
+                        "m",
+                        "rwm"
                     ],
                     "examples": [
                         "r",

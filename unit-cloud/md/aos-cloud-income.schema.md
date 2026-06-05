@@ -1835,6 +1835,8 @@ Must be one of:
 Must be one of:
 * "w"
 * "rw"
+* "m"
+* "rwm"
 
 ###### <a name="items_items_configuration_anyOf_i0_resources_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > resources > anyOf > item 1`
 
@@ -2817,4 +2819,4 @@ Must be one of:
 | **Type** | `null` |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-06-05 at 11:50:37 +0300
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-06-05 at 13:49:29 +0300

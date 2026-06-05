@@ -7,9 +7,7 @@ from typing import Annotated, Literal, Optional
 from pydantic import Base64Bytes, Field, field_serializer
 
 from cloud_common.protocols.unit.common import TypeAosErrorInfoOptional
-from cloud_common.protocols.unit.types import (
-    TypeInstanceNoOptional,
-)
+from cloud_common.protocols.unit.types import TypeInstanceOptional
 from .common import AosIdentity, AosBaseDataModel, TypeItemOptional
 from .types import AosBaseModel
 
@@ -18,7 +16,7 @@ class AosLogFilterV7(AosBaseModel):
     """The filter options applied to logs."""
 
     from_timestamp: Annotated[
-        datetime,
+        Optional[datetime],
         Field(
             default=None,
             alias='from',
@@ -28,7 +26,7 @@ class AosLogFilterV7(AosBaseModel):
     ]
 
     till_timestamp: Annotated[
-        datetime,
+        Optional[datetime],
         Field(
             default=None,
             alias='till',
@@ -58,7 +56,7 @@ class AosLogFilterV7(AosBaseModel):
         ),
     ]
 
-    instance: TypeInstanceNoOptional
+    instance: TypeInstanceOptional
 
     @field_serializer('from_timestamp')
     def serialize_from_timestamp(self, from_timestamp: datetime, info):  # noqa: WPS110
@@ -219,6 +217,7 @@ class AosPushLogV7(AosBaseDataModel):
         Literal[
             'ok',
             'failed',
+            'error',
             'empty',
             'absent',
         ],

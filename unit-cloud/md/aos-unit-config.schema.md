@@ -137,8 +137,8 @@
 
 | Property                                         | Pattern | Type            | Deprecated | Definition                    | Title/Description  |
 | ------------------------------------------------ | ------- | --------------- | ---------- | ----------------------------- | ------------------ |
-| + [nodeType](#nodes_items_nodeType )             | No      | string          | No         | -                             | Node Type          |
-| - [nodeId](#nodes_items_nodeId )                 | No      | string          | No         | -                             | Node ID            |
+| + [nodeType](#nodes_items_nodeType )             | No      | string          | No         | -                             | Node type          |
+| - [nodeId](#nodes_items_nodeId )                 | No      | string          | No         | -                             | Nodeid             |
 | - [alertRules](#nodes_items_alertRules )         | No      | object          | No         | In #/$defs/AlertRules         | Alert Rules        |
 | - [resourceRatios](#nodes_items_resourceRatios ) | No      | object          | No         | In #/$defs/ResourceRatiosInfo | ResourceRatiosInfo |
 | - [devices](#nodes_items_devices )               | No      | array           | No         | -                             | Devices            |
@@ -148,17 +148,27 @@
 
 #### <a name="nodes_items_nodeType"></a>Property `UnitConfig > nodes > NodeConfig > nodeType`
 
-**Title:** Node Type
+**Title:** Node type
 
 |          |          |
 | -------- | -------- |
 | **Type** | `string` |
 
-**Description:** Group of nodes with identical configuration.
+**Description:** The type of the node.
+
+**Examples:**
+
+```json
+"DomA"
+```
+
+```json
+"DomD"
+```
 
 #### <a name="nodes_items_nodeId"></a>Property `UnitConfig > nodes > NodeConfig > nodeId`
 
-**Title:** Node ID
+**Title:** Nodeid
 
 |             |          |
 | ----------- | -------- |
@@ -730,7 +740,7 @@
 | -------- | ----------------- |
 | **Type** | `array of string` |
 
-**Description:** List of files in /dev dir, associated with the device name.
+**Description:** List of host devices.
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -759,7 +769,7 @@
 | **Type**    | `integer` |
 | **Default** | `0`       |
 
-**Description:** The maximum allowed number of service instances that can use this device simultaneously. 0 means no restrictions.
+**Description:** The count of shared devices that can be used in one time. 0 means no restrictions.
 
 | Restrictions |        |
 | ------------ | ------ |
@@ -774,7 +784,7 @@
 | **Type**    | `array of string` |
 | **Default** | `null`            |
 
-**Description:** List of associated user groups.
+**Description:** List of associated groups.
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -1107,4 +1117,4 @@
 | **Maximum**  | &lt; 4294967295 |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2025-07-18 at 15:15:20 +0300
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-06-05 at 11:50:37 +0300

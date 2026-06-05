@@ -144,7 +144,7 @@
           - [Property `AosConfigSchema > dependencies > anyOf > item 0 > AosDependency > identifier > id > anyOf > item 0`](#dependencies_anyOf_i0_items_identifier_id_anyOf_i0)
           - [Property `AosConfigSchema > dependencies > anyOf > item 0 > AosDependency > identifier > id > anyOf > item 1`](#dependencies_anyOf_i0_items_identifier_id_anyOf_i1)
         - [Property `AosConfigSchema > dependencies > anyOf > item 0 > AosDependency > identifier > type`](#dependencies_anyOf_i0_items_identifier_type)
-          - [Property `AosConfigSchema > dependencies > anyOf > item 0 > AosDependency > identifier > type > anyOf > item 0`](#dependencies_anyOf_i0_items_identifier_type_anyOf_i0)
+          - [Property `AosConfigSchema > dependencies > anyOf > item 0 > AosDependency > identifier > type > anyOf > AosIdentityType`](#dependencies_anyOf_i0_items_identifier_type_anyOf_i0)
           - [Property `AosConfigSchema > dependencies > anyOf > item 0 > AosDependency > identifier > type > anyOf > item 1`](#dependencies_anyOf_i0_items_identifier_type_anyOf_i1)
         - [Property `AosConfigSchema > dependencies > anyOf > item 0 > AosDependency > identifier > codename`](#dependencies_anyOf_i0_items_identifier_codename)
           - [Property `AosConfigSchema > dependencies > anyOf > item 0 > AosDependency > identifier > codename > anyOf > item 0`](#dependencies_anyOf_i0_items_identifier_codename_anyOf_i0)
@@ -1828,20 +1828,20 @@ Must be one of:
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 | **Defined in**            | #/$defs/AosDependency                                                       |
 
-| Property                                                 | Pattern | Type             | Deprecated | Definition               | Title/Description |
-| -------------------------------------------------------- | ------- | ---------------- | ---------- | ------------------------ | ----------------- |
-| + [identifier](#dependencies_anyOf_i0_items_identifier ) | No      | object           | No         | In #/$defs/AosIdentifier | AosIdentifier     |
-| + [condition](#dependencies_anyOf_i0_items_condition )   | No      | enum (of string) | No         | -                        | Condition         |
+| Property                                                 | Pattern | Type             | Deprecated | Definition             | Title/Description |
+| -------------------------------------------------------- | ------- | ---------------- | ---------- | ---------------------- | ----------------- |
+| + [identifier](#dependencies_anyOf_i0_items_identifier ) | No      | object           | No         | In #/$defs/AosIdentity | AosIdentity       |
+| + [condition](#dependencies_anyOf_i0_items_condition )   | No      | enum (of string) | No         | -                      | Condition         |
 
 ##### <a name="dependencies_anyOf_i0_items_identifier"></a>Property `AosConfigSchema > dependencies > anyOf > item 0 > AosDependency > identifier`
 
-**Title:** AosIdentifier
+**Title:** AosIdentity
 
 |                           |                                                                             |
 | ------------------------- | --------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Defined in**            | #/$defs/AosIdentifier                                                       |
+| **Defined in**            | #/$defs/AosIdentity                                                         |
 
 **Description:** Identifier of the AOS object.
 
@@ -1876,7 +1876,7 @@ Must be one of:
 |            |          |
 | ---------- | -------- |
 | **Type**   | `string` |
-| **Format** | `uuid4`  |
+| **Format** | `uuid`   |
 
 ###### <a name="dependencies_anyOf_i0_items_identifier_id_anyOf_i1"></a>Property `AosConfigSchema > dependencies > anyOf > item 0 > AosDependency > identifier > id > anyOf > item 1`
 
@@ -1896,23 +1896,31 @@ Must be one of:
 
 **Description:** Aos object type. E.g.: AosService, AosComponent
 
-| Any of(Option)                                                  |
-| --------------------------------------------------------------- |
-| [item 0](#dependencies_anyOf_i0_items_identifier_type_anyOf_i0) |
-| [item 1](#dependencies_anyOf_i0_items_identifier_type_anyOf_i1) |
+| Any of(Option)                                                           |
+| ------------------------------------------------------------------------ |
+| [AosIdentityType](#dependencies_anyOf_i0_items_identifier_type_anyOf_i0) |
+| [item 1](#dependencies_anyOf_i0_items_identifier_type_anyOf_i1)          |
 
-###### <a name="dependencies_anyOf_i0_items_identifier_type_anyOf_i0"></a>Property `AosConfigSchema > dependencies > anyOf > item 0 > AosDependency > identifier > type > anyOf > item 0`
+###### <a name="dependencies_anyOf_i0_items_identifier_type_anyOf_i0"></a>Property `AosConfigSchema > dependencies > anyOf > item 0 > AosDependency > identifier > type > anyOf > AosIdentityType`
 
-|          |                    |
-| -------- | ------------------ |
-| **Type** | `enum (of string)` |
+**Title:** AosIdentityType
+
+|                |                         |
+| -------------- | ----------------------- |
+| **Type**       | `enum (of string)`      |
+| **Defined in** | #/$defs/AosIdentityType |
 
 Must be one of:
-* "aosComponent"
-* "aosService"
-* "aosLayer"
-* "aosSubject"
-* "aosOEM"
+* "component"
+* "service"
+* "layer"
+* "subject"
+* "oem"
+* "sp"
+* "fleet"
+* "node"
+* "node-subject"
+* "runtime"
 
 ###### <a name="dependencies_anyOf_i0_items_identifier_type_anyOf_i1"></a>Property `AosConfigSchema > dependencies > anyOf > item 0 > AosDependency > identifier > type > anyOf > item 1`
 
@@ -2060,4 +2068,4 @@ Must be one of:
 | **Type** | `null` |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2025-07-18 at 15:15:20 +0300
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-06-05 at 11:50:36 +0300

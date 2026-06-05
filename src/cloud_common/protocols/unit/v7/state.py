@@ -84,7 +84,7 @@ class AosUpdateStateV7(AosNewStateV7):
             title='Message type',
             description='Message body type.',
         ),
-    ]
+    ] = 'updateState'
 
 
 class AosStateAcceptanceV7(AosBaseDataModel):

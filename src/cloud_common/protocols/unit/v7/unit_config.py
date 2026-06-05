@@ -256,7 +256,7 @@ class ResourceInfo(AosBaseModel):
     ]
 
 
-class NodeConfig(AosBaseModel):
+class NodeConfigV7(AosBaseModel):
     """Node configuration parameters."""
 
     node_group_subject: Annotated[
@@ -279,23 +279,23 @@ class NodeConfig(AosBaseModel):
     ] = None
 
     alert_rules: Annotated[
-        AlertRules,
+        Optional[AlertRules],
         Field(
             default=None,
             alias='alertRules',
             title='Alert Rules',
             description='The default thresholds for services running on the node.',
         ),
-    ]
+    ] = None
 
     resource_ratios: Annotated[
-        ResourceRatiosInfo,
+        Optional[ResourceRatiosInfo],
         Field(
             alias='resourceRatios',
             default=None,
             description='The default resource ratio allocated for a service.',
         ),
-    ]
+    ] = None
 
     labels: Annotated[
         list[str],
@@ -339,7 +339,7 @@ class UnitConfigV7(AosBaseModel):
     ]
 
     nodes: Annotated[
-        list[NodeConfig],
+        list[NodeConfigV7],
         Field(
             description='The list of node configurations.',
         ),

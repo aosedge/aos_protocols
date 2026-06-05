@@ -399,7 +399,7 @@ class AosUnitStatusV7(AosBaseDataModel):
             alias='items',
             description='List of the Aos update items.',
         ),
-    ]
+    ] = None
 
     instances: Annotated[
         Optional[list[AosInstancesInfo]],
@@ -407,7 +407,7 @@ class AosUnitStatusV7(AosBaseDataModel):
             default=None,
             alias='instances',
         ),
-    ]
+    ] = None
 
     subjects: Annotated[
         Optional[list[AosIdentity]],
@@ -415,4 +415,4 @@ class AosUnitStatusV7(AosBaseDataModel):
             default=None,
             alias='subjects',
         ),
-    ]
+    ] = None

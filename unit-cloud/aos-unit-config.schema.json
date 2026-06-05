@@ -162,7 +162,7 @@
                     "type": "string"
                 },
                 "hostDevices": {
-                    "description": "List of files in /dev dir, associated with the device name.",
+                    "description": "List of host devices.",
                     "items": {
                         "type": "string"
                     },
@@ -171,14 +171,14 @@
                 },
                 "sharedCount": {
                     "default": 0,
-                    "description": "The maximum allowed number of service instances that can use this device simultaneously. 0 means no restrictions.",
+                    "description": "The count of shared devices that can be used in one time. 0 means no restrictions.",
                     "minimum": 0,
                     "title": "Sharedcount",
                     "type": "integer"
                 },
                 "groups": {
                     "default": null,
-                    "description": "List of associated user groups.",
+                    "description": "List of associated groups.",
                     "items": {
                         "type": "string"
                     },
@@ -252,14 +252,18 @@
             "description": "Node configuration parameters.",
             "properties": {
                 "nodeType": {
-                    "description": "Group of nodes with identical configuration.",
-                    "title": "Node Type",
+                    "description": "The type of the node.",
+                    "examples": [
+                        "DomA",
+                        "DomD"
+                    ],
+                    "title": "Node type",
                     "type": "string"
                 },
                 "nodeId": {
                     "default": null,
                     "description": "Unique ID of the node",
-                    "title": "Node ID",
+                    "title": "Nodeid",
                     "type": "string"
                 },
                 "alertRules": {

@@ -1,4 +1,3 @@
-
 generate-html:
 	PYTHONPATH=src python src/generate-docs.py html
 

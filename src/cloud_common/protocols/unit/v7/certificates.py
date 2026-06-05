@@ -80,7 +80,7 @@ class AosUnitSecretsDataV7(AosBaseModel):
     """Keeps the unit secret used to decode secure device information."""
 
     version: Annotated[
-        Literal[7],
+        str,
         Field(
             alias='version',
             title='Version',
@@ -89,7 +89,7 @@ class AosUnitSecretsDataV7(AosBaseModel):
     ]
 
     nodes: Annotated[
-        Optional[AosNodeSecretV7],
+        Optional[list[AosNodeSecretV7]],
         Field(
             default=None,
             description='Nodes and secrets list.',

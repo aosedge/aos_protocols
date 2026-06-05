@@ -626,48 +626,6 @@
             "description": "The hostname of the Aos service. The FQDN is {hostname].{service_provider}.",
             "title": "Hostname"
         },
-        "runner": {
-            "anyOf": [
-                {
-                    "enum": [
-                        "runc",
-                        "crun",
-                        "xrun"
-                    ],
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": "crun",
-            "description": "Aos service allowed runner type. Use for backward compatibility with previous version of Aos",
-            "title": "Runner"
-        },
-        "runners": {
-            "anyOf": [
-                {
-                    "items": {
-                        "enum": [
-                            "runc",
-                            "crun",
-                            "xrun"
-                        ],
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": [
-                "runc",
-                "crun"
-            ],
-            "description": "Aos service allowed runner types. Absense means [\"runc\", \"crun\"].",
-            "title": "Runners"
-        },
         "runtimes": {
             "anyOf": [
                 {

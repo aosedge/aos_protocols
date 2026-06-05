@@ -180,7 +180,7 @@
         "AosDependency": {
             "properties": {
                 "identifier": {
-                    "$ref": "#/$defs/AosIdentifier",
+                    "$ref": "#/$defs/AosIdentity",
                     "description": "Identifier of the AOS object."
                 },
                 "condition": {
@@ -203,13 +203,13 @@
             "title": "AosDependency",
             "type": "object"
         },
-        "AosIdentifier": {
+        "AosIdentity": {
             "description": "Aos objects identifier.",
             "properties": {
                 "id": {
                     "anyOf": [
                         {
-                            "format": "uuid4",
+                            "format": "uuid",
                             "type": "string"
                         },
                         {
@@ -223,14 +223,7 @@
                 "type": {
                     "anyOf": [
                         {
-                            "enum": [
-                                "aosComponent",
-                                "aosService",
-                                "aosLayer",
-                                "aosSubject",
-                                "aosOEM"
-                            ],
-                            "type": "string"
+                            "$ref": "#/$defs/AosIdentityType"
                         },
                         {
                             "type": "null"
@@ -293,8 +286,24 @@
                     "title": "Aos object URN."
                 }
             },
-            "title": "AosIdentifier",
+            "title": "AosIdentity",
             "type": "object"
+        },
+        "AosIdentityType": {
+            "enum": [
+                "component",
+                "service",
+                "layer",
+                "subject",
+                "oem",
+                "sp",
+                "fleet",
+                "node",
+                "node-subject",
+                "runtime"
+            ],
+            "title": "AosIdentityType",
+            "type": "string"
         },
         "RequestedResources": {
             "description": "Schema for requested resources.",

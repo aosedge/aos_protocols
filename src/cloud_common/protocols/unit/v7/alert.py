@@ -191,7 +191,7 @@ class AosAlertDownloadProgressV7(AosBaseAlert):
 
     digest: Annotated[
         str,
-        Field(decription='Digest from AosUpdateItemBlobInfo.digest'),
+        Field(description='Digest from AosUpdateItemBlobInfo.digest'),
     ]
 
     url: Annotated[
@@ -259,7 +259,6 @@ class AosAlertUpdateItemInstanceV7(AosBaseAlert):
         Field(
             alias='subjectId',
             description='Subject unique identifier.',
-            min_length=1,
         ),
     ]
 

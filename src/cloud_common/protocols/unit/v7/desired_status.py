@@ -5,7 +5,7 @@ import base64
 from datetime import time
 from typing import Annotated, Literal, Optional
 
-from pydantic import Base64Bytes, BaseModel, Field, field_serializer, ConfigDict
+from pydantic import BaseModel, Field, field_serializer, ConfigDict
 
 from cloud_common.protocols.unit.types import (
     AosSensitiveBytes,
@@ -15,7 +15,8 @@ from cloud_common.protocols.unit.types import (
     TypeVersionMandatory,
 )
 
-from .common import AosIdentity, TypeItemMandatory, AosSubject, AosBaseDataModel, TypeAosIdentityMandatory
+from ..desired_status import AosCertificateInfo, AosCertificateChainInfo
+from .common import AosIdentity, TypeItemMandatory, AosSubject, AosBaseDataModel
 from .types import TypeNodeDesiredState, AosBaseModel
 from .unit_config import UnitConfigV7
 
@@ -72,40 +73,40 @@ TypeAosDecryptInfo = Annotated[
 ]
 
 
-class AosCertificateInfo(BaseModel):
-    """Certificate content and fingerprint."""
-
-    certificate: Annotated[
-        Base64Bytes,
-        Field(
-            description='Base64 encoded certificate in the `der` form.',
-        ),
-    ]
-
-    fingerprint: Annotated[
-        str,
-        Field(
-            description='Fingerprint of the certificate (unique ID)',
-        ),
-    ]
-
-
-class AosCertificateChainInfo(BaseModel):
-    """Certificate content and fingerprint."""
-
-    name: Annotated[
-        str,
-        Field(
-            description='Unique name of the certificate chain.',
-        ),
-    ]
-
-    fingerprints: Annotated[
-        list[str],
-        Field(
-            description='Fingerprint list of the certificates included in the chain.',
-        ),
-    ]
+# class AosCertificateInfo(BaseModel):
+#     """Certificate content and fingerprint."""
+#
+#     certificate: Annotated[
+#         Base64Bytes,
+#         Field(
+#             description='Base64 encoded certificate in the `der` form.',
+#         ),
+#     ]
+#
+#     fingerprint: Annotated[
+#         str,
+#         Field(
+#             description='Fingerprint of the certificate (unique ID)',
+#         ),
+#     ]
+#
+#
+# class AosCertificateChainInfo(BaseModel):
+#     """Certificate content and fingerprint."""
+#
+#     name: Annotated[
+#         str,
+#         Field(
+#             description='Unique name of the certificate chain.',
+#         ),
+#     ]
+#
+#     fingerprints: Annotated[
+#         list[str],
+#         Field(
+#             description='Fingerprint list of the certificates included in the chain.',
+#         ),
+#     ]
 
 
 class AosSignInfo(AosBaseModel):
@@ -198,7 +199,7 @@ class AosTimetableItem(AosBaseModel):
         list[AosTimeSlot],
         Field(
             alias='timeSlots',
-            min_items=1,
+            min_length=1,
             description='List of the time slots for the timetable.',
         ),
     ]
@@ -266,8 +267,8 @@ class AosDesiredInstanceInfo(AosBaseModel):
         int,
         Field(
             alias='numInstances',
-            default=1,
-            gt=0,
+            default=0,
+            ge=0,
             description='Number of service instances to run.',
         ),
     ] = 1
@@ -306,11 +307,11 @@ class AosDesiredStatusV7(AosBaseDataModel):
     nodes: Annotated[
         list[AosNodeDesiredState],
         Field(
-            default=None,
+            default=[],
             alias='nodes',
             description="The list of desired node's status.",
         ),
-    ]
+    ] = []
 
     unit_config: Annotated[
         Optional[UnitConfigV7],

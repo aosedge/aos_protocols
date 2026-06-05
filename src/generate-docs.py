@@ -170,10 +170,10 @@ def both():
 @cli.command()
 def schemas():
     schema_filenames = [
-        # generate_service_schema(),
-        # generate_update_schema(),
-        # generate_unitconfig_schema(),
-        # generate_cloud_income_schema(),
+        generate_service_schema(),
+        generate_update_schema(),
+        generate_unitconfig_schema(),
+        generate_cloud_income_schema(),
         generate_aos_deployable_item_schema(),
     ]
 

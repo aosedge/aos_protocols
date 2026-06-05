@@ -240,7 +240,7 @@
                     "type": "string"
                 },
                 "digest": {
-                    "decription": "Digest from AosUpdateItemBlobInfo.digest",
+                    "description": "Digest from AosUpdateItemBlobInfo.digest",
                     "title": "Digest",
                     "type": "string"
                 },
@@ -529,8 +529,7 @@
                 },
                 "subjectId": {
                     "$ref": "#/$defs/AosIdentity",
-                    "description": "Subject unique identifier.",
-                    "minLength": 1
+                    "description": "Subject unique identifier."
                 },
                 "instance": {
                     "description": "Instance number (starting from 0).",
@@ -957,7 +956,7 @@
                 "numInstances": {
                     "default": 1,
                     "description": "Number of service instances to run.",
-                    "exclusiveMinimum": 0,
+                    "minimum": 0,
                     "title": "Numinstances",
                     "type": "integer"
                 },
@@ -1009,7 +1008,7 @@
                     "type": "string"
                 },
                 "nodes": {
-                    "default": null,
+                    "default": [],
                     "description": "The list of desired node's status.",
                     "items": {
                         "$ref": "#/$defs/AosNodeDesiredState"
@@ -1950,18 +1949,32 @@
             "description": "The filter options applied to logs.",
             "properties": {
                 "from": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "Start timestamp of the logs in ISO8601 format. Applied operator: `>=`.",
-                    "format": "date-time",
-                    "title": "From",
-                    "type": "string"
+                    "title": "From"
                 },
                 "till": {
+                    "anyOf": [
+                        {
+                            "format": "date-time",
+                            "type": "string"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "End timestamp of the logs in ISO8601 format. Applied operator: `<`.",
-                    "format": "date-time",
-                    "title": "Till",
-                    "type": "string"
+                    "title": "Till"
                 },
                 "nodeIds": {
                     "default": null,
@@ -1997,10 +2010,17 @@
                     "description": "The identification of the resource."
                 },
                 "instance": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
                     "description": "The instance number of the service. Starts from 0.",
-                    "title": "Instance no",
-                    "type": "integer"
+                    "title": "Instance no"
                 }
             },
             "title": "AosLogFilterV7",
@@ -2567,6 +2587,7 @@
                     "enum": [
                         "ok",
                         "failed",
+                        "error",
                         "empty",
                         "absent"
                     ],
@@ -3404,22 +3425,25 @@
             "description": "Keeps the unit secret used to decode secure device information.",
             "properties": {
                 "version": {
-                    "const": 7,
                     "description": "Version of the unit secrets structure.",
                     "title": "Version",
-                    "type": "integer"
+                    "type": "string"
                 },
                 "nodes": {
                     "anyOf": [
                         {
-                            "$ref": "#/$defs/AosNodeSecretV7"
+                            "items": {
+                                "$ref": "#/$defs/AosNodeSecretV7"
+                            },
+                            "type": "array"
                         },
                         {
                             "type": "null"
                         }
                     ],
                     "default": null,
-                    "description": "Nodes and secrets list."
+                    "description": "Nodes and secrets list.",
+                    "title": "Nodes"
                 }
             },
             "required": [
@@ -3572,7 +3596,7 @@
                     "type": "array"
                 },
                 "sha256": {
-                    "description": "SHA3-256 digest of the encrypted target",
+                    "description": "SHA3-256 digest of the target",
                     "format": "base64",
                     "title": "Sha256",
                     "type": "string"
@@ -3668,6 +3692,7 @@
                 },
                 "messageType": {
                     "const": "updateState",
+                    "default": "updateState",
                     "description": "Message body type.",
                     "title": "Message type",
                     "type": "string"
@@ -3702,7 +3727,6 @@
                 }
             },
             "required": [
-                "messageType",
                 "instance",
                 "stateChecksum",
                 "state"
@@ -3769,7 +3793,7 @@
             "title": "AosUploadLogOptions",
             "type": "object"
         },
-        "NodeConfig": {
+        "NodeConfigV7": {
             "description": "Node configuration parameters.",
             "properties": {
                 "nodeGroupSubject": {
@@ -3800,13 +3824,29 @@
                     ]
                 },
                 "alertRules": {
-                    "$ref": "#/$defs/AlertRules",
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/AlertRules"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
                     "default": null,
+                    "description": "The default thresholds for services running on the node.",
                     "title": "Alert Rules"
                 },
                 "resourceRatios": {
-                    "$ref": "#/$defs/ResourceRatiosInfo",
-                    "default": null
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/ResourceRatiosInfo"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "The default resource ratio allocated for a service."
                 },
                 "labels": {
                     "default": null,
@@ -3829,7 +3869,7 @@
                 "nodeGroupSubject",
                 "priority"
             ],
-            "title": "NodeConfig",
+            "title": "NodeConfigV7",
             "type": "object"
         },
         "ResourceRatiosInfo": {
@@ -3879,7 +3919,7 @@
                 "nodes": {
                     "description": "The list of node configurations.",
                     "items": {
-                        "$ref": "#/$defs/NodeConfig"
+                        "$ref": "#/$defs/NodeConfigV7"
                     },
                     "title": "Nodes",
                     "type": "array"

@@ -72,24 +72,6 @@ class AosConfigSchemaV2(BaseModel):
         ),
     ]
 
-    runner: Annotated[  # Deprecated
-        Optional[Literal['runc', 'crun', 'xrun']],
-        Field(
-            alias='runner',
-            default='crun',
-            description='Aos service allowed runner type. Use for backward compatibility with previous version of Aos',
-        ),
-    ]
-
-    runners: Annotated[
-        Optional[list[Literal['runc', 'crun', 'xrun']]],
-        Field(
-            alias='runners',
-            default=['runc', 'crun'],
-            description='Aos service allowed runner types. Absense means ["runc", "crun"].',
-        ),
-    ]
-
     runtimes: Annotated[
         Optional[list[AosIdentity]],
         Field(

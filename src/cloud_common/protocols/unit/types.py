@@ -1,5 +1,4 @@
 #
-#  Copyright (c) 2018-2024 Renesas Inc.
 #  Copyright (c) 2018-2024 EPAM Systems Inc.
 #
 from typing import Annotated, Literal, Optional
@@ -10,8 +9,14 @@ from cloud_common.protocols.unit.constants import DataSizes
 
 TypeStatusForNonExecutables = Annotated[
     Literal[
-        'installed',
+        'unknown',
+        'pending',
         'downloading',
+        'downloaded',
+        'installing',
+        'installed',
+        'removing',
+        'removed',
         'failed',
         'error',
     ],
@@ -64,11 +69,10 @@ TypeNodeIdMandatory = Annotated[
 ]
 
 TypeNodeIdOptional = Annotated[
-    Optional[str],
+    str,
     Field(
         default=None,
         alias='nodeId',
-        title='Node ID',
         description='Unique ID of the node',
     ),
 ]
@@ -77,8 +81,12 @@ TypeNodeTypeMandatory = Annotated[
     str,
     Field(
         alias='nodeType',
-        title='Node Type',
-        description='Group of nodes with identical configuration.',
+        title='Node type',
+        description='The type of the node.',
+        examples=[
+            'DomA',
+            'DomD',
+        ],
     ),
 ]
 
@@ -156,6 +164,15 @@ TypeInstanceNoMandatory = Annotated[
 
 TypeInstanceNoOptional = Annotated[
     int,
+    Field(
+        default=None,
+        alias='instance',
+        title='Instance no',
+        description='The instance number of the service. Starts from 0.',
+    ),
+]
+TypeInstanceOptional = Annotated[
+    Optional[int],
     Field(
         default=None,
         alias='instance',
@@ -250,7 +267,7 @@ TypeAosSha256 = Annotated[
     Base64Bytes,
     Field(
         alias='sha256',
-        description='SHA3-256 digest of the encrypted target',
+        description='SHA3-256 digest of the target',
     ),
 ]
 
@@ -295,8 +312,14 @@ TypeNodeStatus = Annotated[
     Literal[
         'provisioned',
         'unprovisioned',
+        'unprovisioned:wait_provisioning',
+        'unprovisioned:provisioning',
+        'provisioned:wait_unprovisioning',
+        'provisioned:unprovisioning',
         'error',
         'paused',
+        'pausing',
+        'resuming',
     ],
     Field(
         alias='status',
@@ -308,6 +331,8 @@ TypeNodeDesiredStatus = Annotated[
     Literal[
         'provisioned',
         'paused',
+        'pausing',
+        'resuming',
     ],
     Field(
         alias='status',

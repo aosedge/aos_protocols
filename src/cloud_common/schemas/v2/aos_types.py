@@ -110,7 +110,7 @@ class AosResourceAccess(BaseModel):
     ]
 
     mode: Annotated[
-        Literal['w', 'rw', 'w'],
+        Literal['w', 'rw', 'w', 'm', 'rwm'],
         Field(
             default='r',
             description='The needed access permissions for the resource.',

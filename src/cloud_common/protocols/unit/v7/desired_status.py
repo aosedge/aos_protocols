@@ -73,42 +73,6 @@ TypeAosDecryptInfo = Annotated[
 ]
 
 
-# class AosCertificateInfo(BaseModel):
-#     """Certificate content and fingerprint."""
-#
-#     certificate: Annotated[
-#         Base64Bytes,
-#         Field(
-#             description='Base64 encoded certificate in the `der` form.',
-#         ),
-#     ]
-#
-#     fingerprint: Annotated[
-#         str,
-#         Field(
-#             description='Fingerprint of the certificate (unique ID)',
-#         ),
-#     ]
-#
-#
-# class AosCertificateChainInfo(BaseModel):
-#     """Certificate content and fingerprint."""
-#
-#     name: Annotated[
-#         str,
-#         Field(
-#             description='Unique name of the certificate chain.',
-#         ),
-#     ]
-#
-#     fingerprints: Annotated[
-#         list[str],
-#         Field(
-#             description='Fingerprint list of the certificates included in the chain.',
-#         ),
-#     ]
-
-
 class AosSignInfo(AosBaseModel):
     """Aos sign information."""
 

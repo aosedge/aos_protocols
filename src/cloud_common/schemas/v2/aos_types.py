@@ -427,12 +427,12 @@ class AosUpdateItemConfiguration(BaseModel):
     ] = None
 
     exposed_ports: Annotated[
-        Optional[list[int]],
+        Optional[list[int | str]],
         Field(
             alias='exposedPorts',
             default=None,
-            description='List of exposed ports.',
-            examples=[8080, 8081],
+            description='List of exposed ports in format {port}/[tcp|udp].',
+            examples=[8080, 8081, '53/udp'],
         ),
     ] = None
 

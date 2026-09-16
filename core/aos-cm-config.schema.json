@@ -97,42 +97,6 @@
         "CMMonitoringConfig": {
             "description": "Node monitoring configuration for the CM.",
             "properties": {
-                "pollPeriod": {
-                    "anyOf": [
-                        {
-                            "type": "string"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ],
-                    "default": "35s",
-                    "description": "Interval between resource usage samples. Default: 35s.\nFormat: duration string (e.g. \"35s\", \"1m\", \"5m\").",
-                    "examples": [
-                        "35s",
-                        "1m",
-                        "5m"
-                    ],
-                    "title": "Pollperiod"
-                },
-                "averageWindow": {
-                    "anyOf": [
-                        {
-                            "type": "string"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ],
-                    "default": "35s",
-                    "description": "Sliding window for computing resource usage averages. Default: 35s.\nFormat: duration string (e.g. \"35s\", \"5m\", \"10m\").",
-                    "examples": [
-                        "35s",
-                        "5m",
-                        "10m"
-                    ],
-                    "title": "Averagewindow"
-                },
                 "sendPeriod": {
                     "anyOf": [
                         {

@@ -5,10 +5,8 @@ from typing import Annotated, List, Optional
 
 from pydantic import BaseModel, Field
 
-from .common import MonitoringConfig
 
-
-class CMMonitoringConfig(MonitoringConfig):
+class CMMonitoringConfig(BaseModel):
     """Node monitoring configuration for the CM."""
 
     send_period: Annotated[

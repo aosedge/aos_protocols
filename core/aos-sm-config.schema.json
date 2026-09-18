@@ -211,10 +211,10 @@
                             "type": "null"
                         }
                     ],
-                    "default": "35s",
-                    "description": "Interval between resource usage samples. Default: 35s.\nFormat: duration string (e.g. \"35s\", \"1m\", \"5m\").",
+                    "default": "30s",
+                    "description": "Interval between resource usage samples. Default: 30s.\nFormat: duration string (e.g. \"30s\", \"1m\", \"5m\").",
                     "examples": [
-                        "35s",
+                        "30s",
                         "1m",
                         "5m"
                     ],
@@ -229,10 +229,10 @@
                             "type": "null"
                         }
                     ],
-                    "default": "35s",
-                    "description": "Sliding window for computing resource usage averages. Default: 35s.\nFormat: duration string (e.g. \"35s\", \"5m\", \"10m\").",
+                    "default": "90s",
+                    "description": "Sliding window for computing resource usage averages. Default: 90s.\nFormat: duration string (e.g. \"90s\", \"5m\", \"10m\").",
                     "examples": [
-                        "35s",
+                        "90s",
                         "5m",
                         "10m"
                     ],

@@ -13,11 +13,11 @@ class MonitoringConfig(BaseModel):
         Optional[str],
         Field(
             alias='pollPeriod',
-            default='35s',
+            default='30s',
             description="""\
-Interval between resource usage samples. Default: 35s.
-Format: duration string (e.g. "35s", "1m", "5m").""",
-            examples=['35s', '1m', '5m'],
+Interval between resource usage samples. Default: 30s.
+Format: duration string (e.g. "30s", "1m", "5m").""",
+            examples=['30s', '1m', '5m'],
         ),
     ]
 
@@ -25,10 +25,10 @@ Format: duration string (e.g. "35s", "1m", "5m").""",
         Optional[str],
         Field(
             alias='averageWindow',
-            default='35s',
+            default='90s',
             description="""\
-Sliding window for computing resource usage averages. Default: 35s.
-Format: duration string (e.g. "35s", "5m", "10m").""",
-            examples=['35s', '5m', '10m'],
+Sliding window for computing resource usage averages. Default: 90s.
+Format: duration string (e.g. "90s", "5m", "10m").""",
+            examples=['90s', '5m', '10m'],
         ),
     ]

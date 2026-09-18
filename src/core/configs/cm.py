@@ -57,12 +57,21 @@ Format: duration string (e.g. "10s", "30s", "1m").""",
 class CMImageManagerConfig(BaseModel):
     """Image manager subsystem configuration."""
 
-    install_path: Annotated[
+    image_path: Annotated[
         Optional[str],
         Field(
-            alias='installPath',
+            alias='imagePath',
             default=None,
-            description='Directory where deployable item OCI images are installed. Defaults to {workingDir}/install.',
+            description='Directory where deployable item OCI images are installed. Defaults to {workingDir}/images.',
+        ),
+    ]
+
+    images_part_limit: Annotated[
+        Optional[int],
+        Field(
+            alias='imagesPartLimit',
+            default=0,
+            description='Maximum percentage of filesystem capacity allocated to images. 0 means no quota.',
         ),
     ]
 

@@ -28,7 +28,7 @@
         "CMImageManagerConfig": {
             "description": "Image manager subsystem configuration.",
             "properties": {
-                "installPath": {
+                "imagePath": {
                     "anyOf": [
                         {
                             "type": "string"
@@ -38,8 +38,21 @@
                         }
                     ],
                     "default": null,
-                    "description": "Directory where deployable item OCI images are installed. Defaults to {workingDir}/install.",
-                    "title": "Installpath"
+                    "description": "Directory where deployable item OCI images are installed. Defaults to {workingDir}/images.",
+                    "title": "Imagepath"
+                },
+                "imagesPartLimit": {
+                    "anyOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": 0,
+                    "description": "Maximum percentage of filesystem capacity allocated to images. 0 means no quota.",
+                    "title": "Imagespartlimit"
                 },
                 "downloadPath": {
                     "anyOf": [

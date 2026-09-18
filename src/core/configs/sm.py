@@ -25,7 +25,7 @@ class ImageManagerConfig(BaseModel):
         Field(
             alias='imagesPartLimit',
             default=0,
-            description='Maximum number of image parts retained. 0 means unlimited.',
+            description='Maximum percentage of filesystem capacity allocated to images. 0 means no quota.',
         ),
     ]
 

@@ -794,8 +794,14 @@
                 "status": {
                     "description": "current status of the item",
                     "enum": [
-                        "installed",
+                        "unknown",
+                        "pending",
                         "downloading",
+                        "downloaded",
+                        "installing",
+                        "installed",
+                        "removing",
+                        "removed",
                         "failed",
                         "error"
                     ],
@@ -982,7 +988,7 @@
                     "type": "array"
                 },
                 "sha256": {
-                    "description": "SHA3-256 digest of the encrypted target",
+                    "description": "SHA3-256 digest of the target",
                     "format": "base64",
                     "title": "Sha256",
                     "type": "string"
@@ -1089,7 +1095,7 @@
                     "type": "array"
                 },
                 "sha256": {
-                    "description": "SHA3-256 digest of the encrypted target",
+                    "description": "SHA3-256 digest of the target",
                     "format": "base64",
                     "title": "Sha256",
                     "type": "string"
@@ -1149,7 +1155,7 @@
                     "type": "array"
                 },
                 "sha256": {
-                    "description": "SHA3-256 digest of the encrypted target",
+                    "description": "SHA3-256 digest of the target",
                     "format": "base64",
                     "title": "Sha256",
                     "type": "string"
@@ -1620,8 +1626,14 @@
                 "status": {
                     "description": "current status of the item",
                     "enum": [
-                        "installed",
+                        "unknown",
+                        "pending",
                         "downloading",
+                        "downloaded",
+                        "installing",
+                        "installed",
+                        "removing",
+                        "removed",
                         "failed",
                         "error"
                     ],
@@ -2150,7 +2162,9 @@
                     "description": "The desired status of the node.",
                     "enum": [
                         "provisioned",
-                        "paused"
+                        "paused",
+                        "pausing",
+                        "resuming"
                     ],
                     "title": "Status",
                     "type": "string"
@@ -2927,8 +2941,14 @@
                 "status": {
                     "description": "current status of the item",
                     "enum": [
-                        "installed",
+                        "unknown",
+                        "pending",
                         "downloading",
+                        "downloaded",
+                        "installing",
+                        "installed",
+                        "removing",
+                        "removed",
                         "failed",
                         "error"
                     ],
@@ -3078,8 +3098,14 @@
                     "enum": [
                         "provisioned",
                         "unprovisioned",
+                        "unprovisioned:wait_provisioning",
+                        "unprovisioned:provisioning",
+                        "provisioned:wait_unprovisioning",
+                        "provisioned:unprovisioning",
                         "error",
-                        "paused"
+                        "paused",
+                        "pausing",
+                        "resuming"
                     ],
                     "title": "Status",
                     "type": "string"
@@ -3332,22 +3358,19 @@
             "description": "Node configuration parameters.",
             "properties": {
                 "nodeType": {
-                    "description": "Group of nodes with identical configuration.",
-                    "title": "Node Type",
+                    "description": "The type of the node.",
+                    "examples": [
+                        "DomA",
+                        "DomD"
+                    ],
+                    "title": "Node type",
                     "type": "string"
                 },
                 "nodeId": {
-                    "anyOf": [
-                        {
-                            "type": "string"
-                        },
-                        {
-                            "type": "null"
-                        }
-                    ],
                     "default": null,
                     "description": "Unique ID of the node",
-                    "title": "Node ID"
+                    "title": "Nodeid",
+                    "type": "string"
                 },
                 "alertRules": {
                     "$ref": "#/$defs/AlertRules",

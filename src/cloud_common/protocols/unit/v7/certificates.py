@@ -234,6 +234,49 @@ class AosInstallCertDataV7(AosCertificateIdentificationV7):
     error_info: TypeAosErrorInfoOptional
 
 
+class AosNodeRootCertificates(AosBaseModel):
+    """Root certificates on the node."""
+
+    node: Annotated[
+        AosIdentity,
+        Field(
+            alias='node',
+            description='The identity of the node.',
+        ),
+    ]
+
+    sha256_thumbnails: Annotated[
+        list[str],
+        Field(
+            alias='sha256Thumbnails',
+            title='SHA256 thumbnails',
+            description='List of all root certificate thumbnails.',
+        ),
+    ]
+
+
+class AosDesiredNodeRootCertificates(AosBaseModel):
+    """Root certificates on the node."""
+
+    node: Annotated[
+        AosIdentity,
+        Field(
+            alias='node',
+            description='The identity of the node.',
+        ),
+    ]
+
+    certificates: Annotated[
+        list[str],
+        Field(
+            alias='certificates',
+            title='PEM certificate list',
+            description='List of all root certificates in PEM format.',
+        ),
+    ]
+
+
+
 class AosInstallUnitCertificatesConfirmationV7(AosBaseDataModel):
     """
     AosUnit protocol: 'installUnitCertificatesConfirmation' message.
@@ -256,5 +299,68 @@ class AosInstallUnitCertificatesConfirmationV7(AosBaseDataModel):
             alias='certificates',
             title='Request to issue certificates',
             description='Request to issue certificates.',
+        ),
+    ]
+
+
+class AosUnitRootCertificates(AosBaseDataModel):
+    """
+    AosUnit protocol: 'unitRootCertificates' message
+
+    Message from unit reports root certificates installed on each node.
+    """
+
+    message_type: Annotated[
+        Literal['unitRootCertificates'],
+        Field(
+            alias='messageType',
+            title='Message type',
+            description='Message body type.',
+        ),
+    ]
+
+    is_partial: Annotated[
+        Optional[bool],
+        Field(
+            default=None,
+            alias='isPartial',
+            title='Partial info indicator',
+            description='Flag to indicate if this is a full info message or partial (not all nodes)',
+            examples=[True, False],
+        ),
+    ]
+
+    node_certificates: Annotated[
+        list[AosNodeRootCertificates],
+        Field(
+            alias='nodeCertificates',
+            title='List of nodes root certificates',
+            description='Report of root certificates installed on each node.',
+        ),
+    ]
+
+
+class AosDesiredUnitRootCertificates(AosBaseDataModel):
+    """
+    AosUnit protocol: 'desiredUnitRootCertificates' message
+
+    Message from cloud to unit to replace nodes root certificates.
+    """
+
+    message_type: Annotated[
+        Literal['desiredUnitRootCertificates'],
+        Field(
+            alias='messageType',
+            title='Message type',
+            description='Message body type.',
+        ),
+    ]
+
+    node_certificates: Annotated[
+        list[AosNodeRootCertificates],
+        Field(
+            alias='nodeCertificates',
+            title='List of nodes root certificates',
+            description='Report of root certificates installed on each node.',
         ),
     ]

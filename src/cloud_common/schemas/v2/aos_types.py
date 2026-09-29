@@ -1,7 +1,6 @@
 #
 #  Copyright (c) 2018-2025 EPAM Systems Inc.
 #
-from datetime import timedelta
 from typing import Annotated, Literal, Optional, List, Dict
 
 from pydantic import BaseModel, Field
@@ -9,24 +8,95 @@ from pydantic import BaseModel, Field
 from cloud_common.protocols.unit.v7.common import AosOsInfo, AosArchInfo, AosIdentity
 
 
+class AosImageEncryption(BaseModel):
+    """Encryption settings for the image."""
+
+    mode: Annotated[
+        Literal['disabled', 'encrypt', 'encrypted'],
+        Field(
+            default='disabled',
+            alias='mode',
+            description=(
+                'Encryption mode. `disabled`: image is in cleartext. '
+                '`encrypt`: signer encrypts the image during build. '
+                '`encrypted`: image is already encrypted and is used as is.'
+            ),
+        ),
+    ] = 'disabled'
+
+    algorithm: Annotated[
+        Literal['AES256-GCM'],
+        Field(
+            default='AES256-GCM',
+            alias='algorithm',
+            description=(
+                'Symmetric encryption algorithm. Encrypted file layout: 12-byte IV, ciphertext, 16-byte GCM tag.'
+            ),
+        ),
+    ] = 'AES256-GCM'
+
+    key_file: Annotated[
+        Optional[str],
+        Field(
+            default=None,
+            alias='keyFile',
+            description=(
+                'Path to the file with the 32-byte symmetric key (raw, base64 or hex). A relative path is looked up '
+                'next to the config file first and then in `~/.aos/security`. '
+                'Required when mode is `encrypt`. Never included into the bundle.'
+            ),
+        ),
+    ] = None
+
+    @property
+    def is_encrypted(self) -> bool:
+        """Whether the image in the bundle is encrypted (by signer or beforehand)."""
+        return self.mode != 'disabled'
+
+    @property
+    def requires_encryption(self) -> bool:
+        """Whether signer has to encrypt the image."""
+        return self.mode == 'encrypt'
+
+
 class AosImage(BaseModel):
 
     source_folder: Annotated[
-        str,
+        Optional[str],
         Field(
+            default=None,
             alias='sourceFolder',
             description='Source folder for the image.',
         ),
-    ]
+    ] = None
+
+    path: Annotated[
+        Optional[str],
+        Field(
+            default=None,
+            alias='path',
+            description='Path to the compressed image.',
+        ),
+    ] = None
+
+    media_type: Annotated[
+        Optional[str],
+        Field(
+            default=None,
+            alias='mediaType',
+            description='Media type of the image.',
+            examples=['application/vnd.oci.image.layer.v1.tar+gzip'],
+        ),
+    ] = None
 
     os_info: Annotated[
-        AosOsInfo,
+        Optional[AosOsInfo],
         Field(
-            default=AosOsInfo(os='Linux'),
+            default=None,
             alias='osInfo',
             description='OS information of the image.',
         ),
-    ] = AosOsInfo(os='Linux')
+    ] = None
 
     arch_info: Annotated[
         AosArchInfo,
@@ -63,10 +133,19 @@ class AosImage(BaseModel):
         ),
     ] = None
 
+    encryption: Annotated[
+        Optional[AosImageEncryption],
+        Field(
+            default=None,
+            alias='encryption',
+            description='Encryption settings for the image.',
+        ),
+    ] = None
+
 
 class AosRunParameters(BaseModel):
     start_interval: Annotated[
-        Optional[timedelta],
+        Optional[str],
         Field(
             alias='startInterval',
             default=None,
@@ -89,7 +168,7 @@ class AosRunParameters(BaseModel):
     ]
 
     restart_interval: Annotated[
-        Optional[timedelta],
+        Optional[str],
         Field(
             alias='restartInterval',
             default=None,
@@ -110,7 +189,7 @@ class AosResourceAccess(BaseModel):
     ]
 
     mode: Annotated[
-        Literal['w', 'rw', 'w', 'm', 'rwm'],
+        Literal['r', 'rw', 'w'],
         Field(
             default='r',
             description='The needed access permissions for the resource.',
@@ -123,7 +202,7 @@ class AosAlertRulePoints(BaseModel):
     """Schema alert triggering procedure."""
 
     min_timeout: Annotated[
-        Optional[timedelta],
+        Optional[str],
         Field(
             alias='minTimeout',
             description='The duration in ISO8601 for a time window to check alert rule.',
@@ -152,7 +231,7 @@ class AosAlertRulePercents(BaseModel):
     """Schema alert triggering procedure in percents."""
 
     min_timeout: Annotated[
-        Optional[timedelta],
+        Optional[str],
         Field(
             alias='minTimeout',
             description='The duration in ISO8601 for a time window to check alert rule.',
@@ -243,7 +322,7 @@ class AosQuotas(BaseModel):
     ] = None
 
     ram_limit: Annotated[
-        Optional[int],
+        Optional[str | int],
         Field(
             alias='ramLimit',
             default=None,
@@ -252,7 +331,7 @@ class AosQuotas(BaseModel):
     ] = None
 
     storage_limit: Annotated[
-        Optional[int],
+        Optional[str | int],
         Field(
             alias='storageLimit',
             default=None,
@@ -261,7 +340,7 @@ class AosQuotas(BaseModel):
     ] = None
 
     state_limit: Annotated[
-        Optional[int],
+        Optional[str | int],
         Field(
             alias='stateLimit',
             default=None,
@@ -270,7 +349,7 @@ class AosQuotas(BaseModel):
     ] = None
 
     tmp_limit: Annotated[
-        Optional[int],
+        Optional[str | int],
         Field(
             alias='tmpLimit',
             default=None,
@@ -278,19 +357,37 @@ class AosQuotas(BaseModel):
         ),
     ] = None
 
-    upload_speed: Annotated[
-        Optional[int],
+    upload_speed_limit: Annotated[
+        Optional[str | int],
         Field(
-            alias='uploadSpeed',
+            alias='uploadSpeedLimit',
+            default=None,
+            description='Upload speed limit in bits per second',
+        ),
+    ] = None
+
+    download_speed_limit: Annotated[
+        Optional[str | int],
+        Field(
+            alias='downloadSpeedLimit',
             default=None,
             description='Upload limit in bits per second',
         ),
     ] = None
 
-    download_speed: Annotated[
-        Optional[int],
+    upload_limit: Annotated[
+        Optional[str | int],
         Field(
-            alias='downloadSpeed',
+            alias='uploadLimit',
+            default=None,
+            description='Upload limit in bits per second',
+        ),
+    ] = None
+
+    download_limit: Annotated[
+        Optional[str | int],
+        Field(
+            alias='downloadLimit',
             default=None,
             description='Upload limit in bits per second',
         ),
@@ -324,7 +421,7 @@ class AosInstancesInfo(BaseModel):
             alias='minInstances',
             description='Minimum number of instances.',
             default=1,
-            gt=1,
+            ge=1,
             le=100,
         ),
     ] = 1
@@ -431,7 +528,7 @@ class AosUpdateItemConfiguration(BaseModel):
         Field(
             alias='exposedPorts',
             default=None,
-            description='List of exposed ports in format {port}/[tcp|udp].',
+            description='List of exposed ports in format {port|port_range}[/tcp|udp].',
             examples=[8080, 8081, '53/udp'],
         ),
     ] = None
@@ -455,7 +552,7 @@ class AosUpdateItemConfiguration(BaseModel):
     ] = None
 
     offline_ttl: Annotated[
-        Optional[timedelta],
+        Optional[str],
         Field(
             alias='offlineTTL',
             default=None,
@@ -463,7 +560,7 @@ class AosUpdateItemConfiguration(BaseModel):
     TTL (allowed time) to run service when unit in offline mode.
     If value is absent service will live on an unit forever.
     Format: ISO8601 duration.""",
-            examples=['PT1M', 'PT7D']
+            examples=['PT1M', 'PT7D'],
         ),
     ] = None
 
@@ -478,7 +575,7 @@ class AosUpdateItemConfiguration(BaseModel):
                 AosResourceAccess(name='system-dbus', mode='rw'),
                 AosResourceAccess(name='camera0'),
             ],
-        )
+        ),
     ] = None
 
     allowed_connections: Annotated[
@@ -492,7 +589,7 @@ class AosUpdateItemConfiguration(BaseModel):
             examples=[
                 'hello-world/8087:8088/tcp',
                 'hello-world/1515/udp',
-            ]
+            ],
         ),
     ] = None
 
@@ -501,18 +598,18 @@ class AosUpdateItemConfiguration(BaseModel):
         Field(
             alias='quotas',
             default=None,
-            description='Quotas for the service.'
+            description='Quotas for the service.',
         ),
-    ]
+    ] = None
 
     alert_rules: Annotated[
         Optional[AosAlertRules],
         Field(
             alias='alertRules',
             default=None,
-            description='Alert rules for the service.'
+            description='Alert rules for the service.',
         ),
-    ]
+    ] = None
 
     permissions: Annotated[
         Optional[Dict[str, Dict[str, Literal['r', 'rw', 'w']]]],
@@ -522,7 +619,7 @@ class AosUpdateItemConfiguration(BaseModel):
             description='Permissions to access resources.',
             examples=[{'vis': {'Signal.Doors.*': 'rw', 'Attributes.Vehicle.Vin': 'r'}}],
         ),
-    ]
+    ] = None
 
 
 class AosDependency(BaseModel):
@@ -569,7 +666,6 @@ class AosDependency(BaseModel):
     ] = 'completed'
 
 
-
 class AosUpdateItem(BaseModel):
 
     identity: Annotated[
@@ -602,7 +698,7 @@ class AosUpdateItem(BaseModel):
         Field(
             alias='images',
             description='List of images for different architectures.',
-            min_length=1
+            min_length=1,
         ),
     ]
 
@@ -621,177 +717,5 @@ class AosUpdateItem(BaseModel):
             default=None,
             alias='dependencies',
             description='List of the update item dependencies.',
-        ),
-    ]
-
-
-class RequestedResources(BaseModel):
-    """
-    Schema for requested resources.
-    """
-
-    cpu: Annotated[
-        Optional[int],
-        Field(
-            alias='cpu',
-            default=None,
-            description='CPU requested resource (against cpuLimit)',
-        ),
-    ]
-
-    ram: Annotated[
-        Optional[int],
-        Field(
-            alias='ram',
-            default=None,
-            description='RAM requested resource (against ramLimit)',
-        ),
-    ]
-
-    storage: Annotated[
-        Optional[int],
-        Field(
-            alias='storage',
-            default=None,
-            description='Storage requested resource (against storageLimit)',
-        ),
-    ]
-
-    state: Annotated[
-        Optional[int],
-        Field(
-            alias='state',
-            default=None,
-            description='State requested resource (against stateLimit)',
-        ),
-    ]
-
-
-class RunParameters(BaseModel):
-    """Schema for startup parameters."""
-
-    start_interval: Annotated[
-        Optional[timedelta],
-        Field(
-            alias='startInterval',
-            default=None,
-            description='The duration in ISO8601 format to wait service start.',
-            examples=['PT10S', 'PT1M'],
-        ),
-    ]
-
-    start_burst: Annotated[
-        Optional[int],
-        Field(
-            alias='startBurst',
-            default=None,
-            description="""\
-Service which are started more than burst times within an interval time span are not permitted to start any more.
-Use `startInterval` to configure the checking interval and `startBurst`
-to configure how many starts per interval are allowed.""",
-            examples=[3, 10],
-        ),
-    ]
-
-    restart_interval: Annotated[
-        Optional[timedelta],
-        Field(
-            alias='restartInterval',
-            default=None,
-            description='The duration in ISO8601 format to wait before service restart.',
-            examples=['PT1S', 'PT1M'],
-        ),
-    ]
-
-
-class ServiceQuotas(BaseModel):
-    """Schema for possible quotas for a service."""
-
-    cpu_limit: Annotated[
-        Optional[int],
-        Field(
-            alias='cpuLimit',
-            default=None,
-            description='CPU limit in percents',
-        ),
-    ]
-    cpu_dmips_limit: Annotated[
-        Optional[int],
-        Field(
-            alias='cpuDmipsLimit',
-            default=None,
-            description='CPU limit in DMIPs',
-        ),
-    ]
-
-    ram_limit: Annotated[
-        Optional[int],
-        Field(
-            alias='ramLimit',
-            default=None,
-            description='RAM limit in bytes',
-        ),
-    ]
-
-    storage_limit: Annotated[
-        Optional[int],
-        Field(
-            alias='storageLimit',
-            default=None,
-            description='Storage limit in bytes',
-        ),
-    ]
-
-    state_limit: Annotated[
-        Optional[int],
-        Field(
-            alias='stateLimit',
-            default=None,
-            description='State limit in bytes',
-        ),
-    ]
-
-    tmp_limit: Annotated[
-        Optional[int],
-        Field(
-            alias='tmpLimit',
-            default=None,
-            description='Temporary storage limit in bytes',
-        ),
-    ]
-
-    upload_speed: Annotated[
-        Optional[int],
-        Field(
-            alias='uploadSpeed',
-            default=None,
-            description='Upload limit in bytes per second',
-        ),
-    ]
-
-    download_speed: Annotated[
-        Optional[int],
-        Field(
-            alias='downloadSpeed',
-            default=None,
-            description='Upload limit in bytes per second',
-        ),
-    ]
-
-    files_limit: Annotated[
-        Optional[int],
-        Field(
-            alias='noFileLimit',
-            default=None,
-            description='Limit of opened files',
-        ),
-    ]
-
-    pids_limit: Annotated[
-        Optional[int],
-        Field(
-            alias='pidsLimit',
-            default=None,
-            description='Limit of PIDs',
         ),
     ]

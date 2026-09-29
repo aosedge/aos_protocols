@@ -357,7 +357,7 @@ class AosDesiredUnitRootCertificates(AosBaseDataModel):
     ]
 
     node_certificates: Annotated[
-        list[AosNodeRootCertificates],
+        list[AosDesiredNodeRootCertificates],
         Field(
             alias='nodeCertificates',
             title='List of nodes root certificates',

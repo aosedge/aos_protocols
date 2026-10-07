@@ -245,12 +245,19 @@ class AosNodeRootCertificates(AosBaseModel):
         ),
     ]
 
-    sha256_thumbnails: Annotated[
+    sha256_fingerprints: Annotated[
         list[str],
         Field(
-            alias='sha256Thumbnails',
-            title='SHA256 thumbnails',
-            description='List of all root certificate thumbnails.',
+            alias='sha256Fingerprints',
+            title='SHA256 fingerprints',
+            description='List of all root certificate fingerprints.',
+            examples=[
+                ['1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef'],
+                [
+                    '1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef',
+                    '1234567890abcde12345f32425abcdef1234567890abcdef1234567890abcdeb',
+                ],
+            ],
         ),
     ]
 

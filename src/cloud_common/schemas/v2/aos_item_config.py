@@ -11,10 +11,10 @@ from cloud_common.protocols.unit.v7.common import AosIdentity
 from .aos_types import (
     AosResourceAccess,
     AosAlertRules,
-    RequestedResources,
-    RunParameters,
-    ServiceQuotas,
 )
+
+
+from ..service_config.aos_types import RequestedResources, RunParameters, ServiceQuotas
 
 
 class AosConfigSchemaV2(BaseModel):

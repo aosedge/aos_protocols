@@ -3,7 +3,7 @@
 #
 from typing import Annotated, Literal, Optional, List, Dict
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 from cloud_common.protocols.unit.v7.common import AosOsInfo, AosArchInfo, AosIdentity
 
@@ -53,7 +53,11 @@ class AosImage(BaseModel):
         Field(
             default=None,
             alias='sourceFolder',
-            description='Source folder for the image.',
+            description=(
+                'Folder with the image files, relative to the item sourceFolder (to the bundle root if the item '
+                'has none). Mutually exclusive with "path". If neither is set, the folder named after '
+                'the architecture is used ({codename}/{architecture} if the item has no sourceFolder).'
+            ),
         ),
     ] = None
 
@@ -62,7 +66,10 @@ class AosImage(BaseModel):
         Field(
             default=None,
             alias='path',
-            description='Path to the compressed image.',
+            description=(
+                'Already built image (an archive, possibly encrypted), relative to the item sourceFolder '
+                '(to the bundle root if the item has none). Mutually exclusive with "sourceFolder".'
+            ),
         ),
     ] = None
 
@@ -128,6 +135,17 @@ class AosImage(BaseModel):
             description='Encryption settings for the image.',
         ),
     ] = None
+
+    @model_validator(mode='after')
+    def _check_source_folder_or_path(self):
+        if self.source_folder and self.path:
+            raise ValueError(
+                f'image "sourceFolder" ("{self.source_folder}") and "path" ("{self.path}") cannot be set together. '
+                'Use "sourceFolder" for a folder with the image files, or "path" for an already built '
+                '(possibly encrypted) image. Both are relative to the item sourceFolder '
+                '(to the bundle root if the item has none)',
+            )
+        return self
 
 
 class AosRunParameters(BaseModel):
@@ -441,7 +459,7 @@ class AosItemState(BaseModel):
         Field(
             default='state.dat',
             alias='filename',
-            description='Name of the default state file relative to the bundle root.',
+            description='Default state file, relative to the item folder (sourceFolder or codename).',
         ),
     ] = 'state.dat'
 
@@ -450,7 +468,8 @@ class AosItemState(BaseModel):
         Field(
             default=False,
             alias='required',
-            description='Whether the state file must be present and included in the bundle.',
+            description='Whether the state file must be present and included in the bundle '
+                        '(it must then fit in quotas.stateLimit or the default state quota of the service).',
         ),
     ] = False
 
@@ -707,7 +726,11 @@ class AosUpdateItem(BaseModel):
         Field(
             default=None,
             alias='sourceFolder',
-            description='Source folder for the item. If absent, codename from identity will be used.',
+            description=(
+                'Folder of the item, relative to the bundle root. If absent, image "sourceFolder"/"path" '
+                'are relative to the bundle root, an image without both is {codename}/{architecture} '
+                'and the default state is looked up in {codename}.'
+            ),
         ),
     ] = None
 

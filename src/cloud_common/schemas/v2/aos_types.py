@@ -11,19 +11,6 @@ from cloud_common.protocols.unit.v7.common import AosOsInfo, AosArchInfo, AosIde
 class AosImageEncryption(BaseModel):
     """Encryption settings for the image."""
 
-    mode: Annotated[
-        Literal['disabled', 'encrypt', 'encrypted'],
-        Field(
-            default='disabled',
-            alias='mode',
-            description=(
-                'Encryption mode. `disabled`: image is in cleartext. '
-                '`encrypt`: signer encrypts the image during build. '
-                '`encrypted`: image is already encrypted and is used as is.'
-            ),
-        ),
-    ] = 'disabled'
-
     algorithm: Annotated[
         Literal['AES256-GCM'],
         Field(
@@ -446,7 +433,38 @@ class AosInstancesInfo(BaseModel):
     ] = None
 
 
+class AosItemState(BaseModel):
+    """State file configuration for an Aos service item."""
+
+    filename: Annotated[
+        str,
+        Field(
+            default='state.dat',
+            alias='filename',
+            description='Name of the default state file relative to the bundle root.',
+        ),
+    ] = 'state.dat'
+
+    required: Annotated[
+        bool,
+        Field(
+            default=False,
+            alias='required',
+            description='Whether the state file must be present and included in the bundle.',
+        ),
+    ] = False
+
+
 class AosUpdateItemConfiguration(BaseModel):
+
+    state: Annotated[
+        Optional[AosItemState],
+        Field(
+            default=None,
+            alias='state',
+            description='Default state file configuration for the service.',
+        ),
+    ] = None
 
     env: Annotated[
         Optional[List[str]],

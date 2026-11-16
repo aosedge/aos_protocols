@@ -7894,4 +7894,4 @@ All fields are optional. In this case treated as no error.
 | **Type** | `null` |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-10-19 at 22:32:46 +0300
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-11-16 at 18:48:38 +0200

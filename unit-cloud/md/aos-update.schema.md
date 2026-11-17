@@ -514,4 +514,4 @@ In case of the unit is not able to download service or related layer more than T
 | **Type** | `null` |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-06-05 at 13:49:28 +0300
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-11-16 at 18:48:32 +0200

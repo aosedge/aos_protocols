@@ -48,15 +48,25 @@
     - [Property `AosUploadMetaConfig > items > AosUpdateItem > images`](#items_items_images)
       - [AosUploadMetaConfig > items > AosUpdateItem > images > AosImage](#items_items_images_items)
         - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > sourceFolder`](#items_items_images_items_sourceFolder)
+          - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > sourceFolder > anyOf > item 0`](#items_items_images_items_sourceFolder_anyOf_i0)
+          - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > sourceFolder > anyOf > item 1`](#items_items_images_items_sourceFolder_anyOf_i1)
+        - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > path`](#items_items_images_items_path)
+          - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > path > anyOf > item 0`](#items_items_images_items_path_anyOf_i0)
+          - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > path > anyOf > item 1`](#items_items_images_items_path_anyOf_i1)
+        - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > mediaType`](#items_items_images_items_mediaType)
+          - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > mediaType > anyOf > item 0`](#items_items_images_items_mediaType_anyOf_i0)
+          - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > mediaType > anyOf > item 1`](#items_items_images_items_mediaType_anyOf_i1)
         - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo`](#items_items_images_items_osInfo)
-          - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > os`](#items_items_images_items_osInfo_os)
-          - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > version`](#items_items_images_items_osInfo_version)
-            - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > version > anyOf > item 0`](#items_items_images_items_osInfo_version_anyOf_i0)
-            - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > version > anyOf > item 1`](#items_items_images_items_osInfo_version_anyOf_i1)
-          - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > features`](#items_items_images_items_osInfo_features)
-            - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > features > anyOf > item 0`](#items_items_images_items_osInfo_features_anyOf_i0)
-              - [AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > features > anyOf > item 0 > item 0 items](#items_items_images_items_osInfo_features_anyOf_i0_items)
-            - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > features > anyOf > item 1`](#items_items_images_items_osInfo_features_anyOf_i1)
+          - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo`](#items_items_images_items_osInfo_anyOf_i0)
+            - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo > os`](#items_items_images_items_osInfo_anyOf_i0_os)
+            - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo > version`](#items_items_images_items_osInfo_anyOf_i0_version)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo > version > anyOf > item 0`](#items_items_images_items_osInfo_anyOf_i0_version_anyOf_i0)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo > version > anyOf > item 1`](#items_items_images_items_osInfo_anyOf_i0_version_anyOf_i1)
+            - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo > features`](#items_items_images_items_osInfo_anyOf_i0_features)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo > features > anyOf > item 0`](#items_items_images_items_osInfo_anyOf_i0_features_anyOf_i0)
+                - [AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo > features > anyOf > item 0 > item 0 items](#items_items_images_items_osInfo_anyOf_i0_features_anyOf_i0_items)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo > features > anyOf > item 1`](#items_items_images_items_osInfo_anyOf_i0_features_anyOf_i1)
+          - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > item 1`](#items_items_images_items_osInfo_anyOf_i1)
         - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > archInfo`](#items_items_images_items_archInfo)
           - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > archInfo > architecture`](#items_items_images_items_archInfo_architecture)
           - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > archInfo > variant`](#items_items_images_items_archInfo_variant)
@@ -72,8 +82,20 @@
         - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > cmd`](#items_items_images_items_cmd)
           - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > cmd > anyOf > item 0`](#items_items_images_items_cmd_anyOf_i0)
           - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > cmd > anyOf > item 1`](#items_items_images_items_cmd_anyOf_i1)
+        - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > encryption`](#items_items_images_items_encryption)
+          - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > encryption > anyOf > AosImageEncryption`](#items_items_images_items_encryption_anyOf_i0)
+            - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > encryption > anyOf > AosImageEncryption > algorithm`](#items_items_images_items_encryption_anyOf_i0_algorithm)
+            - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > encryption > anyOf > AosImageEncryption > keyFile`](#items_items_images_items_encryption_anyOf_i0_keyFile)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > encryption > anyOf > AosImageEncryption > keyFile > anyOf > item 0`](#items_items_images_items_encryption_anyOf_i0_keyFile_anyOf_i0)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > encryption > anyOf > AosImageEncryption > keyFile > anyOf > item 1`](#items_items_images_items_encryption_anyOf_i0_keyFile_anyOf_i1)
+          - [Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > encryption > anyOf > item 1`](#items_items_images_items_encryption_anyOf_i1)
     - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration`](#items_items_configuration)
       - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration`](#items_items_configuration_anyOf_i0)
+        - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > state`](#items_items_configuration_anyOf_i0_state)
+          - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > state > anyOf > AosItemState`](#items_items_configuration_anyOf_i0_state_anyOf_i0)
+            - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > state > anyOf > AosItemState > filename`](#items_items_configuration_anyOf_i0_state_anyOf_i0_filename)
+            - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > state > anyOf > AosItemState > required`](#items_items_configuration_anyOf_i0_state_anyOf_i0_required)
+          - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > state > anyOf > item 1`](#items_items_configuration_anyOf_i0_state_anyOf_i1)
         - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > env`](#items_items_configuration_anyOf_i0_env)
           - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > env > anyOf > item 0`](#items_items_configuration_anyOf_i0_env_anyOf_i0)
             - [AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > env > anyOf > item 0 > item 0 items](#items_items_configuration_anyOf_i0_env_anyOf_i0_items)
@@ -104,6 +126,8 @@
         - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > exposedPorts`](#items_items_configuration_anyOf_i0_exposedPorts)
           - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > exposedPorts > anyOf > item 0`](#items_items_configuration_anyOf_i0_exposedPorts_anyOf_i0)
             - [AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > exposedPorts > anyOf > item 0 > item 0 items](#items_items_configuration_anyOf_i0_exposedPorts_anyOf_i0_items)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > exposedPorts > anyOf > item 0 > item 0 items > anyOf > item 0`](#items_items_configuration_anyOf_i0_exposedPorts_anyOf_i0_items_anyOf_i0)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > exposedPorts > anyOf > item 0 > item 0 items > anyOf > item 1`](#items_items_configuration_anyOf_i0_exposedPorts_anyOf_i0_items_anyOf_i1)
           - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > exposedPorts > anyOf > item 1`](#items_items_configuration_anyOf_i0_exposedPorts_anyOf_i1)
         - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > runtimes`](#items_items_configuration_anyOf_i0_runtimes)
           - [AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > runtimes > AosIdentity](#items_items_configuration_anyOf_i0_runtimes_items)
@@ -140,21 +164,35 @@
             - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > ramLimit`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_ramLimit)
               - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > ramLimit > anyOf > item 0`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_ramLimit_anyOf_i0)
               - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > ramLimit > anyOf > item 1`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_ramLimit_anyOf_i1)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > ramLimit > anyOf > item 2`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_ramLimit_anyOf_i2)
             - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > storageLimit`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_storageLimit)
               - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > storageLimit > anyOf > item 0`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_storageLimit_anyOf_i0)
               - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > storageLimit > anyOf > item 1`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_storageLimit_anyOf_i1)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > storageLimit > anyOf > item 2`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_storageLimit_anyOf_i2)
             - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > stateLimit`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_stateLimit)
               - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > stateLimit > anyOf > item 0`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_stateLimit_anyOf_i0)
               - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > stateLimit > anyOf > item 1`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_stateLimit_anyOf_i1)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > stateLimit > anyOf > item 2`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_stateLimit_anyOf_i2)
             - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > tmpLimit`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_tmpLimit)
               - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > tmpLimit > anyOf > item 0`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_tmpLimit_anyOf_i0)
               - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > tmpLimit > anyOf > item 1`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_tmpLimit_anyOf_i1)
-            - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadSpeed`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeed)
-              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadSpeed > anyOf > item 0`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeed_anyOf_i0)
-              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadSpeed > anyOf > item 1`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeed_anyOf_i1)
-            - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadSpeed`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeed)
-              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadSpeed > anyOf > item 0`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeed_anyOf_i0)
-              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadSpeed > anyOf > item 1`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeed_anyOf_i1)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > tmpLimit > anyOf > item 2`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_tmpLimit_anyOf_i2)
+            - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadSpeedLimit`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeedLimit)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadSpeedLimit > anyOf > item 0`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeedLimit_anyOf_i0)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadSpeedLimit > anyOf > item 1`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeedLimit_anyOf_i1)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadSpeedLimit > anyOf > item 2`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeedLimit_anyOf_i2)
+            - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadSpeedLimit`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeedLimit)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadSpeedLimit > anyOf > item 0`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeedLimit_anyOf_i0)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadSpeedLimit > anyOf > item 1`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeedLimit_anyOf_i1)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadSpeedLimit > anyOf > item 2`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeedLimit_anyOf_i2)
+            - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadLimit`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadLimit)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadLimit > anyOf > item 0`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadLimit_anyOf_i0)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadLimit > anyOf > item 1`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadLimit_anyOf_i1)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadLimit > anyOf > item 2`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadLimit_anyOf_i2)
+            - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadLimit`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadLimit)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadLimit > anyOf > item 0`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadLimit_anyOf_i0)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadLimit > anyOf > item 1`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadLimit_anyOf_i1)
+              - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadLimit > anyOf > item 2`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadLimit_anyOf_i2)
             - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > noFileLimit`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_noFileLimit)
               - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > noFileLimit > anyOf > item 0`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_noFileLimit_anyOf_i0)
               - [Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > noFileLimit > anyOf > item 1`](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_noFileLimit_anyOf_i1)
@@ -711,7 +749,7 @@ Must be one of:
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 | **Default**               | `null`                                                                      |
 
-**Description:** Source folder for the item. If absent, codename from identity will be used.
+**Description:** Folder of the item, relative to the bundle root. If absent, image "sourceFolder"/"path" are relative to the bundle root, an image without both is {codename}/{architecture} and the default state is looked up in {codename}.
 
 | Any of(Option)                               |
 | -------------------------------------------- |
@@ -762,26 +800,127 @@ Must be one of:
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 | **Defined in**            | #/$defs/AosImage                                                            |
 
-| Property                                                  | Pattern | Type        | Deprecated | Definition             | Title/Description |
-| --------------------------------------------------------- | ------- | ----------- | ---------- | ---------------------- | ----------------- |
-| + [sourceFolder](#items_items_images_items_sourceFolder ) | No      | string      | No         | -                      | Sourcefolder      |
-| - [osInfo](#items_items_images_items_osInfo )             | No      | object      | No         | In #/$defs/AosOsInfo   | AosOsInfo         |
-| + [archInfo](#items_items_images_items_archInfo )         | No      | object      | No         | In #/$defs/AosArchInfo | AosArchInfo       |
-| - [env](#items_items_images_items_env )                   | No      | Combination | No         | -                      | Env               |
-| - [workingDir](#items_items_images_items_workingDir )     | No      | Combination | No         | -                      | Workingdir        |
-| - [cmd](#items_items_images_items_cmd )                   | No      | Combination | No         | -                      | Cmd               |
+| Property                                                  | Pattern | Type        | Deprecated | Definition             | Title/Description                  |
+| --------------------------------------------------------- | ------- | ----------- | ---------- | ---------------------- | ---------------------------------- |
+| - [sourceFolder](#items_items_images_items_sourceFolder ) | No      | Combination | No         | -                      | Sourcefolder                       |
+| - [path](#items_items_images_items_path )                 | No      | Combination | No         | -                      | Path                               |
+| - [mediaType](#items_items_images_items_mediaType )       | No      | Combination | No         | -                      | Mediatype                          |
+| - [osInfo](#items_items_images_items_osInfo )             | No      | Combination | No         | -                      | OS information of the image.       |
+| + [archInfo](#items_items_images_items_archInfo )         | No      | object      | No         | In #/$defs/AosArchInfo | AosArchInfo                        |
+| - [env](#items_items_images_items_env )                   | No      | Combination | No         | -                      | Env                                |
+| - [workingDir](#items_items_images_items_workingDir )     | No      | Combination | No         | -                      | Workingdir                         |
+| - [cmd](#items_items_images_items_cmd )                   | No      | Combination | No         | -                      | Cmd                                |
+| - [encryption](#items_items_images_items_encryption )     | No      | Combination | No         | -                      | Encryption settings for the image. |
 
 ###### <a name="items_items_images_items_sourceFolder"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > sourceFolder`
 
 **Title:** Sourcefolder
 
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Folder with the image files, relative to the item sourceFolder (to the bundle root if the item has none). Mutually exclusive with "path". If neither is set, the folder named after the architecture is used ({codename}/{architecture} if the item has no sourceFolder).
+
+| Any of(Option)                                            |
+| --------------------------------------------------------- |
+| [item 0](#items_items_images_items_sourceFolder_anyOf_i0) |
+| [item 1](#items_items_images_items_sourceFolder_anyOf_i1) |
+
+###### <a name="items_items_images_items_sourceFolder_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > sourceFolder > anyOf > item 0`
+
 |          |          |
 | -------- | -------- |
 | **Type** | `string` |
 
-**Description:** Source folder for the image.
+###### <a name="items_items_images_items_sourceFolder_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > sourceFolder > anyOf > item 1`
+
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
+
+###### <a name="items_items_images_items_path"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > path`
+
+**Title:** Path
+
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Already built image (an archive, possibly encrypted), relative to the item sourceFolder (to the bundle root if the item has none). Mutually exclusive with "sourceFolder".
+
+| Any of(Option)                                    |
+| ------------------------------------------------- |
+| [item 0](#items_items_images_items_path_anyOf_i0) |
+| [item 1](#items_items_images_items_path_anyOf_i1) |
+
+###### <a name="items_items_images_items_path_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > path > anyOf > item 0`
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+###### <a name="items_items_images_items_path_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > path > anyOf > item 1`
+
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
+
+###### <a name="items_items_images_items_mediaType"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > mediaType`
+
+**Title:** Mediatype
+
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Media type of the image.
+
+**Example:**
+
+```json
+"application/vnd.oci.image.layer.v1.tar+gzip"
+```
+
+| Any of(Option)                                         |
+| ------------------------------------------------------ |
+| [item 0](#items_items_images_items_mediaType_anyOf_i0) |
+| [item 1](#items_items_images_items_mediaType_anyOf_i1) |
+
+###### <a name="items_items_images_items_mediaType_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > mediaType > anyOf > item 0`
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+###### <a name="items_items_images_items_mediaType_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > mediaType > anyOf > item 1`
+
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 ###### <a name="items_items_images_items_osInfo"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo`
+
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** OS information of the image.
+
+| Any of(Option)                                         |
+| ------------------------------------------------------ |
+| [AosOsInfo](#items_items_images_items_osInfo_anyOf_i0) |
+| [item 1](#items_items_images_items_osInfo_anyOf_i1)    |
+
+###### <a name="items_items_images_items_osInfo_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo`
 
 **Title:** AosOsInfo
 
@@ -789,18 +928,15 @@ Must be one of:
 | ------------------------- | --------------------------------------------------------------------------- |
 | **Type**                  | `object`                                                                    |
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
-| **Default**               | `{"os": "Linux", "version": null, "features": null}`                        |
 | **Defined in**            | #/$defs/AosOsInfo                                                           |
 
-**Description:** OS information of the image.
+| Property                                                          | Pattern | Type        | Deprecated | Definition | Title/Description |
+| ----------------------------------------------------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
+| + [os](#items_items_images_items_osInfo_anyOf_i0_os )             | No      | string      | No         | -          | Os                |
+| - [version](#items_items_images_items_osInfo_anyOf_i0_version )   | No      | Combination | No         | -          | Version           |
+| - [features](#items_items_images_items_osInfo_anyOf_i0_features ) | No      | Combination | No         | -          | Features          |
 
-| Property                                                 | Pattern | Type        | Deprecated | Definition | Title/Description |
-| -------------------------------------------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
-| + [os](#items_items_images_items_osInfo_os )             | No      | string      | No         | -          | Os                |
-| - [version](#items_items_images_items_osInfo_version )   | No      | Combination | No         | -          | Version           |
-| - [features](#items_items_images_items_osInfo_features ) | No      | Combination | No         | -          | Features          |
-
-###### <a name="items_items_images_items_osInfo_os"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > os`
+###### <a name="items_items_images_items_osInfo_anyOf_i0_os"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo > os`
 
 **Title:** Os
 
@@ -814,7 +950,7 @@ Must be one of:
 "linux"
 ```
 
-###### <a name="items_items_images_items_osInfo_version"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > version`
+###### <a name="items_items_images_items_osInfo_anyOf_i0_version"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo > version`
 
 **Title:** Version
 
@@ -832,24 +968,24 @@ Must be one of:
 "6.8.0"
 ```
 
-| Any of(Option)                                              |
-| ----------------------------------------------------------- |
-| [item 0](#items_items_images_items_osInfo_version_anyOf_i0) |
-| [item 1](#items_items_images_items_osInfo_version_anyOf_i1) |
+| Any of(Option)                                                       |
+| -------------------------------------------------------------------- |
+| [item 0](#items_items_images_items_osInfo_anyOf_i0_version_anyOf_i0) |
+| [item 1](#items_items_images_items_osInfo_anyOf_i0_version_anyOf_i1) |
 
-###### <a name="items_items_images_items_osInfo_version_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > version > anyOf > item 0`
+###### <a name="items_items_images_items_osInfo_anyOf_i0_version_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo > version > anyOf > item 0`
 
 |          |          |
 | -------- | -------- |
 | **Type** | `string` |
 
-###### <a name="items_items_images_items_osInfo_version_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > version > anyOf > item 1`
+###### <a name="items_items_images_items_osInfo_anyOf_i0_version_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo > version > anyOf > item 1`
 
 |          |        |
 | -------- | ------ |
 | **Type** | `null` |
 
-###### <a name="items_items_images_items_osInfo_features"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > features`
+###### <a name="items_items_images_items_osInfo_anyOf_i0_features"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo > features`
 
 **Title:** Features
 
@@ -861,12 +997,12 @@ Must be one of:
 
 **Description:** This OPTIONAL property specifies an array of strings, each specifying a mandatory OS feature.
 
-| Any of(Option)                                               |
-| ------------------------------------------------------------ |
-| [item 0](#items_items_images_items_osInfo_features_anyOf_i0) |
-| [item 1](#items_items_images_items_osInfo_features_anyOf_i1) |
+| Any of(Option)                                                        |
+| --------------------------------------------------------------------- |
+| [item 0](#items_items_images_items_osInfo_anyOf_i0_features_anyOf_i0) |
+| [item 1](#items_items_images_items_osInfo_anyOf_i0_features_anyOf_i1) |
 
-###### <a name="items_items_images_items_osInfo_features_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > features > anyOf > item 0`
+###### <a name="items_items_images_items_osInfo_anyOf_i0_features_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo > features > anyOf > item 0`
 
 |          |                   |
 | -------- | ----------------- |
@@ -880,17 +1016,23 @@ Must be one of:
 | **Additional items** | False              |
 | **Tuple validation** | See below          |
 
-| Each item of this array must be                                          | Description |
-| ------------------------------------------------------------------------ | ----------- |
-| [item 0 items](#items_items_images_items_osInfo_features_anyOf_i0_items) | -           |
+| Each item of this array must be                                                   | Description |
+| --------------------------------------------------------------------------------- | ----------- |
+| [item 0 items](#items_items_images_items_osInfo_anyOf_i0_features_anyOf_i0_items) | -           |
 
-###### <a name="items_items_images_items_osInfo_features_anyOf_i0_items"></a>AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > features > anyOf > item 0 > item 0 items
+###### <a name="items_items_images_items_osInfo_anyOf_i0_features_anyOf_i0_items"></a>AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo > features > anyOf > item 0 > item 0 items
 
 |          |          |
 | -------- | -------- |
 | **Type** | `string` |
 
-###### <a name="items_items_images_items_osInfo_features_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > features > anyOf > item 1`
+###### <a name="items_items_images_items_osInfo_anyOf_i0_features_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > AosOsInfo > features > anyOf > item 1`
+
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
+
+###### <a name="items_items_images_items_osInfo_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > osInfo > anyOf > item 1`
 
 |          |        |
 | -------- | ------ |
@@ -1071,6 +1213,86 @@ Must be one of:
 | -------- | ------ |
 | **Type** | `null` |
 
+###### <a name="items_items_images_items_encryption"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > encryption`
+
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Encryption settings for the image.
+
+| Any of(Option)                                                      |
+| ------------------------------------------------------------------- |
+| [AosImageEncryption](#items_items_images_items_encryption_anyOf_i0) |
+| [item 1](#items_items_images_items_encryption_anyOf_i1)             |
+
+###### <a name="items_items_images_items_encryption_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > encryption > anyOf > AosImageEncryption`
+
+**Title:** AosImageEncryption
+
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | #/$defs/AosImageEncryption                                                  |
+
+**Description:** Encryption settings for the image.
+
+| Property                                                                | Pattern | Type        | Deprecated | Definition | Title/Description |
+| ----------------------------------------------------------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
+| - [algorithm](#items_items_images_items_encryption_anyOf_i0_algorithm ) | No      | const       | No         | -          | Algorithm         |
+| - [keyFile](#items_items_images_items_encryption_anyOf_i0_keyFile )     | No      | Combination | No         | -          | Keyfile           |
+
+###### <a name="items_items_images_items_encryption_anyOf_i0_algorithm"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > encryption > anyOf > AosImageEncryption > algorithm`
+
+**Title:** Algorithm
+
+|             |                |
+| ----------- | -------------- |
+| **Type**    | `const`        |
+| **Default** | `"AES256-GCM"` |
+
+**Description:** Symmetric encryption algorithm. Encrypted file layout: 12-byte IV, ciphertext, 16-byte GCM tag.
+
+Specific value: `"AES256-GCM"`
+
+###### <a name="items_items_images_items_encryption_anyOf_i0_keyFile"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > encryption > anyOf > AosImageEncryption > keyFile`
+
+**Title:** Keyfile
+
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Path to the file with the 32-byte symmetric key (raw, base64 or hex). A relative path is looked up next to the config file first and then in `~/.aos/security`. Required when mode is `encrypt`. Never included into the bundle.
+
+| Any of(Option)                                                           |
+| ------------------------------------------------------------------------ |
+| [item 0](#items_items_images_items_encryption_anyOf_i0_keyFile_anyOf_i0) |
+| [item 1](#items_items_images_items_encryption_anyOf_i0_keyFile_anyOf_i1) |
+
+###### <a name="items_items_images_items_encryption_anyOf_i0_keyFile_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > encryption > anyOf > AosImageEncryption > keyFile > anyOf > item 0`
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+###### <a name="items_items_images_items_encryption_anyOf_i0_keyFile_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > encryption > anyOf > AosImageEncryption > keyFile > anyOf > item 1`
+
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
+
+###### <a name="items_items_images_items_encryption_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > images > AosImage > encryption > anyOf > item 1`
+
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
+
 #### <a name="items_items_configuration"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration`
 
 |                           |                                                                             |
@@ -1096,25 +1318,86 @@ Must be one of:
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 | **Defined in**            | #/$defs/AosUpdateItemConfiguration                                          |
 
-| Property                                                                              | Pattern | Type             | Deprecated | Definition | Title/Description                |
-| ------------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | -------------------------------- |
-| - [env](#items_items_configuration_anyOf_i0_env )                                     | No      | Combination      | No         | -          | Env                              |
-| - [workingDir](#items_items_configuration_anyOf_i0_workingDir )                       | No      | Combination      | No         | -          | Workingdir                       |
-| - [instances](#items_items_configuration_anyOf_i0_instances )                         | No      | Combination      | No         | -          | Instances info.                  |
-| - [cmd](#items_items_configuration_anyOf_i0_cmd )                                     | No      | Combination      | No         | -          | Cmd                              |
-| - [skipResourceLimits](#items_items_configuration_anyOf_i0_skipResourceLimits )       | No      | boolean          | No         | -          | Skipresourcelimits               |
-| - [balancingPolicy](#items_items_configuration_anyOf_i0_balancingPolicy )             | No      | enum (of string) | No         | -          | Balancingpolicy                  |
-| - [baseLayerIsNodeRootfs](#items_items_configuration_anyOf_i0_baseLayerIsNodeRootfs ) | No      | Combination      | No         | -          | Baselayerisnoderootfs            |
-| - [hostname](#items_items_configuration_anyOf_i0_hostname )                           | No      | Combination      | No         | -          | Hostname                         |
-| - [exposedPorts](#items_items_configuration_anyOf_i0_exposedPorts )                   | No      | Combination      | No         | -          | Exposedports                     |
-| - [runtimes](#items_items_configuration_anyOf_i0_runtimes )                           | No      | array            | No         | -          | Runtimes                         |
-| - [runParameters](#items_items_configuration_anyOf_i0_runParameters )                 | No      | Combination      | No         | -          | Run parameters for the Aos item. |
-| - [offlineTTL](#items_items_configuration_anyOf_i0_offlineTTL )                       | No      | Combination      | No         | -          | Offlinettl                       |
-| - [resources](#items_items_configuration_anyOf_i0_resources )                         | No      | Combination      | No         | -          | Resources                        |
-| - [allowedConnections](#items_items_configuration_anyOf_i0_allowedConnections )       | No      | Combination      | No         | -          | Allowedconnections               |
-| - [quotas](#items_items_configuration_anyOf_i0_quotas )                               | No      | Combination      | No         | -          | Quotas for the service.          |
-| - [alertRules](#items_items_configuration_anyOf_i0_alertRules )                       | No      | Combination      | No         | -          | Alert rules for the service.     |
-| - [permissions](#items_items_configuration_anyOf_i0_permissions )                     | No      | Combination      | No         | -          | Permissions                      |
+| Property                                                                              | Pattern | Type             | Deprecated | Definition | Title/Description                                 |
+| ------------------------------------------------------------------------------------- | ------- | ---------------- | ---------- | ---------- | ------------------------------------------------- |
+| - [state](#items_items_configuration_anyOf_i0_state )                                 | No      | Combination      | No         | -          | Default state file configuration for the service. |
+| - [env](#items_items_configuration_anyOf_i0_env )                                     | No      | Combination      | No         | -          | Env                                               |
+| - [workingDir](#items_items_configuration_anyOf_i0_workingDir )                       | No      | Combination      | No         | -          | Workingdir                                        |
+| - [instances](#items_items_configuration_anyOf_i0_instances )                         | No      | Combination      | No         | -          | Instances info.                                   |
+| - [cmd](#items_items_configuration_anyOf_i0_cmd )                                     | No      | Combination      | No         | -          | Cmd                                               |
+| - [skipResourceLimits](#items_items_configuration_anyOf_i0_skipResourceLimits )       | No      | boolean          | No         | -          | Skipresourcelimits                                |
+| - [balancingPolicy](#items_items_configuration_anyOf_i0_balancingPolicy )             | No      | enum (of string) | No         | -          | Balancingpolicy                                   |
+| - [baseLayerIsNodeRootfs](#items_items_configuration_anyOf_i0_baseLayerIsNodeRootfs ) | No      | Combination      | No         | -          | Baselayerisnoderootfs                             |
+| - [hostname](#items_items_configuration_anyOf_i0_hostname )                           | No      | Combination      | No         | -          | Hostname                                          |
+| - [exposedPorts](#items_items_configuration_anyOf_i0_exposedPorts )                   | No      | Combination      | No         | -          | Exposedports                                      |
+| - [runtimes](#items_items_configuration_anyOf_i0_runtimes )                           | No      | array            | No         | -          | Runtimes                                          |
+| - [runParameters](#items_items_configuration_anyOf_i0_runParameters )                 | No      | Combination      | No         | -          | Run parameters for the Aos item.                  |
+| - [offlineTTL](#items_items_configuration_anyOf_i0_offlineTTL )                       | No      | Combination      | No         | -          | Offlinettl                                        |
+| - [resources](#items_items_configuration_anyOf_i0_resources )                         | No      | Combination      | No         | -          | Resources                                         |
+| - [allowedConnections](#items_items_configuration_anyOf_i0_allowedConnections )       | No      | Combination      | No         | -          | Allowedconnections                                |
+| - [quotas](#items_items_configuration_anyOf_i0_quotas )                               | No      | Combination      | No         | -          | Quotas for the service.                           |
+| - [alertRules](#items_items_configuration_anyOf_i0_alertRules )                       | No      | Combination      | No         | -          | Alert rules for the service.                      |
+| - [permissions](#items_items_configuration_anyOf_i0_permissions )                     | No      | Combination      | No         | -          | Permissions                                       |
+
+###### <a name="items_items_configuration_anyOf_i0_state"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > state`
+
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Default state file configuration for the service.
+
+| Any of(Option)                                                     |
+| ------------------------------------------------------------------ |
+| [AosItemState](#items_items_configuration_anyOf_i0_state_anyOf_i0) |
+| [item 1](#items_items_configuration_anyOf_i0_state_anyOf_i1)       |
+
+###### <a name="items_items_configuration_anyOf_i0_state_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > state > anyOf > AosItemState`
+
+**Title:** AosItemState
+
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `object`                                                                    |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Defined in**            | #/$defs/AosItemState                                                        |
+
+**Description:** State file configuration for an Aos service item.
+
+| Property                                                                   | Pattern | Type    | Deprecated | Definition | Title/Description |
+| -------------------------------------------------------------------------- | ------- | ------- | ---------- | ---------- | ----------------- |
+| - [filename](#items_items_configuration_anyOf_i0_state_anyOf_i0_filename ) | No      | string  | No         | -          | Filename          |
+| - [required](#items_items_configuration_anyOf_i0_state_anyOf_i0_required ) | No      | boolean | No         | -          | Required          |
+
+###### <a name="items_items_configuration_anyOf_i0_state_anyOf_i0_filename"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > state > anyOf > AosItemState > filename`
+
+**Title:** Filename
+
+|             |               |
+| ----------- | ------------- |
+| **Type**    | `string`      |
+| **Default** | `"state.dat"` |
+
+**Description:** Default state file, relative to the item folder (sourceFolder or codename).
+
+###### <a name="items_items_configuration_anyOf_i0_state_anyOf_i0_required"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > state > anyOf > AosItemState > required`
+
+**Title:** Required
+
+|             |           |
+| ----------- | --------- |
+| **Type**    | `boolean` |
+| **Default** | `false`   |
+
+**Description:** Whether the state file must be present and included in the bundle (it must then fit in quotas.stateLimit or the default state quota of the service).
+
+###### <a name="items_items_configuration_anyOf_i0_state_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > state > anyOf > item 1`
+
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
 
 ###### <a name="items_items_configuration_anyOf_i0_env"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > env`
 
@@ -1238,7 +1521,7 @@ Must be one of:
 
 | Restrictions |          |
 | ------------ | -------- |
-| **Minimum**  | &gt; 1   |
+| **Minimum**  | &ge; 1   |
 | **Maximum**  | &le; 100 |
 
 ###### <a name="items_items_configuration_anyOf_i0_instances_anyOf_i0_priority"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > instances > anyOf > AosInstancesInfo > priority`
@@ -1432,7 +1715,7 @@ Must be one of:
 | **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
 | **Default**               | `null`                                                                      |
 
-**Description:** List of exposed ports.
+**Description:** List of exposed ports in format {port|port_range}[/tcp|udp].
 
 **Examples:**
 
@@ -1444,6 +1727,10 @@ Must be one of:
 8081
 ```
 
+```json
+"53/udp"
+```
+
 | Any of(Option)                                                      |
 | ------------------------------------------------------------------- |
 | [item 0](#items_items_configuration_anyOf_i0_exposedPorts_anyOf_i0) |
@@ -1451,9 +1738,9 @@ Must be one of:
 
 ###### <a name="items_items_configuration_anyOf_i0_exposedPorts_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > exposedPorts > anyOf > item 0`
 
-|          |                    |
-| -------- | ------------------ |
-| **Type** | `array of integer` |
+|          |         |
+| -------- | ------- |
+| **Type** | `array` |
 
 |                      | Array restrictions |
 | -------------------- | ------------------ |
@@ -1469,9 +1756,27 @@ Must be one of:
 
 ###### <a name="items_items_configuration_anyOf_i0_exposedPorts_anyOf_i0_items"></a>AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > exposedPorts > anyOf > item 0 > item 0 items
 
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+
+| Any of(Option)                                                                     |
+| ---------------------------------------------------------------------------------- |
+| [item 0](#items_items_configuration_anyOf_i0_exposedPorts_anyOf_i0_items_anyOf_i0) |
+| [item 1](#items_items_configuration_anyOf_i0_exposedPorts_anyOf_i0_items_anyOf_i1) |
+
+###### <a name="items_items_configuration_anyOf_i0_exposedPorts_anyOf_i0_items_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > exposedPorts > anyOf > item 0 > item 0 items > anyOf > item 0`
+
 |          |           |
 | -------- | --------- |
 | **Type** | `integer` |
+
+###### <a name="items_items_configuration_anyOf_i0_exposedPorts_anyOf_i0_items_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > exposedPorts > anyOf > item 0 > item 0 items > anyOf > item 1`
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 ###### <a name="items_items_configuration_anyOf_i0_exposedPorts_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > exposedPorts > anyOf > item 1`
 
@@ -1574,10 +1879,9 @@ Must be one of:
 
 ###### <a name="items_items_configuration_anyOf_i0_runParameters_anyOf_i0_startInterval_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > runParameters > anyOf > AosRunParameters > startInterval > anyOf > item 0`
 
-|            |            |
-| ---------- | ---------- |
-| **Type**   | `string`   |
-| **Format** | `duration` |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 ###### <a name="items_items_configuration_anyOf_i0_runParameters_anyOf_i0_startInterval_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > runParameters > anyOf > AosRunParameters > startInterval > anyOf > item 1`
 
@@ -1655,10 +1959,9 @@ Must be one of:
 
 ###### <a name="items_items_configuration_anyOf_i0_runParameters_anyOf_i0_restartInterval_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > runParameters > anyOf > AosRunParameters > restartInterval > anyOf > item 0`
 
-|            |            |
-| ---------- | ---------- |
-| **Type**   | `string`   |
-| **Format** | `duration` |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 ###### <a name="items_items_configuration_anyOf_i0_runParameters_anyOf_i0_restartInterval_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > runParameters > anyOf > AosRunParameters > restartInterval > anyOf > item 1`
 
@@ -1703,10 +2006,9 @@ Must be one of:
 
 ###### <a name="items_items_configuration_anyOf_i0_offlineTTL_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > offlineTTL > anyOf > item 0`
 
-|            |            |
-| ---------- | ---------- |
-| **Type**   | `string`   |
-| **Format** | `duration` |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 ###### <a name="items_items_configuration_anyOf_i0_offlineTTL_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > offlineTTL > anyOf > item 1`
 
@@ -1833,10 +2135,9 @@ Must be one of:
 ```
 
 Must be one of:
-* "w"
+* "r"
 * "rw"
-* "m"
-* "rwm"
+* "w"
 
 ###### <a name="items_items_configuration_anyOf_i0_resources_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > resources > anyOf > item 1`
 
@@ -1929,17 +2230,19 @@ Must be one of:
 
 **Description:** Schema for possible quotas for an Aos item.
 
-| Property                                                                              | Pattern | Type        | Deprecated | Definition | Title/Description |
-| ------------------------------------------------------------------------------------- | ------- | ----------- | ---------- | ---------- | ----------------- |
-| - [cpuLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_cpuLimit )           | No      | Combination | No         | -          | Cpulimit          |
-| - [ramLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_ramLimit )           | No      | Combination | No         | -          | Ramlimit          |
-| - [storageLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_storageLimit )   | No      | Combination | No         | -          | Storagelimit      |
-| - [stateLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_stateLimit )       | No      | Combination | No         | -          | Statelimit        |
-| - [tmpLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_tmpLimit )           | No      | Combination | No         | -          | Tmplimit          |
-| - [uploadSpeed](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeed )     | No      | Combination | No         | -          | Uploadspeed       |
-| - [downloadSpeed](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeed ) | No      | Combination | No         | -          | Downloadspeed     |
-| - [noFileLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_noFileLimit )     | No      | Combination | No         | -          | Nofilelimit       |
-| - [pidsLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_pidsLimit )         | No      | Combination | No         | -          | Pidslimit         |
+| Property                                                                                        | Pattern | Type        | Deprecated | Definition | Title/Description  |
+| ----------------------------------------------------------------------------------------------- | ------- | ----------- | ---------- | ---------- | ------------------ |
+| - [cpuLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_cpuLimit )                     | No      | Combination | No         | -          | Cpulimit           |
+| - [ramLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_ramLimit )                     | No      | Combination | No         | -          | Ramlimit           |
+| - [storageLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_storageLimit )             | No      | Combination | No         | -          | Storagelimit       |
+| - [stateLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_stateLimit )                 | No      | Combination | No         | -          | Statelimit         |
+| - [tmpLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_tmpLimit )                     | No      | Combination | No         | -          | Tmplimit           |
+| - [uploadSpeedLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeedLimit )     | No      | Combination | No         | -          | Uploadspeedlimit   |
+| - [downloadSpeedLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeedLimit ) | No      | Combination | No         | -          | Downloadspeedlimit |
+| - [uploadLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadLimit )               | No      | Combination | No         | -          | Uploadlimit        |
+| - [downloadLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadLimit )           | No      | Combination | No         | -          | Downloadlimit      |
+| - [noFileLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_noFileLimit )               | No      | Combination | No         | -          | Nofilelimit        |
+| - [pidsLimit](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_pidsLimit )                   | No      | Combination | No         | -          | Pidslimit          |
 
 ###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_cpuLimit"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > cpuLimit`
 
@@ -1986,14 +2289,21 @@ Must be one of:
 | ------------------------------------------------------------------------------- |
 | [item 0](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_ramLimit_anyOf_i0) |
 | [item 1](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_ramLimit_anyOf_i1) |
+| [item 2](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_ramLimit_anyOf_i2) |
 
 ###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_ramLimit_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > ramLimit > anyOf > item 0`
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_ramLimit_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > ramLimit > anyOf > item 1`
 
 |          |           |
 | -------- | --------- |
 | **Type** | `integer` |
 
-###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_ramLimit_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > ramLimit > anyOf > item 1`
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_ramLimit_anyOf_i2"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > ramLimit > anyOf > item 2`
 
 |          |        |
 | -------- | ------ |
@@ -2015,14 +2325,21 @@ Must be one of:
 | ----------------------------------------------------------------------------------- |
 | [item 0](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_storageLimit_anyOf_i0) |
 | [item 1](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_storageLimit_anyOf_i1) |
+| [item 2](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_storageLimit_anyOf_i2) |
 
 ###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_storageLimit_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > storageLimit > anyOf > item 0`
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_storageLimit_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > storageLimit > anyOf > item 1`
 
 |          |           |
 | -------- | --------- |
 | **Type** | `integer` |
 
-###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_storageLimit_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > storageLimit > anyOf > item 1`
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_storageLimit_anyOf_i2"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > storageLimit > anyOf > item 2`
 
 |          |        |
 | -------- | ------ |
@@ -2044,14 +2361,21 @@ Must be one of:
 | --------------------------------------------------------------------------------- |
 | [item 0](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_stateLimit_anyOf_i0) |
 | [item 1](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_stateLimit_anyOf_i1) |
+| [item 2](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_stateLimit_anyOf_i2) |
 
 ###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_stateLimit_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > stateLimit > anyOf > item 0`
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_stateLimit_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > stateLimit > anyOf > item 1`
 
 |          |           |
 | -------- | --------- |
 | **Type** | `integer` |
 
-###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_stateLimit_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > stateLimit > anyOf > item 1`
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_stateLimit_anyOf_i2"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > stateLimit > anyOf > item 2`
 
 |          |        |
 | -------- | ------ |
@@ -2073,22 +2397,101 @@ Must be one of:
 | ------------------------------------------------------------------------------- |
 | [item 0](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_tmpLimit_anyOf_i0) |
 | [item 1](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_tmpLimit_anyOf_i1) |
+| [item 2](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_tmpLimit_anyOf_i2) |
 
 ###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_tmpLimit_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > tmpLimit > anyOf > item 0`
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_tmpLimit_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > tmpLimit > anyOf > item 1`
 
 |          |           |
 | -------- | --------- |
 | **Type** | `integer` |
 
-###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_tmpLimit_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > tmpLimit > anyOf > item 1`
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_tmpLimit_anyOf_i2"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > tmpLimit > anyOf > item 2`
 
 |          |        |
 | -------- | ------ |
 | **Type** | `null` |
 
-###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeed"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadSpeed`
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeedLimit"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadSpeedLimit`
 
-**Title:** Uploadspeed
+**Title:** Uploadspeedlimit
+
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Upload speed limit in bits per second
+
+| Any of(Option)                                                                          |
+| --------------------------------------------------------------------------------------- |
+| [item 0](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeedLimit_anyOf_i0) |
+| [item 1](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeedLimit_anyOf_i1) |
+| [item 2](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeedLimit_anyOf_i2) |
+
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeedLimit_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadSpeedLimit > anyOf > item 0`
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeedLimit_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadSpeedLimit > anyOf > item 1`
+
+|          |           |
+| -------- | --------- |
+| **Type** | `integer` |
+
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeedLimit_anyOf_i2"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadSpeedLimit > anyOf > item 2`
+
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
+
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeedLimit"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadSpeedLimit`
+
+**Title:** Downloadspeedlimit
+
+|                           |                                                                             |
+| ------------------------- | --------------------------------------------------------------------------- |
+| **Type**                  | `combining`                                                                 |
+| **Additional properties** | ![Any type: allowed](https://img.shields.io/badge/Any%20type-allowed-green) |
+| **Default**               | `null`                                                                      |
+
+**Description:** Upload limit in bits per second
+
+| Any of(Option)                                                                            |
+| ----------------------------------------------------------------------------------------- |
+| [item 0](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeedLimit_anyOf_i0) |
+| [item 1](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeedLimit_anyOf_i1) |
+| [item 2](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeedLimit_anyOf_i2) |
+
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeedLimit_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadSpeedLimit > anyOf > item 0`
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeedLimit_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadSpeedLimit > anyOf > item 1`
+
+|          |           |
+| -------- | --------- |
+| **Type** | `integer` |
+
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeedLimit_anyOf_i2"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadSpeedLimit > anyOf > item 2`
+
+|          |        |
+| -------- | ------ |
+| **Type** | `null` |
+
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadLimit"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadLimit`
+
+**Title:** Uploadlimit
 
 |                           |                                                                             |
 | ------------------------- | --------------------------------------------------------------------------- |
@@ -2100,24 +2503,31 @@ Must be one of:
 
 | Any of(Option)                                                                     |
 | ---------------------------------------------------------------------------------- |
-| [item 0](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeed_anyOf_i0) |
-| [item 1](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeed_anyOf_i1) |
+| [item 0](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadLimit_anyOf_i0) |
+| [item 1](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadLimit_anyOf_i1) |
+| [item 2](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadLimit_anyOf_i2) |
 
-###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeed_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadSpeed > anyOf > item 0`
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadLimit_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadLimit > anyOf > item 0`
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadLimit_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadLimit > anyOf > item 1`
 
 |          |           |
 | -------- | --------- |
 | **Type** | `integer` |
 
-###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadSpeed_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadSpeed > anyOf > item 1`
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_uploadLimit_anyOf_i2"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > uploadLimit > anyOf > item 2`
 
 |          |        |
 | -------- | ------ |
 | **Type** | `null` |
 
-###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeed"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadSpeed`
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadLimit"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadLimit`
 
-**Title:** Downloadspeed
+**Title:** Downloadlimit
 
 |                           |                                                                             |
 | ------------------------- | --------------------------------------------------------------------------- |
@@ -2129,16 +2539,23 @@ Must be one of:
 
 | Any of(Option)                                                                       |
 | ------------------------------------------------------------------------------------ |
-| [item 0](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeed_anyOf_i0) |
-| [item 1](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeed_anyOf_i1) |
+| [item 0](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadLimit_anyOf_i0) |
+| [item 1](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadLimit_anyOf_i1) |
+| [item 2](#items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadLimit_anyOf_i2) |
 
-###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeed_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadSpeed > anyOf > item 0`
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadLimit_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadLimit > anyOf > item 0`
+
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
+
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadLimit_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadLimit > anyOf > item 1`
 
 |          |           |
 | -------- | --------- |
 | **Type** | `integer` |
 
-###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadSpeed_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadSpeed > anyOf > item 1`
+###### <a name="items_items_configuration_anyOf_i0_quotas_anyOf_i0_downloadLimit_anyOf_i2"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > quotas > anyOf > AosQuotas > downloadLimit > anyOf > item 2`
 
 |          |        |
 | -------- | ------ |
@@ -2304,10 +2721,9 @@ Must be one of:
 
 ###### <a name="items_items_configuration_anyOf_i0_alertRules_anyOf_i0_ram_anyOf_i0_minTimeout_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > alertRules > anyOf > AosAlertRules > ram > anyOf > AosAlertRulePercents > minTimeout > anyOf > item 0`
 
-|            |            |
-| ---------- | ---------- |
-| **Type**   | `string`   |
-| **Format** | `duration` |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 ###### <a name="items_items_configuration_anyOf_i0_alertRules_anyOf_i0_ram_anyOf_i0_minTimeout_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > alertRules > anyOf > AosAlertRules > ram > anyOf > AosAlertRulePercents > minTimeout > anyOf > item 1`
 
@@ -2514,10 +2930,9 @@ Must be one of:
 
 ###### <a name="items_items_configuration_anyOf_i0_alertRules_anyOf_i0_upload_anyOf_i0_minTimeout_anyOf_i0"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > alertRules > anyOf > AosAlertRules > upload > anyOf > AosAlertRulePoints > minTimeout > anyOf > item 0`
 
-|            |            |
-| ---------- | ---------- |
-| **Type**   | `string`   |
-| **Format** | `duration` |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 ###### <a name="items_items_configuration_anyOf_i0_alertRules_anyOf_i0_upload_anyOf_i0_minTimeout_anyOf_i1"></a>Property `AosUploadMetaConfig > items > AosUpdateItem > configuration > anyOf > AosUpdateItemConfiguration > alertRules > anyOf > AosAlertRules > upload > anyOf > AosAlertRulePoints > minTimeout > anyOf > item 1`
 
@@ -2819,4 +3234,4 @@ Must be one of:
 | **Type** | `null` |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-06-05 at 13:49:29 +0300
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-11-16 at 18:48:33 +0200

@@ -6,7 +6,6 @@
                 "minTimeout": {
                     "anyOf": [
                         {
-                            "format": "duration",
                             "type": "string"
                         },
                         {
@@ -63,7 +62,6 @@
                 "minTimeout": {
                     "anyOf": [
                         {
-                            "format": "duration",
                             "type": "string"
                         },
                         {
@@ -294,10 +292,9 @@
                     "default": "r",
                     "description": "The needed access permissions for the resource.",
                     "enum": [
-                        "w",
+                        "r",
                         "rw",
-                        "m",
-                        "rwm"
+                        "w"
                     ],
                     "examples": [
                         "r",

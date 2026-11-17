@@ -257,7 +257,7 @@ class AosAlertUpdateItemInstanceV7(AosBaseAlert):
     subject: Annotated[
         AosIdentity,
         Field(
-            alias='subjectId',
+            alias='subject',
             description='Subject unique identifier.',
         ),
     ]

@@ -867,10 +867,9 @@ Format: ISO8601 duration.
 ```
 
 Must be one of:
-* "w"
+* "r"
 * "rw"
-* "m"
-* "rwm"
+* "w"
 
 ### <a name="resources_anyOf_i1"></a>Property `AosConfigSchemaV2 > resources > anyOf > item 1`
 
@@ -1507,10 +1506,9 @@ Format of connection string: {service_uid}/[port|port_range]/[tcp|udp]
 
 ###### <a name="alertRules_anyOf_i0_ram_anyOf_i0_minTimeout_anyOf_i0"></a>Property `AosConfigSchemaV2 > alertRules > anyOf > AosAlertRules > ram > anyOf > AosAlertRulePercents > minTimeout > anyOf > item 0`
 
-|            |            |
-| ---------- | ---------- |
-| **Type**   | `string`   |
-| **Format** | `duration` |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 ###### <a name="alertRules_anyOf_i0_ram_anyOf_i0_minTimeout_anyOf_i1"></a>Property `AosConfigSchemaV2 > alertRules > anyOf > AosAlertRules > ram > anyOf > AosAlertRulePercents > minTimeout > anyOf > item 1`
 
@@ -1717,10 +1715,9 @@ Format of connection string: {service_uid}/[port|port_range]/[tcp|udp]
 
 ###### <a name="alertRules_anyOf_i0_upload_anyOf_i0_minTimeout_anyOf_i0"></a>Property `AosConfigSchemaV2 > alertRules > anyOf > AosAlertRules > upload > anyOf > AosAlertRulePoints > minTimeout > anyOf > item 0`
 
-|            |            |
-| ---------- | ---------- |
-| **Type**   | `string`   |
-| **Format** | `duration` |
+|          |          |
+| -------- | -------- |
+| **Type** | `string` |
 
 ###### <a name="alertRules_anyOf_i0_upload_anyOf_i0_minTimeout_anyOf_i1"></a>Property `AosConfigSchemaV2 > alertRules > anyOf > AosAlertRules > upload > anyOf > AosAlertRulePoints > minTimeout > anyOf > item 1`
 
@@ -1946,4 +1943,4 @@ Must be one of:
 | **Type** | `null` |
 
 ----------------------------------------------------------------------------------------------------------------------------
-Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-06-05 at 13:49:29 +0300
+Generated using [json-schema-for-humans](https://github.com/coveooss/json-schema-for-humans) on 2026-11-16 at 18:48:33 +0200
